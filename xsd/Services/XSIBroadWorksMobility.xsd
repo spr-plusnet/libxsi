@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- ************************************************************************ -->
+<!-- Copyright (c) 2012 BroadSoft, Inc. All rights reserved. -->
+<!-- ************************************************************************ -->
+<!-- XSI X M L S C H E M A -->
+<!-- ************************* -->
+<!-- This file defines the schema types and elements required by the -->
+<!-- BroadWorks Anywhere Mobility User Service interface in the -->
+<!-- http://schema.broadsoft.com/xsi namespace. -->
+<!-- ************************************************************************ -->
+
+
+
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schema.broadsoft.com/xsi"
+  targetNamespace="http://schema.broadsoft.com/xsi"
+  attributeFormDefault="unqualified" elementFormDefault="qualified"
+  version="1.0">
+
+  <xs:include schemaLocation="../XSIDataTypes.xsd" />
+ 
+  <xs:element name="BroadWorksMobility">
+    <xs:annotation>
+      <xs:documentation>
+        Provides BroadWorks Mobility Service attributes.
+        The following elements are read-only:
+        active
+        allowCallAnchoringControl
+        preventCallsBetweenIdentities
+        mobileIdentity
+
+        Change History:
+        R21 – Added
+        
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="ActivatableServiceInfo">
+          <xs:sequence>
+            <xs:element name="allowCallAnchoringControl"
+              type="xs:boolean" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation>
+                  Indicates if the user is allowed to control call anchoring for
+                  mobile identities.
+                  When set to true, the user can configure call anchoring options
+                  for each mobile identity. If set to false, the user
+                  cannot modify any of the anchoring options.
+                </xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="preventCallsToOwnMobiles"
+              type="xs:boolean" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation>
+                  Indicates if calls between devices of the same user are prevented
+                  or not.
+                  When set to true calls between a user’s devices are blocked.
+                </xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="profileIdentity"
+              type="BroadWorksMobilityProfileIdentityEntry" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation>
+                  Gives the profile identity configuration.
+                </xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="mobileIdentity"
+              type="BroadWorksMobilityMobileIdentityEntry" minOccurs="0"
+              maxOccurs="10">
+              <xs:annotation>
+                <xs:documentation>
+                  Give the list of mobile identities configured for the user.
+                </xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="BroadWorksMobilityMobileIdentity">
+    <xs:annotation>
+      <xs:documentation>
+        The following elements are read-only:
+        mobileNumber
+        primary
+        Provides Mobile Identity related attributes
+        Change History:
+        R21 - Added
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="mobileNumber" type="DN" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              Indicates if the mobile subscriber directory number (MSDN) of the
+              mobile device associated with this identity.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="description"
+          type="BroadWorksMobilityMobileIdentityDescription" nillable="true"
+          minOccurs="0" />
+        <xs:element name="enableAlerting" type="xs:boolean"
+          minOccurs="0" />
+        <xs:element name="primary" type="xs:boolean"
+          minOccurs="0" />
+        <xs:element name="alertAgentCalls"
+          type="xs:boolean" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              Indicates if the mobile is alerted for group/virtual service calls.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="alertClickToDialCalls" type="xs:boolean"
+          minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              Indicates if the mobile is alerted when making a Click -to Dial
+              call.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="alertGroupPagingCalls" type="xs:boolean"
+          minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              Indicates if the mobile is alerted for group paging calls.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="useMobilityCallingLineID" type="xs:boolean"
+          minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              Indicates if the mobile number is used as
+              the calling line identity when a call is originated from
+              this mobile device.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="useDiversionInhibitor" type="xs:boolean"
+          minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              Indicates if redirection is prevented for
+              an unanswered calls. When set to true, unanswered calls are
+              not redirected.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="answerConfirmationRequired" type="xs:boolean"
+          minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              Indicates if a confirmation digit is
+              required after a mobile call leg is answered. When set to
+              true a confirmation digit is required after a mobile call
+              leg is answered.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="broadworksCallControl" type="xs:boolean"
+          minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              Indicates if call control is to be
+              performed by BroadWorks and not by mobile device.
+              When set to true call control is performed by BroadWorks.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="mobileAlertingPolicy"
+          type="BroadWorksMobilityAlertingPolicyInfo" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              Provides identity based alert policy settings for this identity.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="mobileCallAnchoringPolicy"
+          type="BroadWorksMobilityCallAnchoringPolicy" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              Provides identity based call anchoring policy settings for this
+              identity.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+  <xs:simpleType name="BroadWorksMobilityMobileIdentityDescription">
+    <xs:annotation>
+      <xs:documentation>
+        Description of the Mobile Identity
+        Change History:
+        Rel 21 : Added
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:minLength value="1" />
+      <xs:maxLength value="40" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+
+  <xs:complexType name="BroadWorksMobilityMobileIdentityEntry">
+    <xs:annotation>
+      <xs:documentation>
+        BroadWorks Mobility Mobile Identity Entry.
+        The following elements are read-only:
+        mobileNumber
+        primary
+        enableAlerting
+        identityUri
+        Change History:
+        Rel 21: Added
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="mobileNumber" type="DN">
+        <xs:annotation>
+          <xs:documentation>
+            The mobile Number associated with the mobile identity.
+            The mobile identities are referenced by mobile number.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="description"
+        type="BroadWorksMobilityMobileIdentityDescription" minOccurs="0" />
+      <xs:element name="enableAlerting" type="xs:boolean"
+        minOccurs="0" />
+      <xs:element name="primary" type="xs:boolean" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Indicates if this mobile identity is identified as primary
+            mobile of the user.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="identityUri" type="URL"  minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            This is used to provide relative link for viewing and configuring
+            mobile identity related details through Http.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="BroadWorksMobilityProfileIdentityEntry">
+    <xs:annotation>
+      <xs:documentation>
+        BroadWorks Mobility User's Profile Identity Entry.
+        This allows retrieval and modification of profile identity related
+        attributes.
+        Change History:
+        Rel 21: Added
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="profileAlertingPolicy" type="BroadWorksMobilityAlertingPolicyInfo" minOccurs = "0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="BroadWorksMobilityAlertingPolicyInfo">
+    <xs:annotation>
+      <xs:documentation>
+        BroadWorks Mobility selection for phones to ring for an identity.
+        These settings define the list of devices that are alerted when the
+        call is made to that identity.
+        If the devicesToRing is set to Mobile or Both, all the mobile numbers
+        in
+        mobileNumbersAlertList elements are also alerted.
+        if the devicesToRing is set as Fixed or both, all fixed locations
+        are alerted.
+        Optionally other locations such as SCAs, BA and executive assistant
+        locations can be selected.
+        If the device to ring is set as Mobile, the mobile alert should not be
+        cleared out.
+        Change History:
+        R21 - Added
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="devicesToRing"
+        type="BroadWorksMobilityPhoneToRingSelection" minOccurs="0" />
+      <xs:element name="includeSharedCallAppearance" type="xs:boolean"
+        minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Indicates if all SCA devices are alerted provided devicesToRing
+            is set to Fixed or Both.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="includeBroadWorksAnywhere" type="xs:boolean"
+        minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            If set to true, indicates that all BroadWorks Anywhere locations are
+            alerted, provided devicesToRing
+            is set as Fixed or Both.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="includeExecutiveAssistant" type="xs:boolean"
+        minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            If set to true, indicates that all Executive assistant locations are
+            alerted, provided devicesToRing is set as Fixed or Both.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="mobileNumbersAlertList"
+        type="BroadWorksMobilityMobileNumbersAlertList" minOccurs="0"
+        nillable="true">
+        <xs:annotation>
+          <xs:documentation>
+            Indicates set of mobile numbers alerted, provided devices to ring
+            set as Mobile or Both. When not
+            present, the existing alert list is not modified.
+            When set to nil, existing alert list is cleared out.
+            When the list contains mobile numbers, the existing alert is replaced
+            with this list.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="BroadWorksMobilityCallAnchoringPolicy">
+    <xs:annotation>
+      <xs:documentation>
+        Provides call anchoring settings for a BroadWorks Mobility Mobile
+        identity. These settings can be modifies only when the BroadWorks Mobility
+        user is allowed to control these settings.
+        Change History:
+        R21 - Added
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="enableCallAnchoring" type="xs:boolean"
+        minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Indicates if call anchoring is active for this mobile number.
+            When set to true, calls to and from this mobile are anchored.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="timeSchedule" type="TimeSchedule"
+        minOccurs="0" nillable="true">
+        <xs:annotation>
+          <xs:documentation>
+            Indicates time schedule for during which call anchoring is disabled for
+            this mobile identity.
+            These setting override the enableCallAnchoring
+            Option.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="holidaySchedule" type="HolidaySchedule"
+        minOccurs="0" nillable="true">
+        <xs:annotation>
+          <xs:documentation>
+            Indicates holiday schedule for during which call anchoring is disabled
+            for this mobile identity.
+            These setting override the enableCallAnchoring Option.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="BroadWorksMobilityMobileNumbersAlertList">
+    <xs:annotation>
+      <xs:documentation>
+        A list of Mobile Numbers to be alerted.
+        By convention, an element of this type may be set nil to clear
+        The list.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="mobileNumber" type="DN" minOccurs="1"
+        maxOccurs="10" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="BroadWorksMobilityPhoneToRingSelection">
+    <xs:annotation>
+      <xs:documentation>
+        BroadWorks Mobility selection for phone to ring.
+        Change History:
+        R19.0 - Added
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="Fixed" />
+      <xs:enumeration value="Mobile" />
+      <xs:enumeration value="Both" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+</xs:schema>

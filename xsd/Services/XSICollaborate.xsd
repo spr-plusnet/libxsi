@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ************************************************************************ -->
+<!-- Copyright (c) 2014 BroadSoft, Inc. All rights reserved. -->
+<!-- ************************************************************************ -->
+<!-- XSI X M L S C H E M A -->
+<!-- ************************* -->
+<!-- This file defines the schema types and elements required by the -->
+<!-- Collab Service interface in the -->
+<!-- http://schema.broadsoft.com/xsi namespace. -->
+<!-- ************************************************************************ -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schema.broadsoft.com/xsi" 
+  targetNamespace="http://schema.broadsoft.com/xsi"
+  attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.0">
+  
+  <xs:include schemaLocation="../XSIDataTypes.xsd" />
+  <xs:include schemaLocation="../Profile/XSIProfile.xsd" />
+  
+  <xs:element name="Collaborate">
+    <xs:annotation>
+      <xs:documentation>
+        The Collaborate service settings.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="bridgeInfo" type="CollaborateBridgeInfo" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              Contains the information on the owners bridge.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="rooms" type="CollaborateRoomList" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              Contains the list of all of the rooms for a user.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="commonInstantRoomSettings" type="CommonInstantRoomSettings" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              Common Instant Room settings.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="CollaborateBridgeInfo">
+    <xs:annotation>
+      <xs:documentation>
+        Contains the details of the Collaborate Bridge that can be used to host a room.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="bridgeID" type="UserId">
+        <xs:annotation>
+          <xs:documentation>
+            The url for the Collaborate Conference Bridge hosting the room.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="phonenumber" type="DN" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            If the Collaborate Bridge has an address associated with it,
+            this will contain the information.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="extension" type="Extension" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            If there is an extension number defined for the Collaborate
+            Bridge hosting the room, it is
+            included here.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="maxParticipants" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            The maximum number of participants allowed for a room on this bridge.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="alternateNumbers" type="AlternateNumbersList" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            If there are alternate numbers defined for the Collaborate Bridge they are included here.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CollaborateRoomList">
+    <xs:annotation>
+      <xs:documentation>
+        A list of collaborate rooms.
+        Release Added: 21.0
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="room" type="CollaborateRoomInfo" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CommonInstantRoomSettings">
+    <xs:annotation>
+      <xs:documentation>
+        Defines the common settings for all Instant Rooms. 
+        Release Added R21.0.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="endSessionOnOwnerExit" type="xs:boolean" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            The indication to end the room session when the owner exits the room.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ownerRequired" type="xs:boolean" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            The indication to start the room session when the owner is required to join the room.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="attendeeNotification" type="CollaborateRoomAttendeeNotification" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            The choices for the notification when attendees join or leave the collaborate room session.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="CollaborateRoomInfo" type="CollaborateRoomInfo" />
+  <xs:complexType name="CollaborateRoomInfo">
+    <xs:annotation>
+      <xs:documentation>
+        Defines the details of an instance of an active Collaboration
+        Release Added R21.0
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            The name of the room.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="roomType" type="CollaborateRoomType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Return the type of the room
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="roomId" type="CollaborateRoomId" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            The roomId used to access the room.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="endSessionOnOwnerExit" type="xs:boolean" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            The indication to end the room session when the owner exits the room. This element is only applicable for Project Room and My Room.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ownerRequired" type="xs:boolean" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            The indication to start the room session when the owner is required to join the room. This element is only applicable for Project Room and My Room.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="attendeeNotification" type="CollaborateRoomAttendeeNotification" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            The choices for the notification when attendees join or leave the collaborate room session. This element is only applicable for Project Room and My Room.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="roomSchedule" type="CollaborateRoomSchedule" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            This parameter defines schedule details of the project room. This element is only applicable for Project Room.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="instantRoomDuration" type="CollaborateInstantRoomDuration" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            This parameter defines the instant room duration. This element is only applicable for Instant Rooms.
+          </xs:documentation>	
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="CollaborateRoomParticipantList">
+    <xs:annotation>
+      <xs:documentation>
+        A list of CollaborateRoomParticipant.
+        Release Added: 21.0
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="participant" type="CollaborateRoomParticipant" minOccurs="1" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            CollaborateRoomParticipantList is an array of CollaborateRoomParticipant instances.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ColaborateRoomParticipant">
+    <xs:annotation>
+      <xs:documentation>
+        Contains the details for a Collaborate Room Participant.
+        Release Added: R21.0
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="callId" type="CallId">
+        <xs:annotation>
+          <xs:documentation>
+            The call ID of the call for the participant.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="participantInfo" type="PartyInformation">
+        <xs:annotation>
+          <xs:documentation>
+            Information about the participant to the collaboration.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="activeTalker" type="EmptyContent" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            When present, indicates that the active participant is the talker
+            on the collaboration.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="owner" type="EmptyContent" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            When present, indicates that the participant is the owner of the collaboration
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="muted" type="EmptyContent" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            When present, indicates that the participant has been muted by a host.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType> 
+  
+  <xs:simpleType name="CollaborateRoomAttendeeNotification">
+    <xs:annotation>
+      <xs:documentation>
+        Choices for the notification when attendees join or leave the collaborate room session.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="Play Tone"/>
+      <xs:enumeration value="No Notification"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="CollaborateRoomSchedule">
+    <xs:annotation>
+      <xs:documentation>
+        Collaborate room schedule.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="scheduleReservationless">   
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="startTime" type="xs:dateTime"/>
+              <xs:element name="endTime" type="xs:dateTime" nillable="true"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="scheduleOneTime">  
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="startTime" type="xs:dateTime"/>
+              <xs:element name="duration" type="CollaborateRoomScheduleDuration"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="scheduleRecurring">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="startTime" type="xs:dateTime"/>
+              <xs:element name="duration" type="CollaborateRoomScheduleDuration"/>
+              <xs:element name="recurrence" type="Recurrence"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="CollaborateRoomScheduleDuration">
+    <xs:annotation>
+      <xs:documentation>
+        Collaborate room schedule duration.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="hours" type="Hour"/>
+      <xs:element name="minutes" type="CollaborateRoomScheduleDurationMinutes"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:simpleType name="CollaborateRoomScheduleDurationMinutes">
+    <xs:annotation>
+      <xs:documentation>
+        Collaborate room schedule duration minutes. 
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:int">
+      <xs:pattern value="0|15|30|45"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="CollaborateInstantRoomDuration">
+    <xs:annotation>
+      <xs:documentation>
+        Instant room duration.
+        Release Added R22.0
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="startTime" type="xs:dateTime"/>
+      <xs:element name="endTime" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

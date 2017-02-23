@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<project name="libxsi" default="jar" basedir=".">
+	<property name="package" value="libxsi"/>
+	<buildnumber file="build.num"/>
+	<property name="build.classes.dir" location="classes"/>
+	<property name="version" value="21sp1"/>
+	<property name="fullversion" value="${version}-b${build.number}"/>
+	<property name="version" value="${version}"/>
+	<property name="distjar" value="${package}-${fullversion}.jar"/>
+	
+    <target name="generate" >
+    	<mkdir dir="generated"/>
+ 		<exec executable="xjc">
+ 			<arg value="-d"/>
+ 			<arg value="generated"/>
+ 			<arg value="-p"/>
+ 			<arg value="com.broadsoft.xsi"/>
+			<arg value="-encoding"/>
+ 			<arg value="UTF-8"/>
+  			<arg value="xsd/"/>
+ 		</exec>
+    	<echo>TODO: Insert @XmlRootElement to com.broadsoft.xsi.Channel</echo>
+ 	</target>
+
+	<!--####################################################-->
+	<target name="clean" description="clean up">
+		<mkdir dir="${build.classes.dir}" />
+		<delete verbose="true">
+			<fileset dir=".">
+				<include name="${package}-${version}-b*.jar" />
+			</fileset>
+		</delete>
+		<delete file="${build.classes.dir}/**/*.class" />
+	</target>
+	
+	<!--####################################################-->
+    <target name="compile" depends="clean">
+ 		<javac 
+ 			listfiles="false"
+ 			srcdir="."
+ 			destdir="${build.classes.dir}"
+ 			classpath="libs/log4j.jar:"
+ 			source="1.7"
+ 			target="1.7" 
+ 			debug="true"
+ 			debuglevel="lines,vars,source" 			
+ 			encoding="UTF-8" 
+ 			includeantruntime="false">
+ 			<src path="api" />
+ 			<src path="impl" />
+ 			<src path="generated"/>
+ 			<include name="**/*.java"/>
+		</javac>
+	</target>
+	
+	<!--####################################################-->
+    <target name="jar" depends="compile">
+ 		<jar jarfile="${distjar}" basedir="${build.classes.dir}" >
+ 			<fileset dir="bin" includes="de/**/*.class"/>
+ 			<fileset dir="bin" includes="com/**/*.class"/>
+      		<manifest>
+      			<attribute name="Built-By" value="${user.name}"/>
+      			<attribute name="Class-Path" value="log4j.jar "/>
+      	     	<attribute name="Implementation-Title"   value="Broadsoft XSI Library"/>
+      	      	<attribute name="Implementation-Vendor"  value="QSC AG"/>
+      			<attribute name="Implementation-Version" value="${fullversion}"/>
+      		</manifest>
+		</jar>
+		<copy verbose="true" file="${distjar}" tofile="${package}-${version}.jar"/>
+		<delete dir="${build.classes.dir}"/>
+	</target>
+	
+	<!--####################################################-->
+    <target name="deploy" depends="jar">
+   	  <scp file="${distjar}" todir="root@62.206.162.7:/var/broadnet/phoneconfig/qsc/qscom" verbose="false" trust="true" keyfile="${user.home}/.ssh/id_rsa" passphrase=""/>
+	</target>
+	
+</project>

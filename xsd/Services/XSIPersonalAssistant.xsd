@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- ************************************************************************ -->
+<!-- Copyright (c) 2013 BroadSoft, Inc. All rights reserved. -->
+<!-- ************************************************************************ -->
+<!-- XSI X M L S C H E M A -->
+<!-- ************************* -->
+<!-- This file defines the schema types and elements required by the -->
+<!-- Personal Assistant interface in the http://schema.broadsoft.com/xsi -->
+<!-- namespace. -->
+<!-- ************************************************************************ -->
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schema.broadsoft.com/xsi"
+  targetNamespace="http://schema.broadsoft.com/xsi"
+  attributeFormDefault="unqualified" elementFormDefault="qualified"
+  version="1.0">
+
+  <xs:include schemaLocation="../XSIDataTypes.xsd" />
+
+  <xs:element name="PersonalAssistant" type="PersonalAssistant">
+    <xs:annotation>
+      <xs:documentation>
+        User Personal Assistant properties.
+        Personal Assistant allows you to use different personal assistant presence
+        to friendly inform
+        the callers of why the called party is not available, optionally
+        providing the information
+        about when the called party will be back and if there is a personal
+        attendant to attend the call.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+
+  <xs:complexType name="PersonalAssistant">
+    <xs:annotation>
+      <xs:documentation>
+        The user level data associated with the Personal
+        Assistant service
+
+        Change History:
+        21.0 – Added.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="ActivatableServiceInfo">
+        <xs:sequence>
+          <xs:element name="presence" type="PersonalAssistantPresence"
+            minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>
+                This element indicates the Personal Assistant presence setting.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="enableExpirationTime" type="xs:boolean"
+            minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>
+                This element activates/deactivates the Expiration option.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="expirationTime" type="xs:dateTime"
+            minOccurs="0" nillable="true">
+            <xs:annotation>
+              <xs:documentation>
+                This element indicates when the personal assistant presence is
+                expired.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="enableTransferToAttendant" type="xs:boolean"
+            minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>
+                This element indicates whether the caller can be transferred to the
+                personal attendant.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="attendantNumber" type="OutgoingDNorSIPURI"
+            minOccurs="0" nillable="true">
+            <xs:annotation>
+              <xs:documentation>
+                This element indicates the personal attendant’s number.
+                This element only applies when the “enableAttendant” element is set
+                to
+                true.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="ringSplash" type="xs:boolean"
+            minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>
+                This element indicates whether to play ring splash when the caller
+                is
+                transferred by the Personal Assistant service.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="callToNumberList" type="CallToNumberList"
+            minOccurs="0" nillable="true">
+            <xs:annotation>
+              <xs:documentation>
+                This element indicates the Call To Number criteria for the Personal
+                Assistant service.
+                The Personal Assistant service is applied to the call only when the
+                called number meets
+                the Call To Number criteria.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="PersonalAssistantPresence">
+    <xs:annotation>
+      <xs:documentation>
+        The Personal Assistance presence setting.
+
+        Change History:
+        21.0 – Added.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NonEmptyToken">
+      <xs:enumeration value="None">
+        <xs:annotation>
+          <xs:documentation>
+            It indicates that the personal assistant is
+            not enabled.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Business Trip">
+        <xs:annotation>
+          <xs:documentation>
+            It indicates that the user is on a business
+            trip.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Gone for the Day">
+        <xs:annotation>
+          <xs:documentation>
+            It indicates that the user is gone for the
+            day.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Lunch">
+        <xs:annotation>
+          <xs:documentation>
+            Lunch: indicates that the user is at lunch.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Meeting">
+        <xs:annotation>
+          <xs:documentation>
+            It indicates that the user is in meeting;
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Out Of Office">
+        <xs:annotation>
+          <xs:documentation>
+            It indicates that the user is out of the
+            office.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Temporarily Out">
+        <xs:annotation>
+          <xs:documentation>
+            It indicates that the user is temporarily
+            out.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Training">
+        <xs:annotation>
+          <xs:documentation>
+            It indicates that the user is in training.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Unavailable">
+        <xs:annotation>
+          <xs:documentation>
+            It indicates that the user is unavailable.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Vacation">
+        <xs:annotation>
+          <xs:documentation>
+            It indicates that the user is on vacation.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="PersonalAssistantExclusionNumberList"
+    type="PersonalAssistantExclusionNumberList">
+    <xs:annotation>
+      <xs:documentation>
+        Contains the Personal Assistant assigned
+        exclusion number list
+        Change History:
+        21.0 – Added.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="PersonalAssistantExclusionNumberList">
+    <xs:annotation>
+      <xs:documentation>
+        Contains the Personal Assistant configuration
+        data - Exclusion List.
+
+        Change History:
+        21.0 – Added.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="exclusionNumber"
+        type="PersonalAssistantExclusionNumberEntry" minOccurs="0"
+        maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PersonalAssistantExclusionNumberEntry">
+    <xs:annotation>
+      <xs:documentation>
+        Contains the Personal Assistant configuration
+        data - Exclusion Number
+
+        Change History:
+        21.0 – Added.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="number" type="DN">
+        <xs:annotation>
+          <xs:documentation>
+            This element describe the phone number which
+            will be excluded from the Personal Assistant service.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="description" type="xs:string"
+        minOccurs="0" nillable="true">
+        <xs:annotation>
+          <xs:documentation>
+            This element description about the exclusive
+            number.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="PersonalAssistantExclusionNumber" type="PersonalAssistantExclusionNumberEntry">
+    <xs:annotation>
+      <xs:documentation>
+        User Personal Assistant exclusion number
+        properties -
+
+        Change History:
+        21.0 – Added.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="PersonalAssistantAvailableCallToNumbers"
+    type="CallToNumberList">
+    <xs:annotation>
+      <xs:documentation>
+        Contains the Personal Assistant configuration
+        data - Call to Number List
+
+        Change History:
+        21.0 – Added.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="PersonalAssistantAssignedCallToNumbers"
+    type="PersonalAssistantAssignedCallToNumbers">
+    <xs:annotation>
+      <xs:documentation>
+        Contains the Personal Assistant assigned call to
+        Number List
+        Change History:
+        21.0 – Added.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="PersonalAssistantAssignedCallToNumbers">
+    <xs:annotation>
+      <xs:documentation>
+        The user level data associated with the Personal Assistant service
+
+        Change History:
+        21.0 – Added.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="callToNumberList" type="CallToNumberList"
+        minOccurs="0" nillable="true">
+        <xs:annotation>
+          <xs:documentation>
+            This element indicates the Call To Number criteria for the Personal
+            Assistant service.
+            The Personal Assistant service is applied to the call only when the
+            called number meets
+            the Call To Number criteria.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

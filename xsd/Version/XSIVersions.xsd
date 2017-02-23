@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+    <!-- *****************************************************************-->
+    <!--     Copyright (c) 2008 BroadSoft, Inc.  All rights reserved.     -->
+    <!-- **************************************************************   -->
+    <!--                XSI  X M L  S C H E M A                           -->
+    <!--               *************************                          -->
+    <!-- This file defines the schema types and elements required for the -->
+    <!-- Xsi-Actions or Xsi-Events versioning interface in the            -->  
+    <!--  http://schema.broadsoft.com/xsi name space.                     -->
+    <!--                                                                  -->
+    <!-- The Elements and Types are defined in the Alphabetical Order with-->
+    <!-- grouping at the Element, Complex and Simple level respectively.  -->
+    <!-- *****************************************************************-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schema.broadsoft.com/xsi"
+  targetNamespace="http://schema.broadsoft.com/xsi"
+  attributeFormDefault="unqualified" elementFormDefault="qualified"
+  version="1.0">
+
+  <xs:include schemaLocation="../XSIDataTypes.xsd" />
+
+  <!-- **************************************************************-->
+  <!--   Elements in Alphabetical Order.                             -->
+  <!-- **************************************************************-->
+  
+  <xs:element name="Versions">
+    <xs:annotation>
+      <xs:documentation>
+        Contains information of the baseline version and versions of all 
+        active patched commands and or event packages.
+        
+        Change History:
+        R20.0 - Added
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="commands" type="Commands" minOccurs="1"> 
+          <xs:annotation>
+            <xs:documentation>
+              Provides command version information. 
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="eventPackages" type="EventPackages" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              When present, provides event package version
+              information. 
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    
+  <!-- **************************************************************-->
+  <!--   Complex Types in Alphabetical Order.                         -->
+  <!-- **************************************************************-->
+    
+  <xs:complexType name="Commands">
+    <xs:annotation>
+      <xs:documentation>
+        Provides command baseline version.
+        When applicable, also provides a list
+        of patched commands. 
+        
+        Change History:
+        R20.0 - Added
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="baseline" type="NonEmptyToken">
+        <xs:annotation>
+          <xs:documentation>
+            The baseline version for all Xsi commands.
+            Composed of major and minor version numbers
+            separated by decimal point.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="patchedCommand" type="PatchedCommand" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            When present, list commands that have been patched.
+            For command that depends on the activation of a feature, 
+            the command is listed here only if the feature is 
+            activated.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="EventPackages">
+    <xs:annotation>
+      <xs:documentation>
+        Provides event package baseline version.
+        When applicable, also provides a list 
+        of patched event packages. 
+        
+        Change History:
+        R20.0 - Added
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="baseline" type="NonEmptyToken">
+        <xs:annotation>
+          <xs:documentation>
+            The baseline version for all Xsi event packages.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="patchedEventPackage" type="PatchedEventPackage" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            When present, list event packages that have been patched.
+            For event package that depends on the activation of a   
+            feature, the event package is listed here only
+            if the feature is activated.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+    
+  <xs:complexType name="PatchedCommand">
+    <xs:annotation>
+      <xs:documentation>
+        Contains URI and version information for patched Xsi-Events/Xsi-Actions
+        command.  If command is patched more than once, there can be more 
+        than one instances of version.
+        
+        Change History:
+        R20.0 - Added
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="uri" type="NonEmptyURI"/>
+      <xs:element name="version" type="Version" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+ 
+  <xs:complexType name="PatchedEventPackage">
+    <xs:annotation>
+      <xs:documentation>
+        The patched event package with version information.
+        If event package is patched more than once, there
+        can be more than one instances of version.
+        
+        Change History:
+        R20.0 - Added
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name" type="NonEmptyString"/>
+      <xs:element name="version" type="Version" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="Version">
+    <xs:annotation>
+      <xs:documentation>
+        Contains version information for a command or event package.
+        
+        Change History:
+        R20.0 - Added
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="value" type="NonEmptyToken">
+        <xs:annotation>
+          <xs:documentation>
+            Specifies version information with major and
+            minor version numbers separated by decimal point.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="feature" type="NonEmptyString" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            TThis element provides the details on the incremental
+            functionality available.  For example, version 20.0
+            of a command may include new behavior introduced by
+            two different features, yet only one of the two features
+            has been patched back.  The feature element allows
+            the application to differentiate which behavior is available
+            via the patched command.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+ 
+</xs:schema>

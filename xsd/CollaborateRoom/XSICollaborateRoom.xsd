@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ************************************************************************ -->
+<!-- Copyright (c) 2014 BroadSoft, Inc. All rights reserved.                  -->
+<!--************************************************************************* -->
+<!-- XSI X M L S C H E M A                                                    -->
+<!--*************************                                                 -->
+<!-- This file defines the schema types and elements required by              -->
+<!-- Collaborate in the http://schema.broadsoft.com/xsi name space.           -->  
+<!-- The Elements and Types are defined in the Alphabetical Order with        -->
+<!-- grouping at the Element, Complex and Simple level respectively.          -->  
+<!-- ************************************************************************ -->
+  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schema.broadsoft.com/xsi" 
+  targetNamespace="http://schema.broadsoft.com/xsi"
+  attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.0">
+
+  <xs:include schemaLocation="../Services/XSIServices.xsd" />
+  <xs:include schemaLocation="../XSIDataTypes.xsd" />
+
+  
+ <xs:element name="CollaborateRoom" type="CollaborateRoom" />
+  <xs:complexType name="CollaborateRoom">
+    <xs:annotation>
+      <xs:documentation>
+        This schema defines the information of a room which is active. 
+        It will give current state of the room including the list of 
+        participants and owner.
+        Release Added: R21.0
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="roomSessionInfo" type="CollaborateRoomSessionInfo" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Current Session information for the room
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="roomParticipants" type="CollaborateRoomParticipants" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            The details of attendees in the room.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CollaborateRoomSessionInfo">
+    <xs:annotation>
+      <xs:documentation>
+        Defines the details of an instance of an active Collaboration
+        including the clientSessionInfo parameter used to link the 
+        collaboration and the chat room.
+        Release Added R21
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="roomType" type="CollaborateRoomType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Return the type of the room
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="roomId" type="CollaborateRoomId" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            The roomId used to access the room.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="locked" type="EmptyContent" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Is Present if the conference is locked
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="clientSessionInfo" type="ClientSessionInfo" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            An opaque token set by the client. Used by clients to link the collaboration and the chat room.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>  

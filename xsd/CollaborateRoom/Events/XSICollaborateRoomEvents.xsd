@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- ************************************************************************ -->
+<!-- Copyright (c) 2008 BroadSoft, Inc. All rights reserved.                  -->
+<!-- ************************************************************************ -->
+<!-- XSI X M L S C H E M A                                                    -->
+<!-- *************************                                                -->
+<!-- This file defines the schema types and elements required by the          -->
+<!-- CallSession Event interface in the http://schema.broadsoft.com/xsi       -->
+<!-- name space.                                                              -->
+<!--                                                                          -->
+<!-- The Elements and Types are defined in the Alphabetical Order with        -->
+<!-- grouping at the Element, Complex and Simple level respectively.          -->
+<!-- ************************************************************************ -->
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schema.broadsoft.com/xsi"
+  targetNamespace="http://schema.broadsoft.com/xsi"
+  attributeFormDefault="unqualified" elementFormDefault="qualified"
+  version="1.0">
+
+  <xs:include schemaLocation="../../XSIBaseEvent.xsd" />
+  <xs:include schemaLocation="../XSICollaborateRoom.xsd" /> 
+
+  <!-- ************************************************************** -->
+  <!-- Complex Type in Alphabetical Order. -->
+  <!-- ************************************************************** -->
+
+  
+  <xs:complexType name="CollaborateRoomClientSessionInfoUpdatedEvent">
+    <xs:annotation>
+      <xs:documentation>
+        Initial event sent for the Collaboration event package.
+        Event is sent if ClientSessionInfo is changed for the collaboration.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="EventData">
+        <xs:sequence>
+          <xs:element name="roomSessionInfo" type="CollaborateRoomSessionInfo" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>
+                Included if ClientSessionInfo has been changed for the collaboration.        
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+
+  <xs:complexType name="CollaborateRoomLockedEvent">
+    <xs:annotation>
+      <xs:documentation>
+        Sent whenever a collaboration is locked.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="EventData">
+        <xs:sequence>
+          <xs:element name="collaborateRoomParticipant" type="CollaborateRoomParticipant"
+            minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>
+                The participant who locked the collaboration.
+                
+                Omitted in the case of a client XSI Action request.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+   
+  <xs:complexType name="CollaborateRoomStartedEvent">
+    <xs:annotation>
+      <xs:documentation>
+        Sent whenever a collaboration starts.
+        A room starts when the first participant joins unless the owner required 
+        to start room option is selected for the room, in which case the room does 
+        not start until a owner joins the room.
+        
+        Note that rooms can be started more than once.  Each time a room starts it 
+        initializes the room information according to the configuration of the room.
+        It is possible for a conference to require a owner before starting.  In this 
+        case, any other participants who connect prior to the moderator joining are 
+        placed on hold. Only when an owner joins is a CollaborateRoomStartedEvent sent. 
+        It is followed by a join event that contains a list of the participants who 
+        have now entered the call, including the owner.
+      </xs:documentation>
+    </xs:annotation>
+     <xs:complexContent>
+      <xs:extension base="EventData" />
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="CollaborateRoomStoppedEvent">
+    <xs:annotation>
+      <xs:documentation>
+        Sent whenever a collaboration stops.
+        Once the CollaborateRoomStoppedEvent has been issued, no further 
+        CollaborateRoomParticipantLeftEvent events are sent, since the 
+        implication is that all participants have left.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="EventData" />
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="CollaborateRoomSubscriptionEvent">
+    <xs:annotation>
+      <xs:documentation>
+        Initial event sent for the Collaborate event package.
+        The CollaborateRoomSubscriptionEvent is generated whenever 
+        a subscription to a collaborate room is added or refreshed.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="EventData">
+        <xs:sequence>
+          <xs:element name="conference" type="CollaborateRoom" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>
+              Is present if a targetSubId was included on 
+              subscription and if the collaboration is active.        
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="CollaborateRoomSubscriptionResyncEvent">
+    <xs:annotation>
+      <xs:documentation>
+        The CollabSubscriptionResyncEvent is generated when a situation 
+        arises that causes a loss of updates and a resync is needed.
+        Change History:
+        Release Added: R21.0
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="CollaborateRoomSubscriptionEvent" />
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="CollaborateRoomUnlockedEvent">
+    <xs:annotation>
+      <xs:documentation>
+        Sent whenever a collaboration is unlocked.
+        Change History:
+        21.0 - added.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="EventData">
+        <xs:sequence>
+          <xs:element name="collaborateRoomParticipant" type="CollaborateRoomParticipant" minOccurs="0">
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="CollaborateRoomParticipantLeftEvent">
+    <xs:annotation>
+      <xs:documentation>
+        Sent when one or more participants leave a collaboration.
+        
+        Change History:
+        21.0 - added.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="EventData">
+        <xs:sequence>
+          <xs:element name="callIds" type="CollaborateRoomCallIdList"
+            minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>
+                The call ids of the participants leaving the collaboration.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="CollaborateRoomParticipantJoinedEvent">
+    <xs:annotation>
+      <xs:documentation>
+        Sent when one or more participants join a collaboration.
+        
+        Change History:
+        21.0 - added.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="EventData">
+        <xs:sequence>
+          <xs:element name="collaborateRoomParticipants" type="CollaborateRoomParticipants">
+            <xs:annotation>
+              <xs:documentation>
+                The list of participants joining the collaboration.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="CollaborateRoomParticipantMutedEvent">
+    <xs:annotation>
+      <xs:documentation>
+        Sent when one or more participants are muted in a collaboration.
+        
+        Change History:
+        21.0 - added.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="EventData">
+        <xs:sequence>
+          <xs:element name="collaborateRoomParticipants" type="CollaborateRoomParticipants">
+            <xs:annotation>
+              <xs:documentation>
+                List of participants muted.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="CollaborateRoomParticipantUnmutedEvent">
+    <xs:annotation>
+      <xs:documentation>
+        Sent when one or more participants are unmuted in a collaboration.
+        
+        Change History:
+        21.0 - added.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="EventData">
+        <xs:sequence>
+          <xs:element name="collaborateRoomParticipants" type="CollaborateRoomParticipants">
+            <xs:annotation>
+              <xs:documentation>
+                List of participants unmuted.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="CollaborateRoomParticipantUpdatedEvent">
+    <xs:annotation>
+      <xs:documentation>
+        Sent when one or more participants have their participant
+        information updated.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="EventData">
+        <xs:sequence>
+          <xs:element name="collaborateRoomParticipants" type="CollaborateRoomParticipants">
+            <xs:annotation>
+              <xs:documentation>
+                List of participants updated.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+
+
+<!--  Collaborate -->
+  <xs:complexType name="CollaborateRoomEvent">
+    <xs:annotation>
+      <xs:documentation>
+        This schema defines the information of a
+        collaboration which is active.It will give current state of
+        the collaboration
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="collaborateRoomInfo" type="CollaborateRoomEventInfo">
+        <xs:annotation>
+          <xs:documentation>
+            Current State of the collaboration
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="collaborateRoomParticipants" type="CollaborateRoomParticipants">
+        <xs:annotation>
+          <xs:documentation>
+            The details of attendees in the collaboration.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CollaborateRoomEventInfo">
+    <xs:annotation>
+      <xs:documentation>
+        Defines the details of an instance of an active Collaboration.
+        This will not have the information of a participants
+        in the collaboration.
+        Release Added: R21.0
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="lock" type="EmptyContent" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Is present if the Collaboration is locked
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="clientSessionInfo" type="ClientSessionInfo" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            An opaque token set by the client.
+
+            This is present if client session info
+            has been set for this
+            session.
+
+            Release Added: R21
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
