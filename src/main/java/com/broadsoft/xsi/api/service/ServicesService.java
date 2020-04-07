@@ -7,7 +7,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import com.broadsoft.xsi.Services;
 import com.broadsoft.xsi.api.XSIConnection;
@@ -21,7 +22,7 @@ import de.qsc.centraflex.broadsoft.XSIException;
  */
 public class ServicesService implements Service<Services> {
 
-	private final static Logger logger = Logger.getLogger("xsi.service.services");
+	private final static Logger logger = LogManager.getLogger("xsi.service.services");
 
 	private XSIConnection con;
 

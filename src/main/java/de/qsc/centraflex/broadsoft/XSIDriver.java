@@ -15,7 +15,8 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import com.broadsoft.xsi.api.XSIConnection;
 
@@ -24,7 +25,7 @@ import com.broadsoft.xsi.api.XSIConnection;
  *
  */
 public class XSIDriver {
-	private final static Logger logger = Logger.getLogger("connector.xsi");
+	private final static Logger logger = LogManager.getLogger("connector.xsi");
 
 
 	public final static String PROP_XSI_SERVER = "xsi.server";

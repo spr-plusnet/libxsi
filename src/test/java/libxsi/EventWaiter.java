@@ -3,7 +3,8 @@ package libxsi;
 import java.io.IOException;
 import java.util.Properties;
 
-import org.apache.log4j.PropertyConfigurator;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import com.broadsoft.xsi.CallReceivedEvent;
 import com.broadsoft.xsi.CallSubscriptionEvent;
@@ -19,8 +20,6 @@ public class EventWaiter {
 
 	//-----------------------------------------------------------------
 	public static void main(String[] args) throws IOException {
-		PropertyConfigurator.configure("log4j.properties");
-		
 		Properties config = new Properties();
 		config.put(XSIDriver.PROP_XSI_SERVER, "web-b.bmcag.com");
 //		config.put(XSIDriver.PROP_XSI_SERVER, "web3.bmcag.com");

@@ -11,8 +11,8 @@ import java.io.InputStream;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.stream.XMLStreamException;
 
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.xml.sax.SAXException;
 
 /**
@@ -21,7 +21,7 @@ import org.xml.sax.SAXException;
  */
 public class XMLDocumentTokenizer {
 	
-	private final static Logger logger = Logger.getLogger("xml");
+	private final static Logger logger = LogManager.getLogger("xml");
 	
 	enum ParseMode {
 		IDLE,
@@ -50,7 +50,6 @@ public class XMLDocumentTokenizer {
 	 * @throws SAXException 
 	 */
 	public static void main(String[] args) throws XMLStreamException, IOException {
-		BasicConfigurator.configure();
 		File file = new File("teststream.txt");
 		XMLDocumentTokenizer flow = new XMLDocumentTokenizer(new FileInputStream(file));
 		int count =0;
