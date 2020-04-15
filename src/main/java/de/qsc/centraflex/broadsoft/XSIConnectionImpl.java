@@ -477,7 +477,7 @@ public class XSIConnectionImpl implements XSIConnection {
 
 		try {
 			URL url = new URL(String.format("http://%s/com.broadsoft.xsi-actions/v2.0/%s", hostport, subURL));
-			logger.debug("Query "+url+"\n"+(new String(data)));
+			logger.info("Query "+url+"\n"+(new String(data)));
 			logger.debug("POST "+url);
 
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
