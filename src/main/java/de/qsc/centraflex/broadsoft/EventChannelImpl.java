@@ -79,13 +79,15 @@ public class EventChannelImpl implements Runnable, EventChannel {
 	private boolean     notClosed;
 
 	//-----------------------------------------------------------------
-	public EventChannelImpl(XSIConnectionImpl sess, String channelName, boolean useSSL, String encoding, boolean useCType) throws IOException {
+	public EventChannelImpl(XSIConnectionImpl sess, String channelName, boolean useSSL, String encoding, boolean useCType, EventChannelListener listener) throws IOException {
 		this.session = sess;
 		this.channelSetId = channelName;
 		this.USE_SSL = useSSL;
 		this.encoding= encoding;
 		this.USE_CONTENT_TYPE = useCType;
 		allListener  = new ArrayList<EventChannelListener>();
+		if (listener!=null)
+			allListener.add(listener);
 		subscriptionsByID = new HashMap<String, SubscriptionImpl>();
 
 		logger.debug("Setup XSI event channel to "+sess+" using SSL="+USE_SSL);
@@ -211,7 +213,7 @@ public class EventChannelImpl implements Runnable, EventChannel {
 
 		if (con.getContentType().startsWith("application/xml")) {
 			try {
-				logger.info("RCV "+toParse);
+				logger.debug("RCV "+toParse);
 				//				logger.fatal("Stop here");
 				//				System.exit(0);
 				ret.jaxb = XSIDriver.unmarshall(toParse);
@@ -562,7 +564,7 @@ public class EventChannelImpl implements Runnable, EventChannel {
 				if (!stayAlive) {
 					logger.error("Channel terminated");
 					setState(ConnectionState.CONNECTION_LOST);
-//					heartbeat.cancel();
+					heartbeat.cancel();
 					return;
 				}
 			}

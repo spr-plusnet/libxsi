@@ -35,6 +35,7 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 import com.broadsoft.xsi.api.EventChannel;
+import com.broadsoft.xsi.api.EventChannelListener;
 import com.broadsoft.xsi.api.InvalidCredentialsException;
 import com.broadsoft.xsi.api.OperationNotAllowedException;
 import com.broadsoft.xsi.api.XSIConnection;
@@ -152,8 +153,7 @@ public class XSIConnectionImpl implements XSIConnection {
 
 		try {
 			URL url = new URL(String.format("http"+(useSSL?"s":"")+"://%s/com.broadsoft.xsi-actions/v2.0/%s", hostport, subURL));
-			logger.info("Query "+url);
-			System.err.println("GET "+url);
+			logger.info("GET "+url);
 
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
 			con.setRequestProperty("Charset", encoding);
@@ -266,7 +266,6 @@ public class XSIConnectionImpl implements XSIConnection {
 					return new PasswordAuthentication (user, pass.toCharArray());
 				}
 			});
-			con.setDoOutput(true);
 			con.setDoInput(true);
 			con.setRequestProperty("Accept", "application/xml");
 			con.setRequestProperty("Content-Type", "text/xml;charset=UTF-8");
@@ -274,9 +273,12 @@ public class XSIConnectionImpl implements XSIConnection {
 			con.setRequestMethod("PUT"); 
 
 			//Send request
-			DataOutputStream out = new DataOutputStream(con.getOutputStream ());
-			out.write(data);
-			out.flush ();
+			if (data!=null && data.length>0) {
+				con.setDoOutput(true);
+				DataOutputStream out = new DataOutputStream(con.getOutputStream ());
+				out.write(data);
+				out.flush ();
+			}
 			
 			con.connect();
 
@@ -416,7 +418,7 @@ public class XSIConnectionImpl implements XSIConnection {
 			switch (con.getResponseCode()) {
 			case 200:
 				byte[] mess = new byte[con.getInputStream().available()];
-				con.getInputStream().read(mess);
+//				con.getInputStream().read(mess);
 				String message = streamToString(con.getInputStream());
 				logger.debug("RCV: "+message);
 				if (message.isEmpty()) {
@@ -482,6 +484,7 @@ public class XSIConnectionImpl implements XSIConnection {
 
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
 			con.setRequestProperty("Charset", encoding);
+			con.setRequestProperty("Accept-Charset", encoding);
 			if (config.containsKey(XSIDriver.PROP_XSI_APPNAME)) 
 				con.setRequestProperty("User-Agent", (String)config.getProperty(XSIDriver.PROP_XSI_APPNAME));
 			
@@ -599,6 +602,8 @@ public class XSIConnectionImpl implements XSIConnection {
 			case 201:
 				byte[] mess = new byte[con.getInputStream().available()];
 				con.getInputStream().read(mess);
+				if (mess==null || mess.length==0)
+					return null;
 				String message = new String(mess);
 				logger.debug(message);
 
@@ -634,12 +639,12 @@ public class XSIConnectionImpl implements XSIConnection {
 	 * @see com.broadsoft.xsi.api.XSIConnection#createEventChannel(java.lang.String)
 	 */
 	@Override
-	public EventChannel createEventChannel(String name) throws IOException {
+	public EventChannel createEventChannel(String name, EventChannelListener listener) throws IOException {
 		logger.debug("createEventChannel("+name+")");
 		// First set the default cookie manager.
 		CookieHandler.setDefault(new CookieManager(null, CookiePolicy.ACCEPT_ALL));		
 
-		EventChannelImpl channel = new EventChannelImpl(this, name, useSSL, encoding, useCType);
+		EventChannelImpl channel = new EventChannelImpl(this, name, useSSL, encoding, useCType, listener);
 		logger.debug("Channel created");
 		
 		logger.debug("Thread for channel started");

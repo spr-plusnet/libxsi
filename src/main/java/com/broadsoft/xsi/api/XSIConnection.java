@@ -51,7 +51,7 @@ public interface XSIConnection {
 	public void close();
 
 	//-----------------------------------------------------------------
-	public EventChannel createEventChannel(String name) throws IOException;
+	public EventChannel createEventChannel(String name, EventChannelListener listener) throws IOException;
 
 	//-----------------------------------------------------------------
 	public Object actionPOSTQuery(String subURL, byte[] data) throws IOException;

@@ -29,9 +29,7 @@ public class EventWaiter {
 		config.put(XSIDriver.PROP_XSI_USESSL, "true");
 		
 		XSIConnection xsi = XSIDriver.open(config);
-		EventChannel channel = xsi.createEventChannel("myChannel");
-				
-		channel.addListener(new EventChannelListener() {
+		EventChannel channel = xsi.createEventChannel("myChannel",new EventChannelListener() {
 			
 			@Override
 			public void channelStateChanged(EventChannel channel, ConnectionState state) {
