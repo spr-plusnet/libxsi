@@ -124,7 +124,7 @@ public class EventChannelImpl implements Runnable, EventChannel {
 
 	//-----------------------------------------------------------------
 	private void fireEvent(SubscriptionEvent event) {
-		logger.trace("---fire event to "+allListener.size()+" listener");
+		logger.info("---fire event to "+allListener.size()+" listener");
 		for (EventChannelListener tmp : allListener) {
 			try {
 				tmp.onXSIEvent(this, event);

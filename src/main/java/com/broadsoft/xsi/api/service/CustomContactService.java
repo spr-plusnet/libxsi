@@ -1,6 +1,8 @@
 package com.broadsoft.xsi.api.service;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -15,6 +17,8 @@ import com.broadsoft.xsi.CallLogsEntry;
 import com.broadsoft.xsi.CustomContact;
 import com.broadsoft.xsi.Directory;
 import com.broadsoft.xsi.DirectoryDetails;
+import com.broadsoft.xsi.EnterpriseCommon;
+import com.broadsoft.xsi.GroupCommon;
 import com.broadsoft.xsi.Personal;
 import com.broadsoft.xsi.PersonalEntry;
 import com.broadsoft.xsi.api.XSIConnection;
@@ -92,6 +96,61 @@ public class CustomContactService {
 			throw new XSIException("Failed executing service "+getType()+": "+e, 0);
 		}
 		return ret;
+	}
+
+	//-------------------------------------------------------------------
+	/**
+	 * @see com.broadsoft.xsi.api.service.Service#get()
+	 */
+//	@Override
+	public List<PersonalEntry> getEnterpriseCommon(String name, String number, int results) throws XSIException {
+		String subURL = String.format("user/%s/directories/EnterpriseCommon?", con.getUser());
+		List<String> params = new ArrayList<String>();
+		try {
+			if (name!=null && !name.isBlank()) params.add("name="+URLEncoder.encode(name, "UTF-8"));
+			if (number!=null && !number.isBlank()) params.add("number="+URLEncoder.encode(number, "UTF-8"));
+		} catch (UnsupportedEncodingException e) {
+			logger.error(e.toString());
+		}
+		if (results>0) params.add("results="+results);
+		subURL += String.join("&", params);
+			
+		try {
+			EnterpriseCommon logs = (EnterpriseCommon) con.actionGETQuery(subURL);
+			return logs.getCommonPhoneEntry();
+		} catch (IOException e) {
+			logger.error("Failed executing service EnterpriseCommon",e);
+			throw new XSIException("Failed executing service EnterpriseCommon: "+e, 0);
+		}
+	}
+
+	//-------------------------------------------------------------------
+	/**
+	 * @see com.broadsoft.xsi.api.service.Service#get()
+	 */
+//	@Override
+	public List<PersonalEntry> getGroupCommon(String name, String number, int results) throws XSIException {
+		String subURL = String.format("user/%s/directories/GroupCommon", con.getUser());
+		List<String> params = new ArrayList<String>();
+		try {
+			if (name!=null && !name.isBlank()) params.add("name="+URLEncoder.encode(name, "UTF-8"));
+			if (number!=null && !number.isBlank()) params.add("number="+URLEncoder.encode(number, "UTF-8"));
+		} catch (UnsupportedEncodingException e) {
+			logger.error(e.toString());
+		}
+		if (results>0) params.add("results="+results);
+		if (params.size()>0) {
+			subURL += "?";
+			subURL += String.join("&", params);
+		}
+			
+		try {
+			GroupCommon logs = (GroupCommon) con.actionGETQuery(subURL);
+			return logs.getCommonPhoneEntry();
+		} catch (IOException e) {
+			logger.error("Failed executing service GroupCommon",e);
+			throw new XSIException("Failed executing service GroupCommon: "+e, 0);
+		}
 	}
 
 	//-------------------------------------------------------------------
