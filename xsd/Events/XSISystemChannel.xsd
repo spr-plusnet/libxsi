@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <!-- ************************************************************************ -->
+    <!--     Copyright © 2017 BroadSoft Inc.             -->
+    <!-- ************************************************************************ -->
+    <!--                XSI  X M L  S C H E M A                                   -->
+    <!--               *************************                                  -->
+    <!-- This file defines the schema types and elements required by the System   -->
+    <!-- Channel Registration interface in the http://schema.broadsoft.com/xsi    -->
+    <!-- namespace.  The Elements and Types are defined in the Alphabetical       -->
+    <!-- Order with grouping at the Element, Complex and Simple level             -->
+    <!-- respectively.                                                            -->
+    <!-- ************************************************************************ -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schema.broadsoft.com/xsi"
+  targetNamespace="http://schema.broadsoft.com/xsi"
+  attributeFormDefault="unqualified" elementFormDefault="qualified"
+  version="1.0">
+
+
+  <xs:include schemaLocation="../XSIDataTypes.xsd" />
+  <xs:include schemaLocation="../XSIBaseEvent.xsd" />
+
+  <!-- **************************************************************-->
+  <!--        Element Types Used in Alphabetical Order.              -->
+  <!-- **************************************************************-->
+
+  <xs:element name="SystemChannel" type="SystemChannel">
+    <xs:annotation>
+      <xs:documentation>
+        A system channel is a logical path between the remote trusted entity 
+        and the BroadWorks core. The channel is created by the remote trusted 
+        entity and is bound to a specific TCP connection. The
+        channel is characterized by a priority and a weight, which
+        allows the trusted entity to control event routing from the
+        BroadWorks core, specifically when multiple channels constitute
+        the channel set.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="SystemChannelSet">
+    <xs:annotation>
+      <xs:documentation>
+        SystemChannelSet enlist all the system channels for a channel set id.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="channel" type="SystemChannel" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:documentation>
+              Identifies the event channel id created by the Xsp.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+  <!-- **************************************************************-->
+  <!--        Complex  Data Types in Alphabetical Order.             -->
+  <!-- **************************************************************-->
+
+  <xs:complexType name="SystemChannel">
+    <xs:annotation>
+      <xs:documentation>
+        A system channel is a logical path between the remote trusted entity
+        and the BroadWorks core. The channel is created by the remote
+        trusted entity and is bound to a specific TCP connection. The
+        channel is characterized by a priority and a weight, which
+        allows the remote application to control event routing from the
+        BroadWorks core, specifically when multiple channels constitute
+        the channel set..
+        
+        Change History:
+        R23 - added 
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="channelId" type="ChannelId" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            A system generated unique id for identifying the channel in the
+            Broadworks System.
+            The ChannelId should not be provided when creating a Channel,
+            otherwise it is ignored. 
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="channelSetId" type="ChannelSetId">
+        <xs:annotation>
+          <xs:documentation>
+            Identifies the system channel set to which this channel belongs to.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="priority" type="PositiveInt" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            The priority for the system channel. If not present, then the system
+            channel has the default priority of 1.
+            
+            The priority should not be provided when deleting the channel, 
+            otherwise it is ignored.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="weight" type="PositiveInt" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            The weight for the system channel. If not present, then the system
+            channel has the default weight of 50.
+            
+            The weight should not be provided when deleting the channel, 
+            otherwise it is ignored.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

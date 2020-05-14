@@ -41,7 +41,7 @@
     <xs:sequence>
           <xs:element name="enableDivert" type="xs:boolean"/>
           <xs:element name="divertToPhoneNumber" type="OutgoingDNorSIPURI" minOccurs="0"/>
-          <xs:element name="executives" type="ExecutiveDetailsList"/>
+          <xs:element name="executives" type="ExecutiveDetailsList" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
   

@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2016.03.01 um 11:55:38 AM CET 
+// Generiert: 2020.05.11 um 03:08:51 PM CEST 
 //
 
 
@@ -47,6 +47,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="Music On Hold"/>
  *     &lt;enumeration value="N-Way Call"/>
  *     &lt;enumeration value="Personal Assistant"/>
+ *     &lt;enumeration value="Push Notification Registration"/>
  *     &lt;enumeration value="Remote Office"/>
  *     &lt;enumeration value="Route Point Queue"/>
  *     &lt;enumeration value="Security Classification"/>
@@ -119,6 +120,8 @@ public enum EventPackage {
     N_WAY_CALL("N-Way Call"),
     @XmlEnumValue("Personal Assistant")
     PERSONAL_ASSISTANT("Personal Assistant"),
+    @XmlEnumValue("Push Notification Registration")
+    PUSH_NOTIFICATION_REGISTRATION("Push Notification Registration"),
     @XmlEnumValue("Remote Office")
     REMOTE_OFFICE("Remote Office"),
     @XmlEnumValue("Route Point Queue")

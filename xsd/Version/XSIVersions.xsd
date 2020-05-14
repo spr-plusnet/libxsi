@@ -112,7 +112,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="patchedEventPackage" type="PatchedEventPackage" minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="patchedEventPackage" type=" PatchedEventPackage" minOccurs="0" maxOccurs="unbounded">
         <xs:annotation>
           <xs:documentation>
             When present, list event packages that have been patched.

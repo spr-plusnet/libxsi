@@ -646,6 +646,18 @@
       <xs:extension base="ConferenceEvent" />
     </xs:complexContent>
   </xs:complexType>
+  
+  <xs:complexType name="ConferenceMutedEvent">
+    <xs:annotation>
+      <xs:documentation>
+        The Conference Muted event is sent when the controller of a conference
+        is muted through a mute conference request.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="ConferenceEvent" />
+    </xs:complexContent>
+  </xs:complexType>
 
   <xs:complexType name="ConferenceReleasedEvent">
     <xs:annotation>
@@ -676,6 +688,18 @@
       <xs:documentation>
         The Conference Started event is sent when a conference is started.
         The conference state is Active.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="ConferenceEvent" />
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="ConferenceUnmutedEvent">
+    <xs:annotation>
+      <xs:documentation>
+        The Conference Unmuted event is sent when the controller of a conference
+        is unmuted through an unmute conference request.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>

@@ -80,6 +80,7 @@
         <xs:element name="portalPasswordChange" type="xs:anyURI"
           minOccurs="0" />
         <xs:element name="countryCode" type="CountryCode" minOccurs="0" />
+        <xs:element name="nationalPrefix" type="NationalPrefix" minOccurs="0" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -111,6 +112,26 @@
           <xs:element name="boshURL" type="URL" minOccurs="0" />
       </xs:sequence>
     </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="PushNotificationRegistration" type="PushNotificationRegistrationEntry">
+    <xs:annotation>
+      <xs:documentation>
+        A registration for Push Notifications for a user.
+        Change History:
+        R22.0 - Added
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="PushNotificationRegistrations" type="PushNotificationRegistrationEntryList">
+    <xs:annotation>
+      <xs:documentation>
+        A list of Push Notification Registrations.
+        Change History:
+        R22.0 - Added
+      </xs:documentation>
+    </xs:annotation>
   </xs:element>
   
   <xs:element name="Registrations">
@@ -266,6 +287,140 @@
     </xs:sequence>
   </xs:complexType>
 
+  <xs:complexType name="PushNotificationDeviceToken">
+    <xs:annotation>
+      <xs:documentation>
+        The Push Notification Registration device token and its associated events.
+        If the push network defines specific device tokens that correspond to
+        specific push events, the registration allows for multiple token definitions.
+        Change History:
+        R22.0 - Added        
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="token" type="PushNotificationToken">
+        <xs:annotation>
+          <xs:documentation>
+            The device token assigned by the push network.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="pushNotificationEvents" type="PushNotificationEventList">
+        <xs:annotation>
+          <xs:documentation>
+            A list of Push Notification events associated with this token
+            which the application is interested in receiving.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="PushNotificationDeviceTokenList">
+    <xs:annotation>
+      <xs:documentation>
+        A list of Push Notification device tokens along with their associated events.        
+        Change History:
+        R22.0 - Added        
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="deviceToken" type="PushNotificationDeviceToken" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PushNotificationEventList">
+    <xs:annotation>
+      <xs:documentation>
+        A list of Push Notification events.
+        Change History:
+        R22.0 - Added
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="event" type="PushNotificationEvent"
+        minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>  
+
+  <xs:complexType name="PushNotificationRegistrationEntry">
+    <xs:annotation>
+      <xs:documentation>
+        The registration for Push Notifications for a user.
+        Change History:
+        R22.0 - Added        
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="applicationId" type="PushNotificationApplicationId">
+        <xs:annotation>
+          <xs:documentation>
+            The application id name.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="applicationVersion" type="PushNotificationApplicationVersion">
+        <xs:annotation>
+          <xs:documentation>
+            The application's software version.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="registrationId" type="PushNotificationRegistrationId">
+        <xs:annotation>
+          <xs:documentation>
+            An id which is unique per device, per application, per user.
+            When the device's application is upgraded from
+            one software version to a newer software version,
+            the registrationId is expected to remain the same.
+            When the device's application is uninstalled and
+            then re-installed, the registrationId will be different
+            to reflect the new installation.
+            If multiple users use the same application on the same device,
+            the registrationId is expected to be different 
+            to reflect the different users.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="deviceOSType" type="PushNotificationDeviceOSType">
+        <xs:annotation>
+          <xs:documentation>
+            The device's operating system.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="deviceOSVersion" type="PushNotificationDeviceOSVersion">
+        <xs:annotation>
+          <xs:documentation>
+            The device's software version of the operating system.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="deviceTokenList" type="PushNotificationDeviceTokenList">
+        <xs:annotation>
+          <xs:documentation>
+            A list of Push Notification device tokens along with their associated events.        
+            If the push network defines specific device tokens that correspond to
+            specific push events, the registration allows for multiple token definitions.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>      
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="PushNotificationRegistrationEntryList">
+    <xs:annotation>
+      <xs:documentation>
+        A list of Push Notification Registrations.        
+        Change History:
+        R22.0 - Added        
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="pushNotificationRegistration" type="PushNotificationRegistrationEntry"
+        minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
 
   <xs:complexType name="Recurrence">
     <xs:annotation>
@@ -470,6 +625,7 @@
       <xs:enumeration value="Saturday" />
     </xs:restriction>
   </xs:simpleType>
+  
   <xs:simpleType name="DayOfWeekInMonth">
     <xs:annotation>
       <xs:documentation>
@@ -485,6 +641,7 @@
       <xs:enumeration value="Last"></xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
+  
   <xs:simpleType name="Hour">
     <xs:annotation>
       <xs:documentation>
@@ -497,7 +654,6 @@
     </xs:restriction>
   </xs:simpleType>
 
-  
   <xs:simpleType name="Minute">
     <xs:annotation>
       <xs:documentation>
@@ -509,6 +665,7 @@
       <xs:maxInclusive value="59" />
     </xs:restriction>
   </xs:simpleType>
+  
   <xs:simpleType name="Month">
     <xs:annotation>
       <xs:documentation>
@@ -530,6 +687,84 @@
       <xs:enumeration value="December"></xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
+  
+  <xs:simpleType name="PushNotificationApplicationId">
+    <xs:annotation>
+      <xs:documentation>
+        The client's application id for Push Notifications.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NonEmptyString">
+      <xs:maxLength value="2048" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="PushNotificationApplicationVersion">
+    <xs:annotation>
+      <xs:documentation>
+        The client's application software version for Push Notifications.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NonEmptyString">
+      <xs:maxLength value="2048" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="PushNotificationDeviceOSType">
+    <xs:annotation>
+      <xs:documentation>
+        The client's device OS type for Push Notifications.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NonEmptyString">
+      <xs:maxLength value="128" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="PushNotificationDeviceOSVersion">
+    <xs:annotation>
+      <xs:documentation>
+        The client's device OS version for Push Notifications.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NonEmptyString">
+      <xs:maxLength value="2048" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PushNotificationEvent">
+    <xs:annotation>
+      <xs:documentation>
+        The Push Notification event in which the client is interested.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NonEmptyString">
+      <xs:maxLength value="128" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="PushNotificationRegistrationId">
+    <xs:annotation>
+      <xs:documentation>
+        The client's unique registration id for Push Notifications.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NonEmptyString">
+      <xs:maxLength value="1024" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="PushNotificationToken">
+    <xs:annotation>
+      <xs:documentation>
+        The client's unique token id for Push Notifications.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NonEmptyString">
+      <xs:maxLength value="2048" />
+    </xs:restriction>
+  </xs:simpleType>
+  
   <xs:simpleType name="RecurDailyInterval">
     <xs:annotation>
       <xs:documentation>

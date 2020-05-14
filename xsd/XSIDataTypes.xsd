@@ -119,6 +119,7 @@
     </xs:complexContent>
   </xs:complexType>
 
+  <xs:element name="AccessDevice" type="AccessDevice" />
   <xs:complexType name="AccessDevice"> 
     <xs:annotation>
       <xs:documentation>
@@ -127,8 +128,9 @@
         R18.0 - Added
         R19.0 - Added version.
         R20.0 - deviceTypeUrl, deviceUserNamePassword are made optional.
-        R21.0 - deviceUserNamePassword is included in Xsi responses only when 
-                BroadWorks is configured to allow retrieval of device credentials.
+        R21.sp1 - Added elements allowTermination and endpointType. 
+                  The endpointType is only present in the GET response when the 
+                  client XSI version in the GET request is 21.sp1 or greater.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -182,11 +184,25 @@
             User agent type for the device.
           </xs:documentation>
         </xs:annotation>
-      </xs:element>  
+      </xs:element>
+      <xs:element name="allowTermination" type="xs:boolean" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Indicates if the device endpoint location is enabled for terminations.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="endpointType" type="EndpointType" minOccurs="0"> 
+        <xs:annotation>
+          <xs:documentation>
+            Indicates the endpoint type.  
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>    
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="AccessDevices">
+  <!--xs:complexType name="AccessDevices">
     <xs:annotation>
       <xs:documentation>
         Access device table list. 
@@ -196,7 +212,7 @@
     <xs:sequence>
       <xs:element name="accessDevice" type="AccessDevice" minOccurs="0" maxOccurs="unbounded"/> 
     </xs:sequence>
-  </xs:complexType>
+  </xs:complexType-->
   
   <xs:complexType name="ACDCallInfo">
     <xs:annotation>
@@ -1458,6 +1474,7 @@
       <xs:element name="impId" type="IMPUserId" minOccurs="0"/>
       <xs:element name="bridgeId" type="MyRoomDetails" minOccurs="0"/>
       <xs:element name="roomId" type="MyRoomDetails" minOccurs="0"/>
+      <xs:element name="serviceName" type="ServiceName" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
   
@@ -2366,6 +2383,12 @@
     <xs:restriction base="PositiveInt" />
   </xs:simpleType>
 
+  <xs:simpleType name="NationalPrefix">
+    <xs:annotation>
+      <xs:documentation>National Prefix.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="PositiveInt" />
+  </xs:simpleType>
 
   <xs:simpleType name="CriteriaFromDnSelection">
     <xs:annotation>
@@ -2523,6 +2546,7 @@
       <xs:enumeration value="Public Service Identity" />
       <xs:enumeration value="Music On Hold Internal" />
       <xs:enumeration value="Flexible Seating Guest" />
+      <xs:enumeration value="Mobility" />
     </xs:restriction>
   </xs:simpleType>
   
@@ -2682,6 +2706,18 @@
       <xs:maxLength value="61" />
     </xs:restriction>
   </xs:simpleType>
+  
+   <xs:simpleType name="ServiceName">
+	<xs:annotation>
+		<xs:documentation>Service Name is the localized service name of
+			Virtual User
+		</xs:documentation>
+	</xs:annotation>
+	<xs:restriction base="xs:token">
+		<xs:minLength value="1" />
+		<xs:maxLength value="30" />
+	</xs:restriction>
+</xs:simpleType>
 
   <xs:simpleType name="GroupId">
     <xs:annotation>
@@ -4096,7 +4132,17 @@
       <xs:maxLength value="1024" />
     </xs:restriction>
   </xs:simpleType>  
-
+  
+  <xs:simpleType name="ClientAppId">
+    <xs:annotation>
+      <xs:documentation>
+        The identity for a client app.  It is limited to 161
+        characters and cannot contain the '@' character. 
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NonEmptyToken"/>
+  </xs:simpleType>
+  
   <xs:simpleType name="UserId">
     <xs:annotation>
       <xs:documentation>

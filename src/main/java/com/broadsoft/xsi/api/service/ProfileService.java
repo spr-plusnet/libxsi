@@ -10,6 +10,8 @@ import java.util.List;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
+import com.broadsoft.xsi.AccessDevice;
+import com.broadsoft.xsi.AccessDevices;
 import com.broadsoft.xsi.Profile;
 import com.broadsoft.xsi.api.XSIConnection;
 import com.broadsoft.xsi.api.action.Action;
@@ -73,6 +75,18 @@ public class ProfileService implements Service<Profile> {
 	@Override
 	public List<Action> getActions() {
 		return new ArrayList<Action>();
+	}
+
+	//-----------------------------------------------------------------
+	public List<AccessDevice> getAccessDevices() throws XSIException {
+		try {
+			AccessDevices devs = ((AccessDevices)con.actionGETQuery(String.format("user/%s/profile/device", con.getUser())));
+			return devs.getAccessDevice();
+		} catch (IOException e) {
+			logger.error("Failed obtaining list of devices",e);
+			throw new XSIException("Failed obtaining own profile: "+e, 0);
+		}
+		
 	}
 
 }

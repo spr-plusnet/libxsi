@@ -28,12 +28,14 @@
     <xs:include schemaLocation="CollaborateRoom/Events/XSICollaborateRoomEvents.xsd" />
     <xs:include schemaLocation="Directory/XSIDirectories.xsd" />
     <xs:include schemaLocation="Events/XSIChannel.xsd" />
+    <xs:include schemaLocation="Events/XSISystemChannel.xsd" />
     <xs:include schemaLocation="Events/XSISubscription.xsd" />
     <xs:include schemaLocation="RoutePoint/XSIRoutePoint.xsd" />
     <xs:include schemaLocation="RoutePoint/Events/XSIRoutePointEvents.xsd" />
     <xs:include schemaLocation="MeetMeConference/XSIMeetMeConference.xsd" />
     <xs:include schemaLocation="MeetMeConference/Events/XSIMeetMeConferenceEvents.xsd" />
     <xs:include schemaLocation="Profile/XSIProfile.xsd" />
+    <xs:include schemaLocation="Profile/Events/XSIPushNotificationRegistrationEvents.xsd" />    
     <xs:include schemaLocation="Services/XSIServices.xsd" />
     <xs:include schemaLocation="Services/Events/XSIBroadWorksAnywhereEvents.xsd" />
     <xs:include schemaLocation="Services/Events/XSICallEvents.xsd" />

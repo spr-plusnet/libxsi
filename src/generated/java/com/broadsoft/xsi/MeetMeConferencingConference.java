@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2016.03.01 um 11:55:38 AM CET 
+// Generiert: 2020.05.11 um 03:08:51 PM CEST 
 //
 
 
@@ -11,7 +11,6 @@ package com.broadsoft.xsi;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
@@ -47,7 +46,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="endConferenceOnModeratorExit" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="moderatorRequired" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="requireSecurityPin" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *         &lt;element name="allowUniqueIdentifier " type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="allowUniqueIdentifier" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="attendeeNotification" type="{http://schema.broadsoft.com/xsi}MeetMeConferencingConferenceAttendeeNotification" minOccurs="0"/>
  *         &lt;element name="conferenceSchedule" type="{http://schema.broadsoft.com/xsi}MeetMeConferencingConferenceSchedule" minOccurs="0"/>
  *         &lt;element name="moderatorPin" type="{http://schema.broadsoft.com/xsi}MeetMeConferencingConferencePassCode" minOccurs="0"/>
@@ -71,7 +70,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "endConferenceOnModeratorExit",
     "moderatorRequired",
     "requireSecurityPin",
-    "allowUniqueIdentifier0020",
+    "allowUniqueIdentifier",
     "attendeeNotification",
     "conferenceSchedule",
     "moderatorPin",
@@ -91,8 +90,7 @@ public class MeetMeConferencingConference {
     protected Boolean endConferenceOnModeratorExit;
     protected Boolean moderatorRequired;
     protected Boolean requireSecurityPin;
-    @XmlElement(name = "allowUniqueIdentifier ")
-    protected Boolean allowUniqueIdentifier0020;
+    protected Boolean allowUniqueIdentifier;
     @XmlSchemaType(name = "token")
     protected MeetMeConferencingConferenceAttendeeNotification attendeeNotification;
     protected MeetMeConferencingConferenceSchedule conferenceSchedule;
@@ -320,27 +318,27 @@ public class MeetMeConferencingConference {
     }
 
     /**
-     * Ruft den Wert der allowUniqueIdentifier0020-Eigenschaft ab.
+     * Ruft den Wert der allowUniqueIdentifier-Eigenschaft ab.
      * 
      * @return
      *     possible object is
      *     {@link Boolean }
      *     
      */
-    public Boolean isAllowUniqueIdentifier_0020() {
-        return allowUniqueIdentifier0020;
+    public Boolean isAllowUniqueIdentifier() {
+        return allowUniqueIdentifier;
     }
 
     /**
-     * Legt den Wert der allowUniqueIdentifier0020-Eigenschaft fest.
+     * Legt den Wert der allowUniqueIdentifier-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
      *     
      */
-    public void setAllowUniqueIdentifier_0020(Boolean value) {
-        this.allowUniqueIdentifier0020 = value;
+    public void setAllowUniqueIdentifier(Boolean value) {
+        this.allowUniqueIdentifier = value;
     }
 
     /**

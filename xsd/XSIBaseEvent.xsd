@@ -143,6 +143,7 @@
         
         Change History:
         19.0 - added targetSubId element.
+        23.0 - add choice of clientId for ownership identification
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -181,14 +182,25 @@
             </xs:annotation>
           </xs:element>
 
-          <xs:element name="userId" type="UserId">
-            <xs:annotation>
-              <xs:documentation>
-                The user ID of the user that owns the subscription for
-                which the EventData is being sent.
-              </xs:documentation>
-            </xs:annotation>
-          </xs:element>
+          <xs:choice>
+            <xs:element name="userId" type="UserId">
+              <xs:annotation>
+                <xs:documentation>
+                  The user ID of the user that owns the subscription for
+                  which the EventData is being sent.
+                </xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            
+            <xs:element name="clientId" type="ClientAppId">
+                <xs:annotation>
+                  <xs:documentation>
+                    The client identity that owns the subscription for
+                    which the EventData is being sent.
+                  </xs:documentation>
+                </xs:annotation>
+              </xs:element>
+          </xs:choice>
 
           <xs:element name="externalApplicationId" type="ExternalApplicationId">
             <xs:annotation>

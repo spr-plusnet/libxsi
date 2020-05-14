@@ -221,9 +221,10 @@ public class XSIConnectionImpl implements XSIConnection {
 				try {
 					return XSIDriver.unmarshall(message);
 				} catch (JAXBException e) {
-					logger.error("Error unmarshalling server response: "+e);
+					logger.error("Error unmarshalling server response: ",e);
 					logger.error("Message was:\n"+message);
 					con.disconnect();
+					System.exit(1);
 					throw new IOException("Error unmarshalling server response: "+e);
 				}
 			case 401:
@@ -238,7 +239,7 @@ public class XSIConnectionImpl implements XSIConnection {
 		} catch (MalformedURLException e) {
 			logger.error("Malformed URL - url was "+subURL);
 		} catch (IOException e) {
-			logger.error("Exception making GET request: "+e);
+			logger.error("Exception making GET request: "+e,e);
 			throw e;
 		} 
 

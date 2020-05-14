@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2016.03.01 um 11:55:38 AM CET 
+// Generiert: 2020.05.11 um 03:08:51 PM CEST 
 //
 
 
@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         
  *         Change History:
  *         19.0 - added targetSubId element.
+ *         23.0 - add choice of clientId for ownership identification
  *       
  * 
  * <p>Java-Klasse für SubscriptionEvent complex type.
@@ -36,7 +37,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *       &lt;sequence>
  *         &lt;element name="eventID" type="{http://schema.broadsoft.com/xsi}EventId"/>
  *         &lt;element name="sequenceNumber" type="{http://schema.broadsoft.com/xsi}PositiveInt"/>
- *         &lt;element name="userId" type="{http://schema.broadsoft.com/xsi}UserId"/>
+ *         &lt;choice>
+ *           &lt;element name="userId" type="{http://schema.broadsoft.com/xsi}UserId"/>
+ *           &lt;element name="clientId" type="{http://schema.broadsoft.com/xsi}ClientAppId"/>
+ *         &lt;/choice>
  *         &lt;element name="externalApplicationId" type="{http://schema.broadsoft.com/xsi}ExternalApplicationId"/>
  *         &lt;element name="subscriptionId" type="{http://schema.broadsoft.com/xsi}SubscriptionId"/>
  *         &lt;element name="sharedSubscriptionId" type="{http://schema.broadsoft.com/xsi}SubscriptionId" minOccurs="0"/>
@@ -60,6 +64,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "eventID",
     "sequenceNumber",
     "userId",
+    "clientId",
     "externalApplicationId",
     "subscriptionId",
     "sharedSubscriptionId",
@@ -76,10 +81,12 @@ public class SubscriptionEvent
     @XmlElement(required = true)
     protected String eventID;
     protected int sequenceNumber;
-    @XmlElement(required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
     protected String userId;
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "token")
+    protected String clientId;
     @XmlElement(required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
@@ -158,6 +165,30 @@ public class SubscriptionEvent
      */
     public void setUserId(String value) {
         this.userId = value;
+    }
+
+    /**
+     * Ruft den Wert der clientId-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getClientId() {
+        return clientId;
+    }
+
+    /**
+     * Legt den Wert der clientId-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setClientId(String value) {
+        this.clientId = value;
     }
 
     /**

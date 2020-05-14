@@ -67,6 +67,7 @@
         Change History:
         19.0 - added targetSubId element.
         19.0 - changed expires element type to SubscriptionExpiration
+        23.0 - added eventPackageList element.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -89,18 +90,29 @@
               </xs:documentation>
             </xs:annotation>
       </xs:element>
-      <xs:element name="subscriberId" type="UserId"
-        minOccurs="0">
-        <xs:annotation>
-          <xs:documentation>
-            The owner of the subscription. This consists of a user-portion
-            followed by an @ sign and a domain name. Domain name is
-            compulsory in the SubscriberID.
-            This should not be provided while creating or modifying a
-            subscription.
-		  </xs:documentation>
-        </xs:annotation>
-      </xs:element>
+      <xs:choice>
+        <xs:element name="subscriberId" type="UserId"
+          minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              The owner of the subscription. This consists of a user-portion
+              followed by an @ sign and a domain name. Domain name is
+              compulsory in the SubscriberID.
+              This should not be provided while creating or modifying a
+              subscription.
+  		      </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="clientId" type="ClientAppId" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              The owner of the subscription is a clientApp.
+              This is the identity for the clientApp.  It does 
+              not contain an @ sign. 
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
       <xs:element name="targetIdType" type="EntityType"
         minOccurs="0">
         <xs:annotation>
@@ -147,13 +159,22 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:choice>
       <xs:element name="event" type="EventPackage" minOccurs="0">
         <xs:annotation>
           <xs:documentation>
             The event package being subscribed for.
-		  </xs:documentation>
+		      </xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="eventPackageList" type="EventPackageList" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              A list of event packages being subscribed for.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
       <xs:element name="expires" type="SubscriptionExpiration" minOccurs="0">
         <xs:annotation>
           <xs:documentation>
@@ -265,6 +286,7 @@
         21.0 - added Personal Assistant event package
         21.0 - added Collaborate Room event package
         21.sp1 - added Call Forwarding Always Secondary and SilentAlerting event package
+        21.sp1 - added Push Notification Registration event package.        
       </xs:documentation>
     </xs:annotation>
     <xs:restriction base="NonEmptyToken">
@@ -294,6 +316,7 @@
       <xs:enumeration value="Music On Hold" />
       <xs:enumeration value="N-Way Call" />
       <xs:enumeration value="Personal Assistant" />
+      <xs:enumeration value="Push Notification Registration" />      
       <xs:enumeration value="Remote Office" />
       <xs:enumeration value="Route Point Queue" />
       <xs:enumeration value="Security Classification" />
@@ -307,6 +330,26 @@
       <xs:enumeration value="Voice Messaging" />
     </xs:restriction>
   </xs:simpleType>
+  
+  <xs:complexType name="EventPackageList">
+    <xs:annotation>
+      <xs:documentation>
+        A list of event packages.
+        
+        Change History:
+        23.0 - added
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="event" type="EventPackage" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            One or more event packages.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
   
   <xs:simpleType name="SubscriptionExpiration">
     <xs:annotation>

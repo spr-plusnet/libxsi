@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2016.03.01 um 11:55:38 AM CET 
+// Generiert: 2020.05.11 um 03:08:51 PM CEST 
 //
 
 
@@ -92,6 +92,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="accountAuthorizationCode" type="{http://schema.broadsoft.com/xsi}OutgoingCallingPlanAuthorizationCode" minOccurs="0"/>
  *         &lt;element name="callAuthorizationCode" type="{http://schema.broadsoft.com/xsi}OutgoingCallingPlanAuthorizationCode" minOccurs="0"/>
  *         &lt;element name="securityClassification" type="{http://schema.broadsoft.com/xsi}NonEmptyToken" minOccurs="0"/>
+ *         &lt;element name="directRouteNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -153,7 +154,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "redirectingReason",
     "accountAuthorizationCode",
     "callAuthorizationCode",
-    "securityClassification"
+    "securityClassification",
+    "directRouteNumber"
 })
 public class EnhancedCallLogsExtendedEntry {
 
@@ -293,6 +295,9 @@ public class EnhancedCallLogsExtendedEntry {
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
     protected String securityClassification;
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "token")
+    protected String directRouteNumber;
 
     /**
      * Ruft den Wert der countryCode-Eigenschaft ab.
@@ -1532,6 +1537,30 @@ public class EnhancedCallLogsExtendedEntry {
      */
     public void setSecurityClassification(String value) {
         this.securityClassification = value;
+    }
+
+    /**
+     * Ruft den Wert der directRouteNumber-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDirectRouteNumber() {
+        return directRouteNumber;
+    }
+
+    /**
+     * Legt den Wert der directRouteNumber-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDirectRouteNumber(String value) {
+        this.directRouteNumber = value;
     }
 
 }

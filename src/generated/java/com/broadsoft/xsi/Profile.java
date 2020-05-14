@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2016.03.01 um 11:55:38 AM CET 
+// Generiert: 2020.05.11 um 03:08:51 PM CEST 
 //
 
 
@@ -34,6 +34,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="scheduleList" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
  *         &lt;element name="portalPasswordChange" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
  *         &lt;element name="countryCode" type="{http://schema.broadsoft.com/xsi}CountryCode" minOccurs="0"/>
+ *         &lt;element name="nationalPrefix" type="{http://schema.broadsoft.com/xsi}NationalPrefix" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -51,7 +52,8 @@ import javax.xml.bind.annotation.XmlType;
     "registrations",
     "scheduleList",
     "portalPasswordChange",
-    "countryCode"
+    "countryCode",
+    "nationalPrefix"
 })
 @XmlRootElement(name = "Profile")
 public class Profile {
@@ -70,6 +72,7 @@ public class Profile {
     @XmlSchemaType(name = "anyURI")
     protected String portalPasswordChange;
     protected Integer countryCode;
+    protected Integer nationalPrefix;
 
     /**
      * Ruft den Wert der details-Eigenschaft ab.
@@ -261,6 +264,30 @@ public class Profile {
      */
     public void setCountryCode(Integer value) {
         this.countryCode = value;
+    }
+
+    /**
+     * Ruft den Wert der nationalPrefix-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getNationalPrefix() {
+        return nationalPrefix;
+    }
+
+    /**
+     * Legt den Wert der nationalPrefix-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setNationalPrefix(Integer value) {
+        this.nationalPrefix = value;
     }
 
 }

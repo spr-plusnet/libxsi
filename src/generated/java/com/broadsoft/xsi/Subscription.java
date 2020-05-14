@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2016.03.01 um 11:55:38 AM CET 
+// Generiert: 2020.05.11 um 03:08:51 PM CEST 
 //
 
 
@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         Change History:
  *         19.0 - added targetSubId element.
  *         19.0 - changed expires element type to SubscriptionExpiration
+ *         23.0 - added eventPackageList element.
  *       
  * 
  * <p>Java-Klasse für Subscription complex type.
@@ -36,12 +37,18 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *       &lt;sequence>
  *         &lt;element name="subscriptionId" type="{http://schema.broadsoft.com/xsi}SubscriptionId" minOccurs="0"/>
  *         &lt;element name="sharedSubscriptionId" type="{http://schema.broadsoft.com/xsi}SubscriptionId" minOccurs="0"/>
- *         &lt;element name="subscriberId" type="{http://schema.broadsoft.com/xsi}UserId" minOccurs="0"/>
+ *         &lt;choice>
+ *           &lt;element name="subscriberId" type="{http://schema.broadsoft.com/xsi}UserId" minOccurs="0"/>
+ *           &lt;element name="clientId" type="{http://schema.broadsoft.com/xsi}ClientAppId" minOccurs="0"/>
+ *         &lt;/choice>
  *         &lt;element name="targetIdType" type="{http://schema.broadsoft.com/xsi}EntityType" minOccurs="0"/>
  *         &lt;element name="targetGrpParentId" type="{http://schema.broadsoft.com/xsi}NonEmptyString" minOccurs="0"/>
  *         &lt;element name="targetId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="targetSubId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="event" type="{http://schema.broadsoft.com/xsi}EventPackage" minOccurs="0"/>
+ *         &lt;choice>
+ *           &lt;element name="event" type="{http://schema.broadsoft.com/xsi}EventPackage" minOccurs="0"/>
+ *           &lt;element name="eventPackageList" type="{http://schema.broadsoft.com/xsi}EventPackageList" minOccurs="0"/>
+ *         &lt;/choice>
  *         &lt;element name="expires" type="{http://schema.broadsoft.com/xsi}SubscriptionExpiration" minOccurs="0"/>
  *         &lt;choice>
  *           &lt;element name="httpContact" type="{http://schema.broadsoft.com/xsi}ContactURL" minOccurs="0"/>
@@ -61,11 +68,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "subscriptionId",
     "sharedSubscriptionId",
     "subscriberId",
+    "clientId",
     "targetIdType",
     "targetGrpParentId",
     "targetId",
     "targetSubId",
     "event",
+    "eventPackageList",
     "expires",
     "httpContact",
     "channelSetId",
@@ -78,6 +87,9 @@ public class Subscription {
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
     protected String subscriberId;
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "token")
+    protected String clientId;
     @XmlSchemaType(name = "token")
     protected EntityType targetIdType;
     protected String targetGrpParentId;
@@ -85,6 +97,7 @@ public class Subscription {
     protected String targetSubId;
     @XmlSchemaType(name = "token")
     protected EventPackage event;
+    protected EventPackageList eventPackageList;
     protected Integer expires;
     protected ContactURL httpContact;
     protected String channelSetId;
@@ -162,6 +175,30 @@ public class Subscription {
      */
     public void setSubscriberId(String value) {
         this.subscriberId = value;
+    }
+
+    /**
+     * Ruft den Wert der clientId-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getClientId() {
+        return clientId;
+    }
+
+    /**
+     * Legt den Wert der clientId-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setClientId(String value) {
+        this.clientId = value;
     }
 
     /**
@@ -282,6 +319,30 @@ public class Subscription {
      */
     public void setEvent(EventPackage value) {
         this.event = value;
+    }
+
+    /**
+     * Ruft den Wert der eventPackageList-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link EventPackageList }
+     *     
+     */
+    public EventPackageList getEventPackageList() {
+        return eventPackageList;
+    }
+
+    /**
+     * Legt den Wert der eventPackageList-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link EventPackageList }
+     *     
+     */
+    public void setEventPackageList(EventPackageList value) {
+        this.eventPackageList = value;
     }
 
     /**

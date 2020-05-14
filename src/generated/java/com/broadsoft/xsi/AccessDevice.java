@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2016.03.01 um 11:55:38 AM CET 
+// Generiert: 2020.05.11 um 03:08:51 PM CEST 
 //
 
 
@@ -24,8 +24,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         R18.0 - Added
  *         R19.0 - Added version.
  *         R20.0 - deviceTypeUrl, deviceUserNamePassword are made optional.
- *         R21.0 - deviceUserNamePassword is included in Xsi responses only when 
- *                 BroadWorks is configured to allow retrieval of device credentials.
+ *         R21.sp1 - Added elements allowTermination and endpointType. 
+ *                   The endpointType is only present in the GET response when the 
+ *                   client XSI version in the GET request is 21.sp1 or greater.
  *       
  * 
  * <p>Java-Klasse für AccessDevice complex type.
@@ -44,6 +45,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="deviceTypeUrl" type="{http://schema.broadsoft.com/xsi}URL" minOccurs="0"/>
  *         &lt;element name="deviceUserNamePassword" type="{http://schema.broadsoft.com/xsi}DeviceManagementUserNamePassword" minOccurs="0"/>
  *         &lt;element name="version" type="{http://schema.broadsoft.com/xsi}UserAgentSipHeader" minOccurs="0"/>
+ *         &lt;element name="allowTermination" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="endpointType" type="{http://schema.broadsoft.com/xsi}EndpointType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -60,7 +63,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "deviceLinePort",
     "deviceTypeUrl",
     "deviceUserNamePassword",
-    "version"
+    "version",
+    "allowTermination",
+    "endpointType"
 })
 public class AccessDevice {
 
@@ -84,6 +89,9 @@ public class AccessDevice {
     protected String deviceTypeUrl;
     protected DeviceManagementUserNamePassword deviceUserNamePassword;
     protected String version;
+    protected Boolean allowTermination;
+    @XmlSchemaType(name = "token")
+    protected EndpointType endpointType;
 
     /**
      * Ruft den Wert der deviceName-Eigenschaft ab.
@@ -251,6 +259,54 @@ public class AccessDevice {
      */
     public void setVersion(String value) {
         this.version = value;
+    }
+
+    /**
+     * Ruft den Wert der allowTermination-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isAllowTermination() {
+        return allowTermination;
+    }
+
+    /**
+     * Legt den Wert der allowTermination-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setAllowTermination(Boolean value) {
+        this.allowTermination = value;
+    }
+
+    /**
+     * Ruft den Wert der endpointType-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link EndpointType }
+     *     
+     */
+    public EndpointType getEndpointType() {
+        return endpointType;
+    }
+
+    /**
+     * Legt den Wert der endpointType-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link EndpointType }
+     *     
+     */
+    public void setEndpointType(EndpointType value) {
+        this.endpointType = value;
     }
 
 }
