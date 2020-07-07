@@ -60,6 +60,30 @@ public class DirectoryService {
 		}
 	}
 
+	//-------------------------------------------------------------------
+	/**
+	 * @see com.broadsoft.xsi.api.service.Service#get()
+	 */
+//	@Override
+	public List<UserAdditionalEnterpriseGroupDetails> getByIMP(String key) throws XSIException {
+		String subURL = String.format("user/%s/directories/Enterprise?", con.getUser());
+		List<String> params = new ArrayList<String>();
+		try {
+			params.add("impId="+URLEncoder.encode(key, "UTF-8"));
+		} catch (UnsupportedEncodingException e) {
+			logger.error(e.toString());
+		}
+		subURL += String.join("&", params);
+			
+		try {
+			Enterprise logs = (Enterprise) con.actionGETQuery(subURL);
+			return logs.getEnterpriseDirectory().getDirectoryDetails();
+		} catch (IOException e) {
+			logger.error("Failed executing service EnterpriseCommon",e);
+			throw new XSIException("Failed executing service EnterpriseCommon: "+e, 0);
+		}
+	}
+
 //	//-------------------------------------------------------------------
 //	/**
 //	 * @see com.broadsoft.xsi.api.service.Service#get()
