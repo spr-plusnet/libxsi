@@ -100,4 +100,28 @@ public class CallControlService {
 			throw new XSIException("Failed executing service : "+e, 0);
 		}
 	}
+
+	//-------------------------------------------------------------------
+	public void holdCall(String callID) throws XSIException {
+		logger.debug("holdCall");
+		String subURL = String.format("user/%s/calls/%s/Hold", con.getUser(), callID);
+		try {
+			con.actionPUTQuery(subURL, new byte[0]);
+		} catch (IOException e) {
+			logger.error("Failed executing service ",e);
+			throw new XSIException("Failed executing service : "+e, 0);
+		}
+	}
+
+	//-------------------------------------------------------------------
+	public void resumeCall(String callID) throws XSIException {
+		logger.debug("resumeCall");
+		String subURL = String.format("user/%s/calls/%s/Reconnect", con.getUser(), callID);
+		try {
+			con.actionPUTQuery(subURL, new byte[0]);
+		} catch (IOException e) {
+			logger.error("Failed executing service ",e);
+			throw new XSIException("Failed executing service : "+e, 0);
+		}
+	}
 }

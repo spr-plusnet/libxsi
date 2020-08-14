@@ -306,6 +306,7 @@ public class XSIConnectionImpl implements XSIConnection {
 				throw new OperationNotAllowedException("Operation not allowed. Server replied: "+con.getResponseMessage());
 			default:
 				logger.warn("Unexpected response contacting Broadsoft server: "+con.getResponseCode()+" "+con.getResponseMessage());
+				logger.warn("Command was "+url);
 				throw new IOException("Unexpected response contacting Broadsoft server: "+con.getResponseCode()+" "+con.getResponseMessage());
 			}
 
