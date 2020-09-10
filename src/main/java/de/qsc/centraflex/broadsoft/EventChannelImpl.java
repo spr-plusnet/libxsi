@@ -173,16 +173,16 @@ public class EventChannelImpl implements Runnable, EventChannel {
 		con.setRequestProperty("Accept", "text/xml");
 		con.setRequestProperty("Content-Type", "text/xml; charset="+encoding);
 		con.setRequestProperty("Content-Length", "" + data);
-		Authenticator.setDefault(new Authenticator(){
-			protected PasswordAuthentication getPasswordAuthentication() {
-				logger.trace("Auth(sendPost): "+session.getUser()+"  / "+session.getPass());
-				return new PasswordAuthentication (session.getUser(), session.getPass().toCharArray());
-			}
-		});
+//		Authenticator.setDefault(new Authenticator(){
+//			protected PasswordAuthentication getPasswordAuthentication() {
+//				logger.trace("Auth(sendPost): "+session.getUser()+"  / "+session.getPass());
+//				return new PasswordAuthentication (session.getUser(), session.getPass().toCharArray());
+//			}
+//		});
 		con.setRequestMethod("POST");
 		con.setInstanceFollowRedirects(false);
 		//Send request
-		logger.debug("Query: "+url);
+		logger.warn("Query: "+url);
 		DataOutputStream out = new DataOutputStream(con.getOutputStream ());
 		out.write(data);
 		out.flush ();
@@ -192,7 +192,7 @@ public class EventChannelImpl implements Runnable, EventChannel {
 		PostResult ret = new PostResult();
 		ret.code = con.getResponseCode();
 		ret.mess = con.getResponseMessage();
-		logger.debug("Response was "+ret.code+" "+ret.mess);
+		logger.fatal("Response was "+ret.code+" "+ret.mess);
 		if (ret.code==HttpURLConnection.HTTP_MOVED_TEMP) {
 			logger.debug("Redirected to "+ con.getHeaderField("Location"));
 			return sendPost(new URL(con.getHeaderField("Location")), xml);
@@ -276,11 +276,11 @@ public class EventChannelImpl implements Runnable, EventChannel {
 		con.setRequestProperty("Content-Type", "text/xml; charset="+encoding);
 		con.setRequestProperty("Content-Length", "" + data);
 		con.setInstanceFollowRedirects(false);
-		Authenticator.setDefault(new Authenticator(){
-			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication (session.getUser(), session.getPass().toCharArray());
-			}
-		});
+//		Authenticator.setDefault(new Authenticator(){
+//			protected PasswordAuthentication getPasswordAuthentication() {
+//				return new PasswordAuthentication (session.getUser(), session.getPass().toCharArray());
+//			}
+//		});
 		con.setRequestMethod("POST"); 
 		//Send request
 		DataOutputStream out = new DataOutputStream(con.getOutputStream ());
