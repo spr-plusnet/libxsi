@@ -94,8 +94,8 @@ public class XSIConnectionImpl implements XSIConnection {
 		pass = config.getProperty(XSIDriver.PROP_XSI_PASS);
 		if (user==null) 
 			throw new IllegalArgumentException("Missing property "+XSIDriver.PROP_XSI_USER+" in configuration");
-		if (pass==null) 
-			throw new IllegalArgumentException("Missing property "+XSIDriver.PROP_XSI_PASS+" in configuration");
+//		if (pass==null) 
+//			throw new IllegalArgumentException("Missing property "+XSIDriver.PROP_XSI_PASS+" in configuration");
 		
 		/*
 		 * Init services
@@ -306,7 +306,7 @@ public class XSIConnectionImpl implements XSIConnection {
 				throw new OperationNotAllowedException("Operation not allowed. Server replied: "+con.getResponseMessage());
 			default:
 				logger.warn("Unexpected response contacting Broadsoft server: "+con.getResponseCode()+" "+con.getResponseMessage());
-				logger.warn("Command was "+url);
+				logger.warn("Command was PUT "+url);
 				throw new IOException("Unexpected response contacting Broadsoft server: "+con.getResponseCode()+" "+con.getResponseMessage());
 			}
 
@@ -326,7 +326,7 @@ public class XSIConnectionImpl implements XSIConnection {
 	 * @see com.broadsoft.xsi.api.XSIConnection#actionPUTQuery(java.lang.String, java.lang.Object)
 	 */
 	@Override
-	public Object actionPUTQuery(String subURL, Object toEncode) throws IOException {
+	public <T> Object actionPUTQuery(String subURL, T toEncode) throws IOException {
 		ByteArrayOutputStream outBS = new ByteArrayOutputStream();
 		OutputStreamWriter out = new OutputStreamWriter(outBS, Charset.forName("UTF-8"));
 		try {

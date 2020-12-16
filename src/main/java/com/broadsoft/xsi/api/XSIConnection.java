@@ -35,7 +35,8 @@ public interface XSIConnection {
 	 * @param subURL The part of the URL to be appended after https://&lt;server&gt;/com.broadsoft.xsi-actions/v2.0/
 	 * @param toEncode Object to marshall to XML
 	 */
-	public Object actionPUTQuery(String subURL, Object toEncode) throws IOException;
+//	public Object actionPUTQuery(String subURL, Object toEncode) throws IOException;
+	public <T> Object actionPUTQuery(String subURL, T toEncode) throws IOException;
 
 	//-----------------------------------------------------------------
 	/**
