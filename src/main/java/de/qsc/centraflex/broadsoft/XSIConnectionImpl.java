@@ -31,8 +31,8 @@ import java.util.Properties;
 
 import javax.xml.bind.JAXBException;
 
-import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.broadsoft.xsi.api.EventChannel;
 import com.broadsoft.xsi.api.EventChannelListener;
