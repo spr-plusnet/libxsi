@@ -55,8 +55,14 @@ public class CallControlService {
 	}
 
 	//-------------------------------------------------------------------
-	public CallStartInfo createCall(String target) throws XSIException {
+	public CallStartInfo createCall(String target, String clid, String location, String locAddress) throws XSIException {
 		String subURL = String.format("user/%s/calls/new?address=%s", con.getUser(), target);
+		if (clid!=null)
+			subURL+="&clid="+clid;
+		if (location!=null)
+			subURL+="&location="+location;
+		if (locAddress!=null)
+			subURL+="&locationAddress="+locAddress;
 		try {
 			CallStartInfo info = (CallStartInfo) con.actionPOSTQuery(subURL, new byte[0]);
 			logger.warn("CallStartInfo  = "+info);
