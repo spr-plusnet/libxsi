@@ -7,8 +7,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.broadsoft.xsi.AccessDevice;
 import com.broadsoft.xsi.AccessDevices;
@@ -24,7 +24,7 @@ import de.qsc.centraflex.broadsoft.XSIException;
  */
 public class ProfileService implements Service<Profile> {
 
-	private final static Logger logger = LogManager.getLogger("xsi.service.profile");
+	private final static Logger logger = LoggerFactory.getLogger("xsi.service.profile");
 
 	private XSIConnection con;
 	

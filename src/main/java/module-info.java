@@ -9,5 +9,5 @@ module de.plusnet.centraflex.libxsi {
 	
 	requires java.xml;
 	requires java.xml.bind;
-	requires org.apache.logging.log4j;
+	requires org.slf4j;
 }

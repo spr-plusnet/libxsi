@@ -3,11 +3,7 @@ package libxsi;
 import java.io.IOException;
 import java.util.Properties;
 
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
-
 import com.broadsoft.xsi.CallReceivedEvent;
-import com.broadsoft.xsi.CallSubscriptionEvent;
 import com.broadsoft.xsi.SubscriptionEvent;
 import com.broadsoft.xsi.api.ConnectionState;
 import com.broadsoft.xsi.api.EventChannel;

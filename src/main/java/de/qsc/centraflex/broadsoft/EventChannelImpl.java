@@ -30,8 +30,8 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
@@ -52,7 +52,7 @@ import com.broadsoft.xsi.api.Subscription;
  */
 public class EventChannelImpl implements Runnable, EventChannel {
 
-	private final static Logger logger = LogManager.getLogger("xsi.events");
+	private final static Logger logger = LoggerFactory.getLogger("xsi.events");
 
 	private static int count = 0;
 	
@@ -193,7 +193,7 @@ public class EventChannelImpl implements Runnable, EventChannel {
 		PostResult ret = new PostResult();
 		ret.code = con.getResponseCode();
 		ret.mess = con.getResponseMessage();
-		logger.fatal("Response was "+ret.code+" "+ret.mess);
+		logger.warn("Response was "+ret.code+" "+ret.mess);
 		if (ret.code==HttpURLConnection.HTTP_MOVED_TEMP) {
 			logger.debug("Redirected to "+ con.getHeaderField("Location"));
 			return sendPost(new URL(con.getHeaderField("Location")), xml);

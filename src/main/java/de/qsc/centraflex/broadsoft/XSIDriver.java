@@ -16,8 +16,8 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.namespace.QName;
 
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.broadsoft.xsi.api.XSIConnection;
 
@@ -26,7 +26,7 @@ import com.broadsoft.xsi.api.XSIConnection;
  *
  */
 public class XSIDriver {
-	private final static Logger logger = LogManager.getLogger("connector.xsi");
+	private final static Logger logger = LoggerFactory.getLogger("connector.xsi");
 
 
 	public final static String PROP_XSI_SERVER = "xsi.server";
@@ -54,7 +54,7 @@ public class XSIDriver {
 			marshaller   = jaxb.createMarshaller();
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 		} catch (JAXBException e) {
-			logger.fatal("Could not initialize JAXB context: "+e);
+			logger.error("Could not initialize JAXB context: "+e);
 			System.exit(0);
 		}
 	}

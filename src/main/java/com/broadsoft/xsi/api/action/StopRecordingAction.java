@@ -5,8 +5,8 @@ package com.broadsoft.xsi.api.action;
 
 import java.io.IOException;
 
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.broadsoft.xsi.api.XSIConnection;
 
@@ -18,7 +18,7 @@ import de.qsc.centraflex.broadsoft.XSIException;
  */
 public class StopRecordingAction implements CallControlAction {
 
-	private final static Logger logger = LogManager.getLogger("xsi.service.callrecording");
+	private final static Logger logger = LoggerFactory.getLogger("xsi.service.callrecording");
 
 	private XSIConnection con;
 

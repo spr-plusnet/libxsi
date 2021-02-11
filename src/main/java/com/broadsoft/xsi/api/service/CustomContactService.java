@@ -4,16 +4,11 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import com.broadsoft.xsi.CallLogs;
-import com.broadsoft.xsi.CallLogsEntries;
-import com.broadsoft.xsi.CallLogsEntry;
 import com.broadsoft.xsi.CustomContact;
 import com.broadsoft.xsi.Directory;
 import com.broadsoft.xsi.DirectoryDetails;
@@ -32,7 +27,7 @@ import de.qsc.centraflex.broadsoft.XSIException;
  */
 public class CustomContactService {
 
-	private final static Logger logger = LogManager.getLogger("xsi.service.contact");
+	private final static Logger logger = LoggerFactory.getLogger("xsi.service.contact");
 
 	private XSIConnection con;
 	private List<Action> actions;
