@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2020.05.11 um 03:08:51 PM CEST 
+// Generiert: 2021.02.12 um 09:46:20 AM CET 
 //
 
 
@@ -14,6 +14,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -35,6 +37,8 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="portalPasswordChange" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
  *         &lt;element name="countryCode" type="{http://schema.broadsoft.com/xsi}CountryCode" minOccurs="0"/>
  *         &lt;element name="nationalPrefix" type="{http://schema.broadsoft.com/xsi}NationalPrefix" minOccurs="0"/>
+ *         &lt;element name="timeZone" type="{http://schema.broadsoft.com/xsi}TimeZone" minOccurs="0"/>
+ *         &lt;element name="timeZoneDisplayName" type="{http://schema.broadsoft.com/xsi}TimeZoneDisplayName" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -53,7 +57,9 @@ import javax.xml.bind.annotation.XmlType;
     "scheduleList",
     "portalPasswordChange",
     "countryCode",
-    "nationalPrefix"
+    "nationalPrefix",
+    "timeZone",
+    "timeZoneDisplayName"
 })
 @XmlRootElement(name = "Profile")
 public class Profile {
@@ -73,6 +79,12 @@ public class Profile {
     protected String portalPasswordChange;
     protected Integer countryCode;
     protected Integer nationalPrefix;
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "token")
+    protected String timeZone;
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "token")
+    protected String timeZoneDisplayName;
 
     /**
      * Ruft den Wert der details-Eigenschaft ab.
@@ -288,6 +300,54 @@ public class Profile {
      */
     public void setNationalPrefix(Integer value) {
         this.nationalPrefix = value;
+    }
+
+    /**
+     * Ruft den Wert der timeZone-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTimeZone() {
+        return timeZone;
+    }
+
+    /**
+     * Legt den Wert der timeZone-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTimeZone(String value) {
+        this.timeZone = value;
+    }
+
+    /**
+     * Ruft den Wert der timeZoneDisplayName-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTimeZoneDisplayName() {
+        return timeZoneDisplayName;
+    }
+
+    /**
+     * Legt den Wert der timeZoneDisplayName-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTimeZoneDisplayName(String value) {
+        this.timeZoneDisplayName = value;
     }
 
 }

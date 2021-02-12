@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2020.05.11 um 03:08:51 PM CEST 
+// Generiert: 2021.02.12 um 09:46:20 AM CET 
 //
 
 
@@ -42,6 +42,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="broadworksCallControl" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="mobileAlertingPolicy" type="{http://schema.broadsoft.com/xsi}BroadWorksMobilityAlertingPolicyInfo" minOccurs="0"/>
  *         &lt;element name="mobileCallAnchoringPolicy" type="{http://schema.broadsoft.com/xsi}BroadWorksMobilityCallAnchoringPolicy" minOccurs="0"/>
+ *         &lt;element name="useMobilityConnectedIdentity" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -64,7 +65,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "answerConfirmationRequired",
     "broadworksCallControl",
     "mobileAlertingPolicy",
-    "mobileCallAnchoringPolicy"
+    "mobileCallAnchoringPolicy",
+    "useMobilityConnectedIdentity"
 })
 @XmlRootElement(name = "BroadWorksMobilityMobileIdentity")
 public class BroadWorksMobilityMobileIdentity {
@@ -85,6 +87,7 @@ public class BroadWorksMobilityMobileIdentity {
     protected Boolean broadworksCallControl;
     protected BroadWorksMobilityAlertingPolicyInfo mobileAlertingPolicy;
     protected BroadWorksMobilityCallAnchoringPolicy mobileCallAnchoringPolicy;
+    protected Boolean useMobilityConnectedIdentity;
 
     /**
      * Ruft den Wert der mobileNumber-Eigenschaft ab.
@@ -396,6 +399,30 @@ public class BroadWorksMobilityMobileIdentity {
      */
     public void setMobileCallAnchoringPolicy(BroadWorksMobilityCallAnchoringPolicy value) {
         this.mobileCallAnchoringPolicy = value;
+    }
+
+    /**
+     * Ruft den Wert der useMobilityConnectedIdentity-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isUseMobilityConnectedIdentity() {
+        return useMobilityConnectedIdentity;
+    }
+
+    /**
+     * Legt den Wert der useMobilityConnectedIdentity-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setUseMobilityConnectedIdentity(Boolean value) {
+        this.useMobilityConnectedIdentity = value;
     }
 
 }

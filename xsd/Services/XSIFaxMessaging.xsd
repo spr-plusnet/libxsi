@@ -2,7 +2,7 @@
 
 
 <!-- ************************************************************************ -->
-<!--     Copyright (c) 2012 BroadSoft, Inc.  All rights reserved.             -->
+<!--     Copyright © 2017 BroadSoft Inc.             -->
 <!-- ************************************************************************ -->
 <!--                XSI  X M L  S C H E M A                                   -->
 <!--               *************************                                  -->
@@ -53,6 +53,194 @@
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
-  </xs:element> 
+  </xs:element>
   
+  <xs:element name="FaxStatusEntry" type="FaxStatusEntry">
+    <xs:annotation>
+      <xs:documentation>
+         The status for a single fax transaction.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="FaxStatusEntryList" type="FaxStatusEntryList">
+    <xs:annotation>
+      <xs:documentation>
+        A list of fax transaction statuses. 
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="FaxStatusEntryList">
+    <xs:annotation>
+      <xs:documentation>
+         A list of fax transaction statuses.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="fax" type="FaxStatusEntry" maxOccurs="unbounded"  minOccurs="0"/>     
+    </xs:sequence>
+  </xs:complexType>  
+  
+  <xs:complexType name="FaxStatusEntry">
+    <xs:annotation>
+      <xs:documentation>
+        The data for a single fax transaction.       
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="faxId" type="FaxId">
+        <xs:annotation>
+          <xs:documentation>
+            A universally unique ID(UUID) to identify the fax that was sent.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="faxStatus" type="FaxStatusCode">
+        <xs:annotation>
+          <xs:documentation>
+            The status of the fax transaction.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="faxFileName" type="FileName">
+        <xs:annotation>
+          <xs:documentation>
+            The name of the file being faxed, including type.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="faxDestination" type="Address">
+        <xs:annotation>
+          <xs:documentation>
+            The fax recipient's address.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="timestamp" type="Timestamp">
+        <xs:annotation>
+          <xs:documentation>
+            The time when the fax request was received at the AS.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType> 
+
+  <xs:element name="FaxEntry" type="FaxEntry">
+    <xs:annotation>
+      <xs:documentation>
+         The status for a single fax transaction.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+   
+  <xs:complexType name="FaxEntry">
+    <xs:annotation>
+      <xs:documentation>
+        The fax id for a single fax transaction.       
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="faxId" type="FaxId">
+        <xs:annotation>
+          <xs:documentation>
+            A universally unique ID(UUID) to identify the fax that was sent.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>  
+  
+  <xs:simpleType name="FaxId">
+    <xs:annotation>
+      <xs:documentation>
+        A universally unique ID(UUID) to identify the fax that was sent.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NonEmptyToken">
+      <xs:maxLength value="256" />
+    </xs:restriction>
+  </xs:simpleType>
+    
+  <xs:simpleType name="FaxStatusCode">
+    <xs:annotation>
+      <xs:documentation>
+        Indicates the status of the fax transaction.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NonEmptyToken">
+      <xs:enumeration value="Preparing to Transmit">
+        <xs:annotation>
+          <xs:documentation>
+            The call is being setup to transmit the fax file.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Transmitting">
+        <xs:annotation>
+          <xs:documentation>
+            The fax file is being transmitted.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>      
+      <xs:enumeration value="Successful">
+        <xs:annotation>
+          <xs:documentation>
+            The fax file was sent successfully.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Error - File Not Found">
+        <xs:annotation>
+          <xs:documentation>
+            The fax file was not found.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Error - File Transfer Failed">
+        <xs:annotation>
+          <xs:documentation>
+            The fax file transfer failed.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Temporarily Unavailable">
+        <xs:annotation>
+          <xs:documentation>
+            The fax destination is temporarily unavailable.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="User Not Found">
+        <xs:annotation>
+          <xs:documentation>
+            The fax recipient could not be found.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="File Conversion In Progress">
+       <xs:annotation>
+         <xs:documentation>
+           File conversion in progress.
+         </xs:documentation>
+       </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="File Conversion Failed">
+        <xs:annotation>
+          <xs:documentation>
+            File conversion failed.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>     
+      <xs:enumeration value="Xtended Conversion Service Not Available">
+        <xs:annotation>
+          <xs:documentation>
+            Xtended file conversion service not available. 
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>                  
+    </xs:restriction>
+  </xs:simpleType>
+    
 </xs:schema>

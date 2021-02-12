@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2020.05.11 um 03:08:51 PM CEST 
+// Generiert: 2021.02.12 um 09:46:20 AM CET 
 //
 
 
@@ -36,6 +36,8 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="hunt-group"/>
  *     &lt;enumeration value="call-center"/>
  *     &lt;enumeration value="route-point"/>
+ *     &lt;enumeration value="agent-wrap-up"/>
+ *     &lt;enumeration value="voicexml-script-termination"/>
  *     &lt;enumeration value="unknown"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
@@ -223,6 +225,26 @@ public enum RedirectReason {
      */
     @XmlEnumValue("route-point")
     ROUTE_POINT("route-point"),
+
+    /**
+     * 
+     *             The call session was redirected by an
+     *             agent to a wrap-up destination.
+     *           
+     * 
+     */
+    @XmlEnumValue("agent-wrap-up")
+    AGENT_WRAP_UP("agent-wrap-up"),
+
+    /**
+     * 
+     *             The call session was redirected upon
+     *             termination of VoiceXML script.
+     *           
+     * 
+     */
+    @XmlEnumValue("voicexml-script-termination")
+    VOICEXML_SCRIPT_TERMINATION("voicexml-script-termination"),
 
     /**
      * 

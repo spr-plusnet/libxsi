@@ -3,7 +3,7 @@
 
 
     <!-- ************************************************************************ -->
-    <!--     Copyright (c) 2008 BroadSoft, Inc.  All rights reserved.             -->
+    <!--     Copyright © 2017 BroadSoft Inc.             -->
     <!-- ************************************************************************ -->
     <!--                XSI  X M L  S C H E M A                                   -->
     <!--               *************************                                  -->
@@ -23,7 +23,6 @@
   <xs:include schemaLocation="XSIAccountAuthorizationCodes.xsd" />
   <xs:include schemaLocation="XSIAlternateNumbers.xsd" />
   <xs:include schemaLocation="XSIAnonymousCallRejection.xsd" />
-  <xs:include schemaLocation="XSIAttendantConsole.xsd" />
   <xs:include schemaLocation="XSIAutomaticCallback.xsd" />
   <xs:include schemaLocation="XSIAutomaticHoldRetrieve.xsd" />
   <xs:include schemaLocation="XSIBargeInExempt.xsd" />
@@ -53,7 +52,6 @@
   <xs:include schemaLocation="XSICallWaiting.xsd" />
   <xs:include schemaLocation="XSIChargeNumber.xsd" />
   <xs:include schemaLocation="XSICollaborate.xsd" />
-  <xs:include schemaLocation="XSICommPilotCallManager.xsd" />
   <xs:include schemaLocation="XSICommPilotExpress.xsd" />
   <xs:include schemaLocation="XSIConnectedLineIdentificationPresentation.xsd" />
   <xs:include schemaLocation="XSIConnectedLineIdentificationRestriction.xsd" />
@@ -78,10 +76,10 @@
   <xs:include schemaLocation="XSIMWIDeliveryToMobileEndpoint.xsd" />
   <xs:include schemaLocation="XSINumberPortabilityAnnouncement.xsd" />
   <xs:include schemaLocation="XSIOutgoingMWI.xsd" />
-  <xs:include schemaLocation="XSIOutlookIntegration.xsd" />
   <xs:include schemaLocation="XSIPersonalAssistant.xsd" />
   <xs:include schemaLocation="XSIPriorityAlert.xsd" />
   <xs:include schemaLocation="XSIPrivacy.xsd" />
+  <xs:include schemaLocation="XSIPushNotification.xsd"/>
   <xs:include schemaLocation="XSIPushToTalk.xsd" />
   <xs:include schemaLocation="XSIRemoteOffice.xsd" />
   <xs:include schemaLocation="XSISecurityClassification.xsd" />

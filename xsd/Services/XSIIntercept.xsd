@@ -2,7 +2,7 @@
 
 
 <!-- ************************************************************************ -->
-<!--     Copyright (c) 2012 BroadSoft, Inc.  All rights reserved.             -->
+<!--     Copyright © 2017 BroadSoft Inc.             -->
 <!-- ************************************************************************ -->
 <!--                XSI  X M L  S C H E M A                                   -->
 <!--               *************************                                  -->
@@ -23,9 +23,10 @@
     <xs:annotation>
       <xs:documentation>
         User level data associated with service Intercept User.
-
         Change History:
-        R21.sp1 - Modified
+        21.1 – The exemptInboundMobilityCalls, exemptOutboundMobilityCalls, 
+        disableParallelRingingToNetworkLocations and outboundCallMode elements are added. 
+        The allowOutboundLocalCalls element is removed.		
       </xs:documentation>
     </xs:annotation>
     <xs:complexType>

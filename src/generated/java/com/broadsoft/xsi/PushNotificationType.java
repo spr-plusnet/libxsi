@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2020.05.11 um 03:08:51 PM CEST 
+// Generiert: 2021.02.12 um 09:46:20 AM CET 
 //
 
 
@@ -14,31 +14,31 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für OutlookIntegrationContactRetrieval.
+ * <p>Java-Klasse für PushNotificationType.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * <p>
  * <pre>
- * &lt;simpleType name="OutlookIntegrationContactRetrieval">
+ * &lt;simpleType name="PushNotificationType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *     &lt;enumeration value="Retrieve Default Contact Folder Only"/>
- *     &lt;enumeration value="Retrieve All Contacts"/>
+ *     &lt;enumeration value="VoIP"/>
+ *     &lt;enumeration value="Normal"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "OutlookIntegrationContactRetrieval")
+@XmlType(name = "PushNotificationType")
 @XmlEnum
-public enum OutlookIntegrationContactRetrieval {
+public enum PushNotificationType {
 
-    @XmlEnumValue("Retrieve Default Contact Folder Only")
-    RETRIEVE_DEFAULT_CONTACT_FOLDER_ONLY("Retrieve Default Contact Folder Only"),
-    @XmlEnumValue("Retrieve All Contacts")
-    RETRIEVE_ALL_CONTACTS("Retrieve All Contacts");
+    @XmlEnumValue("VoIP")
+    VO_IP("VoIP"),
+    @XmlEnumValue("Normal")
+    NORMAL("Normal");
     private final String value;
 
-    OutlookIntegrationContactRetrieval(String v) {
+    PushNotificationType(String v) {
         value = v;
     }
 
@@ -46,8 +46,8 @@ public enum OutlookIntegrationContactRetrieval {
         return value;
     }
 
-    public static OutlookIntegrationContactRetrieval fromValue(String v) {
-        for (OutlookIntegrationContactRetrieval c: OutlookIntegrationContactRetrieval.values()) {
+    public static PushNotificationType fromValue(String v) {
+        for (PushNotificationType c: PushNotificationType.values()) {
             if (c.value.equals(v)) {
                 return c;
             }

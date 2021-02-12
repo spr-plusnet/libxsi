@@ -2,7 +2,7 @@
 
 
     <!-- ************************************************************************ -->
-    <!--     Copyright (c) 2008 BroadSoft, Inc.  All rights reserved.             -->
+    <!--     Copyright © 2017 BroadSoft Inc.             -->
     <!-- ************************************************************************ -->
     <!--                XSI  X M L  S C H E M A                                   -->
     <!--               *************************                                  -->
@@ -497,7 +497,7 @@
                             </xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element name="hookStatus" type="HookStatus">
+          <xs:element name="hookStatus" type="HookStatusType">
             <xs:annotation>
               <xs:documentation>
                 Indicates the hook status of the user when a subscription is 
@@ -739,7 +739,7 @@
     <xs:complexContent>
       <xs:extension base="EventData">
         <xs:sequence>
-          <xs:element name="hookStatus" type="HookStatus">
+          <xs:element name="hookStatus" type="HookStatusType">
             <xs:annotation>
               <xs:documentation>
                 Indicates the hook status of a user.
@@ -773,5 +773,18 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  
+
+  <xs:complexType name="PlayMusicOnHoldFailureEvent">
+    <xs:annotation>
+      <xs:documentation>
+        The Play Music On Hold Failure event is sent when BroadWorks failed to play 
+        the dynamic music.
+
+        Release Added:  R24.0        
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="CallEvent"/>
+    </xs:complexContent>
+  </xs:complexType>  
 </xs:schema>

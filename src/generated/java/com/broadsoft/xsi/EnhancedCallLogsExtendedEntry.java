@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2020.05.11 um 03:08:51 PM CEST 
+// Generiert: 2021.02.12 um 09:46:20 AM CET 
 //
 
 
@@ -93,6 +93,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="callAuthorizationCode" type="{http://schema.broadsoft.com/xsi}OutgoingCallingPlanAuthorizationCode" minOccurs="0"/>
  *         &lt;element name="securityClassification" type="{http://schema.broadsoft.com/xsi}NonEmptyToken" minOccurs="0"/>
  *         &lt;element name="directRouteNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/>
+ *         &lt;element name="routeListNumber" type="{http://schema.broadsoft.com/xsi}DN" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -155,7 +156,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "accountAuthorizationCode",
     "callAuthorizationCode",
     "securityClassification",
-    "directRouteNumber"
+    "directRouteNumber",
+    "routeListNumber"
 })
 public class EnhancedCallLogsExtendedEntry {
 
@@ -298,6 +300,9 @@ public class EnhancedCallLogsExtendedEntry {
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
     protected String directRouteNumber;
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "token")
+    protected String routeListNumber;
 
     /**
      * Ruft den Wert der countryCode-Eigenschaft ab.
@@ -1561,6 +1566,30 @@ public class EnhancedCallLogsExtendedEntry {
      */
     public void setDirectRouteNumber(String value) {
         this.directRouteNumber = value;
+    }
+
+    /**
+     * Ruft den Wert der routeListNumber-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getRouteListNumber() {
+        return routeListNumber;
+    }
+
+    /**
+     * Legt den Wert der routeListNumber-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setRouteListNumber(String value) {
+        this.routeListNumber = value;
     }
 
 }

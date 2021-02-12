@@ -2,7 +2,7 @@
 
 
 <!-- ************************************************************************ -->
-<!-- Copyright (c) 2012 BroadSoft, Inc. All rights reserved. -->
+<!-- Copyright © 2017 BroadSoft Inc. -->
 <!-- ************************************************************************ -->
 <!-- XSI X M L S C H E M A -->
 <!-- ************************* -->
@@ -96,6 +96,9 @@
         Provides Mobile Identity related attributes
         Change History:
         R21 - Added
+        Release Modified: 
+        R22.sp7 Added useMobilityConnectedIdentity element
+        
       </xs:documentation>
     </xs:annotation>
     <xs:complexType>
@@ -194,6 +197,14 @@
           <xs:annotation>
             <xs:documentation>
               Provides identity based call anchoring policy settings for this
+              identity.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="useMobilityConnectedIdentity" type="xs:boolean" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              Indicates whether the MSDN of this mobile location is utilized as a connected
               identity.
             </xs:documentation>
           </xs:annotation>

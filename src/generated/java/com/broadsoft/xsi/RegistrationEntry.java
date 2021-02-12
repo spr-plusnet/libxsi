@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2020.05.11 um 03:08:51 PM CEST 
+// Generiert: 2021.02.12 um 09:46:20 AM CET 
 //
 
 
@@ -42,6 +42,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="privateIP" type="{http://schema.broadsoft.com/xsi}NetAddress" minOccurs="0"/>
  *         &lt;element name="privatePort" type="{http://schema.broadsoft.com/xsi}Port" minOccurs="0"/>
  *         &lt;element name="userAgent" type="{http://schema.broadsoft.com/xsi}UserAgentSipHeader" minOccurs="0"/>
+ *         &lt;element name="pathHeader" type="{http://schema.broadsoft.com/xsi}PathHeader" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -60,7 +61,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "publicPort",
     "privateIP",
     "privatePort",
-    "userAgent"
+    "userAgent",
+    "pathHeader"
 })
 public class RegistrationEntry {
 
@@ -82,6 +84,9 @@ public class RegistrationEntry {
     protected String privateIP;
     protected Integer privatePort;
     protected String userAgent;
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "token")
+    protected String pathHeader;
 
     /**
      * Ruft den Wert der endpointType-Eigenschaft ab.
@@ -297,6 +302,30 @@ public class RegistrationEntry {
      */
     public void setUserAgent(String value) {
         this.userAgent = value;
+    }
+
+    /**
+     * Ruft den Wert der pathHeader-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPathHeader() {
+        return pathHeader;
+    }
+
+    /**
+     * Legt den Wert der pathHeader-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPathHeader(String value) {
+        this.pathHeader = value;
     }
 
 }

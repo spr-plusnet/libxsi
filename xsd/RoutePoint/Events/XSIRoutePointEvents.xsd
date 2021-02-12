@@ -2,7 +2,7 @@
 
 
      <!-- ************************************************************************ -->
-    <!--     Copyright (c) 2008 BroadSoft, Inc.  All rights reserved.             -->
+    <!--     Copyright © 2017 BroadSoft Inc.             -->
     <!-- ************************************************************************ -->
     <!--                XSI  X M L  S C H E M A                                   -->
     <!--               *************************                                  -->
@@ -469,6 +469,74 @@
     </xs:complexContent>
   </xs:complexType>
 
+  <xs:complexType name="RoutePointCallRejectedEvent">
+    <xs:annotation>
+      <xs:documentation>
+        The Route Point Call Rejected event is sent to the remote
+        application to indicate the reject action has completed. 
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="EventData">
+        <xs:sequence>
+          <xs:element name="callId" type="CallId">
+            <xs:annotation>
+              <xs:documentation>
+                The ID for the call.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="extTrackingId" type="ExternalTrackingId">
+            <xs:annotation>
+              <xs:documentation>
+                The external tracking ID for the call.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="routePointName" type="NonEmptyString">
+            <xs:annotation>
+              <xs:documentation>
+                Indicates the Route Point name(DNIS Name)
+                associated with the RP number
+                the call was received on.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="routePointNumber" type="Address">
+            <xs:annotation>
+              <xs:documentation>
+                Indicates the Route Point number(DNIS) the call
+                was received on.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="remoteParty" type="PartyInformation">
+            <xs:annotation>
+              <xs:documentation>
+                Information about the remote party.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="redirections" type="RedirectionList" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>
+                List of all the redirections (if any) for the call. These are the
+                details of other parties that have redirected this call.               
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="rejectReason" type="CallAdmissionRejectReason">
+            <xs:annotation>
+              <xs:documentation>
+                Reason the call was rejected.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>    
+  </xs:complexType>
+  
   <xs:complexType name="RoutePointCallReleasedEvent">
     <xs:annotation>
       <xs:documentation>
@@ -808,6 +876,77 @@
     </xs:complexContent>
   </xs:complexType>
 
+  <xs:complexType name="RoutePointNewCallEvent">
+    <xs:annotation>
+      <xs:documentation>
+       The RoutePointNewCallEvent event is sent upon receiving an INVITE
+       request to a Route Point. The event is used as a trigger to notify
+       the remote application of a new call. This allows the remote 
+       application to accept or reject the call before the call is added
+       to the Route Point queue.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="EventData">
+        <xs:sequence>
+          <xs:element name="callId" type="CallId">
+            <xs:annotation>
+              <xs:documentation>
+                The ID for the call.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="extTrackingId" type="ExternalTrackingId">
+            <xs:annotation>
+              <xs:documentation>
+                The external tracking ID for the call.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="routePointName" type="NonEmptyString">
+            <xs:annotation>
+              <xs:documentation>
+                Indicates the Route Point name(DNIS Name)
+                associated with the RP number
+                the call was received on.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="routePointNumber" type="Address">
+            <xs:annotation>
+              <xs:documentation>
+                Indicates the Route Point number(DNIS) the call
+                was received on.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="remoteParty" type="PartyInformation">
+            <xs:annotation>
+              <xs:documentation>
+                Information about the remote party.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="receiveTime" type="Timestamp">
+            <xs:annotation>
+              <xs:documentation>
+                The time when the new call was made to a Route Point.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="redirections" type="RedirectionList" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>
+                List of all the redirections (if any) for the call. These are the
+                details of other parties that have redirected this call.               
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
   <xs:complexType name="RoutePointNightPolicyAppliedEvent">
     <xs:annotation>
       <xs:documentation>
@@ -1168,4 +1307,43 @@
     </xs:complexContent>
   </xs:complexType>
 
+  <xs:complexType name="RoutePointConnectingToVoiceXMLEvent">
+    <xs:annotation>
+      <xs:documentation>
+        The Route Point Connecting To VoiceXML event is sent when the remote application
+        performs a Route Point Connect to VoiceXML against a call queued to
+        a VoiceXML virtual subscriber. This event indicates that the call is offered to the
+        VoiceXML virtual subscriber but remains in the queue.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="RoutePointEvent" />
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="RoutePointConnectedToVoiceXMLEvent">
+    <xs:annotation>
+      <xs:documentation>
+        The Route Point Connected To VoiceXML event is sent when the media resources
+        to execute the VoiceXML script are successfully allocated i.e. 200 OK for the
+        SIP INVITE message for media resource allocation is received from the Media Server.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="RoutePointEvent" />
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="RoutePointFailedVoiceXMLEvent">
+    <xs:annotation>
+      <xs:documentation>
+        The Route Point Failed VoiceXML event is sent when the call in
+        the Route Point queue cannot be connected to the VoiceXML virtual subscriber.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="RoutePointEvent" />
+    </xs:complexContent>
+  </xs:complexType>
+  
 </xs:schema>

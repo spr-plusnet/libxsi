@@ -3,7 +3,7 @@
 
 
     <!-- *************************************************************************-->
-    <!--     Copyright (c) 2008 BroadSoft, Inc.  All rights reserved.             -->
+    <!--     Copyright © 2017 BroadSoft Inc.             -->
     <!-- *************************************************************************-->
     <!--                XSI  X M L  S C H E M A                                   -->
     <!--               *************************                                  -->
@@ -64,6 +64,8 @@
         User Profile. User profile allows you to access
         information related to
         particular User's profile
+        Change History:
+        R22.0 - Added timeZone and timeZoneDisplayName
       </xs:documentation>
     </xs:annotation>
     <xs:complexType>
@@ -81,6 +83,8 @@
           minOccurs="0" />
         <xs:element name="countryCode" type="CountryCode" minOccurs="0" />
         <xs:element name="nationalPrefix" type="NationalPrefix" minOccurs="0" />
+        <xs:element name="timeZone" type="TimeZone" minOccurs="0" />  
+        <xs:element name="timeZoneDisplayName" type="TimeZoneDisplayName" minOccurs="0" /> 
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -224,7 +228,7 @@
   <!--       Complex in Alphabetical Order.                          -->
   <!-- **************************************************************-->
 
-  <xs:complexType name="EventDetail">
+  <xs:complexType name="EventDetail">      
     <xs:annotation>
       <xs:documentation>Event Details</xs:documentation>
     </xs:annotation>
@@ -243,6 +247,7 @@
       <xs:element name="endDate" type="xs:date" />
       <xs:element name="recurrence" type="Recurrence"
         minOccurs="0" />
+      <xs:element name="uri" type="URL" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
 
@@ -255,8 +260,6 @@
         minOccurs="0" maxOccurs="unbounded" />
     </xs:sequence>
   </xs:complexType>
-
-
 
   <xs:complexType name="FeatureAccessCodeEntry">
     <xs:annotation>
@@ -294,7 +297,8 @@
         If the push network defines specific device tokens that correspond to
         specific push events, the registration allows for multiple token definitions.
         Change History:
-        R22.0 - Added        
+        R22.0 - Added
+        R24.0 - Modified (patched in R21.sp1.551, R22.0.1123, R23.0.1075)        
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -304,6 +308,13 @@
             The device token assigned by the push network.
           </xs:documentation>
         </xs:annotation>
+      </xs:element>
+      <xs:element name="type" type="PushNotificationType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            The type of push notification.
+          </xs:documentation>
+        </xs:annotation>        
       </xs:element>
       <xs:element name="pushNotificationEvents" type="PushNotificationEventList">
         <xs:annotation>
@@ -329,19 +340,115 @@
     </xs:sequence>
   </xs:complexType>
 
+  <xs:complexType name="PushNotificationEventDetail">
+    <xs:annotation>
+      <xs:documentation>
+        The Push Notification event in which the client is interested.        
+        Change History:
+        R24.0 - Added (patched in R21.sp1.551, R22.0.1123, R23.0.1075)
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name" type="PushNotificationEvent">
+        <xs:annotation>
+          <xs:documentation>
+            The name of the push notification event.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="silent" type="xs:boolean" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Indication if the push notification event is silent (true) or audible (false).
+            If not present, the default is false.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="mutableContent" type="xs:boolean" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Indication whether the content should be shown immediately to the end user (value of false)
+            or can be modified by the client before presenting it to the operating system (value of true). 
+            If not present, the default value is false.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="parameters" type="PushNotificationParametersList" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            The parameters define additional data which are sent in the push notification.
+            These name/value parameters can be specific to iOS, Android, and/or the client application.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
   <xs:complexType name="PushNotificationEventList">
     <xs:annotation>
       <xs:documentation>
         A list of Push Notification events.
         Change History:
         R22.0 - Added
+        R24.0 - Modified (patched in R21.sp1.551, R22.0.1123, R23.0.1075)
+                To maintain backwards compatibility, this type contains a choice:
+                - "event" to support the previous schema definition
+                - "eventDetail" to support the new schema  
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="event" type="PushNotificationEvent"
-        minOccurs="0" maxOccurs="unbounded"/>
+      <xs:choice>
+        <xs:element name="event" type="PushNotificationEvent"
+          minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="eventDetail" type="PushNotificationEventDetail"
+          minOccurs="0" maxOccurs="unbounded" />
+      </xs:choice>
     </xs:sequence>
-  </xs:complexType>  
+  </xs:complexType> 
+
+  <xs:complexType name="PushNotificationParametersList">
+    <xs:annotation>
+      <xs:documentation>
+        A list of parameters that define additional data specific to iOS, Android, and/or the
+        client application.    
+        Change History:
+        R24.0 - Added (patched in R21.sp1.551, R22.0.1123, R23.0.1075)
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="iOSParam" type="PushNotificationParamList" minOccurs="0" />
+      <xs:element name="androidParam" type="PushNotificationParamList" minOccurs="0" />
+      <xs:element name="appDataParam" type="PushNotificationParamList" minOccurs="0" />      
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PushNotificationParamList">
+    <xs:annotation>
+      <xs:documentation>
+        A list of parameters consisting of name/value pairs.    
+        Change History:
+        R24.0 - Added (patched in R21.sp1.551, R22.0.1123, R23.0.1075)
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="param" type="PushNotificationParam"
+        minOccurs="0" maxOccurs="10"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PushNotificationParam">
+    <xs:annotation>
+      <xs:documentation>
+        A parameter definition consisting of a name and a value.    
+        Change History:
+        R24.0 - Added (patched in R21.sp1.551, R22.0.1123, R23.0.1075)
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name" type="PushNotificationParamName"/>
+      <xs:element name="value" type="PushNotificationParamValue"/>
+    </xs:sequence>
+  </xs:complexType>
 
   <xs:complexType name="PushNotificationRegistrationEntry">
     <xs:annotation>
@@ -421,7 +528,7 @@
         minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-
+  
   <xs:complexType name="Recurrence">
     <xs:annotation>
       <xs:documentation>
@@ -554,7 +661,14 @@
             The User-Agent header in the latest REGISTER request received.
           </xs:documentation>
         </xs:annotation>
-      </xs:element>   
+      </xs:element>  
+      <xs:element name="pathHeader" type="PathHeader" minOccurs="0" >
+        <xs:annotation>
+          <xs:documentation>
+            Provides the routing information to the device associated to the SIP Contact.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>         
     </xs:sequence>
   </xs:complexType>
 
@@ -625,7 +739,6 @@
       <xs:enumeration value="Saturday" />
     </xs:restriction>
   </xs:simpleType>
-  
   <xs:simpleType name="DayOfWeekInMonth">
     <xs:annotation>
       <xs:documentation>
@@ -641,7 +754,6 @@
       <xs:enumeration value="Last"></xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  
   <xs:simpleType name="Hour">
     <xs:annotation>
       <xs:documentation>
@@ -654,6 +766,7 @@
     </xs:restriction>
   </xs:simpleType>
 
+  
   <xs:simpleType name="Minute">
     <xs:annotation>
       <xs:documentation>
@@ -665,7 +778,6 @@
       <xs:maxInclusive value="59" />
     </xs:restriction>
   </xs:simpleType>
-  
   <xs:simpleType name="Month">
     <xs:annotation>
       <xs:documentation>
@@ -730,7 +842,7 @@
     <xs:restriction base="NonEmptyString">
       <xs:maxLength value="2048" />
     </xs:restriction>
-  </xs:simpleType>
+  </xs:simpleType> 
 
   <xs:simpleType name="PushNotificationEvent">
     <xs:annotation>
@@ -740,6 +852,32 @@
     </xs:annotation>
     <xs:restriction base="NonEmptyString">
       <xs:maxLength value="128" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PushNotificationParamName">
+    <xs:annotation>
+      <xs:documentation>
+        The parameter name for a parameter consisting of a name/value pair.
+        Change History:
+        R24.0 - Added (patched in R21.sp1.551, R22.0.1123, R23.0.1075)    
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NonEmptyString">
+      <xs:maxLength value="128" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="PushNotificationParamValue">
+    <xs:annotation>
+      <xs:documentation>
+        The parameter value for a parameter consisting of a name/value pair.
+        Change History:
+        R24.0 - Added (patched in R21.sp1.551, R22.0.1123, R23.0.1075)       
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NonEmptyString">
+      <xs:maxLength value="1024" />
     </xs:restriction>
   </xs:simpleType>
   
@@ -762,6 +900,20 @@
     </xs:annotation>
     <xs:restriction base="NonEmptyString">
       <xs:maxLength value="2048" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PushNotificationType">
+    <xs:annotation>
+      <xs:documentation>
+        The type of push notification.
+        Change History:
+        R24.0 - Added (patched in R21.sp1.551, R22.0.1123, R23.0.1075)
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="VoIP" />
+      <xs:enumeration value="Normal" />
     </xs:restriction>
   </xs:simpleType>
   

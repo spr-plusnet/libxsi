@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2020.05.11 um 03:08:51 PM CEST 
+// Generiert: 2021.02.12 um 09:46:20 AM CET 
 //
 
 
@@ -35,7 +35,9 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _CallingLineIDBlockingOverride_QNAME = new QName("http://schema.broadsoft.com/xsi", "CallingLineIDBlockingOverride");
+    private final static QName _FaxStatusEntryList_QNAME = new QName("http://schema.broadsoft.com/xsi", "FaxStatusEntryList");
     private final static QName _Call_QNAME = new QName("http://schema.broadsoft.com/xsi", "Call");
+    private final static QName _FaxEntry_QNAME = new QName("http://schema.broadsoft.com/xsi", "FaxEntry");
     private final static QName _CallingLineIDDeliveryBlocking_QNAME = new QName("http://schema.broadsoft.com/xsi", "CallingLineIDDeliveryBlocking");
     private final static QName _MeetMeConferencingUserConferences_QNAME = new QName("http://schema.broadsoft.com/xsi", "MeetMeConferencingUserConferences");
     private final static QName _MWIDeliveryToMobileEndpoint_QNAME = new QName("http://schema.broadsoft.com/xsi", "MWIDeliveryToMobileEndpoint");
@@ -83,6 +85,7 @@ public class ObjectFactory {
     private final static QName _Conference_QNAME = new QName("http://schema.broadsoft.com/xsi", "Conference");
     private final static QName _CallForwardingAlwaysSecondary_QNAME = new QName("http://schema.broadsoft.com/xsi", "CallForwardingAlwaysSecondary");
     private final static QName _MeetMeConferencingConferenceInfo_QNAME = new QName("http://schema.broadsoft.com/xsi", "MeetMeConferencingConferenceInfo");
+    private final static QName _FaxStatusEntry_QNAME = new QName("http://schema.broadsoft.com/xsi", "FaxStatusEntry");
     private final static QName _PersonalAssistantAssignedCallToNumbers_QNAME = new QName("http://schema.broadsoft.com/xsi", "PersonalAssistantAssignedCallToNumbers");
     private final static QName _IntegratedIMPService_QNAME = new QName("http://schema.broadsoft.com/xsi", "IntegratedIMPService");
     private final static QName _MeetMeConferencingUserBridges_QNAME = new QName("http://schema.broadsoft.com/xsi", "MeetMeConferencingUserBridges");
@@ -91,67 +94,67 @@ public class ObjectFactory {
     private final static QName _SilentAlerting_QNAME = new QName("http://schema.broadsoft.com/xsi", "SilentAlerting");
     private final static QName _ExecutiveAssistants_QNAME = new QName("http://schema.broadsoft.com/xsi", "ExecutiveAssistants");
     private final static QName _FlexibleSeatingGuest_QNAME = new QName("http://schema.broadsoft.com/xsi", "FlexibleSeatingGuest");
-    private final static QName _FileDescriptorFileUrl_QNAME = new QName("http://schema.broadsoft.com/xsi", "fileUrl");
-    private final static QName _PrivacyAllowedUsers_QNAME = new QName("http://schema.broadsoft.com/xsi", "allowedUsers");
-    private final static QName _CommPilotExpressEmailNotifyEmailAddress_QNAME = new QName("http://schema.broadsoft.com/xsi", "emailAddress");
-    private final static QName _VoiceMessagingVoiceMessageDeliveryEmailAddress_QNAME = new QName("http://schema.broadsoft.com/xsi", "voiceMessageDeliveryEmailAddress");
-    private final static QName _VoiceMessagingTransferPhoneNumber_QNAME = new QName("http://schema.broadsoft.com/xsi", "transferPhoneNumber");
-    private final static QName _VoiceMessagingVoiceMessageCarbonCopyEmailAddress_QNAME = new QName("http://schema.broadsoft.com/xsi", "voiceMessageCarbonCopyEmailAddress");
-    private final static QName _VoiceMessagingVoiceMessageNotifyEmailAddress_QNAME = new QName("http://schema.broadsoft.com/xsi", "voiceMessageNotifyEmailAddress");
-    private final static QName _CallForwardingForwardToPhoneNumber_QNAME = new QName("http://schema.broadsoft.com/xsi", "forwardToPhoneNumber");
-    private final static QName _CallForwardingSelectiveDefaultForwardToPhoneNumber_QNAME = new QName("http://schema.broadsoft.com/xsi", "defaultForwardToPhoneNumber");
-    private final static QName _CallCenterAnnouncementURLListUrl1_QNAME = new QName("http://schema.broadsoft.com/xsi", "url1");
-    private final static QName _CallCenterAnnouncementURLListUrl2_QNAME = new QName("http://schema.broadsoft.com/xsi", "url2");
-    private final static QName _CallCenterAnnouncementURLListUrl3_QNAME = new QName("http://schema.broadsoft.com/xsi", "url3");
-    private final static QName _CallCenterAnnouncementURLListUrl4_QNAME = new QName("http://schema.broadsoft.com/xsi", "url4");
-    private final static QName _MWIDeliveryToMobileEndpointMobilePhoneNumber_QNAME = new QName("http://schema.broadsoft.com/xsi", "mobilePhoneNumber");
     private final static QName _BroadWorksMobilityCallAnchoringPolicyTimeSchedule_QNAME = new QName("http://schema.broadsoft.com/xsi", "timeSchedule");
     private final static QName _BroadWorksMobilityCallAnchoringPolicyHolidaySchedule_QNAME = new QName("http://schema.broadsoft.com/xsi", "holidaySchedule");
-    private final static QName _PriorityAlertCriteriaFromDnPhoneNumberList_QNAME = new QName("http://schema.broadsoft.com/xsi", "phoneNumberList");
-    private final static QName _BroadWorksMobilityMobileIdentityDescription_QNAME = new QName("http://schema.broadsoft.com/xsi", "description");
-    private final static QName _BroadWorksMobilityAlertingPolicyInfoMobileNumbersAlertList_QNAME = new QName("http://schema.broadsoft.com/xsi", "mobileNumbersAlertList");
+    private final static QName _PersonalAssistantExclusionNumberEntryDescription_QNAME = new QName("http://schema.broadsoft.com/xsi", "description");
+    private final static QName _CriteriaWithPriorityAlertCriteriaCallToNumber_QNAME = new QName("http://schema.broadsoft.com/xsi", "criteriaCallToNumber");
+    private final static QName _AlternateNumberEntryExtension_QNAME = new QName("http://schema.broadsoft.com/xsi", "extension");
+    private final static QName _AlternateNumberEntryPhoneNumber_QNAME = new QName("http://schema.broadsoft.com/xsi", "phoneNumber");
+    private final static QName _AlternateNumberEntryRingPattern_QNAME = new QName("http://schema.broadsoft.com/xsi", "ringPattern");
+    private final static QName _CriteriaToDnPhoneNumberList_QNAME = new QName("http://schema.broadsoft.com/xsi", "phoneNumberList");
+    private final static QName _ACDNightServiceTransferPhoneNumber_QNAME = new QName("http://schema.broadsoft.com/xsi", "transferPhoneNumber");
+    private final static QName _ACDNightServiceBusinessHours_QNAME = new QName("http://schema.broadsoft.com/xsi", "businessHours");
+    private final static QName _CallParkUserDetailsList_QNAME = new QName("http://schema.broadsoft.com/xsi", "userDetailsList");
     private final static QName _CommPilotExpressAvailableInOfficeAdditionalPhoneNumberToRing_QNAME = new QName("http://schema.broadsoft.com/xsi", "additionalPhoneNumberToRing");
-    private final static QName _BroadWorksAnywhereLocationOutboundAlternateNumber_QNAME = new QName("http://schema.broadsoft.com/xsi", "outboundAlternateNumber");
-    private final static QName _FeatureAccessCodeEntryAlternateCode_QNAME = new QName("http://schema.broadsoft.com/xsi", "alternateCode");
-    private final static QName _CallCenterAgentUnavailableCode_QNAME = new QName("http://schema.broadsoft.com/xsi", "agentUnavailableCode");
-    private final static QName _CallCenterOutgoingCallDNIS_QNAME = new QName("http://schema.broadsoft.com/xsi", "outgoingCallDNIS");
-    private final static QName _SimultaneousRingPersonalSimRingLocations_QNAME = new QName("http://schema.broadsoft.com/xsi", "simRingLocations");
-    private final static QName _CriteriaWithExecutiveFilteringCriteriaCallToNumber_QNAME = new QName("http://schema.broadsoft.com/xsi", "criteriaCallToNumber");
-    private final static QName _CallCenterAnnouncementFileListFile4_QNAME = new QName("http://schema.broadsoft.com/xsi", "file4");
-    private final static QName _CallCenterAnnouncementFileListFile2_QNAME = new QName("http://schema.broadsoft.com/xsi", "file2");
-    private final static QName _CallCenterAnnouncementFileListFile3_QNAME = new QName("http://schema.broadsoft.com/xsi", "file3");
-    private final static QName _CallCenterAnnouncementFileListFile1_QNAME = new QName("http://schema.broadsoft.com/xsi", "file1");
-    private final static QName _PersonalAssistantAssignedCallToNumbersCallToNumberList_QNAME = new QName("http://schema.broadsoft.com/xsi", "callToNumberList");
-    private final static QName _SpeedDial8EntryPhoneNumber_QNAME = new QName("http://schema.broadsoft.com/xsi", "phoneNumber");
-    private final static QName _BusyLampFieldListURI_QNAME = new QName("http://schema.broadsoft.com/xsi", "listURI");
-    private final static QName _BusyLampFieldMonitoredUserList_QNAME = new QName("http://schema.broadsoft.com/xsi", "monitoredUserList");
-    private final static QName _HotelingGuestHostUserId_QNAME = new QName("http://schema.broadsoft.com/xsi", "hostUserId");
-    private final static QName _AlternateNumbersNumbers_QNAME = new QName("http://schema.broadsoft.com/xsi", "numbers");
+    private final static QName _SequentialRingLocationAddress_QNAME = new QName("http://schema.broadsoft.com/xsi", "address");
+    private final static QName _BroadWorksMobilityAlertingPolicyInfoMobileNumbersAlertList_QNAME = new QName("http://schema.broadsoft.com/xsi", "mobileNumbersAlertList");
+    private final static QName _PersonalAssistantCallToNumberList_QNAME = new QName("http://schema.broadsoft.com/xsi", "callToNumberList");
     private final static QName _PersonalAssistantExpirationTime_QNAME = new QName("http://schema.broadsoft.com/xsi", "expirationTime");
     private final static QName _PersonalAssistantAttendantNumber_QNAME = new QName("http://schema.broadsoft.com/xsi", "attendantNumber");
-    private final static QName _AttendantConsoleMonitoredUsers_QNAME = new QName("http://schema.broadsoft.com/xsi", "monitoredUsers");
-    private final static QName _AttendantConsoleDisplayFields_QNAME = new QName("http://schema.broadsoft.com/xsi", "displayFields");
-    private final static QName _ACDNightServiceBusinessHours_QNAME = new QName("http://schema.broadsoft.com/xsi", "businessHours");
-    private final static QName _FlexibleSeatingGuestUnlockPhonePINCode_QNAME = new QName("http://schema.broadsoft.com/xsi", "unlockPhonePINCode");
-    private final static QName _FaxMessagingExtension_QNAME = new QName("http://schema.broadsoft.com/xsi", "extension");
-    private final static QName _CommPilotExpressProfile_QNAME = new QName("http://schema.broadsoft.com/xsi", "profile");
-    private final static QName _RemoteOfficeRemoteOfficeNumber_QNAME = new QName("http://schema.broadsoft.com/xsi", "remoteOfficeNumber");
-    private final static QName _CommPilotExpressRedirectionForwardingAddress_QNAME = new QName("http://schema.broadsoft.com/xsi", "forwardingAddress");
-    private final static QName _SequentialRingLocationAddress_QNAME = new QName("http://schema.broadsoft.com/xsi", "address");
-    private final static QName _OutgoingMWIOutgoingSMDIMWIPhoneNumberList_QNAME = new QName("http://schema.broadsoft.com/xsi", "outgoingSMDIMWIPhoneNumberList");
+    private final static QName _VoiceMessagingVoiceMessageDeliveryEmailAddress_QNAME = new QName("http://schema.broadsoft.com/xsi", "voiceMessageDeliveryEmailAddress");
+    private final static QName _VoiceMessagingVoiceMessageCarbonCopyEmailAddress_QNAME = new QName("http://schema.broadsoft.com/xsi", "voiceMessageCarbonCopyEmailAddress");
+    private final static QName _VoiceMessagingVoiceMessageNotifyEmailAddress_QNAME = new QName("http://schema.broadsoft.com/xsi", "voiceMessageNotifyEmailAddress");
     private final static QName _UserInfoHiranganaLastName_QNAME = new QName("http://schema.broadsoft.com/xsi", "hiranganaLastName");
     private final static QName _UserInfoFirstName_QNAME = new QName("http://schema.broadsoft.com/xsi", "firstName");
     private final static QName _UserInfoLastName_QNAME = new QName("http://schema.broadsoft.com/xsi", "lastName");
     private final static QName _UserInfoHiranganaFirstName_QNAME = new QName("http://schema.broadsoft.com/xsi", "hiranganaFirstName");
+    private final static QName _FlexibleSeatingGuestHostUserId_QNAME = new QName("http://schema.broadsoft.com/xsi", "hostUserId");
+    private final static QName _FlexibleSeatingGuestUnlockPhonePINCode_QNAME = new QName("http://schema.broadsoft.com/xsi", "unlockPhonePINCode");
+    private final static QName _BusyLampFieldListURI_QNAME = new QName("http://schema.broadsoft.com/xsi", "listURI");
+    private final static QName _BusyLampFieldMonitoredUserList_QNAME = new QName("http://schema.broadsoft.com/xsi", "monitoredUserList");
+    private final static QName _CommPilotExpressRedirectionForwardingAddress_QNAME = new QName("http://schema.broadsoft.com/xsi", "forwardingAddress");
+    private final static QName _CallForwardingSelectiveDefaultForwardToPhoneNumber_QNAME = new QName("http://schema.broadsoft.com/xsi", "defaultForwardToPhoneNumber");
+    private final static QName _VoiceMessagingGreetingsGreetingOnlyForwardDestination_QNAME = new QName("http://schema.broadsoft.com/xsi", "greetingOnlyForwardDestination");
+    private final static QName _PrivacyAllowedUsers_QNAME = new QName("http://schema.broadsoft.com/xsi", "allowedUsers");
+    private final static QName _ACDForcedForwardingForwardToPhoneNumber_QNAME = new QName("http://schema.broadsoft.com/xsi", "forwardToPhoneNumber");
     private final static QName _PushToTalkAccessListSelection_QNAME = new QName("http://schema.broadsoft.com/xsi", "accessListSelection");
-    private final static QName _MeetMeConferencingConferenceAccountCode_QNAME = new QName("http://schema.broadsoft.com/xsi", "accountCode");
-    private final static QName _AlternateNumberEntryRingPattern_QNAME = new QName("http://schema.broadsoft.com/xsi", "ringPattern");
+    private final static QName _CallCenterAnnouncementFileListFile4_QNAME = new QName("http://schema.broadsoft.com/xsi", "file4");
+    private final static QName _CallCenterAnnouncementFileListFile2_QNAME = new QName("http://schema.broadsoft.com/xsi", "file2");
+    private final static QName _CallCenterAnnouncementFileListFile3_QNAME = new QName("http://schema.broadsoft.com/xsi", "file3");
+    private final static QName _CallCenterAnnouncementFileListFile1_QNAME = new QName("http://schema.broadsoft.com/xsi", "file1");
+    private final static QName _FileDescriptorFileUrl_QNAME = new QName("http://schema.broadsoft.com/xsi", "fileUrl");
+    private final static QName _BroadWorksAnywhereLocationOutboundAlternateNumber_QNAME = new QName("http://schema.broadsoft.com/xsi", "outboundAlternateNumber");
+    private final static QName _MWIDeliveryToMobileEndpointMobilePhoneNumber_QNAME = new QName("http://schema.broadsoft.com/xsi", "mobilePhoneNumber");
+    private final static QName _ExecutiveAssistantDivertToPhoneNumber_QNAME = new QName("http://schema.broadsoft.com/xsi", "divertToPhoneNumber");
+    private final static QName _AlternateNumbersNumbers_QNAME = new QName("http://schema.broadsoft.com/xsi", "numbers");
+    private final static QName _OutgoingMWIOutgoingSMDIMWIPhoneNumberList_QNAME = new QName("http://schema.broadsoft.com/xsi", "outgoingSMDIMWIPhoneNumberList");
+    private final static QName _CommPilotExpressEmailNotifyEmailAddress_QNAME = new QName("http://schema.broadsoft.com/xsi", "emailAddress");
+    private final static QName _CallCenterAgentUnavailableCode_QNAME = new QName("http://schema.broadsoft.com/xsi", "agentUnavailableCode");
+    private final static QName _CallCenterOutgoingCallDNIS_QNAME = new QName("http://schema.broadsoft.com/xsi", "outgoingCallDNIS");
+    private final static QName _RemoteOfficeRemoteOfficeNumber_QNAME = new QName("http://schema.broadsoft.com/xsi", "remoteOfficeNumber");
+    private final static QName _SimultaneousRingPersonalSimRingLocations_QNAME = new QName("http://schema.broadsoft.com/xsi", "simRingLocations");
+    private final static QName _FeatureAccessCodeEntryAlternateCode_QNAME = new QName("http://schema.broadsoft.com/xsi", "alternateCode");
     private final static QName _CommPilotExpressRedirectionWithExceptionExcludedAddress1_QNAME = new QName("http://schema.broadsoft.com/xsi", "excludedAddress1");
     private final static QName _CommPilotExpressRedirectionWithExceptionForwardToAddress_QNAME = new QName("http://schema.broadsoft.com/xsi", "forwardToAddress");
     private final static QName _CommPilotExpressRedirectionWithExceptionExcludedAddress3_QNAME = new QName("http://schema.broadsoft.com/xsi", "excludedAddress3");
     private final static QName _CommPilotExpressRedirectionWithExceptionExcludedAddress2_QNAME = new QName("http://schema.broadsoft.com/xsi", "excludedAddress2");
-    private final static QName _VoiceMessagingGreetingsGreetingOnlyForwardDestination_QNAME = new QName("http://schema.broadsoft.com/xsi", "greetingOnlyForwardDestination");
-    private final static QName _CallParkUserDetailsList_QNAME = new QName("http://schema.broadsoft.com/xsi", "userDetailsList");
+    private final static QName _CallCenterAnnouncementURLListUrl1_QNAME = new QName("http://schema.broadsoft.com/xsi", "url1");
+    private final static QName _CallCenterAnnouncementURLListUrl2_QNAME = new QName("http://schema.broadsoft.com/xsi", "url2");
+    private final static QName _CallCenterAnnouncementURLListUrl3_QNAME = new QName("http://schema.broadsoft.com/xsi", "url3");
+    private final static QName _CallCenterAnnouncementURLListUrl4_QNAME = new QName("http://schema.broadsoft.com/xsi", "url4");
+    private final static QName _CommPilotExpressProfile_QNAME = new QName("http://schema.broadsoft.com/xsi", "profile");
+    private final static QName _MeetMeConferencingConferenceAccountCode_QNAME = new QName("http://schema.broadsoft.com/xsi", "accountCode");
+    private final static QName _BroadWorksReceptionistMonitoredUsers_QNAME = new QName("http://schema.broadsoft.com/xsi", "monitoredUsers");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.broadsoft.xsi
@@ -313,6 +316,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link FaxStatusEntry }
+     * 
+     */
+    public FaxStatusEntry createFaxStatusEntry() {
+        return new FaxStatusEntry();
+    }
+
+    /**
      * Create an instance of {@link PersonalAssistantAssignedCallToNumbers }
      * 
      */
@@ -390,6 +401,22 @@ public class ObjectFactory {
      */
     public UserDetailInfoList createUserDetailInfoList() {
         return new UserDetailInfoList();
+    }
+
+    /**
+     * Create an instance of {@link PlayDynamicMusicOnHold }
+     * 
+     */
+    public PlayDynamicMusicOnHold createPlayDynamicMusicOnHold() {
+        return new PlayDynamicMusicOnHold();
+    }
+
+    /**
+     * Create an instance of {@link MusicOnHoldURIList }
+     * 
+     */
+    public MusicOnHoldURIList createMusicOnHoldURIList() {
+        return new MusicOnHoldURIList();
     }
 
     /**
@@ -521,14 +548,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OutlookIntegration }
-     * 
-     */
-    public OutlookIntegration createOutlookIntegration() {
-        return new OutlookIntegration();
-    }
-
-    /**
      * Create an instance of {@link SelectiveCallAcceptanceCriteria }
      * 
      */
@@ -625,22 +644,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AttendantConsole }
-     * 
-     */
-    public AttendantConsole createAttendantConsole() {
-        return new AttendantConsole();
-    }
-
-    /**
-     * Create an instance of {@link AttendantConsoleDisplayFieldList }
-     * 
-     */
-    public AttendantConsoleDisplayFieldList createAttendantConsoleDisplayFieldList() {
-        return new AttendantConsoleDisplayFieldList();
-    }
-
-    /**
      * Create an instance of {@link OutgoingMWI }
      * 
      */
@@ -710,6 +713,14 @@ public class ObjectFactory {
      */
     public EventPackages createEventPackages() {
         return new EventPackages();
+    }
+
+    /**
+     * Create an instance of {@link RoutePointConnectToVoiceXML }
+     * 
+     */
+    public RoutePointConnectToVoiceXML createRoutePointConnectToVoiceXML() {
+        return new RoutePointConnectToVoiceXML();
     }
 
     /**
@@ -910,14 +921,6 @@ public class ObjectFactory {
      */
     public MeetMeConferencingConference createMeetMeConferencingConference() {
         return new MeetMeConferencingConference();
-    }
-
-    /**
-     * Create an instance of {@link CommPilotCallManager }
-     * 
-     */
-    public CommPilotCallManager createCommPilotCallManager() {
-        return new CommPilotCallManager();
     }
 
     /**
@@ -1169,6 +1172,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link FaxStatusEntryList }
+     * 
+     */
+    public FaxStatusEntryList createFaxStatusEntryList() {
+        return new FaxStatusEntryList();
+    }
+
+    /**
      * Create an instance of {@link Calls }
      * 
      */
@@ -1246,6 +1257,14 @@ public class ObjectFactory {
      */
     public VoiceMessagingAliasList createVoiceMessagingAliasList() {
         return new VoiceMessagingAliasList();
+    }
+
+    /**
+     * Create an instance of {@link HookStatus }
+     * 
+     */
+    public HookStatus createHookStatus() {
+        return new HookStatus();
     }
 
     /**
@@ -1593,6 +1612,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link PushNotification }
+     * 
+     */
+    public PushNotification createPushNotification() {
+        return new PushNotification();
+    }
+
+    /**
      * Create an instance of {@link EnhancedCallLogs }
      * 
      */
@@ -1670,6 +1697,14 @@ public class ObjectFactory {
      */
     public FaxMessaging createFaxMessaging() {
         return new FaxMessaging();
+    }
+
+    /**
+     * Create an instance of {@link CallNotifyCriteria }
+     * 
+     */
+    public CallNotifyCriteria createCallNotifyCriteria() {
+        return new CallNotifyCriteria();
     }
 
     /**
@@ -1862,6 +1897,14 @@ public class ObjectFactory {
      */
     public MusicOnHold createMusicOnHold() {
         return new MusicOnHold();
+    }
+
+    /**
+     * Create an instance of {@link FaxEntry }
+     * 
+     */
+    public FaxEntry createFaxEntry() {
+        return new FaxEntry();
     }
 
     /**
@@ -2281,6 +2324,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link RoutePointConnectedToVoiceXMLEvent }
+     * 
+     */
+    public RoutePointConnectedToVoiceXMLEvent createRoutePointConnectedToVoiceXMLEvent() {
+        return new RoutePointConnectedToVoiceXMLEvent();
+    }
+
+    /**
      * Create an instance of {@link AgentStateInformation }
      * 
      */
@@ -2382,6 +2433,14 @@ public class ObjectFactory {
      */
     public MeetMeConferenceLockedEvent createMeetMeConferenceLockedEvent() {
         return new MeetMeConferenceLockedEvent();
+    }
+
+    /**
+     * Create an instance of {@link PushNotificationEventDetail }
+     * 
+     */
+    public PushNotificationEventDetail createPushNotificationEventDetail() {
+        return new PushNotificationEventDetail();
     }
 
     /**
@@ -2510,6 +2569,22 @@ public class ObjectFactory {
      */
     public Version createVersion() {
         return new Version();
+    }
+
+    /**
+     * Create an instance of {@link PushNotificationParametersList }
+     * 
+     */
+    public PushNotificationParametersList createPushNotificationParametersList() {
+        return new PushNotificationParametersList();
+    }
+
+    /**
+     * Create an instance of {@link PlayMusicOnHoldFailureEvent }
+     * 
+     */
+    public PlayMusicOnHoldFailureEvent createPlayMusicOnHoldFailureEvent() {
+        return new PlayMusicOnHoldFailureEvent();
     }
 
     /**
@@ -2702,6 +2777,14 @@ public class ObjectFactory {
      */
     public ExecutiveAssistantEndpoint createExecutiveAssistantEndpoint() {
         return new ExecutiveAssistantEndpoint();
+    }
+
+    /**
+     * Create an instance of {@link RoutePointFailedVoiceXMLEvent }
+     * 
+     */
+    public RoutePointFailedVoiceXMLEvent createRoutePointFailedVoiceXMLEvent() {
+        return new RoutePointFailedVoiceXMLEvent();
     }
 
     /**
@@ -3070,6 +3153,14 @@ public class ObjectFactory {
      */
     public RoutePointCallUpdatedEvent createRoutePointCallUpdatedEvent() {
         return new RoutePointCallUpdatedEvent();
+    }
+
+    /**
+     * Create an instance of {@link PushNotificationParam }
+     * 
+     */
+    public PushNotificationParam createPushNotificationParam() {
+        return new PushNotificationParam();
     }
 
     /**
@@ -3969,6 +4060,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link RoutePointConnectingToVoiceXMLEvent }
+     * 
+     */
+    public RoutePointConnectingToVoiceXMLEvent createRoutePointConnectingToVoiceXMLEvent() {
+        return new RoutePointConnectingToVoiceXMLEvent();
+    }
+
+    /**
      * Create an instance of {@link CallIdList }
      * 
      */
@@ -4110,6 +4209,14 @@ public class ObjectFactory {
      */
     public CallRedirectedEvent createCallRedirectedEvent() {
         return new CallRedirectedEvent();
+    }
+
+    /**
+     * Create an instance of {@link RoutePointCallRejectedEvent }
+     * 
+     */
+    public RoutePointCallRejectedEvent createRoutePointCallRejectedEvent() {
+        return new RoutePointCallRejectedEvent();
     }
 
     /**
@@ -4257,6 +4364,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link PushNotificationParamList }
+     * 
+     */
+    public PushNotificationParamList createPushNotificationParamList() {
+        return new PushNotificationParamList();
+    }
+
+    /**
      * Create an instance of {@link BroadWorksAnywhereLocationInfo }
      * 
      */
@@ -4302,6 +4417,14 @@ public class ObjectFactory {
      */
     public SubscriptionEvent createSubscriptionEvent() {
         return new SubscriptionEvent();
+    }
+
+    /**
+     * Create an instance of {@link RoutePointNewCallEvent }
+     * 
+     */
+    public RoutePointNewCallEvent createRoutePointNewCallEvent() {
+        return new RoutePointNewCallEvent();
     }
 
     /**
@@ -4626,12 +4749,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FaxStatusEntryList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "FaxStatusEntryList")
+    public JAXBElement<FaxStatusEntryList> createFaxStatusEntryList(FaxStatusEntryList value) {
+        return new JAXBElement<FaxStatusEntryList>(_FaxStatusEntryList_QNAME, FaxStatusEntryList.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Call }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "Call")
     public JAXBElement<Call> createCall(Call value) {
         return new JAXBElement<Call>(_Call_QNAME, Call.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FaxEntry }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "FaxEntry")
+    public JAXBElement<FaxEntry> createFaxEntry(FaxEntry value) {
+        return new JAXBElement<FaxEntry>(_FaxEntry_QNAME, FaxEntry.class, null, value);
     }
 
     /**
@@ -5058,6 +5199,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FaxStatusEntry }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "FaxStatusEntry")
+    public JAXBElement<FaxStatusEntry> createFaxStatusEntry(FaxStatusEntry value) {
+        return new JAXBElement<FaxStatusEntry>(_FaxStatusEntry_QNAME, FaxStatusEntry.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link PersonalAssistantAssignedCallToNumbers }{@code >}}
      * 
      */
@@ -5130,143 +5280,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "fileUrl", scope = FileDescriptor.class)
-    public JAXBElement<String> createFileDescriptorFileUrl(String value) {
-        return new JAXBElement<String>(_FileDescriptorFileUrl_QNAME, String.class, FileDescriptor.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UserDetailInfoList }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "allowedUsers", scope = Privacy.class)
-    public JAXBElement<UserDetailInfoList> createPrivacyAllowedUsers(UserDetailInfoList value) {
-        return new JAXBElement<UserDetailInfoList>(_PrivacyAllowedUsers_QNAME, UserDetailInfoList.class, Privacy.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "emailAddress", scope = CommPilotExpressEmailNotify.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createCommPilotExpressEmailNotifyEmailAddress(String value) {
-        return new JAXBElement<String>(_CommPilotExpressEmailNotifyEmailAddress_QNAME, String.class, CommPilotExpressEmailNotify.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "voiceMessageDeliveryEmailAddress", scope = VoiceMessaging.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createVoiceMessagingVoiceMessageDeliveryEmailAddress(String value) {
-        return new JAXBElement<String>(_VoiceMessagingVoiceMessageDeliveryEmailAddress_QNAME, String.class, VoiceMessaging.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "transferPhoneNumber", scope = VoiceMessaging.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createVoiceMessagingTransferPhoneNumber(String value) {
-        return new JAXBElement<String>(_VoiceMessagingTransferPhoneNumber_QNAME, String.class, VoiceMessaging.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "voiceMessageCarbonCopyEmailAddress", scope = VoiceMessaging.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createVoiceMessagingVoiceMessageCarbonCopyEmailAddress(String value) {
-        return new JAXBElement<String>(_VoiceMessagingVoiceMessageCarbonCopyEmailAddress_QNAME, String.class, VoiceMessaging.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "voiceMessageNotifyEmailAddress", scope = VoiceMessaging.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createVoiceMessagingVoiceMessageNotifyEmailAddress(String value) {
-        return new JAXBElement<String>(_VoiceMessagingVoiceMessageNotifyEmailAddress_QNAME, String.class, VoiceMessaging.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Address }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "forwardToPhoneNumber", scope = CallForwarding.class)
-    public JAXBElement<Address> createCallForwardingForwardToPhoneNumber(Address value) {
-        return new JAXBElement<Address>(_CallForwardingForwardToPhoneNumber_QNAME, Address.class, CallForwarding.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "defaultForwardToPhoneNumber", scope = CallForwardingSelective.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createCallForwardingSelectiveDefaultForwardToPhoneNumber(String value) {
-        return new JAXBElement<String>(_CallForwardingSelectiveDefaultForwardToPhoneNumber_QNAME, String.class, CallForwardingSelective.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "url1", scope = CallCenterAnnouncementURLList.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createCallCenterAnnouncementURLListUrl1(String value) {
-        return new JAXBElement<String>(_CallCenterAnnouncementURLListUrl1_QNAME, String.class, CallCenterAnnouncementURLList.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "url2", scope = CallCenterAnnouncementURLList.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createCallCenterAnnouncementURLListUrl2(String value) {
-        return new JAXBElement<String>(_CallCenterAnnouncementURLListUrl2_QNAME, String.class, CallCenterAnnouncementURLList.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "url3", scope = CallCenterAnnouncementURLList.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createCallCenterAnnouncementURLListUrl3(String value) {
-        return new JAXBElement<String>(_CallCenterAnnouncementURLListUrl3_QNAME, String.class, CallCenterAnnouncementURLList.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "url4", scope = CallCenterAnnouncementURLList.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createCallCenterAnnouncementURLListUrl4(String value) {
-        return new JAXBElement<String>(_CallCenterAnnouncementURLListUrl4_QNAME, String.class, CallCenterAnnouncementURLList.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "mobilePhoneNumber", scope = MWIDeliveryToMobileEndpoint.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createMWIDeliveryToMobileEndpointMobilePhoneNumber(String value) {
-        return new JAXBElement<String>(_MWIDeliveryToMobileEndpointMobilePhoneNumber_QNAME, String.class, MWIDeliveryToMobileEndpoint.class, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link TimeSchedule }{@code >}}
      * 
      */
@@ -5285,40 +5298,137 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CriteriaPhoneNumberList }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumberList", scope = PriorityAlertCriteriaFromDn.class)
-    public JAXBElement<CriteriaPhoneNumberList> createPriorityAlertCriteriaFromDnPhoneNumberList(CriteriaPhoneNumberList value) {
-        return new JAXBElement<CriteriaPhoneNumberList>(_PriorityAlertCriteriaFromDnPhoneNumberList_QNAME, CriteriaPhoneNumberList.class, PriorityAlertCriteriaFromDn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "description", scope = BroadWorksMobilityMobileIdentity.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createBroadWorksMobilityMobileIdentityDescription(String value) {
-        return new JAXBElement<String>(_BroadWorksMobilityMobileIdentityDescription_QNAME, String.class, BroadWorksMobilityMobileIdentity.class, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "description", scope = PersonalAssistantExclusionNumberEntry.class)
     public JAXBElement<String> createPersonalAssistantExclusionNumberEntryDescription(String value) {
-        return new JAXBElement<String>(_BroadWorksMobilityMobileIdentityDescription_QNAME, String.class, PersonalAssistantExclusionNumberEntry.class, value);
+        return new JAXBElement<String>(_PersonalAssistantExclusionNumberEntryDescription_QNAME, String.class, PersonalAssistantExclusionNumberEntry.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BroadWorksMobilityMobileNumbersAlertList }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link CallToNumberList }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "mobileNumbersAlertList", scope = BroadWorksMobilityAlertingPolicyInfo.class)
-    public JAXBElement<BroadWorksMobilityMobileNumbersAlertList> createBroadWorksMobilityAlertingPolicyInfoMobileNumbersAlertList(BroadWorksMobilityMobileNumbersAlertList value) {
-        return new JAXBElement<BroadWorksMobilityMobileNumbersAlertList>(_BroadWorksMobilityAlertingPolicyInfoMobileNumbersAlertList_QNAME, BroadWorksMobilityMobileNumbersAlertList.class, BroadWorksMobilityAlertingPolicyInfo.class, value);
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "criteriaCallToNumber", scope = CriteriaWithPriorityAlert.class)
+    public JAXBElement<CallToNumberList> createCriteriaWithPriorityAlertCriteriaCallToNumber(CallToNumberList value) {
+        return new JAXBElement<CallToNumberList>(_CriteriaWithPriorityAlertCriteriaCallToNumber_QNAME, CallToNumberList.class, CriteriaWithPriorityAlert.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "extension", scope = AlternateNumberEntry.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createAlternateNumberEntryExtension(String value) {
+        return new JAXBElement<String>(_AlternateNumberEntryExtension_QNAME, String.class, AlternateNumberEntry.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumber", scope = AlternateNumberEntry.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createAlternateNumberEntryPhoneNumber(String value) {
+        return new JAXBElement<String>(_AlternateNumberEntryPhoneNumber_QNAME, String.class, AlternateNumberEntry.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AlternateNumbersRingPatternEnum }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "ringPattern", scope = AlternateNumberEntry.class, defaultValue = "Normal")
+    public JAXBElement<AlternateNumbersRingPatternEnum> createAlternateNumberEntryRingPattern(AlternateNumbersRingPatternEnum value) {
+        return new JAXBElement<AlternateNumbersRingPatternEnum>(_AlternateNumberEntryRingPattern_QNAME, AlternateNumbersRingPatternEnum.class, AlternateNumberEntry.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "description", scope = AlternateNumberEntry.class)
+    public JAXBElement<String> createAlternateNumberEntryDescription(String value) {
+        return new JAXBElement<String>(_PersonalAssistantExclusionNumberEntryDescription_QNAME, String.class, AlternateNumberEntry.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumber", scope = SpeedDial8Entry.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createSpeedDial8EntryPhoneNumber(String value) {
+        return new JAXBElement<String>(_AlternateNumberEntryPhoneNumber_QNAME, String.class, SpeedDial8Entry.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "description", scope = SpeedDial8Entry.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createSpeedDial8EntryDescription(String value) {
+        return new JAXBElement<String>(_PersonalAssistantExclusionNumberEntryDescription_QNAME, String.class, SpeedDial8Entry.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "extension", scope = FaxMessaging.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createFaxMessagingExtension(String value) {
+        return new JAXBElement<String>(_AlternateNumberEntryExtension_QNAME, String.class, FaxMessaging.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumber", scope = FaxMessaging.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createFaxMessagingPhoneNumber(String value) {
+        return new JAXBElement<String>(_AlternateNumberEntryPhoneNumber_QNAME, String.class, FaxMessaging.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CriteriaPhoneNumberList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumberList", scope = CriteriaToDn.class)
+    public JAXBElement<CriteriaPhoneNumberList> createCriteriaToDnPhoneNumberList(CriteriaPhoneNumberList value) {
+        return new JAXBElement<CriteriaPhoneNumberList>(_CriteriaToDnPhoneNumberList_QNAME, CriteriaPhoneNumberList.class, CriteriaToDn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "transferPhoneNumber", scope = ACDNightService.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createACDNightServiceTransferPhoneNumber(String value) {
+        return new JAXBElement<String>(_ACDNightServiceTransferPhoneNumber_QNAME, String.class, ACDNightService.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "businessHours", scope = ACDNightService.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createACDNightServiceBusinessHours(String value) {
+        return new JAXBElement<String>(_ACDNightServiceBusinessHours_QNAME, String.class, ACDNightService.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UserDetailsList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "userDetailsList", scope = CallPark.class)
+    public JAXBElement<UserDetailsList> createCallParkUserDetailsList(UserDetailsList value) {
+        return new JAXBElement<UserDetailsList>(_CallParkUserDetailsList_QNAME, UserDetailsList.class, CallPark.class, value);
     }
 
     /**
@@ -5331,191 +5441,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Address }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "outboundAlternateNumber", scope = BroadWorksAnywhereLocation.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createBroadWorksAnywhereLocationOutboundAlternateNumber(String value) {
-        return new JAXBElement<String>(_BroadWorksAnywhereLocationOutboundAlternateNumber_QNAME, String.class, BroadWorksAnywhereLocation.class, value);
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "address", scope = SequentialRingLocation.class)
+    public JAXBElement<Address> createSequentialRingLocationAddress(Address value) {
+        return new JAXBElement<Address>(_SequentialRingLocationAddress_QNAME, Address.class, SequentialRingLocation.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link BroadWorksMobilityMobileNumbersAlertList }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "description", scope = BroadWorksAnywhereLocation.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createBroadWorksAnywhereLocationDescription(String value) {
-        return new JAXBElement<String>(_BroadWorksMobilityMobileIdentityDescription_QNAME, String.class, BroadWorksAnywhereLocation.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "alternateCode", scope = FeatureAccessCodeEntry.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createFeatureAccessCodeEntryAlternateCode(String value) {
-        return new JAXBElement<String>(_FeatureAccessCodeEntryAlternateCode_QNAME, String.class, FeatureAccessCodeEntry.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "agentUnavailableCode", scope = com.broadsoft.xsi.CallCenter.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createCallCenterAgentUnavailableCode(String value) {
-        return new JAXBElement<String>(_CallCenterAgentUnavailableCode_QNAME, String.class, com.broadsoft.xsi.CallCenter.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DNISKey }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "outgoingCallDNIS", scope = com.broadsoft.xsi.CallCenter.class)
-    public JAXBElement<DNISKey> createCallCenterOutgoingCallDNIS(DNISKey value) {
-        return new JAXBElement<DNISKey>(_CallCenterOutgoingCallDNIS_QNAME, DNISKey.class, com.broadsoft.xsi.CallCenter.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SimultaneousRingLocationList }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "simRingLocations", scope = SimultaneousRingPersonal.class)
-    public JAXBElement<SimultaneousRingLocationList> createSimultaneousRingPersonalSimRingLocations(SimultaneousRingLocationList value) {
-        return new JAXBElement<SimultaneousRingLocationList>(_SimultaneousRingPersonalSimRingLocations_QNAME, SimultaneousRingLocationList.class, SimultaneousRingPersonal.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CallToNumberList }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "criteriaCallToNumber", scope = CriteriaWithExecutiveFiltering.class)
-    public JAXBElement<CallToNumberList> createCriteriaWithExecutiveFilteringCriteriaCallToNumber(CallToNumberList value) {
-        return new JAXBElement<CallToNumberList>(_CriteriaWithExecutiveFilteringCriteriaCallToNumber_QNAME, CallToNumberList.class, CriteriaWithExecutiveFiltering.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TimeSchedule }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "timeSchedule", scope = ScheduleList.class)
-    public JAXBElement<TimeSchedule> createScheduleListTimeSchedule(TimeSchedule value) {
-        return new JAXBElement<TimeSchedule>(_BroadWorksMobilityCallAnchoringPolicyTimeSchedule_QNAME, TimeSchedule.class, ScheduleList.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link HolidaySchedule }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "holidaySchedule", scope = ScheduleList.class)
-    public JAXBElement<HolidaySchedule> createScheduleListHolidaySchedule(HolidaySchedule value) {
-        return new JAXBElement<HolidaySchedule>(_BroadWorksMobilityCallAnchoringPolicyHolidaySchedule_QNAME, HolidaySchedule.class, ScheduleList.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LabeledMediaFileResource }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "file4", scope = CallCenterAnnouncementFileList.class)
-    public JAXBElement<LabeledMediaFileResource> createCallCenterAnnouncementFileListFile4(LabeledMediaFileResource value) {
-        return new JAXBElement<LabeledMediaFileResource>(_CallCenterAnnouncementFileListFile4_QNAME, LabeledMediaFileResource.class, CallCenterAnnouncementFileList.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LabeledMediaFileResource }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "file2", scope = CallCenterAnnouncementFileList.class)
-    public JAXBElement<LabeledMediaFileResource> createCallCenterAnnouncementFileListFile2(LabeledMediaFileResource value) {
-        return new JAXBElement<LabeledMediaFileResource>(_CallCenterAnnouncementFileListFile2_QNAME, LabeledMediaFileResource.class, CallCenterAnnouncementFileList.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LabeledMediaFileResource }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "file3", scope = CallCenterAnnouncementFileList.class)
-    public JAXBElement<LabeledMediaFileResource> createCallCenterAnnouncementFileListFile3(LabeledMediaFileResource value) {
-        return new JAXBElement<LabeledMediaFileResource>(_CallCenterAnnouncementFileListFile3_QNAME, LabeledMediaFileResource.class, CallCenterAnnouncementFileList.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LabeledMediaFileResource }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "file1", scope = CallCenterAnnouncementFileList.class)
-    public JAXBElement<LabeledMediaFileResource> createCallCenterAnnouncementFileListFile1(LabeledMediaFileResource value) {
-        return new JAXBElement<LabeledMediaFileResource>(_CallCenterAnnouncementFileListFile1_QNAME, LabeledMediaFileResource.class, CallCenterAnnouncementFileList.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CallToNumberList }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "callToNumberList", scope = PersonalAssistantAssignedCallToNumbers.class)
-    public JAXBElement<CallToNumberList> createPersonalAssistantAssignedCallToNumbersCallToNumberList(CallToNumberList value) {
-        return new JAXBElement<CallToNumberList>(_PersonalAssistantAssignedCallToNumbersCallToNumberList_QNAME, CallToNumberList.class, PersonalAssistantAssignedCallToNumbers.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumber", scope = SpeedDial8Entry.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createSpeedDial8EntryPhoneNumber(String value) {
-        return new JAXBElement<String>(_SpeedDial8EntryPhoneNumber_QNAME, String.class, SpeedDial8Entry.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "description", scope = SpeedDial8Entry.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createSpeedDial8EntryDescription(String value) {
-        return new JAXBElement<String>(_BroadWorksMobilityMobileIdentityDescription_QNAME, String.class, SpeedDial8Entry.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "listURI", scope = BusyLampField.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createBusyLampFieldListURI(String value) {
-        return new JAXBElement<String>(_BusyLampFieldListURI_QNAME, String.class, BusyLampField.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UserDetailInfoList }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "monitoredUserList", scope = BusyLampField.class)
-    public JAXBElement<UserDetailInfoList> createBusyLampFieldMonitoredUserList(UserDetailInfoList value) {
-        return new JAXBElement<UserDetailInfoList>(_BusyLampFieldMonitoredUserList_QNAME, UserDetailInfoList.class, BusyLampField.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "hostUserId", scope = HotelingGuest.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createHotelingGuestHostUserId(String value) {
-        return new JAXBElement<String>(_HotelingGuestHostUserId_QNAME, String.class, HotelingGuest.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AlternateNumbersList }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "numbers", scope = AlternateNumbers.class)
-    public JAXBElement<AlternateNumbersList> createAlternateNumbersNumbers(AlternateNumbersList value) {
-        return new JAXBElement<AlternateNumbersList>(_AlternateNumbersNumbers_QNAME, AlternateNumbersList.class, AlternateNumbers.class, value);
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "mobileNumbersAlertList", scope = BroadWorksMobilityAlertingPolicyInfo.class)
+    public JAXBElement<BroadWorksMobilityMobileNumbersAlertList> createBroadWorksMobilityAlertingPolicyInfoMobileNumbersAlertList(BroadWorksMobilityMobileNumbersAlertList value) {
+        return new JAXBElement<BroadWorksMobilityMobileNumbersAlertList>(_BroadWorksMobilityAlertingPolicyInfoMobileNumbersAlertList_QNAME, BroadWorksMobilityMobileNumbersAlertList.class, BroadWorksMobilityAlertingPolicyInfo.class, value);
     }
 
     /**
@@ -5524,7 +5464,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "callToNumberList", scope = PersonalAssistant.class)
     public JAXBElement<CallToNumberList> createPersonalAssistantCallToNumberList(CallToNumberList value) {
-        return new JAXBElement<CallToNumberList>(_PersonalAssistantAssignedCallToNumbersCallToNumberList_QNAME, CallToNumberList.class, PersonalAssistant.class, value);
+        return new JAXBElement<CallToNumberList>(_PersonalAssistantCallToNumberList_QNAME, CallToNumberList.class, PersonalAssistant.class, value);
     }
 
     /**
@@ -5547,201 +5487,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UserDetailInfoList }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "monitoredUsers", scope = AttendantConsole.class)
-    public JAXBElement<UserDetailInfoList> createAttendantConsoleMonitoredUsers(UserDetailInfoList value) {
-        return new JAXBElement<UserDetailInfoList>(_AttendantConsoleMonitoredUsers_QNAME, UserDetailInfoList.class, AttendantConsole.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AttendantConsoleDisplayFieldList }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "displayFields", scope = AttendantConsole.class)
-    public JAXBElement<AttendantConsoleDisplayFieldList> createAttendantConsoleDisplayFields(AttendantConsoleDisplayFieldList value) {
-        return new JAXBElement<AttendantConsoleDisplayFieldList>(_AttendantConsoleDisplayFields_QNAME, AttendantConsoleDisplayFieldList.class, AttendantConsole.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "transferPhoneNumber", scope = ACDNightService.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createACDNightServiceTransferPhoneNumber(String value) {
-        return new JAXBElement<String>(_VoiceMessagingTransferPhoneNumber_QNAME, String.class, ACDNightService.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "businessHours", scope = ACDNightService.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createACDNightServiceBusinessHours(String value) {
-        return new JAXBElement<String>(_ACDNightServiceBusinessHours_QNAME, String.class, ACDNightService.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CriteriaPhoneNumberList }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumberList", scope = SelectiveCallRejectionCriteriaFromDn.class)
-    public JAXBElement<CriteriaPhoneNumberList> createSelectiveCallRejectionCriteriaFromDnPhoneNumberList(CriteriaPhoneNumberList value) {
-        return new JAXBElement<CriteriaPhoneNumberList>(_PriorityAlertCriteriaFromDnPhoneNumberList_QNAME, CriteriaPhoneNumberList.class, SelectiveCallRejectionCriteriaFromDn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "hostUserId", scope = FlexibleSeatingGuest.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createFlexibleSeatingGuestHostUserId(String value) {
-        return new JAXBElement<String>(_HotelingGuestHostUserId_QNAME, String.class, FlexibleSeatingGuest.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "unlockPhonePINCode", scope = FlexibleSeatingGuest.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createFlexibleSeatingGuestUnlockPhonePINCode(String value) {
-        return new JAXBElement<String>(_FlexibleSeatingGuestUnlockPhonePINCode_QNAME, String.class, FlexibleSeatingGuest.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumber", scope = ChargeNumber.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createChargeNumberPhoneNumber(String value) {
-        return new JAXBElement<String>(_SpeedDial8EntryPhoneNumber_QNAME, String.class, ChargeNumber.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CriteriaPhoneNumberList }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumberList", scope = CriteriaFromDn.class)
-    public JAXBElement<CriteriaPhoneNumberList> createCriteriaFromDnPhoneNumberList(CriteriaPhoneNumberList value) {
-        return new JAXBElement<CriteriaPhoneNumberList>(_PriorityAlertCriteriaFromDnPhoneNumberList_QNAME, CriteriaPhoneNumberList.class, CriteriaFromDn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "extension", scope = FaxMessaging.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createFaxMessagingExtension(String value) {
-        return new JAXBElement<String>(_FaxMessagingExtension_QNAME, String.class, FaxMessaging.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumber", scope = FaxMessaging.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createFaxMessagingPhoneNumber(String value) {
-        return new JAXBElement<String>(_SpeedDial8EntryPhoneNumber_QNAME, String.class, FaxMessaging.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CommPilotExpressProfile }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "profile", scope = CommPilotExpress.class)
-    public JAXBElement<CommPilotExpressProfile> createCommPilotExpressProfile(CommPilotExpressProfile value) {
-        return new JAXBElement<CommPilotExpressProfile>(_CommPilotExpressProfile_QNAME, CommPilotExpressProfile.class, CommPilotExpress.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UserDetailInfoList }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "monitoredUsers", scope = BroadWorksReceptionist.class)
-    public JAXBElement<UserDetailInfoList> createBroadWorksReceptionistMonitoredUsers(UserDetailInfoList value) {
-        return new JAXBElement<UserDetailInfoList>(_AttendantConsoleMonitoredUsers_QNAME, UserDetailInfoList.class, BroadWorksReceptionist.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Address }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "remoteOfficeNumber", scope = RemoteOffice.class)
-    public JAXBElement<Address> createRemoteOfficeRemoteOfficeNumber(Address value) {
-        return new JAXBElement<Address>(_RemoteOfficeRemoteOfficeNumber_QNAME, Address.class, RemoteOffice.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Address }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "forwardingAddress", scope = CommPilotExpressRedirection.class)
-    public JAXBElement<Address> createCommPilotExpressRedirectionForwardingAddress(Address value) {
-        return new JAXBElement<Address>(_CommPilotExpressRedirectionForwardingAddress_QNAME, Address.class, CommPilotExpressRedirection.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "description", scope = SpeedDial100Entry.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createSpeedDial100EntryDescription(String value) {
-        return new JAXBElement<String>(_BroadWorksMobilityMobileIdentityDescription_QNAME, String.class, SpeedDial100Entry.class, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link TimeSchedule }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "timeSchedule", scope = Criteria.class)
-    public JAXBElement<TimeSchedule> createCriteriaTimeSchedule(TimeSchedule value) {
-        return new JAXBElement<TimeSchedule>(_BroadWorksMobilityCallAnchoringPolicyTimeSchedule_QNAME, TimeSchedule.class, Criteria.class, value);
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "timeSchedule", scope = ScheduleList.class)
+    public JAXBElement<TimeSchedule> createScheduleListTimeSchedule(TimeSchedule value) {
+        return new JAXBElement<TimeSchedule>(_BroadWorksMobilityCallAnchoringPolicyTimeSchedule_QNAME, TimeSchedule.class, ScheduleList.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link HolidaySchedule }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "holidaySchedule", scope = Criteria.class)
-    public JAXBElement<HolidaySchedule> createCriteriaHolidaySchedule(HolidaySchedule value) {
-        return new JAXBElement<HolidaySchedule>(_BroadWorksMobilityCallAnchoringPolicyHolidaySchedule_QNAME, HolidaySchedule.class, Criteria.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "forwardToPhoneNumber", scope = ACDForcedForwarding.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createACDForcedForwardingForwardToPhoneNumber(String value) {
-        return new JAXBElement<String>(_CallForwardingForwardToPhoneNumber_QNAME, String.class, ACDForcedForwarding.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Address }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "address", scope = SequentialRingLocation.class)
-    public JAXBElement<Address> createSequentialRingLocationAddress(Address value) {
-        return new JAXBElement<Address>(_SequentialRingLocationAddress_QNAME, Address.class, SequentialRingLocation.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CriteriaPhoneNumberList }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumberList", scope = ExecutiveCallFilteringCriteriaFromDn.class)
-    public JAXBElement<CriteriaPhoneNumberList> createExecutiveCallFilteringCriteriaFromDnPhoneNumberList(CriteriaPhoneNumberList value) {
-        return new JAXBElement<CriteriaPhoneNumberList>(_PriorityAlertCriteriaFromDnPhoneNumberList_QNAME, CriteriaPhoneNumberList.class, ExecutiveCallFilteringCriteriaFromDn.class, value);
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "holidaySchedule", scope = ScheduleList.class)
+    public JAXBElement<HolidaySchedule> createScheduleListHolidaySchedule(HolidaySchedule value) {
+        return new JAXBElement<HolidaySchedule>(_BroadWorksMobilityCallAnchoringPolicyHolidaySchedule_QNAME, HolidaySchedule.class, ScheduleList.class, value);
     }
 
     /**
@@ -5750,16 +5510,47 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "criteriaCallToNumber", scope = CriteriaWithSelectiveCall.class)
     public JAXBElement<CallToNumberList> createCriteriaWithSelectiveCallCriteriaCallToNumber(CallToNumberList value) {
-        return new JAXBElement<CallToNumberList>(_CriteriaWithExecutiveFilteringCriteriaCallToNumber_QNAME, CallToNumberList.class, CriteriaWithSelectiveCall.class, value);
+        return new JAXBElement<CallToNumberList>(_CriteriaWithPriorityAlertCriteriaCallToNumber_QNAME, CallToNumberList.class, CriteriaWithSelectiveCall.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OutgoingDNList }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "outgoingSMDIMWIPhoneNumberList", scope = OutgoingMWI.class)
-    public JAXBElement<OutgoingDNList> createOutgoingMWIOutgoingSMDIMWIPhoneNumberList(OutgoingDNList value) {
-        return new JAXBElement<OutgoingDNList>(_OutgoingMWIOutgoingSMDIMWIPhoneNumberList_QNAME, OutgoingDNList.class, OutgoingMWI.class, value);
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "voiceMessageDeliveryEmailAddress", scope = VoiceMessaging.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createVoiceMessagingVoiceMessageDeliveryEmailAddress(String value) {
+        return new JAXBElement<String>(_VoiceMessagingVoiceMessageDeliveryEmailAddress_QNAME, String.class, VoiceMessaging.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "transferPhoneNumber", scope = VoiceMessaging.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createVoiceMessagingTransferPhoneNumber(String value) {
+        return new JAXBElement<String>(_ACDNightServiceTransferPhoneNumber_QNAME, String.class, VoiceMessaging.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "voiceMessageCarbonCopyEmailAddress", scope = VoiceMessaging.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createVoiceMessagingVoiceMessageCarbonCopyEmailAddress(String value) {
+        return new JAXBElement<String>(_VoiceMessagingVoiceMessageCarbonCopyEmailAddress_QNAME, String.class, VoiceMessaging.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "voiceMessageNotifyEmailAddress", scope = VoiceMessaging.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createVoiceMessagingVoiceMessageNotifyEmailAddress(String value) {
+        return new JAXBElement<String>(_VoiceMessagingVoiceMessageNotifyEmailAddress_QNAME, String.class, VoiceMessaging.class, value);
     }
 
     /**
@@ -5803,12 +5594,99 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CallToNumberList }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "criteriaCallToNumber", scope = CriteriaWithFromDnAndCallToNumber.class)
-    public JAXBElement<CallToNumberList> createCriteriaWithFromDnAndCallToNumberCriteriaCallToNumber(CallToNumberList value) {
-        return new JAXBElement<CallToNumberList>(_CriteriaWithExecutiveFilteringCriteriaCallToNumber_QNAME, CallToNumberList.class, CriteriaWithFromDnAndCallToNumber.class, value);
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "hostUserId", scope = FlexibleSeatingGuest.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createFlexibleSeatingGuestHostUserId(String value) {
+        return new JAXBElement<String>(_FlexibleSeatingGuestHostUserId_QNAME, String.class, FlexibleSeatingGuest.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "unlockPhonePINCode", scope = FlexibleSeatingGuest.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createFlexibleSeatingGuestUnlockPhonePINCode(String value) {
+        return new JAXBElement<String>(_FlexibleSeatingGuestUnlockPhonePINCode_QNAME, String.class, FlexibleSeatingGuest.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "listURI", scope = BusyLampField.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createBusyLampFieldListURI(String value) {
+        return new JAXBElement<String>(_BusyLampFieldListURI_QNAME, String.class, BusyLampField.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UserDetailInfoList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "monitoredUserList", scope = BusyLampField.class)
+    public JAXBElement<UserDetailInfoList> createBusyLampFieldMonitoredUserList(UserDetailInfoList value) {
+        return new JAXBElement<UserDetailInfoList>(_BusyLampFieldMonitoredUserList_QNAME, UserDetailInfoList.class, BusyLampField.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Address }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "forwardingAddress", scope = CommPilotExpressRedirection.class)
+    public JAXBElement<Address> createCommPilotExpressRedirectionForwardingAddress(Address value) {
+        return new JAXBElement<Address>(_CommPilotExpressRedirectionForwardingAddress_QNAME, Address.class, CommPilotExpressRedirection.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "defaultForwardToPhoneNumber", scope = CallForwardingSelective.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createCallForwardingSelectiveDefaultForwardToPhoneNumber(String value) {
+        return new JAXBElement<String>(_CallForwardingSelectiveDefaultForwardToPhoneNumber_QNAME, String.class, CallForwardingSelective.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "greetingOnlyForwardDestination", scope = VoiceMessagingGreetings.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createVoiceMessagingGreetingsGreetingOnlyForwardDestination(String value) {
+        return new JAXBElement<String>(_VoiceMessagingGreetingsGreetingOnlyForwardDestination_QNAME, String.class, VoiceMessagingGreetings.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UserDetailInfoList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "allowedUsers", scope = Privacy.class)
+    public JAXBElement<UserDetailInfoList> createPrivacyAllowedUsers(UserDetailInfoList value) {
+        return new JAXBElement<UserDetailInfoList>(_PrivacyAllowedUsers_QNAME, UserDetailInfoList.class, Privacy.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "forwardToPhoneNumber", scope = ACDForcedForwarding.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createACDForcedForwardingForwardToPhoneNumber(String value) {
+        return new JAXBElement<String>(_ACDForcedForwardingForwardToPhoneNumber_QNAME, String.class, ACDForcedForwarding.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Address }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "forwardToPhoneNumber", scope = CallForwarding.class)
+    public JAXBElement<Address> createCallForwardingForwardToPhoneNumber(Address value) {
+        return new JAXBElement<Address>(_ACDForcedForwardingForwardToPhoneNumber_QNAME, Address.class, CallForwarding.class, value);
     }
 
     /**
@@ -5830,51 +5708,285 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LabeledMediaFileResource }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "file4", scope = CallCenterAnnouncementFileList.class)
+    public JAXBElement<LabeledMediaFileResource> createCallCenterAnnouncementFileListFile4(LabeledMediaFileResource value) {
+        return new JAXBElement<LabeledMediaFileResource>(_CallCenterAnnouncementFileListFile4_QNAME, LabeledMediaFileResource.class, CallCenterAnnouncementFileList.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LabeledMediaFileResource }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "file2", scope = CallCenterAnnouncementFileList.class)
+    public JAXBElement<LabeledMediaFileResource> createCallCenterAnnouncementFileListFile2(LabeledMediaFileResource value) {
+        return new JAXBElement<LabeledMediaFileResource>(_CallCenterAnnouncementFileListFile2_QNAME, LabeledMediaFileResource.class, CallCenterAnnouncementFileList.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LabeledMediaFileResource }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "file3", scope = CallCenterAnnouncementFileList.class)
+    public JAXBElement<LabeledMediaFileResource> createCallCenterAnnouncementFileListFile3(LabeledMediaFileResource value) {
+        return new JAXBElement<LabeledMediaFileResource>(_CallCenterAnnouncementFileListFile3_QNAME, LabeledMediaFileResource.class, CallCenterAnnouncementFileList.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LabeledMediaFileResource }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "file1", scope = CallCenterAnnouncementFileList.class)
+    public JAXBElement<LabeledMediaFileResource> createCallCenterAnnouncementFileListFile1(LabeledMediaFileResource value) {
+        return new JAXBElement<LabeledMediaFileResource>(_CallCenterAnnouncementFileListFile1_QNAME, LabeledMediaFileResource.class, CallCenterAnnouncementFileList.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CriteriaPhoneNumberList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumberList", scope = SelectiveCallRejectionCriteriaFromDn.class)
+    public JAXBElement<CriteriaPhoneNumberList> createSelectiveCallRejectionCriteriaFromDnPhoneNumberList(CriteriaPhoneNumberList value) {
+        return new JAXBElement<CriteriaPhoneNumberList>(_CriteriaToDnPhoneNumberList_QNAME, CriteriaPhoneNumberList.class, SelectiveCallRejectionCriteriaFromDn.class, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "accountCode", scope = MeetMeConferencingConference.class)
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "fileUrl", scope = FileDescriptor.class)
+    public JAXBElement<String> createFileDescriptorFileUrl(String value) {
+        return new JAXBElement<String>(_FileDescriptorFileUrl_QNAME, String.class, FileDescriptor.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CriteriaPhoneNumberList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumberList", scope = ExecutiveCallFilteringCriteriaFromDn.class)
+    public JAXBElement<CriteriaPhoneNumberList> createExecutiveCallFilteringCriteriaFromDnPhoneNumberList(CriteriaPhoneNumberList value) {
+        return new JAXBElement<CriteriaPhoneNumberList>(_CriteriaToDnPhoneNumberList_QNAME, CriteriaPhoneNumberList.class, ExecutiveCallFilteringCriteriaFromDn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link TimeSchedule }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "timeSchedule", scope = Criteria.class)
+    public JAXBElement<TimeSchedule> createCriteriaTimeSchedule(TimeSchedule value) {
+        return new JAXBElement<TimeSchedule>(_BroadWorksMobilityCallAnchoringPolicyTimeSchedule_QNAME, TimeSchedule.class, Criteria.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link HolidaySchedule }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "holidaySchedule", scope = Criteria.class)
+    public JAXBElement<HolidaySchedule> createCriteriaHolidaySchedule(HolidaySchedule value) {
+        return new JAXBElement<HolidaySchedule>(_BroadWorksMobilityCallAnchoringPolicyHolidaySchedule_QNAME, HolidaySchedule.class, Criteria.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "outboundAlternateNumber", scope = BroadWorksAnywhereLocation.class)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createMeetMeConferencingConferenceAccountCode(String value) {
-        return new JAXBElement<String>(_MeetMeConferencingConferenceAccountCode_QNAME, String.class, MeetMeConferencingConference.class, value);
+    public JAXBElement<String> createBroadWorksAnywhereLocationOutboundAlternateNumber(String value) {
+        return new JAXBElement<String>(_BroadWorksAnywhereLocationOutboundAlternateNumber_QNAME, String.class, BroadWorksAnywhereLocation.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "extension", scope = AlternateNumberEntry.class)
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "description", scope = BroadWorksAnywhereLocation.class)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createAlternateNumberEntryExtension(String value) {
-        return new JAXBElement<String>(_FaxMessagingExtension_QNAME, String.class, AlternateNumberEntry.class, value);
+    public JAXBElement<String> createBroadWorksAnywhereLocationDescription(String value) {
+        return new JAXBElement<String>(_PersonalAssistantExclusionNumberEntryDescription_QNAME, String.class, BroadWorksAnywhereLocation.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumber", scope = AlternateNumberEntry.class)
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "mobilePhoneNumber", scope = MWIDeliveryToMobileEndpoint.class)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createAlternateNumberEntryPhoneNumber(String value) {
-        return new JAXBElement<String>(_SpeedDial8EntryPhoneNumber_QNAME, String.class, AlternateNumberEntry.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AlternateNumbersRingPatternEnum }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "ringPattern", scope = AlternateNumberEntry.class, defaultValue = "Normal")
-    public JAXBElement<AlternateNumbersRingPatternEnum> createAlternateNumberEntryRingPattern(AlternateNumbersRingPatternEnum value) {
-        return new JAXBElement<AlternateNumbersRingPatternEnum>(_AlternateNumberEntryRingPattern_QNAME, AlternateNumbersRingPatternEnum.class, AlternateNumberEntry.class, value);
+    public JAXBElement<String> createMWIDeliveryToMobileEndpointMobilePhoneNumber(String value) {
+        return new JAXBElement<String>(_MWIDeliveryToMobileEndpointMobilePhoneNumber_QNAME, String.class, MWIDeliveryToMobileEndpoint.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "description", scope = AlternateNumberEntry.class)
-    public JAXBElement<String> createAlternateNumberEntryDescription(String value) {
-        return new JAXBElement<String>(_BroadWorksMobilityMobileIdentityDescription_QNAME, String.class, AlternateNumberEntry.class, value);
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "divertToPhoneNumber", scope = ExecutiveAssistant.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createExecutiveAssistantDivertToPhoneNumber(String value) {
+        return new JAXBElement<String>(_ExecutiveAssistantDivertToPhoneNumber_QNAME, String.class, ExecutiveAssistant.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AlternateNumbersList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "numbers", scope = AlternateNumbers.class)
+    public JAXBElement<AlternateNumbersList> createAlternateNumbersNumbers(AlternateNumbersList value) {
+        return new JAXBElement<AlternateNumbersList>(_AlternateNumbersNumbers_QNAME, AlternateNumbersList.class, AlternateNumbers.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CriteriaPhoneNumberList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumberList", scope = CriteriaFromDn.class)
+    public JAXBElement<CriteriaPhoneNumberList> createCriteriaFromDnPhoneNumberList(CriteriaPhoneNumberList value) {
+        return new JAXBElement<CriteriaPhoneNumberList>(_CriteriaToDnPhoneNumberList_QNAME, CriteriaPhoneNumberList.class, CriteriaFromDn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OutgoingDNorSIPURIList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumberList", scope = VoiceMessagingDistributionList.class)
+    public JAXBElement<OutgoingDNorSIPURIList> createVoiceMessagingDistributionListPhoneNumberList(OutgoingDNorSIPURIList value) {
+        return new JAXBElement<OutgoingDNorSIPURIList>(_CriteriaToDnPhoneNumberList_QNAME, OutgoingDNorSIPURIList.class, VoiceMessagingDistributionList.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "description", scope = VoiceMessagingDistributionList.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createVoiceMessagingDistributionListDescription(String value) {
+        return new JAXBElement<String>(_PersonalAssistantExclusionNumberEntryDescription_QNAME, String.class, VoiceMessagingDistributionList.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OutgoingDNList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "outgoingSMDIMWIPhoneNumberList", scope = OutgoingMWI.class)
+    public JAXBElement<OutgoingDNList> createOutgoingMWIOutgoingSMDIMWIPhoneNumberList(OutgoingDNList value) {
+        return new JAXBElement<OutgoingDNList>(_OutgoingMWIOutgoingSMDIMWIPhoneNumberList_QNAME, OutgoingDNList.class, OutgoingMWI.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "emailAddress", scope = CommPilotExpressEmailNotify.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createCommPilotExpressEmailNotifyEmailAddress(String value) {
+        return new JAXBElement<String>(_CommPilotExpressEmailNotifyEmailAddress_QNAME, String.class, CommPilotExpressEmailNotify.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumber", scope = ChargeNumber.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createChargeNumberPhoneNumber(String value) {
+        return new JAXBElement<String>(_AlternateNumberEntryPhoneNumber_QNAME, String.class, ChargeNumber.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "agentUnavailableCode", scope = com.broadsoft.xsi.CallCenter.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createCallCenterAgentUnavailableCode(String value) {
+        return new JAXBElement<String>(_CallCenterAgentUnavailableCode_QNAME, String.class, com.broadsoft.xsi.CallCenter.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DNISKey }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "outgoingCallDNIS", scope = com.broadsoft.xsi.CallCenter.class)
+    public JAXBElement<DNISKey> createCallCenterOutgoingCallDNIS(DNISKey value) {
+        return new JAXBElement<DNISKey>(_CallCenterOutgoingCallDNIS_QNAME, DNISKey.class, com.broadsoft.xsi.CallCenter.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Address }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "remoteOfficeNumber", scope = RemoteOffice.class)
+    public JAXBElement<Address> createRemoteOfficeRemoteOfficeNumber(Address value) {
+        return new JAXBElement<Address>(_RemoteOfficeRemoteOfficeNumber_QNAME, Address.class, RemoteOffice.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CriteriaPhoneNumberList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumberList", scope = PriorityAlertCriteriaFromDn.class)
+    public JAXBElement<CriteriaPhoneNumberList> createPriorityAlertCriteriaFromDnPhoneNumberList(CriteriaPhoneNumberList value) {
+        return new JAXBElement<CriteriaPhoneNumberList>(_CriteriaToDnPhoneNumberList_QNAME, CriteriaPhoneNumberList.class, PriorityAlertCriteriaFromDn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "description", scope = BroadWorksMobilityMobileIdentity.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createBroadWorksMobilityMobileIdentityDescription(String value) {
+        return new JAXBElement<String>(_PersonalAssistantExclusionNumberEntryDescription_QNAME, String.class, BroadWorksMobilityMobileIdentity.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CallToNumberList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "criteriaCallToNumber", scope = CriteriaWithExecutiveFiltering.class)
+    public JAXBElement<CallToNumberList> createCriteriaWithExecutiveFilteringCriteriaCallToNumber(CallToNumberList value) {
+        return new JAXBElement<CallToNumberList>(_CriteriaWithPriorityAlertCriteriaCallToNumber_QNAME, CallToNumberList.class, CriteriaWithExecutiveFiltering.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "description", scope = SpeedDial100Entry.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createSpeedDial100EntryDescription(String value) {
+        return new JAXBElement<String>(_PersonalAssistantExclusionNumberEntryDescription_QNAME, String.class, SpeedDial100Entry.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SimultaneousRingLocationList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "simRingLocations", scope = SimultaneousRingPersonal.class)
+    public JAXBElement<SimultaneousRingLocationList> createSimultaneousRingPersonalSimRingLocations(SimultaneousRingLocationList value) {
+        return new JAXBElement<SimultaneousRingLocationList>(_SimultaneousRingPersonalSimRingLocations_QNAME, SimultaneousRingLocationList.class, SimultaneousRingPersonal.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "hostUserId", scope = HotelingGuest.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createHotelingGuestHostUserId(String value) {
+        return new JAXBElement<String>(_FlexibleSeatingGuestHostUserId_QNAME, String.class, HotelingGuest.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "alternateCode", scope = FeatureAccessCodeEntry.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createFeatureAccessCodeEntryAlternateCode(String value) {
+        return new JAXBElement<String>(_FeatureAccessCodeEntryAlternateCode_QNAME, String.class, FeatureAccessCodeEntry.class, value);
     }
 
     /**
@@ -5914,59 +6026,89 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OutgoingDNorSIPURIList }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumberList", scope = VoiceMessagingDistributionList.class)
-    public JAXBElement<OutgoingDNorSIPURIList> createVoiceMessagingDistributionListPhoneNumberList(OutgoingDNorSIPURIList value) {
-        return new JAXBElement<OutgoingDNorSIPURIList>(_PriorityAlertCriteriaFromDnPhoneNumberList_QNAME, OutgoingDNorSIPURIList.class, VoiceMessagingDistributionList.class, value);
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "url1", scope = CallCenterAnnouncementURLList.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createCallCenterAnnouncementURLListUrl1(String value) {
+        return new JAXBElement<String>(_CallCenterAnnouncementURLListUrl1_QNAME, String.class, CallCenterAnnouncementURLList.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "description", scope = VoiceMessagingDistributionList.class)
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "url2", scope = CallCenterAnnouncementURLList.class)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createVoiceMessagingDistributionListDescription(String value) {
-        return new JAXBElement<String>(_BroadWorksMobilityMobileIdentityDescription_QNAME, String.class, VoiceMessagingDistributionList.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CriteriaPhoneNumberList }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "phoneNumberList", scope = CriteriaToDn.class)
-    public JAXBElement<CriteriaPhoneNumberList> createCriteriaToDnPhoneNumberList(CriteriaPhoneNumberList value) {
-        return new JAXBElement<CriteriaPhoneNumberList>(_PriorityAlertCriteriaFromDnPhoneNumberList_QNAME, CriteriaPhoneNumberList.class, CriteriaToDn.class, value);
+    public JAXBElement<String> createCallCenterAnnouncementURLListUrl2(String value) {
+        return new JAXBElement<String>(_CallCenterAnnouncementURLListUrl2_QNAME, String.class, CallCenterAnnouncementURLList.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "greetingOnlyForwardDestination", scope = VoiceMessagingGreetings.class)
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "url3", scope = CallCenterAnnouncementURLList.class)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createVoiceMessagingGreetingsGreetingOnlyForwardDestination(String value) {
-        return new JAXBElement<String>(_VoiceMessagingGreetingsGreetingOnlyForwardDestination_QNAME, String.class, VoiceMessagingGreetings.class, value);
+    public JAXBElement<String> createCallCenterAnnouncementURLListUrl3(String value) {
+        return new JAXBElement<String>(_CallCenterAnnouncementURLListUrl3_QNAME, String.class, CallCenterAnnouncementURLList.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "url4", scope = CallCenterAnnouncementURLList.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createCallCenterAnnouncementURLListUrl4(String value) {
+        return new JAXBElement<String>(_CallCenterAnnouncementURLListUrl4_QNAME, String.class, CallCenterAnnouncementURLList.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CommPilotExpressProfile }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "profile", scope = CommPilotExpress.class)
+    public JAXBElement<CommPilotExpressProfile> createCommPilotExpressProfile(CommPilotExpressProfile value) {
+        return new JAXBElement<CommPilotExpressProfile>(_CommPilotExpressProfile_QNAME, CommPilotExpressProfile.class, CommPilotExpress.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "accountCode", scope = MeetMeConferencingConference.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createMeetMeConferencingConferenceAccountCode(String value) {
+        return new JAXBElement<String>(_MeetMeConferencingConferenceAccountCode_QNAME, String.class, MeetMeConferencingConference.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CallToNumberList }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "criteriaCallToNumber", scope = CriteriaWithPriorityAlert.class)
-    public JAXBElement<CallToNumberList> createCriteriaWithPriorityAlertCriteriaCallToNumber(CallToNumberList value) {
-        return new JAXBElement<CallToNumberList>(_CriteriaWithExecutiveFilteringCriteriaCallToNumber_QNAME, CallToNumberList.class, CriteriaWithPriorityAlert.class, value);
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "criteriaCallToNumber", scope = CriteriaWithFromDnAndCallToNumber.class)
+    public JAXBElement<CallToNumberList> createCriteriaWithFromDnAndCallToNumberCriteriaCallToNumber(CallToNumberList value) {
+        return new JAXBElement<CallToNumberList>(_CriteriaWithPriorityAlertCriteriaCallToNumber_QNAME, CallToNumberList.class, CriteriaWithFromDnAndCallToNumber.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UserDetailsList }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link UserDetailInfoList }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "userDetailsList", scope = CallPark.class)
-    public JAXBElement<UserDetailsList> createCallParkUserDetailsList(UserDetailsList value) {
-        return new JAXBElement<UserDetailsList>(_CallParkUserDetailsList_QNAME, UserDetailsList.class, CallPark.class, value);
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "monitoredUsers", scope = BroadWorksReceptionist.class)
+    public JAXBElement<UserDetailInfoList> createBroadWorksReceptionistMonitoredUsers(UserDetailInfoList value) {
+        return new JAXBElement<UserDetailInfoList>(_BroadWorksReceptionistMonitoredUsers_QNAME, UserDetailInfoList.class, BroadWorksReceptionist.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CallToNumberList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schema.broadsoft.com/xsi", name = "callToNumberList", scope = PersonalAssistantAssignedCallToNumbers.class)
+    public JAXBElement<CallToNumberList> createPersonalAssistantAssignedCallToNumbersCallToNumberList(CallToNumberList value) {
+        return new JAXBElement<CallToNumberList>(_PersonalAssistantCallToNumberList_QNAME, CallToNumberList.class, PersonalAssistantAssignedCallToNumbers.class, value);
     }
 
 }

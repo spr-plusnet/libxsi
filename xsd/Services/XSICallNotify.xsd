@@ -2,7 +2,7 @@
 
 
 <!-- ************************************************************************ -->
-<!--     Copyright (c) 2012 BroadSoft, Inc.  All rights reserved.             -->
+<!--     Copyright © 2017 BroadSoft Inc.             -->
 <!-- ************************************************************************ -->
 <!--                XSI  X M L  S C H E M A                                   -->
 <!--               *************************                                  -->
@@ -44,5 +44,38 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element> 
+  
+  <xs:element name="CallNotifyCriteria">    
+    <xs:annotation>
+      <xs:documentation>
+        Call Notify Criteria Details
+         
+        Change History:
+        R22.0 - Added
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="notify" type="xs:boolean" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              When true, controls whether notify is sent for this criteria.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="criteria" type="CriteriaWithFromDnAndCallToNumber" minOccurs="0" >
+          <xs:annotation>
+            <xs:documentation>
+              The criteria for each Call Notify entry can
+              be a list of up to 12 (from) phone numbers or digit
+              patterns, a list of the user's applicable "to"
+              numbers, a specified time schedule, and a specified
+              holiday schedule.            
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   
 </xs:schema>

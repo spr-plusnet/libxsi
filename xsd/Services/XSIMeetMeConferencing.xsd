@@ -2,7 +2,7 @@
 
 
 <!-- ************************************************************************ -->
-<!--     Copyright (c) 2012 BroadSoft, Inc.  All rights reserved.             -->
+<!--     Copyright © 2017 BroadSoft Inc.             -->
 <!-- ************************************************************************ -->
 <!--                XSI  X M L  S C H E M A                                   -->
 <!--               *************************                                  -->
@@ -133,6 +133,7 @@
     <xs:annotation>
       <xs:documentation>
         Contains the details to create/modify the MeetMe conference.
+        Release 23: Optional parameter "allowParticipantUnmuteInAutoLectureMode"
         Release 19: Optional parameters "requireSecurityPin", "securityPin" added. 
                     accountCode element made nillable.
         Release Added: R17.sp3
@@ -191,8 +192,8 @@
       <xs:element name="muteAllAttendeesOnEntry" type="xs:boolean" minOccurs="0">
         <xs:annotation>
           <xs:documentation>
-            Parameter to define whether all the partcipants are muted on entry. Participants can
-            unmute only after the moderator switchefd off the lecture mode. This element must be present when creating a conference. It is optional when modifying the conference.
+            Parameter to define whether all the participants are muted on entry. Participants can
+            unmute only after the moderator switches off the lecture mode. This element must be present when creating a conference. It is optional when modifying the conference.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -255,6 +256,15 @@
             Security PIN for the conference. 
             This will not be present while updating
             the conference information.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element> 
+      <xs:element name="allowParticipantUnmuteInAutoLectureMode" type="xs:boolean" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            If the conference enters automatic lecture mode if this 
+            parameter is true then the participants will be
+            able to unmute/mute using a star code. 
           </xs:documentation>
         </xs:annotation>
       </xs:element>      

@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2020.05.11 um 03:08:51 PM CEST 
+// Generiert: 2021.02.12 um 09:46:20 AM CET 
 //
 
 
@@ -24,6 +24,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         R18.0 - Added
  *         R19.0 - Added version.
  *         R20.0 - deviceTypeUrl, deviceUserNamePassword are made optional.
+ *         R21.0 - deviceUserNamePassword is included in Xsi responses only when 
+ *                 BroadWorks is configured to allow retrieval of device credentials.
  *         R21.sp1 - Added elements allowTermination and endpointType. 
  *                   The endpointType is only present in the GET response when the 
  *                   client XSI version in the GET request is 21.sp1 or greater.

@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2020.05.11 um 03:08:51 PM CEST 
+// Generiert: 2021.02.12 um 09:46:20 AM CET 
 //
 
 
@@ -51,6 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="Trunk Group Forward Unconditional"/>
  *     &lt;enumeration value="Voice Messaging"/>
  *     &lt;enumeration value="Voice Mail Transfer"/>
+ *     &lt;enumeration value="VoiceXML Script Termination"/>
+ *     &lt;enumeration value="Agent Wrap-Up"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -119,7 +121,11 @@ public enum ServiceInvocationDisposition {
     @XmlEnumValue("Voice Messaging")
     VOICE_MESSAGING("Voice Messaging"),
     @XmlEnumValue("Voice Mail Transfer")
-    VOICE_MAIL_TRANSFER("Voice Mail Transfer");
+    VOICE_MAIL_TRANSFER("Voice Mail Transfer"),
+    @XmlEnumValue("VoiceXML Script Termination")
+    VOICE_XML_SCRIPT_TERMINATION("VoiceXML Script Termination"),
+    @XmlEnumValue("Agent Wrap-Up")
+    AGENT_WRAP_UP("Agent Wrap-Up");
     private final String value;
 
     ServiceInvocationDisposition(String v) {

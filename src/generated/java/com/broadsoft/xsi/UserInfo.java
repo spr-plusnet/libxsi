@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2020.05.11 um 03:08:51 PM CEST 
+// Generiert: 2021.02.12 um 09:46:20 AM CET 
 //
 
 
@@ -23,6 +23,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 /**
  * 
  *         Basic information about a User.
+ *         Change History:
+ *         23.5 - added externalId element
  *       
  * 
  * <p>Java-Klasse für UserInfo complex type.
@@ -35,6 +37,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="userId" type="{http://schema.broadsoft.com/xsi}UserId"/>
+ *         &lt;element name="externalId" type="{http://schema.broadsoft.com/xsi}ExternalUserIdentityId" minOccurs="0"/>
  *         &lt;element name="firstName" type="{http://schema.broadsoft.com/xsi}FirstName" minOccurs="0"/>
  *         &lt;element name="lastName" type="{http://schema.broadsoft.com/xsi}LastName" minOccurs="0"/>
  *         &lt;element name="hiranganaLastName" type="{http://schema.broadsoft.com/xsi}HiraganaLastName" minOccurs="0"/>
@@ -51,6 +54,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "UserInfo", propOrder = {
     "userId",
+    "externalId",
     "firstName",
     "lastName",
     "hiranganaLastName",
@@ -66,6 +70,9 @@ public class UserInfo {
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
     protected String userId;
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "token")
+    protected String externalId;
     @XmlElementRef(name = "firstName", namespace = "http://schema.broadsoft.com/xsi", type = JAXBElement.class, required = false)
     protected JAXBElement<String> firstName;
     @XmlElementRef(name = "lastName", namespace = "http://schema.broadsoft.com/xsi", type = JAXBElement.class, required = false)
@@ -98,6 +105,30 @@ public class UserInfo {
      */
     public void setUserId(String value) {
         this.userId = value;
+    }
+
+    /**
+     * Ruft den Wert der externalId-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExternalId() {
+        return externalId;
+    }
+
+    /**
+     * Legt den Wert der externalId-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExternalId(String value) {
+        this.externalId = value;
     }
 
     /**

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
     <!-- ************************************************************************ -->
-    <!--     Copyright (c) 2008 BroadSoft, Inc.  All rights reserved.             -->
+    <!--     Copyright © 2017 BroadSoft Inc.             -->
     <!-- ************************************************************************ -->
     <!--                XSI  X M L  S C H E M A                                   -->
     <!--               *************************                                  -->
@@ -100,7 +100,7 @@
               compulsory in the SubscriberID.
               This should not be provided while creating or modifying a
               subscription.
-  		      </xs:documentation>
+            </xs:documentation>
           </xs:annotation>
         </xs:element>
         <xs:element name="clientId" type="ClientAppId" minOccurs="0">
@@ -121,7 +121,7 @@
             group,service provider, enterprise or system.
             This should not be provided while creating or modifying a
             subscription.
-		  </xs:documentation>
+		      </xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="targetGrpParentId" type="NonEmptyString"
@@ -160,14 +160,14 @@
         </xs:annotation>
       </xs:element>
       <xs:choice>
-      <xs:element name="event" type="EventPackage" minOccurs="0">
-        <xs:annotation>
-          <xs:documentation>
-            The event package being subscribed for.
-		      </xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="eventPackageList" type="EventPackageList" minOccurs="0">
+        <xs:element name="event" type="EventPackage" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              The one event package being subscribed for.
+  		      </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="eventPackageList" type="EventPackageList" minOccurs="0">
           <xs:annotation>
             <xs:documentation>
               A list of event packages being subscribed for.
@@ -195,7 +195,7 @@
             <xs:documentation>
               The location information(URI+Scheme(Http/Https)) where events are
               sent to for this subscription.
-			</xs:documentation>
+			      </xs:documentation>
           </xs:annotation>
         </xs:element>
         <xs:element name="channelSetId" type="ChannelSetId"
@@ -285,8 +285,8 @@
         20.0 - added Flexible Seating Guest event package.
         21.0 - added Personal Assistant event package
         21.0 - added Collaborate Room event package
-        21.sp1 - added Call Forwarding Always Secondary and SilentAlerting event package
-        21.sp1 - added Push Notification Registration event package.        
+        21.1 - added Call Forwarding Always Secondary and SilentAlerting event package
+        22.0 - added Push Notification Registration event package.
       </xs:documentation>
     </xs:annotation>
     <xs:restriction base="NonEmptyToken">
@@ -316,7 +316,7 @@
       <xs:enumeration value="Music On Hold" />
       <xs:enumeration value="N-Way Call" />
       <xs:enumeration value="Personal Assistant" />
-      <xs:enumeration value="Push Notification Registration" />      
+      <xs:enumeration value="Push Notification Registration" />
       <xs:enumeration value="Remote Office" />
       <xs:enumeration value="Route Point Queue" />
       <xs:enumeration value="Security Classification" />

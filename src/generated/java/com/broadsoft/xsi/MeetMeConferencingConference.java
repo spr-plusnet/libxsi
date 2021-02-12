@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2020.05.11 um 03:08:51 PM CEST 
+// Generiert: 2021.02.12 um 09:46:20 AM CET 
 //
 
 
@@ -21,6 +21,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 /**
  * 
  *         Contains the details to create/modify the MeetMe conference.
+ *         Release 23: Optional parameter "allowParticipantUnmuteInAutoLectureMode"
  *         Release 19: Optional parameters "requireSecurityPin", "securityPin" added. 
  *                     accountCode element made nillable.
  *         Release Added: R17.sp3
@@ -51,6 +52,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="conferenceSchedule" type="{http://schema.broadsoft.com/xsi}MeetMeConferencingConferenceSchedule" minOccurs="0"/>
  *         &lt;element name="moderatorPin" type="{http://schema.broadsoft.com/xsi}MeetMeConferencingConferencePassCode" minOccurs="0"/>
  *         &lt;element name="securityPin" type="{http://schema.broadsoft.com/xsi}MeetMeConferencingConferenceSecurityPin" minOccurs="0"/>
+ *         &lt;element name="allowParticipantUnmuteInAutoLectureMode" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -74,7 +76,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "attendeeNotification",
     "conferenceSchedule",
     "moderatorPin",
-    "securityPin"
+    "securityPin",
+    "allowParticipantUnmuteInAutoLectureMode"
 })
 public class MeetMeConferencingConference {
 
@@ -100,6 +103,7 @@ public class MeetMeConferencingConference {
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
     protected String securityPin;
+    protected Boolean allowParticipantUnmuteInAutoLectureMode;
 
     /**
      * Ruft den Wert der conferenceTitle-Eigenschaft ab.
@@ -435,6 +439,30 @@ public class MeetMeConferencingConference {
      */
     public void setSecurityPin(String value) {
         this.securityPin = value;
+    }
+
+    /**
+     * Ruft den Wert der allowParticipantUnmuteInAutoLectureMode-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isAllowParticipantUnmuteInAutoLectureMode() {
+        return allowParticipantUnmuteInAutoLectureMode;
+    }
+
+    /**
+     * Legt den Wert der allowParticipantUnmuteInAutoLectureMode-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setAllowParticipantUnmuteInAutoLectureMode(Boolean value) {
+        this.allowParticipantUnmuteInAutoLectureMode = value;
     }
 
 }

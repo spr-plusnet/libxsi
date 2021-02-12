@@ -2,7 +2,7 @@
 
 
     <!-- ************************************************************************ -->
-    <!--     Copyright (c) 2008 BroadSoft, Inc.  All rights reserved.             -->
+    <!--     Copyright © 2017 BroadSoft Inc.             -->
     <!-- ************************************************************************ -->
     <!--                XSI  X M L  S C H E M A                                   -->
     <!--               *************************                                  -->
@@ -128,6 +128,8 @@
         R18.0 - Added
         R19.0 - Added version.
         R20.0 - deviceTypeUrl, deviceUserNamePassword are made optional.
+        R21.0 - deviceUserNamePassword is included in Xsi responses only when 
+                BroadWorks is configured to allow retrieval of device credentials.
         R21.sp1 - Added elements allowTermination and endpointType. 
                   The endpointType is only present in the GET response when the 
                   client XSI version in the GET request is 21.sp1 or greater.
@@ -198,21 +200,9 @@
             Indicates the endpoint type.  
           </xs:documentation>
         </xs:annotation>
-      </xs:element>    
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
-
-  <!--xs:complexType name="AccessDevices">
-    <xs:annotation>
-      <xs:documentation>
-        Access device table list. 
-        Contains a table of devices associated with a user.
-      </xs:documentation>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element name="accessDevice" type="AccessDevice" minOccurs="0" maxOccurs="unbounded"/> 
-    </xs:sequence>
-  </xs:complexType-->
   
   <xs:complexType name="ACDCallInfo">
     <xs:annotation>
@@ -529,19 +519,13 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <xs:complexType name="AttendantConsoleDisplayFieldList">
+  <xs:simpleType name="NationalPrefix">
     <xs:annotation>
-      <xs:documentation>
-        List of AttendantConsoleDisplayField.
-      </xs:documentation>
+      <xs:documentation>National Prefix.</xs:documentation>
     </xs:annotation>
-    <xs:sequence>
-      <xs:element name="displayField" type="AttendantConsoleDisplayFieldEnum"
-        minOccurs="1" maxOccurs="10">
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
-  
+    <xs:restriction base="PositiveInt" />
+  </xs:simpleType>
+    
   <xs:complexType name="AudioFileDetails">
     <xs:annotation>
       <xs:documentation>
@@ -1455,6 +1439,9 @@
       <xs:documentation>
         Details of the user in User Services.
         Release Modified: 21.0
+        
+        Change History:
+        24.0 - Add the locationDialingCode element.        
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -1475,6 +1462,7 @@
       <xs:element name="bridgeId" type="MyRoomDetails" minOccurs="0"/>
       <xs:element name="roomId" type="MyRoomDetails" minOccurs="0"/>
       <xs:element name="serviceName" type="ServiceName" minOccurs="0" />
+      <xs:element name="locationDialingCode" type="LocationDialingCode" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
   
@@ -1518,7 +1506,7 @@
             minOccurs="0" />
           <xs:element name="number" type="DN" minOccurs="0" />
           <xs:element name="extension" type="Extension"
-            minOccurs="0" />
+            minOccurs="0" />            
         </xs:sequence>
       </xs:extension >
     </xs:complexContent>
@@ -1551,10 +1539,13 @@
     <xs:annotation>
       <xs:documentation>
         Basic information about a User.
+        Change History:
+        23.5 - added externalId element
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="userId" type="UserId" />
+      <xs:element name="externalId" type="ExternalUserIdentityId" minOccurs="0" />
       <xs:element name="firstName" type="FirstName" nillable="true"
         minOccurs="0" />
       <xs:element name="lastName" type="LastName" nillable="true"
@@ -1976,26 +1967,6 @@
     </xs:restriction>
   </xs:simpleType>
   
-  <xs:simpleType name="AttendantConsoleDisplayFieldEnum">
-    <xs:annotation>
-      <xs:documentation>
-        Attendant Console Display Columns values.
-      </xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="NonEmptyToken">
-      <xs:enumeration value="Action" />
-      <xs:enumeration value="Department" />
-      <xs:enumeration value="Email" />
-      <xs:enumeration value="Extension" />
-      <xs:enumeration value="Mobile" />
-      <xs:enumeration value="Name" />
-      <xs:enumeration value="Phone Number" />
-      <xs:enumeration value="Pager" />
-      <xs:enumeration value="Status" />
-      <xs:enumeration value="Title" />
-    </xs:restriction>
-  </xs:simpleType>
-
   <xs:simpleType name="AutomaticHoldRetrieveRecallTimerSeconds">
     <xs:annotation>
       <xs:documentation>
@@ -2324,15 +2295,6 @@
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="MaxChannelsReached">
-        <xs:annotation>
-          <xs:documentation>
-            The remote application has requested to add a channel, but 
-            the number of channels allowed per channel set had been
-            reached.
-          </xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="UserDeleted">
         <xs:annotation>
           <xs:documentation>
@@ -2383,12 +2345,6 @@
     <xs:restriction base="PositiveInt" />
   </xs:simpleType>
 
-  <xs:simpleType name="NationalPrefix">
-    <xs:annotation>
-      <xs:documentation>National Prefix.</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="PositiveInt" />
-  </xs:simpleType>
 
   <xs:simpleType name="CriteriaFromDnSelection">
     <xs:annotation>
@@ -2628,6 +2584,17 @@
     <xs:restriction base="NonEmptyToken" />
   </xs:simpleType>
 
+  <xs:simpleType name="ExternalUserIdentityId">
+    <xs:annotation>
+      <xs:documentation>
+        The external identity of the user.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NonEmptyToken">
+      <xs:maxLength value="36"/>
+    </xs:restriction>
+  </xs:simpleType>
+
   <xs:simpleType name="FeatureAccessCode">
     <xs:annotation>
       <xs:documentation>Feature Access Code</xs:documentation>
@@ -2706,18 +2673,18 @@
       <xs:maxLength value="61" />
     </xs:restriction>
   </xs:simpleType>
-  
-   <xs:simpleType name="ServiceName">
-	<xs:annotation>
-		<xs:documentation>Service Name is the localized service name of
-			Virtual User
-		</xs:documentation>
-	</xs:annotation>
-	<xs:restriction base="xs:token">
-		<xs:minLength value="1" />
-		<xs:maxLength value="30" />
-	</xs:restriction>
-</xs:simpleType>
+
+  <xs:simpleType name="ServiceName">
+    <xs:annotation>
+      <xs:documentation>Service Name is the localized service name of 
+        a Virtual User
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:minLength value="1" />
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
 
   <xs:simpleType name="GroupId">
     <xs:annotation>
@@ -2800,7 +2767,7 @@
     </xs:restriction>
   </xs:simpleType>
   
-  <xs:simpleType name="HookStatus">
+  <xs:simpleType name="HookStatusType">
     <xs:annotation>
       <xs:documentation>
         Indicates the hook status of a user.
@@ -2898,10 +2865,9 @@
   <xs:simpleType name="InterceptOutboundCall">
   <xs:annotation>
     <xs:documentation>
-      The type of inbound calls to Intercept or allow.
-
+      The type of outbound calls to block or allow.
       Change History:
-      R21.sp1 - Added
+      21.1 - Added	  
     </xs:documentation>
   </xs:annotation>
   <xs:restriction base="xs:token">
@@ -3466,7 +3432,18 @@
     </xs:restriction>
   </xs:simpleType>
 
-
+  <xs:simpleType name="PathHeader">
+    <xs:annotation>
+      <xs:documentation>
+        Provides the routing information to the device associated to the SIP Contact.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="1024"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
   <xs:simpleType name="PhoneListEntryName">
     <xs:annotation>
       <xs:documentation>
@@ -3805,7 +3782,23 @@
             Route-Point to an agent.
           </xs:documentation>
         </xs:annotation>
-      </xs:enumeration>      
+      </xs:enumeration>
+      <xs:enumeration value="agent-wrap-up">
+        <xs:annotation>
+          <xs:documentation>
+            The call session was redirected by an
+            agent to a wrap-up destination.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="voicexml-script-termination">
+        <xs:annotation>
+          <xs:documentation>
+            The call session was redirected upon
+            termination of VoiceXML script.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="unknown">
         <xs:annotation>
           <xs:documentation>
@@ -4132,7 +4125,7 @@
       <xs:maxLength value="1024" />
     </xs:restriction>
   </xs:simpleType>  
-  
+
   <xs:simpleType name="ClientAppId">
     <xs:annotation>
       <xs:documentation>

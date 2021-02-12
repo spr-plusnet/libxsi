@@ -2,7 +2,7 @@
 
 
 <!-- ************************************************************************ -->
-<!--     Copyright (c) 2012 BroadSoft, Inc.  All rights reserved.             -->
+<!--     Copyright © 2017 BroadSoft Inc.             -->
 <!-- ************************************************************************ -->
 <!--                XSI  X M L  S C H E M A                                   -->
 <!--               *************************                                  -->
@@ -275,7 +275,7 @@
           <xs:element name="unicodeAlertingCustomCallingLineIdName" type="ExecutiveAlertingCustomCallingLineIdName" minOccurs="0"/>
           <xs:element name="alertingCallingLineIdPhoneNumberMode" type="ExecutiveAlertingCallingLineIdPhoneNumberMode" minOccurs="0"/>
           <xs:element name="alertingCustomCallingLineIdPhoneNumber" type="DN" minOccurs="0"/>
-          <xs:element name="callPushRecallNumberOfRings" type=" NumberOfRingsTwoToTwenty " minOccurs="0"/>
+          <xs:element name="callPushRecallNumberOfRings" type="NumberOfRingsTwoToTwenty" minOccurs="0"/>
           <xs:element name="nextAssistantNumberOfRings" type="NumberOfRingsTwoToTwenty" minOccurs="0"/>
           <xs:element name="enableRollover" type="xs:boolean" minOccurs="0"/>
           <xs:element name="rolloverWaitTimeSeconds" type="ExecutiveRolloverWaitTimeSeconds" minOccurs="0"/>

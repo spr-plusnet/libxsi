@@ -2,15 +2,14 @@
 
 
 <!-- ************************************************************************ -->
-<!-- Copyright (c) 2013 BroadSoft, Inc. All rights reserved. -->
+<!-- Copyright © 2017 BroadSoft Inc.                                          -->
 <!-- ************************************************************************ -->
-<!-- XSI X M L S C H E M A -->
-<!-- ************************* -->
-<!-- This file defines the schema types and elements required by the -->
-<!-- Personal Assistant interface in the http://schema.broadsoft.com/xsi -->
-<!-- namespace. -->
+<!-- XSI X M L S C H E M A                                                    -->
+<!-- *********************                                                    -->
+<!-- This file defines the schema types and elements required by the          -->
+<!-- Personal Assistant interface in the http://schema.broadsoft.com/xsi      -->
+<!-- namespace.                                                               -->
 <!-- ************************************************************************ -->
-
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schema.broadsoft.com/xsi"
   targetNamespace="http://schema.broadsoft.com/xsi"
@@ -41,7 +40,8 @@
         Assistant service
 
         Change History:
-        21.0 – Added.
+        21.0 - Added.
+        Release Modified: R22.sp6 - Added alertMeFirst and numberOfRings elements.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -114,6 +114,23 @@
               </xs:documentation>
             </xs:annotation>
           </xs:element>
+          <xs:element name="alertMeFirst" type="xs:boolean" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>
+                This element indicates if the user should be alerted first before an 
+                incoming call is treated with the Personal Assistant presence status.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="numberOfRings" type="NumberOfRingsZeroToTwentyExcludeOne" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>
+                This element specifies the number of rings the user will be alerted for an incoming 
+                call before the call is routed to the Personal Assistant presence treatment and optionally 
+                forwarded to an assistant or voicemail.
+              </xs:documentation>
+           </xs:annotation>
+          </xs:element> 
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -328,5 +345,5 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-
+    
 </xs:schema>

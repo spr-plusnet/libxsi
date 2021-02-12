@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ************************************************************************ -->
-<!--     Copyright (c) 2014 BroadSoft, Inc.  All rights reserved.             -->
+<!--     Copyright © 2017 BroadSoft Inc.             -->
 <!-- ************************************************************************ -->
 <!--                XSI  X M L  S C H E M A                                   -->
 <!--               *************************                                  -->
@@ -29,7 +29,7 @@
         phone waiting to receive calls. Note that the address (phone number or SIP-URI) you forward
         your calls to must be permitted by your outgoing calling plan.
         Change History:
-        R21.sp1 - Added
+        21.1 - Added
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>

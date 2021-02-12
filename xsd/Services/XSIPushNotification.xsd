@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <!-- ************************************************************************ -->
+    <!--     Copyright © 2018 BroadSoft Inc.             -->
+    <!-- ************************************************************************ -->
+    <!--                XSI  X M L  S C H E M A                                   -->
+    <!--               *************************                                  -->
+    <!-- This file defines the schema types and elements required by the          -->
+    <!-- PushNotification User Service interface in the                           -->
+    <!-- http://schema.broadsoft.com/xsi namespace.                               -->
+    <!-- ************************************************************************ -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schema.broadsoft.com/xsi"
+  targetNamespace="http://schema.broadsoft.com/xsi"
+  attributeFormDefault="unqualified" elementFormDefault="qualified"
+  version="1.0">
+
+  <xs:include schemaLocation="../XSIDataTypes.xsd" />
+ 
+  <xs:element name="PushNotification">
+    <xs:annotation>
+      <xs:documentation>
+        The user data associated with the push notification service.
+
+        Change History:
+        23.0 - Added.
+        24.0 - Added the sendPushNotificationForGroupPaging element.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="sendPushNotificationForClickToDial" type="xs:boolean" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              When this value is true any click-to-dial call origination sends a push
+              notification to any device registered for NEW_CALL for this user.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="sendPushNotificationForGroupPaging" type="xs:boolean" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              When this value is true any group paging call origination sends a push
+              notification to any device registered for NEW_CALL for this user.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+</xs:schema>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
     <!-- ************************************************************************ -->
-    <!--     Copyright (c) 2008 BroadSoft, Inc.  All rights reserved.             -->
+    <!--     Copyright © 2017 BroadSoft Inc.             -->
     <!-- ************************************************************************ -->
     <!--                XSI  X M L  S C H E M A                                   -->
     <!--               *************************                                  -->
@@ -35,7 +35,7 @@
     <xs:include schemaLocation="MeetMeConference/XSIMeetMeConference.xsd" />
     <xs:include schemaLocation="MeetMeConference/Events/XSIMeetMeConferenceEvents.xsd" />
     <xs:include schemaLocation="Profile/XSIProfile.xsd" />
-    <xs:include schemaLocation="Profile/Events/XSIPushNotificationRegistrationEvents.xsd" />    
+    <xs:include schemaLocation="Profile/Events/XSIPushNotificationRegistrationEvents.xsd" />
     <xs:include schemaLocation="Services/XSIServices.xsd" />
     <xs:include schemaLocation="Services/Events/XSIBroadWorksAnywhereEvents.xsd" />
     <xs:include schemaLocation="Services/Events/XSICallEvents.xsd" />

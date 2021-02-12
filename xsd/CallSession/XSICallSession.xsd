@@ -3,7 +3,7 @@
 
 
     <!-- ************************************************************************ -->
-    <!--     Copyright (c) 2008 BroadSoft, Inc.  All rights reserved.             -->
+    <!--     Copyright © 2017 BroadSoft Inc.             -->
     <!-- ************************************************************************ -->
     <!--                XSI  X M L  S C H E M A                                   -->
     <!--               *************************                                  -->
@@ -216,7 +216,7 @@
     </xs:complexType>
   </xs:element-->
   
-  <!--xs:element name="HookStatus">
+  <xs:element name="HookStatus">
     <xs:annotation>
       <xs:documentation>
         Hook Status of a user.
@@ -227,10 +227,10 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="hookStatus" type="HookStatus" />
+        <xs:element name="hookStatus" type="HookStatusType" />
       </xs:sequence>
     </xs:complexType>
-  </xs:element--> 
+  </xs:element> 
   
   <xs:element name="IMRNInfo" type="IMRNInfo">
     <xs:annotation>
@@ -1015,6 +1015,7 @@
     <xs:restriction base="NonEmptyToken">
       <xs:enumeration value="Barge-In" />
       <xs:enumeration value="Silently Monitored" />
+      <xs:enumeration value="Supervisor Coached" />
     </xs:restriction>
   </xs:simpleType>
 

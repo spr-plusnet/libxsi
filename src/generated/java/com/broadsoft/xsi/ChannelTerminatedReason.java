@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2020.05.11 um 03:08:51 PM CEST 
+// Generiert: 2021.02.12 um 09:46:20 AM CET 
 //
 
 
@@ -22,7 +22,6 @@ import javax.xml.bind.annotation.XmlType;
  * &lt;simpleType name="ChannelTerminatedReason">
  *   &lt;restriction base="{http://schema.broadsoft.com/xsi}NonEmptyToken">
  *     &lt;enumeration value="DuplicateChannelSet"/>
- *     &lt;enumeration value="MaxChannelsReached"/>
  *     &lt;enumeration value="UserDeleted"/>
  *     &lt;enumeration value="NonResponsiveChannel"/>
  *     &lt;enumeration value="ExplicitDelete"/>
@@ -50,17 +49,6 @@ public enum ChannelTerminatedReason {
      */
     @XmlEnumValue("DuplicateChannelSet")
     DUPLICATE_CHANNEL_SET("DuplicateChannelSet"),
-
-    /**
-     * 
-     *             The remote application has requested to add a channel, but 
-     *             the number of channels allowed per channel set had been
-     *             reached.
-     *           
-     * 
-     */
-    @XmlEnumValue("MaxChannelsReached")
-    MAX_CHANNELS_REACHED("MaxChannelsReached"),
 
     /**
      * 

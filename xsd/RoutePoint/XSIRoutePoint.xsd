@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
     <!-- ************************************************************************ -->
-    <!--     Copyright (c) 2008 BroadSoft, Inc.  All rights reserved.             -->
+    <!--     Copyright © 2017 BroadSoft Inc.             -->
     <!-- ************************************************************************ -->
     <!--                XSI  X M L  S C H E M A                                   -->
     <!--               *************************                                  -->
@@ -534,6 +534,33 @@
     </xs:complexType>
   </xs:element>
 
+  <xs:element name="RoutePointConnectToVoiceXML">
+    <xs:annotation>
+      <xs:documentation>
+        Requests the specified call in the Route Point's queue to be distributed to
+        the specified VoiceXML virtual subscriber for script execution. 
+        </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="voicexmlId" type="SubscriberId">
+          <xs:annotation>
+            <xs:documentation>
+              The userId of the VoiceXML virtual subscriber to which the call is to be distributed. 
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="scriptUrl" type="NonEmptyURI">
+          <xs:annotation>
+            <xs:documentation>
+              The URL of the VoiceXML script to execute.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
   <!-- **************************************************************-->
   <!--   Complex Type in Alphabetical Order.                          -->
   <!-- **************************************************************-->
@@ -774,6 +801,42 @@
   <!--   Simple Type in Alphabetical Order.                          -->
   <!-- **************************************************************-->
 
+  <xs:simpleType name="CallAdmissionRejectReason">
+    <xs:annotation>
+      <xs:documentation>
+        The CallAdmissionRejectReason specifies the reason a call
+        is rejected by call admission.
+        
+        Change History:
+          R24.0 - Added
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="NonEmptyToken">
+      <xs:enumeration value="CallRejectRequested">
+        <xs:annotation>
+          <xs:documentation>
+            The call is rejected as requested by the remote application.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CallAdmissionTimeout">
+        <xs:annotation>
+          <xs:documentation>
+           The call is rejected because the call admission timer expired prior to 
+           the remote application admitting or rejecting the call.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CallAbandoned">
+        <xs:annotation>
+          <xs:documentation>
+            The call is rejected because originating party abandoned the call.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  
   <xs:simpleType name="CPDResult">
     <xs:annotation>
       <xs:documentation>
@@ -1083,5 +1146,5 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-
+  
 </xs:schema>

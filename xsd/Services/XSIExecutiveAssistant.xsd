@@ -2,7 +2,7 @@
 
 
 <!-- ************************************************************************ -->
-<!--     Copyright (c) 2012 BroadSoft, Inc.  All rights reserved.             -->
+<!--     Copyright © 2017 BroadSoft Inc.             -->
 <!-- ************************************************************************ -->
 <!--                XSI  X M L  S C H E M A                                   -->
 <!--               *************************                                  -->
@@ -36,12 +36,14 @@
         Contains the executive assistant setting and a table of executives this assistant has been assigned to.
         Change History:
         R20.0 – Added.
+        R22.0 - Changed enableDivert and executives to be optional for PUT,
+                and divertToPhoneNumber to be nillable for PUT.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-          <xs:element name="enableDivert" type="xs:boolean"/>
-          <xs:element name="divertToPhoneNumber" type="OutgoingDNorSIPURI" minOccurs="0"/>
-          <xs:element name="executives" type="ExecutiveDetailsList" minOccurs="0"/>
+      <xs:element name="enableDivert" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="divertToPhoneNumber" type="OutgoingDNorSIPURI" nillable="true" minOccurs="0"/>
+      <xs:element name="executives" type="ExecutiveDetailsList" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
   

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
   <!-- ************************************************************************** -->
-  <!--     Copyright (c) 2008 BroadSoft, Inc.  All rights reserved.               -->
+  <!--     Copyright © 2017 BroadSoft Inc.               -->
   <!-- ************************************************************************** -->
   <!--                XSI  X M L  S C H E M A                                     -->
   <!--               *************************                                    -->
@@ -870,9 +870,10 @@
         caused the call to be detached.
 
         Change History:
-        R17.sp4 - Added
-        R19.0 - Modifed
-        R21.sp1 - Modifed
+        R17.sp4 -  Added
+        R19.0 - Modified
+         21.1 - Modified
+        R24.0 - Modified
       </xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:token">
@@ -906,6 +907,8 @@
       <xs:enumeration value="Trunk Group Forward Unconditional" />
       <xs:enumeration value="Voice Messaging" />
       <xs:enumeration value="Voice Mail Transfer" /> 
+      <xs:enumeration value="VoiceXML Script Termination" />
+      <xs:enumeration value="Agent Wrap-Up" />
     </xs:restriction>
   </xs:simpleType>
 
@@ -1662,7 +1665,7 @@
         </xs:annotation>
       </xs:element>
       <xs:element name="directRouteNumber" type="OutgoingDNorSIPURI"
-        minOccurs="0">       
+        minOccurs="0">
         <xs:annotation>
           <xs:documentation>
             This is the phone number received in the Request-URI for a Direct Route 
@@ -1672,6 +1675,14 @@
             request contains a trunk group identifier that matches the direct route 
             identifiers for a user who is a trunking user and has the Direct Route 
             service assigned.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="routeListNumber" type="DN" minOccurs="0">       
+        <xs:annotation>
+          <xs:documentation>
+            This is the Route List DN in use for a Route List call.
+            This field is present only for a Route List call.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

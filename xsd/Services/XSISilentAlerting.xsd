@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ************************************************************************ -->
-<!--     Copyright (c) 2014 BroadSoft, Inc.  All rights reserved.             -->
+<!--     Copyright © 2017 BroadSoft Inc.             -->
 <!-- ************************************************************************ -->
 <!--                XSI  X M L  S C H E M A                                   -->
 <!--               *************************                                  -->
@@ -22,7 +22,7 @@
       <xs:documentation>
         User Silent Alerting properties. Silent Alerting provides the ability to suppress ringing for devices that support the option.
         Change History:
-        R21.sp1 - Added.
+        21.1 - Added.
       </xs:documentation>
     </xs:annotation>
   </xs:element> 

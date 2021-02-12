@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2020.05.11 um 03:08:51 PM CEST 
+// Generiert: 2021.02.12 um 09:46:20 AM CET 
 //
 
 
@@ -20,6 +20,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  *         Details of the user in User Services.
  *         Release Modified: 21.0
+ *         
+ *         Change History:
+ *         24.0 - Add the locationDialingCode element.        
  *       
  * 
  * <p>Java-Klasse für UserAdditionalDetails complex type.
@@ -48,6 +51,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="bridgeId" type="{http://schema.broadsoft.com/xsi}MyRoomDetails" minOccurs="0"/>
  *         &lt;element name="roomId" type="{http://schema.broadsoft.com/xsi}MyRoomDetails" minOccurs="0"/>
  *         &lt;element name="serviceName" type="{http://schema.broadsoft.com/xsi}ServiceName" minOccurs="0"/>
+ *         &lt;element name="locationDialingCode" type="{http://schema.broadsoft.com/xsi}LocationDialingCode" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -74,7 +78,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "impId",
     "bridgeId",
     "roomId",
-    "serviceName"
+    "serviceName",
+    "locationDialingCode"
 })
 public class UserAdditionalDetails {
 
@@ -129,6 +134,9 @@ public class UserAdditionalDetails {
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
     protected String serviceName;
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "token")
+    protected String locationDialingCode;
 
     /**
      * Ruft den Wert der mobile-Eigenschaft ab.
@@ -536,6 +544,30 @@ public class UserAdditionalDetails {
      */
     public void setServiceName(String value) {
         this.serviceName = value;
+    }
+
+    /**
+     * Ruft den Wert der locationDialingCode-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getLocationDialingCode() {
+        return locationDialingCode;
+    }
+
+    /**
+     * Legt den Wert der locationDialingCode-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setLocationDialingCode(String value) {
+        this.locationDialingCode = value;
     }
 
 }

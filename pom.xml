@@ -4,7 +4,7 @@
 
 	<groupId>de.plusnet.centraflex</groupId>
 	<artifactId>libxsi</artifactId>
-	<version>21.2</version>
+	<version>2020.07</version>
 	<name>libxsi</name>
 
 	<properties>
