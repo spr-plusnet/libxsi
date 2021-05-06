@@ -7,8 +7,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.broadsoft.xsi.CallRecording;
 import com.broadsoft.xsi.api.XSIConnection;
@@ -24,7 +24,7 @@ import de.plusnet.centraflex.broadsoft.XSIException;
  */
 public class CallRecordingService implements WritableService<CallRecording> {
 
-	private final static Logger logger = LoggerFactory.getLogger("xsi.service.callrecording");
+	private final static Logger logger = LogManager.getLogger("xsi.service.callrecording");
 
 	private XSIConnection con;
 	private List<Action> actions;

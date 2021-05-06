@@ -7,7 +7,6 @@ module de.plusnet.centraflex.libxsi {
 
 	opens com.broadsoft.xsi;
 	
-	requires org.slf4j;
 	requires org.eclipse.persistence.moxy;
 	requires jakarta.xml.bind;
 }

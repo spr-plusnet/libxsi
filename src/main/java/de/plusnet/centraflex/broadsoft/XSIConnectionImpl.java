@@ -29,10 +29,8 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Properties;
 
-import jakarta.xml.bind.JAXBException;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.broadsoft.xsi.api.EventChannel;
 import com.broadsoft.xsi.api.EventChannelListener;
@@ -48,13 +46,15 @@ import com.broadsoft.xsi.api.service.Service;
 import com.broadsoft.xsi.api.service.ServiceType;
 import com.broadsoft.xsi.api.service.ServicesService;
 
+import jakarta.xml.bind.JAXBException;
+
 /**
  * @author prelle
  *
  */
 public class XSIConnectionImpl implements XSIConnection {
 
-	private final static Logger logger = LoggerFactory.getLogger("connector.xsi");
+	private final static Logger logger = LogManager.getLogger("connector.xsi");
 	
 	private String hostport;
 	private String user;

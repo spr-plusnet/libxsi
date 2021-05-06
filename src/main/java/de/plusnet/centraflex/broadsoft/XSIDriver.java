@@ -7,24 +7,24 @@ import java.io.Writer;
 import java.util.HashMap;
 import java.util.Properties;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.eclipse.persistence.Version;
+
+import com.broadsoft.xsi.api.XSIConnection;
+
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
 import jakarta.xml.bind.Unmarshaller;
 
-import org.eclipse.persistence.Version;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.broadsoft.xsi.api.XSIConnection;
-
 /**
  * @author prelle
  *
  */
 public class XSIDriver {
-	private final static Logger logger = LoggerFactory.getLogger("connector.xsi");
+	private final static Logger logger = LogManager.getLogger("connector.xsi");
 
 
 	public final static String PROP_XSI_SERVER = "xsi.server";

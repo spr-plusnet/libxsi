@@ -11,8 +11,8 @@ import java.io.InputStream;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.stream.XMLStreamException;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.xml.sax.SAXException;
 
 /**
@@ -21,7 +21,7 @@ import org.xml.sax.SAXException;
  */
 public class XMLDocumentTokenizer {
 	
-	private final static Logger logger = LoggerFactory.getLogger("xml");
+	private final static Logger logger = LogManager.getLogger("connector.xsi.xml");
 	
 	enum ParseMode {
 		IDLE,

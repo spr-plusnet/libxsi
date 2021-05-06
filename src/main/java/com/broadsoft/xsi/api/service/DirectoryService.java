@@ -6,8 +6,8 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.broadsoft.xsi.Enterprise;
 import com.broadsoft.xsi.UserAdditionalEnterpriseGroupDetails;
@@ -21,7 +21,7 @@ import de.plusnet.centraflex.broadsoft.XSIException;
  */
 public class DirectoryService {
 
-	private final static Logger logger = LoggerFactory.getLogger("xsi.service.enterprise");
+	private final static Logger logger = LogManager.getLogger("xsi.service.enterprise");
 
 	private XSIConnection con;
 

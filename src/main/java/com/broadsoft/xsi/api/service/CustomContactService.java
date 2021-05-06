@@ -6,8 +6,8 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.broadsoft.xsi.CustomContact;
 import com.broadsoft.xsi.Directory;
@@ -27,7 +27,7 @@ import de.plusnet.centraflex.broadsoft.XSIException;
  */
 public class CustomContactService {
 
-	private final static Logger logger = LoggerFactory.getLogger("xsi.service.contact");
+	private final static Logger logger = LogManager.getLogger("xsi.service.contact");
 
 	private XSIConnection con;
 	private List<Action> actions;
