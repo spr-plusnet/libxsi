@@ -1,6 +1,3 @@
-/**
- * 
- */
 package de.plusnet.centraflex.broadsoft;
 
 import java.io.DataOutputStream;
@@ -30,8 +27,8 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
@@ -52,7 +49,7 @@ import com.broadsoft.xsi.api.Subscription;
  */
 public class EventChannelImpl implements Runnable, EventChannel {
 
-	private final static Logger logger = LoggerFactory.getLogger("xsi.events");
+	private final static Logger logger = LogManager.getLogger("xsi.events");
 
 	private static int count = 0;
 	
@@ -212,7 +209,7 @@ public class EventChannelImpl implements Runnable, EventChannel {
 //		logger.debug("Response received: "+con.getContentType());
 		String toParse = waitForNextResponse(ret.in);
 
-		if (con.getContentType().startsWith("application/xml")) {
+		if (con.getContentType().startsWith("application/xml") || con.getContentType().startsWith("text/xml")) {
 			try {
 				logger.debug("RCV "+toParse);
 				//				logger.fatal("Stop here");
