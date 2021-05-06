@@ -1,18 +1,18 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSeeAlso;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -25,15 +25,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
- * &lt;complexType name="RoutePointEvent">
- *   &lt;complexContent>
- *     &lt;extension base="{http://schema.broadsoft.com/xsi}EventData">
- *       &lt;sequence>
- *         &lt;element name="queueEntry" type="{http://schema.broadsoft.com/xsi}RoutePointQueueEntry"/>
- *       &lt;/sequence>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="RoutePointEvent"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://schema.broadsoft.com/xsi}EventData"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="queueEntry" type="{http://schema.broadsoft.com/xsi}RoutePointQueueEntry"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -43,33 +43,33 @@ import javax.xml.bind.annotation.XmlType;
     "queueEntry"
 })
 @XmlSeeAlso({
-    RoutePointCallBouncedEvent.class,
-    RoutePointWhisperStartedEvent.class,
-    RoutePointConnectedToVoiceXMLEvent.class,
-    RoutePointCallTransferredEvent.class,
-    RoutePointMOHCompletedEvent.class,
-    RoutePointFailedVoiceXMLEvent.class,
-    RoutePointSilenceCompletedEvent.class,
-    RoutePointRingbackCompletedEvent.class,
-    RoutePointCallAnsweredByAgentEvent.class,
-    RoutePointCallUpdatedEvent.class,
-    RoutePointCallFailedEvent.class,
-    RoutePointBusyStartedEvent.class,
-    RoutePointSilenceStartedEvent.class,
     RoutePointBusyCompletedEvent.class,
-    RoutePointCallOverflowedEvent.class,
-    RoutePointCallReleasedEvent.class,
-    RoutePointCallOverflowedTreatmentCompletedEvent.class,
+    RoutePointBusyStartedEvent.class,
     RoutePointCallAbandonedEvent.class,
-    RoutePointCallOfferedToAgentEvent.class,
-    RoutePointTreatmentStartedEvent.class,
-    RoutePointOutgoingCallOriginatedEvent.class,
-    RoutePointRingbackStartedEvent.class,
-    RoutePointConnectingToVoiceXMLEvent.class,
     RoutePointCallAddedEvent.class,
-    RoutePointOutgoingCallAnsweredEvent.class,
+    RoutePointCallAnsweredByAgentEvent.class,
+    RoutePointCallBouncedEvent.class,
+    RoutePointCallFailedEvent.class,
+    RoutePointCallOfferedToAgentEvent.class,
+    RoutePointCallOverflowedEvent.class,
+    RoutePointCallOverflowedTreatmentCompletedEvent.class,
+    RoutePointCallReleasedEvent.class,
+    RoutePointCallTransferredEvent.class,
+    RoutePointCallUpdatedEvent.class,
+    RoutePointMOHCompletedEvent.class,
     RoutePointMOHStartedEvent.class,
-    RoutePointTreatmentCompletedEvent.class
+    RoutePointOutgoingCallAnsweredEvent.class,
+    RoutePointOutgoingCallOriginatedEvent.class,
+    RoutePointRingbackCompletedEvent.class,
+    RoutePointRingbackStartedEvent.class,
+    RoutePointSilenceCompletedEvent.class,
+    RoutePointSilenceStartedEvent.class,
+    RoutePointTreatmentCompletedEvent.class,
+    RoutePointTreatmentStartedEvent.class,
+    RoutePointWhisperStartedEvent.class,
+    RoutePointConnectingToVoiceXMLEvent.class,
+    RoutePointConnectedToVoiceXMLEvent.class,
+    RoutePointFailedVoiceXMLEvent.class
 })
 public class RoutePointEvent
     extends EventData

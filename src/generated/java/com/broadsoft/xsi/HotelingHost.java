@@ -1,21 +1,21 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -24,24 +24,24 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;extension base="{http://schema.broadsoft.com/xsi}ActivatableServiceInfo">
- *       &lt;sequence>
- *         &lt;element name="enforceAssociationLimit" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *         &lt;element name="associationLimitHours" type="{http://schema.broadsoft.com/xsi}HotelingAssociationLimitHours" minOccurs="0"/>
- *         &lt;element name="accessLevel" type="{http://schema.broadsoft.com/xsi}HotelingHostAccessLevel" minOccurs="0"/>
- *         &lt;element name="removeGuestAssociation" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *         &lt;element name="guestLastName" type="{http://schema.broadsoft.com/xsi}LastName" minOccurs="0"/>
- *         &lt;element name="guestFirstName" type="{http://schema.broadsoft.com/xsi}FirstName" minOccurs="0"/>
- *         &lt;element name="guestPhoneNumber" type="{http://schema.broadsoft.com/xsi}DN" minOccurs="0"/>
- *         &lt;element name="guestExtension" type="{http://schema.broadsoft.com/xsi}Extension" minOccurs="0"/>
- *         &lt;element name="guestLocationDialingCode" type="{http://schema.broadsoft.com/xsi}LocationDialingCode" minOccurs="0"/>
- *         &lt;element name="guestAssociationDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://schema.broadsoft.com/xsi}ActivatableServiceInfo"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="enforceAssociationLimit" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
+ *         &lt;element name="associationLimitHours" type="{http://schema.broadsoft.com/xsi}HotelingAssociationLimitHours" minOccurs="0"/&gt;
+ *         &lt;element name="accessLevel" type="{http://schema.broadsoft.com/xsi}HotelingHostAccessLevel" minOccurs="0"/&gt;
+ *         &lt;element name="removeGuestAssociation" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
+ *         &lt;element name="guestLastName" type="{http://schema.broadsoft.com/xsi}LastName" minOccurs="0"/&gt;
+ *         &lt;element name="guestFirstName" type="{http://schema.broadsoft.com/xsi}FirstName" minOccurs="0"/&gt;
+ *         &lt;element name="guestPhoneNumber" type="{http://schema.broadsoft.com/xsi}DN" minOccurs="0"/&gt;
+ *         &lt;element name="guestExtension" type="{http://schema.broadsoft.com/xsi}Extension" minOccurs="0"/&gt;
+ *         &lt;element name="guestLocationDialingCode" type="{http://schema.broadsoft.com/xsi}LocationDialingCode" minOccurs="0"/&gt;
+ *         &lt;element name="guestAssociationDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

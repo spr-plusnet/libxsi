@@ -1,20 +1,20 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -31,21 +31,21 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
- * &lt;complexType name="ACDCallForwardedTreatmentCompletedEvent">
- *   &lt;complexContent>
- *     &lt;extension base="{http://schema.broadsoft.com/xsi}EventData">
- *       &lt;sequence>
- *         &lt;element name="callId" type="{http://schema.broadsoft.com/xsi}CallId"/>
- *         &lt;element name="extTrackingId" type="{http://schema.broadsoft.com/xsi}ExternalTrackingId"/>
- *         &lt;element name="acdName" type="{http://schema.broadsoft.com/xsi}NonEmptyString"/>
- *         &lt;element name="acdNumber" type="{http://schema.broadsoft.com/xsi}Address"/>
- *         &lt;element name="remoteParty" type="{http://schema.broadsoft.com/xsi}PartyInformation"/>
- *         &lt;element name="redirect" type="{http://schema.broadsoft.com/xsi}Redirect" minOccurs="0"/>
- *         &lt;element name="reason" type="{http://schema.broadsoft.com/xsi}TreatmentCompletionReason"/>
- *       &lt;/sequence>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="ACDCallForwardedTreatmentCompletedEvent"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://schema.broadsoft.com/xsi}EventData"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="callId" type="{http://schema.broadsoft.com/xsi}CallId"/&gt;
+ *         &lt;element name="extTrackingId" type="{http://schema.broadsoft.com/xsi}ExternalTrackingId"/&gt;
+ *         &lt;element name="acdName" type="{http://schema.broadsoft.com/xsi}NonEmptyString"/&gt;
+ *         &lt;element name="acdNumber" type="{http://schema.broadsoft.com/xsi}Address"/&gt;
+ *         &lt;element name="remoteParty" type="{http://schema.broadsoft.com/xsi}PartyInformation"/&gt;
+ *         &lt;element name="redirect" type="{http://schema.broadsoft.com/xsi}Redirect" minOccurs="0"/&gt;
+ *         &lt;element name="reason" type="{http://schema.broadsoft.com/xsi}TreatmentCompletionReason"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

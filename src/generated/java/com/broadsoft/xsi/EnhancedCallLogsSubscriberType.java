@@ -1,37 +1,36 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java-Klasse für EnhancedCallLogsSubscriberType.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
- * <p>
  * <pre>
- * &lt;simpleType name="EnhancedCallLogsSubscriberType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *     &lt;enumeration value="Auto Attendant"/>
- *     &lt;enumeration value="BroadWorks Anywhere Portal"/>
- *     &lt;enumeration value="Call Center"/>
- *     &lt;enumeration value="Hunt Group"/>
- *     &lt;enumeration value="Route Point"/>
- *     &lt;enumeration value="Find-me/Follow-me"/>
- *     &lt;enumeration value="Flexible Seating Host"/>
- *     &lt;enumeration value="VoiceXML"/>
- *     &lt;enumeration value="User"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="EnhancedCallLogsSubscriberType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
+ *     &lt;enumeration value="Auto Attendant"/&gt;
+ *     &lt;enumeration value="BroadWorks Anywhere Portal"/&gt;
+ *     &lt;enumeration value="Call Center"/&gt;
+ *     &lt;enumeration value="Hunt Group"/&gt;
+ *     &lt;enumeration value="Route Point"/&gt;
+ *     &lt;enumeration value="Find-me/Follow-me"/&gt;
+ *     &lt;enumeration value="Flexible Seating Host"/&gt;
+ *     &lt;enumeration value="VoiceXML"/&gt;
+ *     &lt;enumeration value="User"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

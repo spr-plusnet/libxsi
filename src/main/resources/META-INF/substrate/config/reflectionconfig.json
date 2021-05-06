@@ -2,4491 +2,3483 @@
 {
   "name":"com.broadsoft.xsi.ACDAgentJoinData",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDAgentJoinInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDAgentJoinInfoList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDAgentJoinUpdateData",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDAgentJoinUpdateEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDAgentUnavailableCodeDetail",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDAgentUnavailableCodeList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDAgentUnavailableCodes",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallAbandonedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallAddedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallAnsweredByAgentEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallBouncedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallDispositionCodeDetail",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallDispositionCodeLevel",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ENTERPRISE"}, 
-    {"name":"GROUP"}, 
-    {"name":"QUEUE"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallDispositionCodeList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallDispostionCodes",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallEscapedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallForwardedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallForwardedTreatmentCompletedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallOfferedToAgentEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallOverflowedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallOverflowedTreatmentCompletedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallPromotedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallReleasedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallReorderedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallStrandedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallStrandedTreatementCompletedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallStrandedUnavailableEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallStrandedUnavailableTreatementCompletedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallTransferredEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDCallUpdatedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDConfigurationSubscriptionEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDDNIS",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDDNISDisplaySetting",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDDNISInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDDNISInfoList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDDNISKey",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDDNISPrioritySetting",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDExternalReporting",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDExternalReportingMode",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ENHANCED"}, 
-    {"name":"OFF"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ACDForcedForwarding",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDForcedForwardingEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDHolidayPolicyAppliedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDHolidayPolicyTreatmentCompletedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDHolidayServiceEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDNightPolicyAppliedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDNightPolicyTreatmentCompletedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDNightService",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDNightServiceEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDOutgoingCallInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDProfile",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDPromote",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDQueue",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDQueueEntry",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDQueueEntryList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDRouting",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"PRIORITY_BASED"}, 
-    {"name":"SKILL_BASED"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ACDSubscriptionEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDSubscriptionResyncEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ACDType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"BASIC"}, 
-    {"name":"PREMIUM"}, 
-    {"name":"STANDARD"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ACDWhisperStartedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AccessDevice",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AccessDeviceLevel",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"GROUP"}, 
-    {"name":"SERVICE_PROVIDER"}, 
-    {"name":"SYSTEM"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.AccessDevices",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AccessEndpoint",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AccountAuthorizationCodeEntry",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AccountCodes",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ActivatableServiceInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Address",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AgentACDAutomaticState",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"AVAILABLE"}, 
-    {"name":"UNAVAILABLE"}, 
-    {"name":"WRAP_UP"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.AgentCallCenterAssignedStatus",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AgentDispositionCodeAddedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AgentEscalation",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"EMERGENCY"}, 
-    {"name":"NORMAL"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.AgentState",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"AVAILABLE"}, 
-    {"name":"SIGN_IN"}, 
-    {"name":"SIGN_OUT"}, 
-    {"name":"UNAVAILABLE"}, 
-    {"name":"WRAP_UP"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.AgentStateEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AgentStateInformation",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AgentSubscriptionEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AlternateNumberEntry",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AlternateNumbers",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AlternateNumbersList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AlternateNumbersRingPatternEnum",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"LONG_LONG"}, 
-    {"name":"NORMAL"}, 
-    {"name":"SHORT_LONG_SHORT"}, 
-    {"name":"SHORT_SHORT_LONG"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.AnnouncementSelection",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"DEFAULT"}, 
-    {"name":"PERSONAL"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.AnonymousCallRejection",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ApplicationController",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ApplicationControllerState",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"NOT_READY"}, 
-    {"name":"READY"}
-  ]
-},
-{
-  "name":"com.broadsoft.xsi.AttendantConsole",
-  "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
-  "name":"com.broadsoft.xsi.AttendantConsoleDisplayFieldEnum",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ACTION"}, 
-    {"name":"DEPARTMENT"}, 
-    {"name":"EMAIL"}, 
-    {"name":"EXTENSION"}, 
-    {"name":"MOBILE"}, 
-    {"name":"NAME"}, 
-    {"name":"PAGER"}, 
-    {"name":"PHONE_NUMBER"}, 
-    {"name":"STATUS"}, 
-    {"name":"TITLE"}
-  ]
-},
-{
-  "name":"com.broadsoft.xsi.AttendantConsoleDisplayFieldList",
-  "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.AudioFileDetails",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AutomaticCallback",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AutomaticHoldRetrieve",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AvailableFlexibleSeatingHosts",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AvailableFlexibleSeatingHosts$HostUserIdList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AvailableHotelingHosts",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AvailableHotelingHosts$HostUserIdList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.AvailableUsers",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BargeInExempt",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BaseEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BasicCallType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"EMERGENCY"}, 
-    {"name":"ENTERPRISE"}, 
-    {"name":"GROUP"}, 
-    {"name":"NETWORK"}, 
-    {"name":"NETWORK_URL"}, 
-    {"name":"REPAIR"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.BroadWorksAnywhereEndpoint",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BroadWorksAnywhereEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BroadWorksAnywhereInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BroadWorksAnywhereLocation",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BroadWorksAnywhereLocationCriteria",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BroadWorksAnywhereLocationInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BroadWorksAnywhereLocationInfoList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BroadWorksAnywherePortal",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BroadWorksAnywherePortal$PhoneNumbers",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BroadWorksMobility",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BroadWorksMobilityAlertingPolicyInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BroadWorksMobilityCallAnchoringPolicy",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BroadWorksMobilityEndpoint",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BroadWorksMobilityMobileIdentity",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BroadWorksMobilityMobileIdentityEntry",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BroadWorksMobilityMobileNumbersAlertList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BroadWorksMobilityPhoneToRingSelection",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"BOTH"}, 
-    {"name":"FIXED"}, 
-    {"name":"MOBILE"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.BroadWorksMobilityProfileIdentityEntry",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BroadWorksReceptionist",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BusyLampField",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.BusyPattern",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"FAST_BUSY"}, 
-    {"name":"NORMAL"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.CPDResult",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"FAX"}, 
-    {"name":"SIT"}, 
-    {"name":"VOICE_MESSAGING"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.Call",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.CallAdmissionRejectReason",
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.CallAnsweredEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallBargedInEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallCategory",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"EMERGENCY"}, 
-    {"name":"INTERLATA"}, 
-    {"name":"INTERNATIONAL"}, 
-    {"name":"INTRALATA"}, 
-    {"name":"LOCAL"}, 
-    {"name":"NATIONAL"}, 
-    {"name":"OTHER"}, 
-    {"name":"PRIVATE"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenter",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenterAgentMonitoringEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenterAgentMonitoringStatus",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenterAgentMonitoringSubscriptionEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenterAgentOnCallAlertEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenterAgentOnCallAlertInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenterAgents",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenterAgents$CallCenter",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenterAnnouncementFileList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenterAnnouncementURLList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenterDetails",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenterList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenterManualNightServiceAnnouncementMode",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"MANUAL_ANNOUNCEMENT"}, 
-    {"name":"NORMAL_ANNOUNCEMENT"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenterMonitoring",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenterMonitoringEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenterMonitoringStatus",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenterReportingServer",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenterScheduledServiceAction",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"BUSY"}, 
-    {"name":"NONE"}, 
-    {"name":"TRANSFER"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenters",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallCenters$CallCenter",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallClientSessionInfoUpdatedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallCollectingEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallDetachedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallForwardedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallForwarding",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallForwardingAlways",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallForwardingAlwaysEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallForwardingAlwaysSecondary",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallForwardingAlwaysSecondaryEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallForwardingBusy",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallForwardingBusyEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallForwardingNoAnswer",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallForwardingNoAnswerEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallForwardingNotReachable",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallForwardingSelective",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallForwardingSelectiveCriteria",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallForwardingSelectiveNumberSelection",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"DO_NOT_FORWARD"}, 
-    {"name":"FORWARD_TO_DEFAULT_NUMBER"}, 
-    {"name":"FORWARD_TO_SPECIFIED_NUMBER"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.CallHeldEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallIdList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallLogs",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallLogsEntries",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallLogsEntry",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallMeNow",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallMeNowAnswerConfirmation",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ANY_KEY"}, 
-    {"name":"NONE"}, 
-    {"name":"PASSCODE"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.CallMeNowCriteria",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallMeNowStartInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallMonitoredEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallNotify",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.CallNotifyCriteria",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallOriginatedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallOriginatingEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallPark",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallParkRetrievedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallParkedAgainstEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallPickedUpEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallReceivedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallRecording",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallRecordingMode",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ALWAYS"}, 
-    {"name":"ALWAYS_PAUSE_RESUME"}, 
-    {"name":"NEVER"}, 
-    {"name":"ON_DEMAND"}, 
-    {"name":"ON_DEMAND_USER_START"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.CallRecordingPausedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallRecordingResumedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallRecordingStartedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallRecordingStartingEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallRecordingStoppedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallRedirectedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallReleasedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallReleasingEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallRetrievedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallSecurityClassificationUpdatedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallStartInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallState",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ACTIVE"}, 
-    {"name":"ALERTING"}, 
-    {"name":"DETACHED"}, 
-    {"name":"HELD"}, 
-    {"name":"IDLE"}, 
-    {"name":"RELEASED"}, 
-    {"name":"REMOTE_HELD"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.CallSubscriptionEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallSubscriptionResyncEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallToNumber",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallToNumberList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallToNumberType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ALTERNATE"}, 
-    {"name":"MOBILITY"}, 
-    {"name":"PRIMARY"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.CallTransferEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallTransferInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallTransferredEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"CITY_WIDE_CENTREX"}, 
-    {"name":"EMERGENCY"}, 
-    {"name":"ENTERPRISE"}, 
-    {"name":"ERROR"}, 
-    {"name":"GROUP"}, 
-    {"name":"NETWORK"}, 
-    {"name":"PRIVATE_DIAL_PLAN"}, 
-    {"name":"REPAIR"}, 
-    {"name":"UNKNOWN"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.CallUpdateReason",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"CALL_BARGED_IN"}, 
-    {"name":"CALL_FORWARDED"}, 
-    {"name":"CALL_MONITORED"}, 
-    {"name":"CALL_PARK_RETRIEVED"}, 
-    {"name":"CALL_PICKED_UP"}, 
-    {"name":"CALL_TRANSFERRED"}, 
-    {"name":"UNKNOWN"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.CallUpdatedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallWaiting",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallWaitingEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallingLineIDBlockingOverride",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallingLineIDDeliveryBlocking",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallingNameDelivery",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallingNameRetrieval",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallingNumberDelivery",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallingPartyCategory",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CallingPartyCategoryEnum",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"HOSPITAL"}, 
-    {"name":"HOTEL"}, 
-    {"name":"ORDINARY"}, 
-    {"name":"PAYPHONE"}, 
-    {"name":"PRISON"}, 
-    {"name":"SPECIAL"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.CallingPresentationNumberSource",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"CONFIGURABLE_CLID"}, 
-    {"name":"DEPARTMENT"}, 
-    {"name":"DNIS"}, 
-    {"name":"EMERGENCY"}, 
-    {"name":"GROUP"}, 
-    {"name":"TRUNK_GROUP"}, 
-    {"name":"USER"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.Calls",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Channel",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ChannelSet",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ChannelTerminatedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ChannelTerminatedReason",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"DUPLICATE_CHANNEL_SET"}, 
-    {"name":"EXPIRED"}, 
-    {"name":"EXPLICIT_DELETE"}, 
-    {"name":"MAX_CHANNELS_REACHED"}, 
-    {"name":"NON_RESPONSIVE_CHANNEL"}, 
-    {"name":"UNKNOWN_CHANNEL"}, 
-    {"name":"USER_DELETED"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ChargeNumber",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ColaborateRoomParticipant",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Collaborate",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateBridgeInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateInstantRoomDuration",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoom",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomAttendeeNotification",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"NO_NOTIFICATION"}, 
-    {"name":"PLAY_TONE"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomCallIdList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomClientSessionInfoUpdatedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomEventInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomLockedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomParticipant",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomParticipantJoinedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomParticipantLeftEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomParticipantList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomParticipantMutedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomParticipantUnmutedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomParticipantUpdatedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomParticipants",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomSchedule",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomSchedule$ScheduleOneTime",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomSchedule$ScheduleRecurring",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomSchedule$ScheduleReservationless",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomScheduleDuration",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomSessionInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomStartedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomStoppedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomSubscriptionEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomSubscriptionResyncEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"INSTANT_ROOM"}, 
-    {"name":"MY_ROOM"}, 
-    {"name":"PROJECT_ROOM"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.CollaborateRoomUnlockedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
-  "name":"com.broadsoft.xsi.CommPilotCallManager",
-  "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CommPilotExpress",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CommPilotExpressAvailableInOffice",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CommPilotExpressAvailableOutOfOffice",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CommPilotExpressBusy",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CommPilotExpressEmailNotify",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CommPilotExpressEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CommPilotExpressProfile",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"AVAILABLE_IN_OFFICE"}, 
-    {"name":"AVAILABLE_OUT_OF_OFFICE"}, 
-    {"name":"BUSY"}, 
-    {"name":"UNAVAILABLE"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.CommPilotExpressRedirection",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CommPilotExpressRedirectionAction",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"FORWARD"}, 
-    {"name":"TRANSFER_TO_VOICE_MAIL"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.CommPilotExpressRedirectionWithException",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CommPilotExpressUnavailable",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CommPilotExpressVoiceMailGreeting",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"NO_ANSWER"}, 
-    {"name":"UNAVAILABLE"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.Commands",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CommonInstantRoomSettings",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Conference",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ConferenceCallMadeDeafEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ConferenceCallMadeUnDeafEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ConferenceCallMutedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ConferenceCallUnMutedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ConferenceEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ConferenceHeldEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ConferenceMutedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ConferenceParticipant",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ConferenceParticipantList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ConferenceReleasedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ConferenceRetrievedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ConferenceStartedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ConferenceState",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ACTIVE"}, 
-    {"name":"HELD"}, 
-    {"name":"RELEASED"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ConferenceType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"BARGE_IN"}, 
-    {"name":"SILENTLY_MONITORED"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ConferenceUnmutedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ConferenceUpdatedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ConnectedLineIdentificationPresentation",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ConnectedLineIdentificationRestriction",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ConnectedNumberSource",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"CONFIGURABLE_CLID"}, 
-    {"name":"DEPARTMENT"}, 
-    {"name":"GROUP"}, 
-    {"name":"USER"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ContactDetails",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ContactURL",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Criteria",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CriteriaActivation",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CriteriaActivationList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CriteriaDnSelection",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ANY"}, 
-    {"name":"SPECIFIED_ONLY"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.CriteriaFromDn",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CriteriaFromDnSelection",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ANY"}, 
-    {"name":"SPECIFIED_ONLY"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.CriteriaPhoneNumberList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CriteriaToDn",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CriteriaWithExecutiveFiltering",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CriteriaWithFromDn",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CriteriaWithFromDnAndCallToNumber",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CriteriaWithPriorityAlert",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CriteriaWithSelectiveCall",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CriteriaWithToDn",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CustomContact",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CustomRingbackUser",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CustomRingbackUserCriteria",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.CustomerOriginatedTrace",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.DNISKey",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.DayOfWeek",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"FRIDAY"}, 
-    {"name":"MONDAY"}, 
-    {"name":"SATURDAY"}, 
-    {"name":"SUNDAY"}, 
-    {"name":"THURSDAY"}, 
-    {"name":"TUESDAY"}, 
-    {"name":"WEDNESDAY"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.DayOfWeekInMonth",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"FIRST"}, 
-    {"name":"FOURTH"}, 
-    {"name":"LAST"}, 
-    {"name":"SECOND"}, 
-    {"name":"THIRD"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.DepartmentKey",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.DeviceManagementUserNamePassword",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.DeviceToken",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.DirectedCallPickupWithBargeIn",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Directory",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Directory$Contacts",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.DirectoryDetails",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.DistinctiveRing",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"BELLCORE_DR_2"}, 
-    {"name":"BELLCORE_DR_3"}, 
-    {"name":"BELLCORE_DR_4"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.DoNotDisturb",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.DoNotDisturbEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.EmptyContent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Endpoint",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.EndpointType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"FLEXIBLE_SEATING_GUEST"}, 
-    {"name":"MOBILITY"}, 
-    {"name":"MUSIC_ON_HOLD_INTERNAL"}, 
-    {"name":"PRIMARY"}, 
-    {"name":"PUBLIC_SERVICE_IDENTITY"}, 
-    {"name":"SHARED_CALL_APPEARANCE"}, 
-    {"name":"VIDEO_ADD_ON"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.EnhancedCallLogs",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.EnhancedCallLogsEntries",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.EnhancedCallLogsEntry",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.EnhancedCallLogsExtendedEntry",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.EnhancedCallLogsSubscriberType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"AUTO_ATTENDANT"}, 
-    {"name":"BROAD_WORKS_ANYWHERE_PORTAL"}, 
-    {"name":"CALL_CENTER"}, 
-    {"name":"FIND_ME_FOLLOW_ME"}, 
-    {"name":"FLEXIBLE_SEATING_HOST"}, 
-    {"name":"HUNT_GROUP"}, 
-    {"name":"ROUTE_POINT"}, 
-    {"name":"USER"}, 
-    {"name":"VOICE_XML"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.Enterprise",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.EnterpriseCommon",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.EntityType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"GROUP"}, 
-    {"name":"SERVICE_PROVIDER"}, 
-    {"name":"SYSTEM"}, 
-    {"name":"USER"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ErrorEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ErrorInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.EventData",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.EventDetail",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.EventPackage",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ADVANCED_CALL"}, 
-    {"name":"BASIC_CALL"}, 
-    {"name":"BROAD_WORKS_ANYWHERE"}, 
-    {"name":"CALL_CENTER_AGENT"}, 
-    {"name":"CALL_CENTER_AGENT_MONITORING"}, 
-    {"name":"CALL_CENTER_CONFIGURATION"}, 
-    {"name":"CALL_CENTER_MONITORING"}, 
-    {"name":"CALL_CENTER_QUEUE"}, 
-    {"name":"CALL_FORWARDING_ALWAYS"}, 
-    {"name":"CALL_FORWARDING_ALWAYS_SECONDARY"}, 
-    {"name":"CALL_FORWARDING_BUSY"}, 
-    {"name":"CALL_FORWARDING_NO_ANSWER"}, 
-    {"name":"CALL_PARK"}, 
-    {"name":"CALL_RECORDING"}, 
-    {"name":"CALL_TRANSFER"}, 
-    {"name":"CALL_WAITING"}, 
-    {"name":"COLLABORATE_ROOM"}, 
-    {"name":"COMM_PILOT_EXPRESS"}, 
-    {"name":"DO_NOT_DISTURB"}, 
-    {"name":"FLEXIBLE_SEATING_GUEST"}, 
-    {"name":"HOTELING_GUEST"}, 
-    {"name":"LAST_NUMBER_REDIAL"}, 
-    {"name":"MEET_ME_CONFERENCE"}, 
-    {"name":"MUSIC_ON_HOLD"}, 
-    {"name":"N_WAY_CALL"}, 
-    {"name":"PERSONAL_ASSISTANT"}, 
-    {"name":"PUSH_NOTIFICATION_REGISTRATION"}, 
-    {"name":"REMOTE_OFFICE"}, 
-    {"name":"ROUTE_POINT_QUEUE"}, 
-    {"name":"SECURITY_CLASSIFICATION"}, 
-    {"name":"SEQUENTIAL_RING"}, 
-    {"name":"SILENT_ALERTING"}, 
-    {"name":"SIMULTANEOUS_RING_PERSONAL"}, 
-    {"name":"STANDARD_CALL"}, 
-    {"name":"THIRD_PARTY_VOICE_MAIL_SUPPORT"}, 
-    {"name":"THREE_WAY_CALL"}, 
-    {"name":"VOICE_MAIL_MESSAGE_SUMMARY"}, 
-    {"name":"VOICE_MESSAGING"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.EventPackageList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.EventPackages",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.EventResponse",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Events",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Executive",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveAlerting",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveAlertingCallingLineIdNameMode",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"CUSTOM"}, 
-    {"name":"EXECUTIVE"}, 
-    {"name":"EXECUTIVE_ORIGINATOR"}, 
-    {"name":"ORIGINATOR"}, 
-    {"name":"ORIGINATOR_EXECUTIVE"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveAlertingCallingLineIdPhoneNumberMode",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"CUSTOM"}, 
-    {"name":"EXECUTIVE"}, 
-    {"name":"ORIGINATOR"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveAlertingMode",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"SEQUENTIAL"}, 
-    {"name":"SIMULTANEOUS"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveAssistant",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveAssistantDetails",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveAssistantDetailsList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveAssistantEndpoint",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveAssistants",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveCallFiltering",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveCallFilteringCriteriaDnSelection",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ANY"}, 
-    {"name":"ANY_EXTERNAL"}, 
-    {"name":"ANY_INTERNAL"}, 
-    {"name":"SPECIFIED_ONLY"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveCallFilteringCriteriaFromDn",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveCallFilteringMode",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ADVANCED"}, 
-    {"name":"SIMPLE"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveCallSimpleFilterType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ALL_CALLS"}, 
-    {"name":"ALL_EXTERNAL_CALLS"}, 
-    {"name":"ALL_INTERNAL_CALLS"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveDetails",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveDetailsList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveFilteringCriteria",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveRolloverActionType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"FORWARD"}, 
-    {"name":"NO_ANSWER_PROCESSING"}, 
-    {"name":"VOICE_MESSAGING"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveScreening",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ExecutiveScreeningAlertType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"RING_SPLASH"}, 
-    {"name":"SILENT"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ExtendedFileResourceSelection",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"DEFAULT"}, 
-    {"name":"FILE"}, 
-    {"name":"URL"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ExternalCallingLineIDDelivery",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.FAC",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.FaxEntry",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.FaxMessaging",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.FaxStatusCode",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.broadsoft.xsi.FaxStatusEntry",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.FaxStatusEntryList",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.FeatureAccessCodeEntry",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.FileDescriptor",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.FileResource",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.FileSelectionType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"DEFAULT"}, 
-    {"name":"FILE"}, 
-    {"name":"URL"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.FlexibleSeatingGuest",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.FlexibleSeatingGuestAccessDevice",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.FlexibleSeatingGuestEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Group",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.GroupCommon",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.GroupNightForwarding",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.GroupNightForwardingUserServiceActivationMode",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ALWAYS_ON"}, 
-    {"name":"AUTOMATIC_ON"}, 
-    {"name":"OFF"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.HolidaySchedule",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.HookStatus",
   "allDeclaredFields":true,
-  "fields":[
-    {"name":"OFF_HOOK"}, 
-    {"name":"ON_HOOK"}
-  ]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.HookStatusEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.HookStatusType",
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.HotelingGuest",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.HotelingGuestEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.HotelingHost",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.HotelingHostAccessLevel",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ENTERPRISE"}, 
-    {"name":"GROUP"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.HourMinute",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.HuntPolicy",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"CIRCULAR"}, 
-    {"name":"REGULAR"}, 
-    {"name":"SIMULTANEOUS"}, 
-    {"name":"UNIFORM"}, 
-    {"name":"WEIGHTED"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.IMPProfile",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.IMRNInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.InCallServiceActivation",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.IntegratedIMPService",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.InterceptInboundCall",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ALLOW_ALL"}, 
-    {"name":"ALLOW_SYSTEM_DNS"}, 
-    {"name":"INTERCEPT_ALL"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.InterceptOutboundCall",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ALLOW_OUTBOUND_ENTERPRISE_CALLS"}, 
-    {"name":"ALLOW_OUTBOUND_LOCAL_CALLS"}, 
-    {"name":"BLOCK_ALL"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.InterceptUser",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.InternalCallingLineIDDelivery",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.InternalReleaseCause",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"BUSY"}, 
-    {"name":"DIAL_TONE_TIMEOUT"}, 
-    {"name":"FORBIDDEN"}, 
-    {"name":"GLOBAL_FAILURE"}, 
-    {"name":"INSUFFICIENT_CREDITS"}, 
-    {"name":"REQUEST_FAILURE"}, 
-    {"name":"REQUEST_TIMEOUT"}, 
-    {"name":"ROUTING_FAILURE"}, 
-    {"name":"SERVER_FAILURE"}, 
-    {"name":"TEMPORARILY_UNAVAILABLE"}, 
-    {"name":"TRANSLATION_FAILURE"}, 
-    {"name":"USER_NOT_FOUND"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.LabeledMediaFileResource",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.LastNumberRedialEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.LegacyAutomaticCallback",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.LoginToken",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MWIDeliveryToMobileEndpoint",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeAutoLectureModeStartedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConference",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferenceCallIdList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferenceClientSessionInfoUpdatedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferenceInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferenceLockedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferenceParticipant",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferenceParticipants",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferenceRecordingPausedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferenceRecordingResumedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferenceRecordingStartedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferenceRecordingState",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"END"}, 
-    {"name":"NOT_STARTED"}, 
-    {"name":"PAUSE"}, 
-    {"name":"RECORDING"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferenceRecordingStoppedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferenceRecordingStoppedReason",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"MAX_RECORDING_FILE_SIZE_REACHED"}, 
-    {"name":"MEDIA_FAILURE"}, 
-    {"name":"NORMAL"}, 
-    {"name":"SILENCE_ONLY"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferenceSecurityClassificationUpdatedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferenceStartedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferenceStoppedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferenceSubscriptionEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferenceSubscriptionResyncEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferenceUnlockedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferencingBridgeHostList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferencingConference",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferencingConferenceAttendeeNotification",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"NO_NOTIFICATION"}, 
-    {"name":"PLAY_RECORDED_NAME"}, 
-    {"name":"PLAY_TONE"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferencingConferenceDuration",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferencingConferenceInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferencingConferencePorts",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferencingConferenceSchedule",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferencingConferenceSchedule$ScheduleOneTime",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferencingConferenceSchedule$ScheduleRecurring",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferencingConferenceSchedule$ScheduleReservationless",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferencingConferenceStatus",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ACTIVE"}, 
-    {"name":"EXPIRED"}, 
-    {"name":"INACTIVE"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferencingConferenceType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ONE_TIME"}, 
-    {"name":"RECURRING_DAILY"}, 
-    {"name":"RECURRING_MONTHLY"}, 
-    {"name":"RECURRING_WEEKLY"}, 
-    {"name":"RECURRING_YEARLY"}, 
-    {"name":"RESERVATIONLESS"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferencingUserBridge",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferencingUserBridges",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferencingUserConference",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeConferencingUserConferences",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeLectureModeStartedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeLectureModeStoppedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeParticipantHeldEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeParticipantJoinedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeParticipantLeftEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeParticipantMutedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeParticipantRetrievedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeParticipantUnmutedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MeetMeParticipantUpdatedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MessageInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MessageInfoList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MessageMediaContent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MessageMediaFileType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"MOV"}, 
-    {"name":"MP_3"}, 
-    {"name":"TIF"}, 
-    {"name":"WAV"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.MessageSummary",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Month",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"APRIL"}, 
-    {"name":"AUGUST"}, 
-    {"name":"DECEMBER"}, 
-    {"name":"FEBRUARY"}, 
-    {"name":"JANUARY"}, 
-    {"name":"JULY"}, 
-    {"name":"JUNE"}, 
-    {"name":"MARCH"}, 
-    {"name":"MAY"}, 
-    {"name":"NOVEMBER"}, 
-    {"name":"OCTOBER"}, 
-    {"name":"SEPTEMBER"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.MusicOnHold",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.MusicOnHoldEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.MusicOnHoldURIList",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.NWayCallEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.NameDialingName",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.NetworkEndpoint",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.NetworkType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"PRIVATE"}, 
-    {"name":"PUBLIC"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.NonNegativeIntWithSeverity",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.NumberPortabilityAnnouncement",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ObjectFactory",
-  "allDeclaredMethods":true
+  "allDeclaredMethods":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
   "name":"com.broadsoft.xsi.OutgoingDNList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.OutgoingDNorSIPURIList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.OutgoingMWI",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
-  "name":"com.broadsoft.xsi.OutlookIntegration",
-  "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
-  "name":"com.broadsoft.xsi.OutlookIntegrationContactRetrieval",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"RETRIEVE_ALL_CONTACTS"}, 
-    {"name":"RETRIEVE_DEFAULT_CONTACT_FOLDER_ONLY"}
-  ]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.OverflowReason",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"SIZE"}, 
-    {"name":"TIME"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.PartyInformation",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PatchedCommand",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PatchedEventPackage",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PauseResumeNotifyMethod",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ANNOUNCEMENT"}, 
-    {"name":"BEEPONLY"}, 
-    {"name":"NONE"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.Personal",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PersonalAssistant",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PersonalAssistantAssignedCallToNumbers",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PersonalAssistantEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PersonalAssistantExclusionNumberEntry",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PersonalAssistantExclusionNumberList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PersonalAssistantPresence",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"BUSINESS_TRIP"}, 
-    {"name":"GONE_FOR_THE_DAY"}, 
-    {"name":"LUNCH"}, 
-    {"name":"MEETING"}, 
-    {"name":"NONE"}, 
-    {"name":"OUT_OF_OFFICE"}, 
-    {"name":"TEMPORARILY_OUT"}, 
-    {"name":"TRAINING"}, 
-    {"name":"UNAVAILABLE"}, 
-    {"name":"VACATION"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.PersonalEntry",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Personality",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"CLICK_TO_DIAL"}, 
-    {"name":"ORIGINATOR"}, 
-    {"name":"TERMINATOR"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.PlayCollectInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PlayCollectResult",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PlayCollectType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"BUSY"}, 
-    {"name":"MOH"}, 
-    {"name":"RINGBACK"}, 
-    {"name":"SILENCE"}, 
-    {"name":"TREATMENT"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.PlayCompletionReason",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.broadsoft.xsi.PlayDynamicMusicOnHold",
   "allDeclaredFields":true,
-  "fields":[
-    {"name":"EOF"}, 
-    {"name":"ERROR"}, 
-    {"name":"MATCH"}, 
-    {"name":"NO_MATCH"}, 
-    {"name":"STOPPED_NEW_PLAY_COLLECT"}, 
-    {"name":"STOPPED_OFFERED_WITH_RINGBACK"}, 
-    {"name":"STOPPED_OUT_OF_QUEUE"}, 
-    {"name":"TIMEOUT"}
-  ]
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.PlayMusicOnHoldFailureEvent",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Portal",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PresentationIndicator",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ANONYMOUS"}, 
-    {"name":"ANONYMOUS_NAME"}, 
-    {"name":"ANONYMOUS_UNAVAILABLE"}, 
-    {"name":"ANONYMOUS_URI"}, 
-    {"name":"PUBLIC"}, 
-    {"name":"UNAVAILABLE"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.PriorityAlert",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PriorityAlertCriteria",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PriorityAlertCriteriaFromDn",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PriorityAlertCriteriaFromDnSelection",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ANY_EXTERNAL"}, 
-    {"name":"SPECIFIED_ONLY"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.Privacy",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Profile",
   "allDeclaredFields":true,
   "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredConstructors":true
+},
+{
+  "name":"com.broadsoft.xsi.PushNotification",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PushNotificationDeviceToken",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PushNotificationDeviceTokenList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.PushNotificationEventDetail",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PushNotificationEventList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.PushNotificationParam",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.PushNotificationParamList",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.PushNotificationParametersList",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PushNotificationRegistrationEntry",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PushNotificationRegistrationEntryList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PushNotificationRegistrationEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.PushNotificationType",
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.PushToTalk",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.PushToTalkAccessListSelection",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ALLOW_CALLS_FROM_EVERYONE_EXCEPT_SELECTED_USERS"}, 
-    {"name":"ALLOW_CALLS_FROM_SELECTED_USERS"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.PushToTalkOutgoingConnectionSelection",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ONE_WAY"}, 
-    {"name":"TWO_WAY"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.QueueCallOrder",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RecallType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"AUTOMATIC_HOLD_RETRIEVE_RECALL"}, 
-    {"name":"BUSY_CAMP_ON_CALLBACK"}, 
-    {"name":"CALL_PARK_RECALL"}, 
-    {"name":"CALL_TRANSFER_RECALL"}, 
-    {"name":"EXECUTIVE_ASSISTANT_CALL_PUSH_RECALL"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.RecordingControls",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"NONE"}, 
-    {"name":"PAUSE"}, 
-    {"name":"PAUSE_STOP"}, 
-    {"name":"RECORD"}, 
-    {"name":"RESUME"}, 
-    {"name":"RESUME_STOP"}, 
-    {"name":"STOP"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.RecordingState",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"FAILED"}, 
-    {"name":"PAUSED"}, 
-    {"name":"PENDING"}, 
-    {"name":"STARTED"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.RecordingStoppedReason",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"FAILURE"}, 
-    {"name":"USER_REQUESTED"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.Recurrence",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Recurrence$RecurDaily",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Recurrence$RecurMonthlyByDay",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Recurrence$RecurMonthlyByWeek",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Recurrence$RecurWeekly",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Recurrence$RecurYearlyByDay",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Recurrence$RecurYearlyByWeek",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Redirect",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RedirectReason",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"AWAY"}, 
-    {"name":"CALL_CENTER"}, 
-    {"name":"DEFLECTION"}, 
-    {"name":"DO_NOT_DISTURB"}, 
-    {"name":"FOLLOW_ME"}, 
-    {"name":"HUNT_GROUP"}, 
-    {"name":"NO_ANSWER"}, 
-    {"name":"OUT_OF_SERVICE"}, 
-    {"name":"ROUTE_POINT"}, 
-    {"name":"TIME_OF_DAY"}, 
-    {"name":"TRANSFER"}, 
-    {"name":"UNAVAILABLE"}, 
-    {"name":"UNCONDITIONAL"}, 
-    {"name":"UNKNOWN"}, 
-    {"name":"USER_BUSY"}, 
-    {"name":"VOICEMAIL"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.RedirectingPresentationIndicator",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ANONYMOUS"}, 
-    {"name":"ANONYMOUS_NAME"}, 
-    {"name":"ANONYMOUS_URI"}, 
-    {"name":"PUBLIC"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.Redirection",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RedirectionList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RegistrationEntry",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Registrations",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ReleaseCause",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ReleasingParty",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"LOCAL_RELEASE"}, 
-    {"name":"REMOTE_RELEASE"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.RemoteOffice",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RemoteOfficeEndpoint",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RemoteOfficeEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointBlindTransfer",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointBusyCompletedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointBusyStartedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointCallAbandonedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointCallAddedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointCallAnsweredByAgentEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointCallBouncedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointCallFailedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointCallFailureReason",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"CALL_FAILURE_DUE_TO_INACTIVITY"}, 
-    {"name":"CALL_FAILURE_REQUESTED"}, 
-    {"name":"ROUTE_POINT_FAILURE"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointCallForwardedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointCallForwardedTreatmentCompletedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointCallOfferedToAgentEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointCallOverflowedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointCallOverflowedTreatmentCompletedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.RoutePointCallRejectedEvent",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointCallReleaseReason",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"CALL_RELEASE_REQUESTED"}, 
-    {"name":"NO_ANSWER_TIME_OUT"}, 
-    {"name":"RELEASED_WITH_CAUSE"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointCallReleasedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointCallStartInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointCallTransferredEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointCallUpdatedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.RoutePointConnectToVoiceXML",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.RoutePointConnectedToVoiceXMLEvent",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.RoutePointConnectingToVoiceXMLEvent",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointDistribute",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointFailedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.RoutePointFailedVoiceXMLEvent",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointHolidayPolicyAppliedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointHolidayPolicyTreatmentCompletedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointMOHCompletedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointMOHStartedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.RoutePointNewCallEvent",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointNightPolicyAppliedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointNightPolicyTreatmentCompletedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointOutgoingCallAnsweredEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointOutgoingCallOriginatedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointOutgoingDial",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointPlayBusy",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointPlayInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointPlayMusicOnHold",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointPlayRingBack",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointPlaySilence",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointPlayTreatment",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointPlayTreatmentURIList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointQueue",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointQueueEntry",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointQueueEntryList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointRecoveredEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointRingbackCompletedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointRingbackStartedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointSilenceCompletedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointSilenceStartedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointState",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"FAILED"}, 
-    {"name":"NORMAL"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointStateChangeReason",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"EXTERNAL_REQUEST"}, 
-    {"name":"FAILURE_DETECTED"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointSubscriptionEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointSubscriptionResyncEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointTreatmentCompletedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointTreatmentStartedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.RoutePointWhisperStartedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Schedule",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ScheduleDetail",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ScheduleLevel",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ENTERPRISE"}, 
-    {"name":"GROUP"}, 
-    {"name":"USER"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ScheduleList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ScheduleType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"HOLIDAY"}, 
-    {"name":"TIME"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ScheduleUri",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SecurityClassification",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SecurityClassificationEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SecurityClassificationInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SecurityClassificationLevels",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SelectiveCallAcceptance",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SelectiveCallAcceptanceCriteria",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SelectiveCallRejection",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SelectiveCallRejectionCriteria",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SelectiveCallRejectionCriteriaCallTypeSelection",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ANY"}, 
-    {"name":"FORWARDED"}, 
-    {"name":"SPECIFIED_ONLY"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.SelectiveCallRejectionCriteriaFromDn",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SequentialRing",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SequentialRingCriteria",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SequentialRingEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SequentialRingLocation",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ServiceEntry",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ServiceEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ServiceInstanceReadProfile",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ServiceInvocationBasicCallType",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"EMERGENCY"}, 
-    {"name":"ENTERPRISE"}, 
-    {"name":"GROUP"}, 
-    {"name":"NETWORK"}, 
-    {"name":"NETWORK_URL"}, 
-    {"name":"REPAIR"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ServiceInvocationDisposition",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"AUTOMATIC_HOLD_RETRIEVE"}, 
-    {"name":"CALL_FORWARD_ALWAYS"}, 
-    {"name":"CALL_FORWARD_ALWAYS_SECONDARY"}, 
-    {"name":"CALL_FORWARD_BUSY"}, 
-    {"name":"CALL_FORWARD_NOT_REACHABLE"}, 
-    {"name":"CALL_FORWARD_NO_ANSWER"}, 
-    {"name":"CALL_FORWARD_SELECTIVE"}, 
-    {"name":"CALL_PARK"}, 
-    {"name":"CALL_PICKUP"}, 
-    {"name":"DEFLECTION"}, 
-    {"name":"DIRECTED_CALL_PICKUP"}, 
-    {"name":"DISTRIBUTION_FROM_CALL_CENTER"}, 
-    {"name":"DISTRIBUTION_FROM_HUNT_GROUP"}, 
-    {"name":"DISTRIBUTION_FROM_ROUTE_POINT"}, 
-    {"name":"DO_NOT_DISTURB"}, 
-    {"name":"FAX_DEPOSIT"}, 
-    {"name":"FIND_ME_FOLLOW_ME"}, 
-    {"name":"GROUP_NIGHT_FORWARDING"}, 
-    {"name":"PERSONAL_ASSISTANT"}, 
-    {"name":"SEQUENTIAL_RING"}, 
-    {"name":"SERIES_COMPLETION"}, 
-    {"name":"SIMULTANEOUS_RING"}, 
-    {"name":"THIRD_PARTY_DEFLECTION"}, 
-    {"name":"THIRD_PARTY_VOICE_MAIL_SUPPORT"}, 
-    {"name":"TRANSFER_CONSULT"}, 
-    {"name":"TRUNK_GROUP_FORWARD_CAPACITY_EXCEEDED"}, 
-    {"name":"TRUNK_GROUP_FORWARD_UNCONDITIONAL"}, 
-    {"name":"TRUNK_GROUP_FORWARD_UNREACHABLE"}, 
-    {"name":"VOICE_MAIL_TRANSFER"}, 
-    {"name":"VOICE_MESSAGING"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.ServiceProvider",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Services",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SilentAlerting",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SilentAlertingEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SimultaneousRingLocation",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SimultaneousRingLocationList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SimultaneousRingPersonal",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SimultaneousRingPersonalCriteria",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SimultaneousRingPersonalEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SimultaneousRingSelection",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"DO_NOT_RING_IF_ON_A_CALL"}, 
-    {"name":"RING_FOR_ALL_INCOMING_CALLS"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.SpeedDial100",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SpeedDial100Entry",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SpeedDial8",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SpeedDial8Entry",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Subscription",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SubscriptionEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SubscriptionList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SubscriptionTerminatedEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Supervisors",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Supervisors$CallCenters",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Supervisors$CallCenters$CallCenter",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Supervisors$RoutePoint",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SystemChannel",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.SystemChannelSet",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ThirdPartyVoiceMailSupport",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ThirdPartyVoiceMailSupportEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.ThreeWayCallEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.TimeSchedule",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.TimestampWithSeverity",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.TransmitDTMF",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.TreatmentCompletionReason",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"EOF"}, 
-    {"name":"REMOTE_RELEASE"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.UserAdditionalDetails",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.UserAdditionalDetailsList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.UserAdditionalEnterpriseGroupDetails",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.UserDetailInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.UserDetailInfoList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.UserDetails",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.UserDetailsList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.UserIdList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.UserInfo",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.UserInfoList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Version",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.Versions",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.VideoFileDetails",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.VoiceMailMessageSummary",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.VoiceMailMessageSummaryEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.VoiceMailPartyInformation",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.VoiceMessage",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.VoiceMessaging",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.VoiceMessagingAliasList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.VoiceMessagingAlternateNoAnswerGreeting",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.VoiceMessagingDisableMessageDepositSelection",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"DISCONNECT"}, 
-    {"name":"FORWARD"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.VoiceMessagingDistributionList",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.VoiceMessagingEvent",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.VoiceMessagingGreetings",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.VoiceMessagingMailServer",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.VoiceMessagingMailServerProtocol",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"IMAP"}, 
-    {"name":"POP_3"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.VoiceMessagingMessageProcessing",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"DELIVER_TO_EMAIL_ADDRESS_ONLY"}, 
-    {"name":"UNIFIED_VOICE_AND_EMAIL_MESSAGING"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.VoiceMessagingMessages",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "allDeclaredMethods":true
 },
 {
   "name":"com.broadsoft.xsi.VoiceMessagingNoAnswerGreetingSelection",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"ALTERNATE_01"}, 
-    {"name":"ALTERNATE_02"}, 
-    {"name":"ALTERNATE_03"}, 
-    {"name":"DEFAULT"}, 
-    {"name":"PERSONAL"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.VoiceMessagingUserMailServerSelection",
-  "allDeclaredFields":true,
-  "fields":[
-    {"name":"GROUP_MAIL_SERVER"}, 
-    {"name":"PERSONAL_MAIL_SERVER"}
-  ]
+  "allDeclaredFields":true
 },
 {
   "name":"com.broadsoft.xsi.VoicePortal",
   "allDeclaredFields":true,
-  "allDeclaredMethods":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.broadsoft.xsi.package-info"
+},
+{
+  "name":"com.sun.crypto.provider.AESCipher$General",
   "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.crypto.provider.DHParameters",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.crypto.provider.HmacCore$HmacSHA384",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.crypto.provider.TlsKeyMaterialGenerator",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.crypto.provider.TlsMasterSecretGenerator",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.crypto.provider.TlsPrfGenerator$V12",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.xml.internal.stream.XMLInputFactoryImpl",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"int"
+},
+{
+  "name":"java.lang.Boolean"
+},
+{
+  "name":"java.lang.Integer"
+},
+{
+  "name":"java.lang.Long"
+},
+{
+  "name":"java.lang.Object",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true,
+  "allDeclaredConstructors":true
+},
+{
+  "name":"java.lang.String"
+},
+{
+  "name":"java.lang.String[]"
+},
+{
+  "name":"java.math.BigInteger"
+},
+{
+  "name":"java.security.AlgorithmParametersSpi"
+},
+{
+  "name":"java.security.KeyStoreSpi"
+},
+{
+  "name":"java.security.MessageDigestSpi"
+},
+{
+  "name":"java.security.SecureRandomParameters"
+},
+{
+  "name":"java.security.interfaces.ECPrivateKey"
+},
+{
+  "name":"java.security.interfaces.ECPublicKey"
+},
+{
+  "name":"java.security.interfaces.RSAPrivateKey"
+},
+{
+  "name":"java.security.interfaces.RSAPublicKey"
+},
+{
+  "name":"java.util.ArrayList",
+  "methods":[{"name":"<init>","parameterTypes":["int"] }]
+},
+{
+  "name":"java.util.Date"
+},
+{
+  "name":"java.util.Vector",
+  "methods":[{"name":"<init>","parameterTypes":["int"] }]
+},
+{
+  "name":"javax.security.auth.x500.X500Principal",
+  "fields":[{"name":"thisX500Name"}],
+  "methods":[{"name":"<init>","parameterTypes":["sun.security.x509.X500Name"] }]
+},
+{
+  "name":"jakarta.xml.bind.JAXBElement",
+  "methods":[{"name":"getValue","parameterTypes":[] }]
+},
+{
+  "name":"jakarta.xml.bind.annotation.XmlElementRef",
+  "methods":[{"name":"required","parameterTypes":[] }]
+},
+{
+  "name":"jakarta.xml.bind.annotation.XmlRegistry"
+},
+{
+  "name":"jakarta.xml.bind.annotation.XmlSchema",
+  "methods":[{"name":"location","parameterTypes":[] }]
+},
+{
+  "name":"jakarta.xml.bind.annotation.XmlSeeAlso",
+  "methods":[{"name":"value","parameterTypes":[] }]
+},
+{
+  "name":"jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter",
+  "allPublicMethods":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"org.eclipse.persistence.internal.jaxb.WrappedValue",
+  "methods":[{"name":"setValue","parameterTypes":["java.lang.Object"] }]
+},
+{
+  "name":"org.eclipse.persistence.internal.oxm.record.DomToXMLEventWriter",
+  "methods":[{"name":"writeToEventWriter","parameterTypes":["org.w3c.dom.Node","java.lang.String","java.lang.String","javax.xml.stream.XMLEventWriter"] }]
+},
+{
+  "name":"org.eclipse.persistence.internal.oxm.record.DomToXMLStreamWriter",
+  "methods":[{"name":"writeToStream","parameterTypes":["org.w3c.dom.Node","java.lang.String","java.lang.String","javax.xml.stream.XMLStreamWriter"] }]
+},
+{
+  "name":"org.eclipse.persistence.internal.oxm.record.XMLEventReaderInputSource",
+  "methods":[{"name":"<init>","parameterTypes":["javax.xml.stream.XMLEventReader"] }]
+},
+{
+  "name":"org.eclipse.persistence.internal.oxm.record.XMLEventReaderReader",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"org.eclipse.persistence.internal.oxm.record.XMLStreamReaderInputSource",
+  "methods":[{"name":"<init>","parameterTypes":["javax.xml.stream.XMLStreamReader"] }]
+},
+{
+  "name":"org.eclipse.persistence.internal.oxm.record.XMLStreamReaderReader",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"org.eclipse.persistence.jaxb.JAXBContextFactory",
+  "methods":[{"name":"createContext","parameterTypes":["java.lang.String","java.lang.ClassLoader","java.util.Map"] }]
+},
+{
+  "name":"org.eclipse.persistence.oxm.record.XMLEventWriterRecord",
+  "methods":[{"name":"<init>","parameterTypes":["javax.xml.stream.XMLEventWriter"] }]
+},
+{
+  "name":"org.eclipse.persistence.oxm.record.XMLStreamWriterRecord",
+  "methods":[{"name":"<init>","parameterTypes":["javax.xml.stream.XMLStreamWriter"] }]
 }
 ]

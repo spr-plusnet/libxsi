@@ -1,19 +1,19 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -30,32 +30,32 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
- * &lt;complexType name="UserAdditionalDetails">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="mobile" type="{http://schema.broadsoft.com/xsi}DN" minOccurs="0"/>
- *         &lt;element name="yahooId" type="{http://schema.broadsoft.com/xsi}YahooId" minOccurs="0"/>
- *         &lt;element name="pager" type="{http://schema.broadsoft.com/xsi}DN" minOccurs="0"/>
- *         &lt;element name="emailAddress" type="{http://schema.broadsoft.com/xsi}EmailAddress" minOccurs="0"/>
- *         &lt;element name="title" type="{http://schema.broadsoft.com/xsi}Title" minOccurs="0"/>
- *         &lt;element name="location" type="{http://schema.broadsoft.com/xsi}AddressLine" minOccurs="0"/>
- *         &lt;element name="addressLine1" type="{http://schema.broadsoft.com/xsi}AddressLine" minOccurs="0"/>
- *         &lt;element name="addressLine2" type="{http://schema.broadsoft.com/xsi}AddressLine" minOccurs="0"/>
- *         &lt;element name="city" type="{http://schema.broadsoft.com/xsi}LocationInfo" minOccurs="0"/>
- *         &lt;element name="state" type="{http://schema.broadsoft.com/xsi}LocationInfo" minOccurs="0"/>
- *         &lt;element name="zip" type="{http://schema.broadsoft.com/xsi}LocationInfo" minOccurs="0"/>
- *         &lt;element name="country" type="{http://schema.broadsoft.com/xsi}LocationInfo" minOccurs="0"/>
- *         &lt;element name="department" type="{http://schema.broadsoft.com/xsi}DepartmentName" minOccurs="0"/>
- *         &lt;element name="impId" type="{http://schema.broadsoft.com/xsi}IMPUserId" minOccurs="0"/>
- *         &lt;element name="bridgeId" type="{http://schema.broadsoft.com/xsi}MyRoomDetails" minOccurs="0"/>
- *         &lt;element name="roomId" type="{http://schema.broadsoft.com/xsi}MyRoomDetails" minOccurs="0"/>
- *         &lt;element name="serviceName" type="{http://schema.broadsoft.com/xsi}ServiceName" minOccurs="0"/>
- *         &lt;element name="locationDialingCode" type="{http://schema.broadsoft.com/xsi}LocationDialingCode" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="UserAdditionalDetails"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="mobile" type="{http://schema.broadsoft.com/xsi}DN" minOccurs="0"/&gt;
+ *         &lt;element name="yahooId" type="{http://schema.broadsoft.com/xsi}YahooId" minOccurs="0"/&gt;
+ *         &lt;element name="pager" type="{http://schema.broadsoft.com/xsi}DN" minOccurs="0"/&gt;
+ *         &lt;element name="emailAddress" type="{http://schema.broadsoft.com/xsi}EmailAddress" minOccurs="0"/&gt;
+ *         &lt;element name="title" type="{http://schema.broadsoft.com/xsi}Title" minOccurs="0"/&gt;
+ *         &lt;element name="location" type="{http://schema.broadsoft.com/xsi}AddressLine" minOccurs="0"/&gt;
+ *         &lt;element name="addressLine1" type="{http://schema.broadsoft.com/xsi}AddressLine" minOccurs="0"/&gt;
+ *         &lt;element name="addressLine2" type="{http://schema.broadsoft.com/xsi}AddressLine" minOccurs="0"/&gt;
+ *         &lt;element name="city" type="{http://schema.broadsoft.com/xsi}LocationInfo" minOccurs="0"/&gt;
+ *         &lt;element name="state" type="{http://schema.broadsoft.com/xsi}LocationInfo" minOccurs="0"/&gt;
+ *         &lt;element name="zip" type="{http://schema.broadsoft.com/xsi}LocationInfo" minOccurs="0"/&gt;
+ *         &lt;element name="country" type="{http://schema.broadsoft.com/xsi}LocationInfo" minOccurs="0"/&gt;
+ *         &lt;element name="department" type="{http://schema.broadsoft.com/xsi}DepartmentName" minOccurs="0"/&gt;
+ *         &lt;element name="impId" type="{http://schema.broadsoft.com/xsi}IMPUserId" minOccurs="0"/&gt;
+ *         &lt;element name="bridgeId" type="{http://schema.broadsoft.com/xsi}MyRoomDetails" minOccurs="0"/&gt;
+ *         &lt;element name="roomId" type="{http://schema.broadsoft.com/xsi}MyRoomDetails" minOccurs="0"/&gt;
+ *         &lt;element name="serviceName" type="{http://schema.broadsoft.com/xsi}ServiceName" minOccurs="0"/&gt;
+ *         &lt;element name="locationDialingCode" type="{http://schema.broadsoft.com/xsi}LocationDialingCode" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

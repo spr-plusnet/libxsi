@@ -14,7 +14,7 @@ import com.broadsoft.xsi.BusyLampField;
 import com.broadsoft.xsi.api.XSIConnection;
 import com.broadsoft.xsi.api.action.Action;
 
-import de.qsc.centraflex.broadsoft.XSIException;
+import de.plusnet.centraflex.broadsoft.XSIException;
 
 /**
  * @author spr

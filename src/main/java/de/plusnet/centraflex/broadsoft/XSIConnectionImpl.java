@@ -1,7 +1,7 @@
 /**
  * 
  */
-package de.qsc.centraflex.broadsoft;
+package de.plusnet.centraflex.broadsoft;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
@@ -29,7 +29,7 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Properties;
 
-import javax.xml.bind.JAXBException;
+import jakarta.xml.bind.JAXBException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -54,7 +54,7 @@ import com.broadsoft.xsi.api.service.ServicesService;
  */
 public class XSIConnectionImpl implements XSIConnection {
 
-	private final static Logger logger = LoggerFactory.getLogger("xsi.actions");
+	private final static Logger logger = LoggerFactory.getLogger("connector.xsi");
 	
 	private String hostport;
 	private String user;

@@ -1,46 +1,45 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java-Klasse für RedirectReason.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
- * <p>
  * <pre>
- * &lt;simpleType name="RedirectReason">
- *   &lt;restriction base="{http://schema.broadsoft.com/xsi}NonEmptyToken">
- *     &lt;enumeration value="user-busy"/>
- *     &lt;enumeration value="no-answer"/>
- *     &lt;enumeration value="unavailable"/>
- *     &lt;enumeration value="unconditional"/>
- *     &lt;enumeration value="time-of-day"/>
- *     &lt;enumeration value="do-not-disturb"/>
- *     &lt;enumeration value="deflection"/>
- *     &lt;enumeration value="follow-me"/>
- *     &lt;enumeration value="out-of-service"/>
- *     &lt;enumeration value="away"/>
- *     &lt;enumeration value="transfer"/>
- *     &lt;enumeration value="voicemail"/>
- *     &lt;enumeration value="hunt-group"/>
- *     &lt;enumeration value="call-center"/>
- *     &lt;enumeration value="route-point"/>
- *     &lt;enumeration value="agent-wrap-up"/>
- *     &lt;enumeration value="voicexml-script-termination"/>
- *     &lt;enumeration value="unknown"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="RedirectReason"&gt;
+ *   &lt;restriction base="{http://schema.broadsoft.com/xsi}NonEmptyToken"&gt;
+ *     &lt;enumeration value="user-busy"/&gt;
+ *     &lt;enumeration value="no-answer"/&gt;
+ *     &lt;enumeration value="unavailable"/&gt;
+ *     &lt;enumeration value="unconditional"/&gt;
+ *     &lt;enumeration value="time-of-day"/&gt;
+ *     &lt;enumeration value="do-not-disturb"/&gt;
+ *     &lt;enumeration value="deflection"/&gt;
+ *     &lt;enumeration value="follow-me"/&gt;
+ *     &lt;enumeration value="out-of-service"/&gt;
+ *     &lt;enumeration value="away"/&gt;
+ *     &lt;enumeration value="transfer"/&gt;
+ *     &lt;enumeration value="voicemail"/&gt;
+ *     &lt;enumeration value="hunt-group"/&gt;
+ *     &lt;enumeration value="call-center"/&gt;
+ *     &lt;enumeration value="route-point"/&gt;
+ *     &lt;enumeration value="agent-wrap-up"/&gt;
+ *     &lt;enumeration value="voicexml-script-termination"/&gt;
+ *     &lt;enumeration value="unknown"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

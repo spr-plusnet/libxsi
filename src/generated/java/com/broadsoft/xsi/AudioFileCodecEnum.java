@@ -1,35 +1,34 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java-Klasse für AudioFileCodecEnum.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
- * <p>
  * <pre>
- * &lt;simpleType name="AudioFileCodecEnum">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *     &lt;enumeration value="None"/>
- *     &lt;enumeration value="G711"/>
- *     &lt;enumeration value="G729"/>
- *     &lt;enumeration value="G726"/>
- *     &lt;enumeration value="AMR"/>
- *     &lt;enumeration value="G722"/>
- *     &lt;enumeration value="AMR-WB"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="AudioFileCodecEnum"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
+ *     &lt;enumeration value="None"/&gt;
+ *     &lt;enumeration value="G711"/&gt;
+ *     &lt;enumeration value="G729"/&gt;
+ *     &lt;enumeration value="G726"/&gt;
+ *     &lt;enumeration value="AMR"/&gt;
+ *     &lt;enumeration value="G722"/&gt;
+ *     &lt;enumeration value="AMR-WB"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

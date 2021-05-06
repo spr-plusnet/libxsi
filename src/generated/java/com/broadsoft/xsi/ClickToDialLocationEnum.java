@@ -1,34 +1,33 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java-Klasse für ClickToDialLocationEnum.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
- * <p>
  * <pre>
- * &lt;simpleType name="ClickToDialLocationEnum">
- *   &lt;restriction base="{http://schema.broadsoft.com/xsi}NonEmptyToken">
- *     &lt;enumeration value="Primary"/>
- *     &lt;enumeration value="BroadWorksAnywhere"/>
- *     &lt;enumeration value="SharedCallAppearance"/>
- *     &lt;enumeration value="Mobility"/>
- *     &lt;enumeration value="FlexibleSeatingGuest"/>
- *     &lt;enumeration value="All"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="ClickToDialLocationEnum"&gt;
+ *   &lt;restriction base="{http://schema.broadsoft.com/xsi}NonEmptyToken"&gt;
+ *     &lt;enumeration value="Primary"/&gt;
+ *     &lt;enumeration value="BroadWorksAnywhere"/&gt;
+ *     &lt;enumeration value="SharedCallAppearance"/&gt;
+ *     &lt;enumeration value="Mobility"/&gt;
+ *     &lt;enumeration value="FlexibleSeatingGuest"/&gt;
+ *     &lt;enumeration value="All"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

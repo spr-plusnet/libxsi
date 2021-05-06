@@ -1,21 +1,19 @@
-/**
- * 
- */
-package de.qsc.centraflex.broadsoft;
+package de.plusnet.centraflex.broadsoft;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringReader;
 import java.io.Writer;
+import java.util.HashMap;
 import java.util.Properties;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
-import javax.xml.namespace.QName;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
+import jakarta.xml.bind.Unmarshaller;
 
+import org.eclipse.persistence.Version;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,12 +42,15 @@ public class XSIDriver {
 	//-----------------------------------------------------------------
 	static {
 		Package pack = XSIDriver.class.getPackage();
+		Version.getVersionString();
 		if (pack.getImplementationTitle()==null)
 			logger.info("XSI Driver running directly from class files");
 		else
 			logger.info(XSIDriver.class.getPackage().getImplementationTitle()+" version "+XSIDriver.class.getPackage().getImplementationVersion());
 		try {
-			jaxb = JAXBContext.newInstance("com.broadsoft.xsi");
+//			jaxb = ContextFactory.createContext("com.broadsoft.xsi", XSIDriver.class.getClassLoader(), new HashMap<String, Object>());
+			jaxb = org.eclipse.persistence.jaxb.JAXBContextFactory.createContext("com.broadsoft.xsi", XSIDriver.class.getClassLoader(), new HashMap<String, Object>());
+//			jaxb = JAXBContext.newInstance("com.broadsoft.xsi");
 			unmarshaller = jaxb.createUnmarshaller();
 			marshaller   = jaxb.createMarshaller();
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);

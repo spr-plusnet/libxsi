@@ -1,40 +1,39 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java-Klasse für Month.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
- * <p>
  * <pre>
- * &lt;simpleType name="Month">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *     &lt;enumeration value="January"/>
- *     &lt;enumeration value="February"/>
- *     &lt;enumeration value="March"/>
- *     &lt;enumeration value="April"/>
- *     &lt;enumeration value="May"/>
- *     &lt;enumeration value="June"/>
- *     &lt;enumeration value="July"/>
- *     &lt;enumeration value="August"/>
- *     &lt;enumeration value="September"/>
- *     &lt;enumeration value="October"/>
- *     &lt;enumeration value="November"/>
- *     &lt;enumeration value="December"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="Month"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
+ *     &lt;enumeration value="January"/&gt;
+ *     &lt;enumeration value="February"/&gt;
+ *     &lt;enumeration value="March"/&gt;
+ *     &lt;enumeration value="April"/&gt;
+ *     &lt;enumeration value="May"/&gt;
+ *     &lt;enumeration value="June"/&gt;
+ *     &lt;enumeration value="July"/&gt;
+ *     &lt;enumeration value="August"/&gt;
+ *     &lt;enumeration value="September"/&gt;
+ *     &lt;enumeration value="October"/&gt;
+ *     &lt;enumeration value="November"/&gt;
+ *     &lt;enumeration value="December"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

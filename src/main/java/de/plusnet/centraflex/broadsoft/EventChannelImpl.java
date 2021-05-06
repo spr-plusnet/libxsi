@@ -1,7 +1,7 @@
 /**
  * 
  */
-package de.qsc.centraflex.broadsoft;
+package de.plusnet.centraflex.broadsoft;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -22,8 +22,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import javax.net.ssl.SSLException;
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.JAXBException;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.JAXBException;
 import javax.xml.namespace.QName;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;

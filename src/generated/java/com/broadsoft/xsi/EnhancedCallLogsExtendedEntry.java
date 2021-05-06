@@ -1,21 +1,21 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -36,68 +36,68 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
- * &lt;complexType name="EnhancedCallLogsExtendedEntry">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="countryCode" type="{http://schema.broadsoft.com/xsi}CountryCode" minOccurs="0"/>
- *         &lt;element name="callLogId" type="{http://schema.broadsoft.com/xsi}CallLogId"/>
- *         &lt;element name="callId" type="{http://schema.broadsoft.com/xsi}CallId"/>
- *         &lt;element name="subscriberType" type="{http://schema.broadsoft.com/xsi}EnhancedCallLogsSubscriberType"/>
- *         &lt;element name="dialedNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/>
- *         &lt;element name="calledNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/>
- *         &lt;element name="networkTranslatedAddress" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/>
- *         &lt;element name="callingAssertedNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/>
- *         &lt;element name="callingPresentationNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/>
- *         &lt;element name="callingPresentationNumberSource" type="{http://schema.broadsoft.com/xsi}CallingPresentationNumberSource" minOccurs="0"/>
- *         &lt;element name="callingPresentationName" type="{http://schema.broadsoft.com/xsi}CallLogsEntryName" minOccurs="0"/>
- *         &lt;element name="callingPresentationIndicator" type="{http://schema.broadsoft.com/xsi}PresentationIndicator"/>
- *         &lt;element name="callingGroupId" type="{http://schema.broadsoft.com/xsi}GroupId" minOccurs="0"/>
- *         &lt;element name="calledDirectoryName" type="{http://schema.broadsoft.com/xsi}CallLogsEntryName" minOccurs="0"/>
- *         &lt;element name="calledGroupId" type="{http://schema.broadsoft.com/xsi}GroupId" minOccurs="0"/>
- *         &lt;element name="connectedNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/>
- *         &lt;element name="connectedNumberSource" type="{http://schema.broadsoft.com/xsi}ConnectedNumberSource" minOccurs="0"/>
- *         &lt;element name="connectedName" type="{http://schema.broadsoft.com/xsi}CallLogsEntryName" minOccurs="0"/>
- *         &lt;element name="connectedPresentationIndicator" type="{http://schema.broadsoft.com/xsi}PresentationIndicator" minOccurs="0"/>
- *         &lt;element name="connectedGroupId" type="{http://schema.broadsoft.com/xsi}GroupId" minOccurs="0"/>
- *         &lt;element name="typeOfNetwork" type="{http://schema.broadsoft.com/xsi}NetworkType" minOccurs="0"/>
- *         &lt;element name="callCategory" type="{http://schema.broadsoft.com/xsi}CallCategory" minOccurs="0"/>
- *         &lt;element name="basicCallType" type="{http://schema.broadsoft.com/xsi}BasicCallType"/>
- *         &lt;element name="configurableCallType" type="{http://schema.broadsoft.com/xsi}CommunicationBarringCallType" minOccurs="0"/>
- *         &lt;element name="alternateCallIndicator" type="{http://schema.broadsoft.com/xsi}CommunicationBarringAlternateCallIndicator" minOccurs="0"/>
- *         &lt;element name="virtualOnNetCallType" type="{http://schema.broadsoft.com/xsi}VirtualOnNetCallTypeName" minOccurs="0"/>
- *         &lt;element name="time" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
- *         &lt;element name="startTime" type="{http://schema.broadsoft.com/xsi}Timestamp"/>
- *         &lt;element name="answerTime" type="{http://schema.broadsoft.com/xsi}Timestamp" minOccurs="0"/>
- *         &lt;element name="releaseTime" type="{http://schema.broadsoft.com/xsi}Timestamp" minOccurs="0"/>
- *         &lt;element name="detachedTime" type="{http://schema.broadsoft.com/xsi}Timestamp" minOccurs="0"/>
- *         &lt;element name="detachedAnswerTime" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
- *         &lt;element name="outgoingDnis" type="{http://schema.broadsoft.com/xsi}EnhancedCallLogsOutgoingDnis" minOccurs="0"/>
- *         &lt;element name="serviceInvocationDisposition" type="{http://schema.broadsoft.com/xsi}ServiceInvocationDisposition" minOccurs="0"/>
- *         &lt;element name="serviceInvocationDialedNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/>
- *         &lt;element name="serviceInvocationCalledNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/>
- *         &lt;element name="serviceInvocationNetworkTranslatedAddress" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/>
- *         &lt;element name="serviceInvocationTypeOfNetwork" type="{http://schema.broadsoft.com/xsi}NetworkType" minOccurs="0"/>
- *         &lt;element name="serviceInvocationCallCategory" type="{http://schema.broadsoft.com/xsi}CallCategory" minOccurs="0"/>
- *         &lt;element name="serviceInvocationBasicCallType" type="{http://schema.broadsoft.com/xsi}ServiceInvocationBasicCallType" minOccurs="0"/>
- *         &lt;element name="serviceInvocationConfigurableCallType" type="{http://schema.broadsoft.com/xsi}CommunicationBarringCallType" minOccurs="0"/>
- *         &lt;element name="serviceInvocationAlternateCallIndicator" type="{http://schema.broadsoft.com/xsi}CommunicationBarringAlternateCallIndicator" minOccurs="0"/>
- *         &lt;element name="serviceInvocationVirtualOnNetCallType" type="{http://schema.broadsoft.com/xsi}VirtualOnNetCallTypeName" minOccurs="0"/>
- *         &lt;element name="serviceInvocationCalledDirectoryName" type="{http://schema.broadsoft.com/xsi}CallLogsEntryName" minOccurs="0"/>
- *         &lt;element name="serviceInvocationCalledGroupId" type="{http://schema.broadsoft.com/xsi}GroupId" minOccurs="0"/>
- *         &lt;element name="redirectingNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/>
- *         &lt;element name="redirectingName" type="{http://schema.broadsoft.com/xsi}CallLogsEntryName" minOccurs="0"/>
- *         &lt;element name="redirectingPresentationIndicator" type="{http://schema.broadsoft.com/xsi}RedirectingPresentationIndicator" minOccurs="0"/>
- *         &lt;element name="redirectingReason" type="{http://schema.broadsoft.com/xsi}RedirectingReason" minOccurs="0"/>
- *         &lt;element name="accountAuthorizationCode" type="{http://schema.broadsoft.com/xsi}OutgoingCallingPlanAuthorizationCode" minOccurs="0"/>
- *         &lt;element name="callAuthorizationCode" type="{http://schema.broadsoft.com/xsi}OutgoingCallingPlanAuthorizationCode" minOccurs="0"/>
- *         &lt;element name="securityClassification" type="{http://schema.broadsoft.com/xsi}NonEmptyToken" minOccurs="0"/>
- *         &lt;element name="directRouteNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/>
- *         &lt;element name="routeListNumber" type="{http://schema.broadsoft.com/xsi}DN" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="EnhancedCallLogsExtendedEntry"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="countryCode" type="{http://schema.broadsoft.com/xsi}CountryCode" minOccurs="0"/&gt;
+ *         &lt;element name="callLogId" type="{http://schema.broadsoft.com/xsi}CallLogId"/&gt;
+ *         &lt;element name="callId" type="{http://schema.broadsoft.com/xsi}CallId"/&gt;
+ *         &lt;element name="subscriberType" type="{http://schema.broadsoft.com/xsi}EnhancedCallLogsSubscriberType"/&gt;
+ *         &lt;element name="dialedNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/&gt;
+ *         &lt;element name="calledNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/&gt;
+ *         &lt;element name="networkTranslatedAddress" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/&gt;
+ *         &lt;element name="callingAssertedNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/&gt;
+ *         &lt;element name="callingPresentationNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/&gt;
+ *         &lt;element name="callingPresentationNumberSource" type="{http://schema.broadsoft.com/xsi}CallingPresentationNumberSource" minOccurs="0"/&gt;
+ *         &lt;element name="callingPresentationName" type="{http://schema.broadsoft.com/xsi}CallLogsEntryName" minOccurs="0"/&gt;
+ *         &lt;element name="callingPresentationIndicator" type="{http://schema.broadsoft.com/xsi}PresentationIndicator"/&gt;
+ *         &lt;element name="callingGroupId" type="{http://schema.broadsoft.com/xsi}GroupId" minOccurs="0"/&gt;
+ *         &lt;element name="calledDirectoryName" type="{http://schema.broadsoft.com/xsi}CallLogsEntryName" minOccurs="0"/&gt;
+ *         &lt;element name="calledGroupId" type="{http://schema.broadsoft.com/xsi}GroupId" minOccurs="0"/&gt;
+ *         &lt;element name="connectedNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/&gt;
+ *         &lt;element name="connectedNumberSource" type="{http://schema.broadsoft.com/xsi}ConnectedNumberSource" minOccurs="0"/&gt;
+ *         &lt;element name="connectedName" type="{http://schema.broadsoft.com/xsi}CallLogsEntryName" minOccurs="0"/&gt;
+ *         &lt;element name="connectedPresentationIndicator" type="{http://schema.broadsoft.com/xsi}PresentationIndicator" minOccurs="0"/&gt;
+ *         &lt;element name="connectedGroupId" type="{http://schema.broadsoft.com/xsi}GroupId" minOccurs="0"/&gt;
+ *         &lt;element name="typeOfNetwork" type="{http://schema.broadsoft.com/xsi}NetworkType" minOccurs="0"/&gt;
+ *         &lt;element name="callCategory" type="{http://schema.broadsoft.com/xsi}CallCategory" minOccurs="0"/&gt;
+ *         &lt;element name="basicCallType" type="{http://schema.broadsoft.com/xsi}BasicCallType"/&gt;
+ *         &lt;element name="configurableCallType" type="{http://schema.broadsoft.com/xsi}CommunicationBarringCallType" minOccurs="0"/&gt;
+ *         &lt;element name="alternateCallIndicator" type="{http://schema.broadsoft.com/xsi}CommunicationBarringAlternateCallIndicator" minOccurs="0"/&gt;
+ *         &lt;element name="virtualOnNetCallType" type="{http://schema.broadsoft.com/xsi}VirtualOnNetCallTypeName" minOccurs="0"/&gt;
+ *         &lt;element name="time" type="{http://www.w3.org/2001/XMLSchema}dateTime"/&gt;
+ *         &lt;element name="startTime" type="{http://schema.broadsoft.com/xsi}Timestamp"/&gt;
+ *         &lt;element name="answerTime" type="{http://schema.broadsoft.com/xsi}Timestamp" minOccurs="0"/&gt;
+ *         &lt;element name="releaseTime" type="{http://schema.broadsoft.com/xsi}Timestamp" minOccurs="0"/&gt;
+ *         &lt;element name="detachedTime" type="{http://schema.broadsoft.com/xsi}Timestamp" minOccurs="0"/&gt;
+ *         &lt;element name="detachedAnswerTime" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/&gt;
+ *         &lt;element name="outgoingDnis" type="{http://schema.broadsoft.com/xsi}EnhancedCallLogsOutgoingDnis" minOccurs="0"/&gt;
+ *         &lt;element name="serviceInvocationDisposition" type="{http://schema.broadsoft.com/xsi}ServiceInvocationDisposition" minOccurs="0"/&gt;
+ *         &lt;element name="serviceInvocationDialedNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/&gt;
+ *         &lt;element name="serviceInvocationCalledNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/&gt;
+ *         &lt;element name="serviceInvocationNetworkTranslatedAddress" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/&gt;
+ *         &lt;element name="serviceInvocationTypeOfNetwork" type="{http://schema.broadsoft.com/xsi}NetworkType" minOccurs="0"/&gt;
+ *         &lt;element name="serviceInvocationCallCategory" type="{http://schema.broadsoft.com/xsi}CallCategory" minOccurs="0"/&gt;
+ *         &lt;element name="serviceInvocationBasicCallType" type="{http://schema.broadsoft.com/xsi}ServiceInvocationBasicCallType" minOccurs="0"/&gt;
+ *         &lt;element name="serviceInvocationConfigurableCallType" type="{http://schema.broadsoft.com/xsi}CommunicationBarringCallType" minOccurs="0"/&gt;
+ *         &lt;element name="serviceInvocationAlternateCallIndicator" type="{http://schema.broadsoft.com/xsi}CommunicationBarringAlternateCallIndicator" minOccurs="0"/&gt;
+ *         &lt;element name="serviceInvocationVirtualOnNetCallType" type="{http://schema.broadsoft.com/xsi}VirtualOnNetCallTypeName" minOccurs="0"/&gt;
+ *         &lt;element name="serviceInvocationCalledDirectoryName" type="{http://schema.broadsoft.com/xsi}CallLogsEntryName" minOccurs="0"/&gt;
+ *         &lt;element name="serviceInvocationCalledGroupId" type="{http://schema.broadsoft.com/xsi}GroupId" minOccurs="0"/&gt;
+ *         &lt;element name="redirectingNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/&gt;
+ *         &lt;element name="redirectingName" type="{http://schema.broadsoft.com/xsi}CallLogsEntryName" minOccurs="0"/&gt;
+ *         &lt;element name="redirectingPresentationIndicator" type="{http://schema.broadsoft.com/xsi}RedirectingPresentationIndicator" minOccurs="0"/&gt;
+ *         &lt;element name="redirectingReason" type="{http://schema.broadsoft.com/xsi}RedirectingReason" minOccurs="0"/&gt;
+ *         &lt;element name="accountAuthorizationCode" type="{http://schema.broadsoft.com/xsi}OutgoingCallingPlanAuthorizationCode" minOccurs="0"/&gt;
+ *         &lt;element name="callAuthorizationCode" type="{http://schema.broadsoft.com/xsi}OutgoingCallingPlanAuthorizationCode" minOccurs="0"/&gt;
+ *         &lt;element name="securityClassification" type="{http://schema.broadsoft.com/xsi}NonEmptyToken" minOccurs="0"/&gt;
+ *         &lt;element name="directRouteNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDNorSIPURI" minOccurs="0"/&gt;
+ *         &lt;element name="routeListNumber" type="{http://schema.broadsoft.com/xsi}DN" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

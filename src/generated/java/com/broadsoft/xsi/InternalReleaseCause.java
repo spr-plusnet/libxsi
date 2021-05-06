@@ -1,40 +1,39 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java-Klasse für InternalReleaseCause.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
- * <p>
  * <pre>
- * &lt;simpleType name="InternalReleaseCause">
- *   &lt;restriction base="{http://schema.broadsoft.com/xsi}NonEmptyToken">
- *     &lt;enumeration value="Busy"/>
- *     &lt;enumeration value="Forbidden"/>
- *     &lt;enumeration value="Routing Failure"/>
- *     &lt;enumeration value="Global Failure"/>
- *     &lt;enumeration value="Request Failure"/>
- *     &lt;enumeration value="Server Failure"/>
- *     &lt;enumeration value="Translation Failure"/>
- *     &lt;enumeration value="Temporarily Unavailable"/>
- *     &lt;enumeration value="User Not Found"/>
- *     &lt;enumeration value="Request Timeout"/>
- *     &lt;enumeration value="Dial Tone Timeout"/>
- *     &lt;enumeration value="Insufficient Credits"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="InternalReleaseCause"&gt;
+ *   &lt;restriction base="{http://schema.broadsoft.com/xsi}NonEmptyToken"&gt;
+ *     &lt;enumeration value="Busy"/&gt;
+ *     &lt;enumeration value="Forbidden"/&gt;
+ *     &lt;enumeration value="Routing Failure"/&gt;
+ *     &lt;enumeration value="Global Failure"/&gt;
+ *     &lt;enumeration value="Request Failure"/&gt;
+ *     &lt;enumeration value="Server Failure"/&gt;
+ *     &lt;enumeration value="Translation Failure"/&gt;
+ *     &lt;enumeration value="Temporarily Unavailable"/&gt;
+ *     &lt;enumeration value="User Not Found"/&gt;
+ *     &lt;enumeration value="Request Timeout"/&gt;
+ *     &lt;enumeration value="Dial Tone Timeout"/&gt;
+ *     &lt;enumeration value="Insufficient Credits"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

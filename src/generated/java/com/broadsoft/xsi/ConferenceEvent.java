@@ -1,18 +1,18 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSeeAlso;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -21,15 +21,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
- * &lt;complexType name="ConferenceEvent">
- *   &lt;complexContent>
- *     &lt;extension base="{http://schema.broadsoft.com/xsi}EventData">
- *       &lt;sequence>
- *         &lt;element name="conference" type="{http://schema.broadsoft.com/xsi}Conference"/>
- *       &lt;/sequence>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="ConferenceEvent"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://schema.broadsoft.com/xsi}EventData"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="conference" type="{http://schema.broadsoft.com/xsi}Conference"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -39,17 +39,17 @@ import javax.xml.bind.annotation.XmlType;
     "conference"
 })
 @XmlSeeAlso({
-    ConferenceMutedEvent.class,
-    ConferenceCallMutedEvent.class,
-    ConferenceReleasedEvent.class,
-    ConferenceHeldEvent.class,
-    ConferenceCallMadeUnDeafEvent.class,
-    ConferenceRetrievedEvent.class,
-    ConferenceUpdatedEvent.class,
-    ConferenceCallUnMutedEvent.class,
-    ConferenceStartedEvent.class,
     ConferenceCallMadeDeafEvent.class,
-    ConferenceUnmutedEvent.class
+    ConferenceCallMadeUnDeafEvent.class,
+    ConferenceCallMutedEvent.class,
+    ConferenceCallUnMutedEvent.class,
+    ConferenceHeldEvent.class,
+    ConferenceMutedEvent.class,
+    ConferenceReleasedEvent.class,
+    ConferenceRetrievedEvent.class,
+    ConferenceStartedEvent.class,
+    ConferenceUnmutedEvent.class,
+    ConferenceUpdatedEvent.class
 })
 public class ConferenceEvent
     extends EventData

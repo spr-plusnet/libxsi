@@ -1,60 +1,59 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java-Klasse für ServiceInvocationDisposition.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
- * <p>
  * <pre>
- * &lt;simpleType name="ServiceInvocationDisposition">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *     &lt;enumeration value="Automatic Hold/Retrieve"/>
- *     &lt;enumeration value="Call Forward Always"/>
- *     &lt;enumeration value="Call Forward Always Secondary"/>
- *     &lt;enumeration value="Call Forward Busy"/>
- *     &lt;enumeration value="Call Forward No Answer"/>
- *     &lt;enumeration value="Call Forward Not Reachable"/>
- *     &lt;enumeration value="Call Forward Selective"/>
- *     &lt;enumeration value="Call Park"/>
- *     &lt;enumeration value="Call Pickup"/>
- *     &lt;enumeration value="Deflection"/>
- *     &lt;enumeration value="Directed Call Pickup"/>
- *     &lt;enumeration value="Distribution from Call Center"/>
- *     &lt;enumeration value="Distribution from Hunt Group"/>
- *     &lt;enumeration value="Distribution from Route Point"/>
- *     &lt;enumeration value="Do Not Disturb"/>
- *     &lt;enumeration value="Fax Deposit"/>
- *     &lt;enumeration value="Find-me/Follow-me"/>
- *     &lt;enumeration value="Group Night Forwarding"/>
- *     &lt;enumeration value="Personal Assistant"/>
- *     &lt;enumeration value="Sequential Ring"/>
- *     &lt;enumeration value="Series Completion"/>
- *     &lt;enumeration value="Simultaneous Ring"/>
- *     &lt;enumeration value="Third Party Deflection"/>
- *     &lt;enumeration value="Third Party Voice Mail Support"/>
- *     &lt;enumeration value="Transfer Consult"/>
- *     &lt;enumeration value="Trunk Group Forward Capacity Exceeded"/>
- *     &lt;enumeration value="Trunk Group Forward Unreachable"/>
- *     &lt;enumeration value="Trunk Group Forward Unconditional"/>
- *     &lt;enumeration value="Voice Messaging"/>
- *     &lt;enumeration value="Voice Mail Transfer"/>
- *     &lt;enumeration value="VoiceXML Script Termination"/>
- *     &lt;enumeration value="Agent Wrap-Up"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="ServiceInvocationDisposition"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
+ *     &lt;enumeration value="Automatic Hold/Retrieve"/&gt;
+ *     &lt;enumeration value="Call Forward Always"/&gt;
+ *     &lt;enumeration value="Call Forward Always Secondary"/&gt;
+ *     &lt;enumeration value="Call Forward Busy"/&gt;
+ *     &lt;enumeration value="Call Forward No Answer"/&gt;
+ *     &lt;enumeration value="Call Forward Not Reachable"/&gt;
+ *     &lt;enumeration value="Call Forward Selective"/&gt;
+ *     &lt;enumeration value="Call Park"/&gt;
+ *     &lt;enumeration value="Call Pickup"/&gt;
+ *     &lt;enumeration value="Deflection"/&gt;
+ *     &lt;enumeration value="Directed Call Pickup"/&gt;
+ *     &lt;enumeration value="Distribution from Call Center"/&gt;
+ *     &lt;enumeration value="Distribution from Hunt Group"/&gt;
+ *     &lt;enumeration value="Distribution from Route Point"/&gt;
+ *     &lt;enumeration value="Do Not Disturb"/&gt;
+ *     &lt;enumeration value="Fax Deposit"/&gt;
+ *     &lt;enumeration value="Find-me/Follow-me"/&gt;
+ *     &lt;enumeration value="Group Night Forwarding"/&gt;
+ *     &lt;enumeration value="Personal Assistant"/&gt;
+ *     &lt;enumeration value="Sequential Ring"/&gt;
+ *     &lt;enumeration value="Series Completion"/&gt;
+ *     &lt;enumeration value="Simultaneous Ring"/&gt;
+ *     &lt;enumeration value="Third Party Deflection"/&gt;
+ *     &lt;enumeration value="Third Party Voice Mail Support"/&gt;
+ *     &lt;enumeration value="Transfer Consult"/&gt;
+ *     &lt;enumeration value="Trunk Group Forward Capacity Exceeded"/&gt;
+ *     &lt;enumeration value="Trunk Group Forward Unreachable"/&gt;
+ *     &lt;enumeration value="Trunk Group Forward Unconditional"/&gt;
+ *     &lt;enumeration value="Voice Messaging"/&gt;
+ *     &lt;enumeration value="Voice Mail Transfer"/&gt;
+ *     &lt;enumeration value="VoiceXML Script Termination"/&gt;
+ *     &lt;enumeration value="Agent Wrap-Up"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

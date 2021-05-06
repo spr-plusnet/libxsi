@@ -7,7 +7,7 @@ import java.util.List;
 
 import com.broadsoft.xsi.api.action.Action;
 
-import de.qsc.centraflex.broadsoft.XSIException;
+import de.plusnet.centraflex.broadsoft.XSIException;
 
 /**
  * @author spr

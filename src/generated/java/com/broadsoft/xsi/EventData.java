@@ -1,17 +1,17 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlSeeAlso;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -24,12 +24,12 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
- * &lt;complexType name="EventData">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="EventData"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -37,80 +37,80 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "EventData")
 @XmlSeeAlso({
-    CollaborateRoomParticipantMutedEvent.class,
-    ACDHolidayPolicyTreatmentCompletedEvent.class,
-    CollaborateRoomParticipantLeftEvent.class,
-    MeetMeLectureModeStartedEvent.class,
-    MeetMeConferenceLockedEvent.class,
-    RoutePointCallForwardedTreatmentCompletedEvent.class,
-    VoiceMailMessageSummaryEvent.class,
     ACDCallForwardedEvent.class,
-    MeetMeParticipantRetrievedEvent.class,
-    CollaborateRoomParticipantJoinedEvent.class,
-    CollaborateRoomParticipantUnmutedEvent.class,
-    MeetMeConferenceRecordingStartedEvent.class,
-    MeetMeConferenceStartedEvent.class,
-    CallCenterAgentMonitoringEvent.class,
-    RoutePointNightPolicyAppliedEvent.class,
-    CollaborateRoomClientSessionInfoUpdatedEvent.class,
-    MeetMeParticipantLeftEvent.class,
-    RoutePointHolidayPolicyTreatmentCompletedEvent.class,
-    MeetMeParticipantUnmutedEvent.class,
-    MeetMeParticipantJoinedEvent.class,
-    AgentStateEvent.class,
-    CallCenterMonitoringEvent.class,
-    ACDNightServiceEvent.class,
-    RoutePointHolidayPolicyAppliedEvent.class,
-    ACDHolidayPolicyAppliedEvent.class,
-    SubscriptionTerminatedEvent.class,
-    CollaborateRoomStartedEvent.class,
-    CallCenterAgentMonitoringSubscriptionEvent.class,
-    ACDNightPolicyTreatmentCompletedEvent.class,
-    AgentSubscriptionEvent.class,
-    MeetMeAutoLectureModeStartedEvent.class,
-    ACDNightPolicyAppliedEvent.class,
-    MeetMeConferenceRecordingPausedEvent.class,
-    RoutePointRecoveredEvent.class,
-    RoutePointNightPolicyTreatmentCompletedEvent.class,
-    MeetMeConferenceRecordingResumedEvent.class,
-    MeetMeLectureModeStoppedEvent.class,
-    CollaborateRoomParticipantUpdatedEvent.class,
-    MeetMeConferenceSecurityClassificationUpdatedEvent.class,
-    RoutePointCallForwardedEvent.class,
-    CollaborateRoomSubscriptionEvent.class,
-    CallSubscriptionEvent.class,
-    RoutePointSubscriptionEvent.class,
-    CollaborateRoomStoppedEvent.class,
-    MeetMeConferenceStoppedEvent.class,
-    CollaborateRoomLockedEvent.class,
-    MeetMeParticipantHeldEvent.class,
-    ACDHolidayServiceEvent.class,
-    MeetMeConferenceSubscriptionEvent.class,
-    MeetMeConferenceRecordingStoppedEvent.class,
-    ACDSubscriptionEvent.class,
-    CallCenterAgentOnCallAlertEvent.class,
-    MeetMeParticipantMutedEvent.class,
-    ACDForcedForwardingEvent.class,
-    ConferenceEvent.class,
-    CallRedirectedEvent.class,
-    RoutePointCallRejectedEvent.class,
-    HookStatusEvent.class,
-    ACDConfigurationSubscriptionEvent.class,
     ACDCallForwardedTreatmentCompletedEvent.class,
-    MeetMeParticipantUpdatedEvent.class,
-    RoutePointFailedEvent.class,
+    ACDConfigurationSubscriptionEvent.class,
+    ACDForcedForwardingEvent.class,
+    ACDHolidayPolicyAppliedEvent.class,
+    ACDHolidayPolicyTreatmentCompletedEvent.class,
+    ACDHolidayServiceEvent.class,
+    ACDNightPolicyAppliedEvent.class,
+    ACDNightPolicyTreatmentCompletedEvent.class,
+    ACDNightServiceEvent.class,
+    ACDSubscriptionEvent.class,
+    ACDEvent.class,
+    CallCenterMonitoringEvent.class,
     ACDAgentJoinUpdateEvent.class,
-    CollaborateRoomUnlockedEvent.class,
-    RoutePointNewCallEvent.class,
-    CallParkedAgainstEvent.class,
-    PushNotificationRegistrationEvent.class,
-    MeetMeConferenceClientSessionInfoUpdatedEvent.class,
-    MeetMeConferenceUnlockedEvent.class,
-    CallEvent.class,
+    AgentSubscriptionEvent.class,
     AgentDispositionCodeAddedEvent.class,
-    ServiceEvent.class,
+    AgentStateEvent.class,
+    CallCenterAgentMonitoringEvent.class,
+    CallCenterAgentMonitoringSubscriptionEvent.class,
+    CallCenterAgentOnCallAlertEvent.class,
+    CallRedirectedEvent.class,
+    CallSubscriptionEvent.class,
+    ConferenceEvent.class,
+    HookStatusEvent.class,
+    VoiceMailMessageSummaryEvent.class,
+    CallEvent.class,
+    CollaborateRoomClientSessionInfoUpdatedEvent.class,
+    CollaborateRoomLockedEvent.class,
+    CollaborateRoomStartedEvent.class,
+    CollaborateRoomStoppedEvent.class,
+    CollaborateRoomSubscriptionEvent.class,
+    CollaborateRoomUnlockedEvent.class,
+    CollaborateRoomParticipantLeftEvent.class,
+    CollaborateRoomParticipantJoinedEvent.class,
+    CollaborateRoomParticipantMutedEvent.class,
+    CollaborateRoomParticipantUnmutedEvent.class,
+    CollaborateRoomParticipantUpdatedEvent.class,
+    SubscriptionTerminatedEvent.class,
+    RoutePointCallForwardedEvent.class,
+    RoutePointCallForwardedTreatmentCompletedEvent.class,
+    RoutePointCallRejectedEvent.class,
+    RoutePointFailedEvent.class,
+    RoutePointHolidayPolicyAppliedEvent.class,
+    RoutePointHolidayPolicyTreatmentCompletedEvent.class,
+    RoutePointNewCallEvent.class,
+    RoutePointNightPolicyAppliedEvent.class,
+    RoutePointNightPolicyTreatmentCompletedEvent.class,
+    RoutePointRecoveredEvent.class,
+    RoutePointSubscriptionEvent.class,
     RoutePointEvent.class,
-    ACDEvent.class
+    MeetMeAutoLectureModeStartedEvent.class,
+    MeetMeConferenceClientSessionInfoUpdatedEvent.class,
+    MeetMeConferenceLockedEvent.class,
+    MeetMeConferenceRecordingPausedEvent.class,
+    MeetMeConferenceRecordingResumedEvent.class,
+    MeetMeConferenceRecordingStartedEvent.class,
+    MeetMeConferenceRecordingStoppedEvent.class,
+    MeetMeConferenceSecurityClassificationUpdatedEvent.class,
+    MeetMeConferenceStartedEvent.class,
+    MeetMeConferenceStoppedEvent.class,
+    MeetMeConferenceSubscriptionEvent.class,
+    MeetMeConferenceUnlockedEvent.class,
+    MeetMeLectureModeStartedEvent.class,
+    MeetMeLectureModeStoppedEvent.class,
+    MeetMeParticipantLeftEvent.class,
+    MeetMeParticipantHeldEvent.class,
+    MeetMeParticipantJoinedEvent.class,
+    MeetMeParticipantMutedEvent.class,
+    MeetMeParticipantRetrievedEvent.class,
+    MeetMeParticipantUnmutedEvent.class,
+    MeetMeParticipantUpdatedEvent.class,
+    PushNotificationRegistrationEvent.class,
+    CallParkedAgainstEvent.class,
+    ServiceEvent.class
 })
 public abstract class EventData {
 

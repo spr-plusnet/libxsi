@@ -1,66 +1,65 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java-Klasse für EventPackage.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
- * <p>
  * <pre>
- * &lt;simpleType name="EventPackage">
- *   &lt;restriction base="{http://schema.broadsoft.com/xsi}NonEmptyToken">
- *     &lt;enumeration value="Advanced Call"/>
- *     &lt;enumeration value="Basic Call"/>
- *     &lt;enumeration value="BroadWorks Anywhere"/>
- *     &lt;enumeration value="Call Center Agent"/>
- *     &lt;enumeration value="Call Center Agent Monitoring"/>
- *     &lt;enumeration value="Call Center Configuration"/>
- *     &lt;enumeration value="Call Center Monitoring"/>
- *     &lt;enumeration value="Call Center Queue"/>
- *     &lt;enumeration value="Call Forwarding Always"/>
- *     &lt;enumeration value="Call Forwarding Always Secondary"/>
- *     &lt;enumeration value="Call Forwarding Busy"/>
- *     &lt;enumeration value="Call Forwarding No Answer"/>
- *     &lt;enumeration value="Call Park"/>
- *     &lt;enumeration value="Call Recording"/>
- *     &lt;enumeration value="Call Transfer"/>
- *     &lt;enumeration value="Call Waiting"/>
- *     &lt;enumeration value="Collaborate Room"/>
- *     &lt;enumeration value="CommPilot Express"/>
- *     &lt;enumeration value="Do Not Disturb"/>
- *     &lt;enumeration value="Flexible Seating Guest"/>
- *     &lt;enumeration value="Hoteling Guest"/>
- *     &lt;enumeration value="Last Number Redial"/>
- *     &lt;enumeration value="Meet Me Conference"/>
- *     &lt;enumeration value="Music On Hold"/>
- *     &lt;enumeration value="N-Way Call"/>
- *     &lt;enumeration value="Personal Assistant"/>
- *     &lt;enumeration value="Push Notification Registration"/>
- *     &lt;enumeration value="Remote Office"/>
- *     &lt;enumeration value="Route Point Queue"/>
- *     &lt;enumeration value="Security Classification"/>
- *     &lt;enumeration value="Sequential Ring"/>
- *     &lt;enumeration value="Silent Alerting"/>
- *     &lt;enumeration value="Simultaneous Ring Personal"/>
- *     &lt;enumeration value="Standard Call"/>
- *     &lt;enumeration value="Third-Party Voice Mail Support"/>
- *     &lt;enumeration value="Three-Way Call"/>
- *     &lt;enumeration value="Voice Mail Message Summary"/>
- *     &lt;enumeration value="Voice Messaging"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="EventPackage"&gt;
+ *   &lt;restriction base="{http://schema.broadsoft.com/xsi}NonEmptyToken"&gt;
+ *     &lt;enumeration value="Advanced Call"/&gt;
+ *     &lt;enumeration value="Basic Call"/&gt;
+ *     &lt;enumeration value="BroadWorks Anywhere"/&gt;
+ *     &lt;enumeration value="Call Center Agent"/&gt;
+ *     &lt;enumeration value="Call Center Agent Monitoring"/&gt;
+ *     &lt;enumeration value="Call Center Configuration"/&gt;
+ *     &lt;enumeration value="Call Center Monitoring"/&gt;
+ *     &lt;enumeration value="Call Center Queue"/&gt;
+ *     &lt;enumeration value="Call Forwarding Always"/&gt;
+ *     &lt;enumeration value="Call Forwarding Always Secondary"/&gt;
+ *     &lt;enumeration value="Call Forwarding Busy"/&gt;
+ *     &lt;enumeration value="Call Forwarding No Answer"/&gt;
+ *     &lt;enumeration value="Call Park"/&gt;
+ *     &lt;enumeration value="Call Recording"/&gt;
+ *     &lt;enumeration value="Call Transfer"/&gt;
+ *     &lt;enumeration value="Call Waiting"/&gt;
+ *     &lt;enumeration value="Collaborate Room"/&gt;
+ *     &lt;enumeration value="CommPilot Express"/&gt;
+ *     &lt;enumeration value="Do Not Disturb"/&gt;
+ *     &lt;enumeration value="Flexible Seating Guest"/&gt;
+ *     &lt;enumeration value="Hoteling Guest"/&gt;
+ *     &lt;enumeration value="Last Number Redial"/&gt;
+ *     &lt;enumeration value="Meet Me Conference"/&gt;
+ *     &lt;enumeration value="Music On Hold"/&gt;
+ *     &lt;enumeration value="N-Way Call"/&gt;
+ *     &lt;enumeration value="Personal Assistant"/&gt;
+ *     &lt;enumeration value="Push Notification Registration"/&gt;
+ *     &lt;enumeration value="Remote Office"/&gt;
+ *     &lt;enumeration value="Route Point Queue"/&gt;
+ *     &lt;enumeration value="Security Classification"/&gt;
+ *     &lt;enumeration value="Sequential Ring"/&gt;
+ *     &lt;enumeration value="Silent Alerting"/&gt;
+ *     &lt;enumeration value="Simultaneous Ring Personal"/&gt;
+ *     &lt;enumeration value="Standard Call"/&gt;
+ *     &lt;enumeration value="Third-Party Voice Mail Support"/&gt;
+ *     &lt;enumeration value="Three-Way Call"/&gt;
+ *     &lt;enumeration value="Voice Mail Message Summary"/&gt;
+ *     &lt;enumeration value="Voice Messaging"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

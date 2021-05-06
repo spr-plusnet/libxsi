@@ -16,7 +16,7 @@ import com.broadsoft.xsi.api.action.Action;
 import com.broadsoft.xsi.api.action.RecordAction;
 import com.broadsoft.xsi.api.action.StopRecordingAction;
 
-import de.qsc.centraflex.broadsoft.XSIException;
+import de.plusnet.centraflex.broadsoft.XSIException;
 
 /**
  * @author spr

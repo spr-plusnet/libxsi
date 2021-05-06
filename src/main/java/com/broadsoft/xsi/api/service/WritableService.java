@@ -3,7 +3,7 @@
  */
 package com.broadsoft.xsi.api.service;
 
-import de.qsc.centraflex.broadsoft.XSIException;
+import de.plusnet.centraflex.broadsoft.XSIException;
 
 /**
  * @author spr

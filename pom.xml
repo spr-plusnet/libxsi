@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
@@ -8,11 +9,23 @@
 	<name>libxsi</name>
 
 	<properties>
-		<maven.compiler.source>11</maven.compiler.source>
-		<maven.compiler.target>11</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.release>11</maven.compiler.release>
+		<client.plugin.version>0.1.37-SNAPSHOT</client.plugin.version>
+		<mainClassName>libxsi.GetUserInfo</mainClassName>
+		<jaxb.version>3.0.0</jaxb.version>
 	</properties>
+
+	<developers>
+		<developer>
+			<name>Stefan Prelle</name>
+			<email>spr@plusnet.de</email>
+			<timezone>GMT+1</timezone>
+			<roles>
+				<role>Lead developer</role>
+			</roles>
+		</developer>
+	</developers>
 
 	<dependencies>
 		<dependency>
@@ -21,17 +34,76 @@
 			<version>2.0.0-alpha1</version>
 		</dependency>
 		<dependency>
-			<groupId>javax.xml.bind</groupId>
-			<artifactId>jaxb-api</artifactId>
-			<version>2.4.0-b180830.0359</version>
-		</dependency>
-		<dependency>
-			<groupId>org.glassfish.jaxb</groupId>
-			<artifactId>jaxb-runtime</artifactId>
-			<version>2.4.0-b180830.0438</version>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>2.0.0-alpha1</version>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+			<groupId>jakarta.xml.bind</groupId>
+			<artifactId>jakarta.xml.bind-api</artifactId>
+			<version>3.0.0</version>
+			<exclusions>
+				<exclusion>
+				  <groupId>com.sun.activation</groupId>
+    	    <artifactId>jakarta.activation</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.glassfish.jaxb</groupId> -->
+<!-- 			<artifactId>jaxb-xjc</artifactId> -->
+<!-- 			<version>${jaxb.version}</version> -->
+<!-- 		</dependency> -->
+
+		<dependency>
+			<groupId>org.glassfish.jaxb</groupId>
+			<artifactId>jaxb-core</artifactId>
+			<version>${jaxb.version}</version>
+			<exclusions>
+				<exclusion>
+				  <groupId>com.sun.activation</groupId>
+    	    <artifactId>jakarta.activation</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.glassfish.jaxb</groupId> -->
+<!-- 			<artifactId>jaxb-runtime</artifactId> -->
+<!-- 			<version>${jaxb.version}</version> -->
+<!-- 		</dependency> -->
+		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>org.eclipse.persistence.moxy</artifactId>
+			<version>3.0.0</version>
+			<exclusions>
+				<exclusion>
+				  <groupId>com.sun.activation</groupId>
+    	    <artifactId>jakarta.activation</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>de.plusnet</groupId>
+			<artifactId>activation-api</artifactId>
+			<version>0.0.1</version>
+		</dependency>
 	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>Gluon</id>
+			<url>https://nexus.gluonhq.com/nexus/content/repositories/releases</url>
+		</repository>
+		<repository>
+			<id>jfrog</id>
+			<url>https://rpgframework.jfrog.io/artifactory/RPGFramework</url>
+		</repository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/groups/public</url>
+		</repository>
+	</repositories>
 
 	<build>
 		<plugins>
@@ -54,34 +126,75 @@
 				</executions>
 			</plugin>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
 			</plugin>
+
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
+				<groupId>com.gluonhq</groupId>
+				<artifactId>client-maven-plugin</artifactId>
+				<version>${client.plugin.version}</version>
 				<configuration>
-					<archive>
-						<manifestEntries>
-							<Automatic-Module-Name>de.plusnet.centraflex.xsi</Automatic-Module-Name>
-						</manifestEntries>
-					</archive>
+
+					<bundlesList>
+						<list>org.eclipse.persistence.exceptions.i18n.JAXBExceptionResource</list>
+						<list>org.eclipse.persistence.internal.localization.i18n.LoggingLocalizationResource</list>
+						<list>org.eclipse.persistence.internal.localization.i18n.EclipseLinkLocalizationResource</list>
+						<list>org.eclipse.persistence.exceptions.i18n.ValidationExceptionResource</list>
+						<list>org.eclipse.persistence.version</list>
+					</bundlesList>
+					<!--enableSWRendering>true</enableSWRendering -->
+					<!--javafxStaticSdkVersion>16-ea+gvm31</javafxStaticSdkVersion -->
+					<mainClass>${mainClassName}</mainClass>
+					<nativeImageArgs>
+						<arg>-Duser.language=de</arg>
+						<arg>-Duser.country=DE</arg>
+						<arg>--allow-incomplete-classpath</arg>
+						<arg>--report-unsupported-elements-at-runtime</arg>
+						<arg>-H:IncludeResourceBundles=org.eclipse.persistence.version</arg>
+					</nativeImageArgs>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>3.1.1</version>
+
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					<archive>
+						<manifest>
+							<mainClass>${mainClassName}</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+
+			</plugin>
 		</plugins>
+
 	</build>
 
-	<distributionManagement>
-		<repository>
-			<id>central</id>
-			<name>artifactory.bmcag.com-releases</name>
-			<url>http://artifactory.bmcag.com/artifactory/plusnet</url>
-		</repository>
-		<snapshotRepository>
+	<pluginRepositories>
+		<pluginRepository>
 			<id>snapshots</id>
-			<name>artifactory.bmcag.com-snapshots</name>
-			<url>http://artifactory.bmcag.com/artifactory/plusnet</url>
-		</snapshotRepository>
-	</distributionManagement>
-
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>gluon-releases</id>
+			<url>https://nexus.gluonhq.com/nexus/content/repositories/releases/</url>
+		</pluginRepository>
+	</pluginRepositories>
 </project>

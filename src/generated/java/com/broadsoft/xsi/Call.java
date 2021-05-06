@@ -1,20 +1,20 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -37,51 +37,51 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
- * &lt;complexType name="Call">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="callId" type="{http://schema.broadsoft.com/xsi}CallId"/>
- *         &lt;element name="extTrackingId" type="{http://schema.broadsoft.com/xsi}ExternalTrackingId"/>
- *         &lt;element name="networkCallId" type="{http://schema.broadsoft.com/xsi}NonEmptyToken" minOccurs="0"/>
- *         &lt;element name="personality" type="{http://schema.broadsoft.com/xsi}Personality"/>
- *         &lt;element name="state" type="{http://schema.broadsoft.com/xsi}CallState"/>
- *         &lt;element name="releaseCause" type="{http://schema.broadsoft.com/xsi}ReleaseCause" minOccurs="0"/>
- *         &lt;element name="releasingParty" type="{http://schema.broadsoft.com/xsi}ReleasingParty" minOccurs="0"/>
- *         &lt;element name="remoteParty" type="{http://schema.broadsoft.com/xsi}PartyInformation"/>
- *         &lt;element name="redirections" type="{http://schema.broadsoft.com/xsi}RedirectionList" minOccurs="0"/>
- *         &lt;element name="redirect" type="{http://schema.broadsoft.com/xsi}Redirect" minOccurs="0"/>
- *         &lt;element name="endpoint" type="{http://schema.broadsoft.com/xsi}Endpoint" minOccurs="0"/>
- *         &lt;element name="appearance" type="{http://schema.broadsoft.com/xsi}Appearance" minOccurs="0"/>
- *         &lt;element name="allowAnswer" type="{http://schema.broadsoft.com/xsi}EmptyContent" minOccurs="0"/>
- *         &lt;element name="allowRetrieve" type="{http://schema.broadsoft.com/xsi}EmptyContent" minOccurs="0"/>
- *         &lt;element name="alternateAddressType" type="{http://schema.broadsoft.com/xsi}AlternateAddressType" minOccurs="0"/>
- *         &lt;element name="huntGroupUserId" type="{http://schema.broadsoft.com/xsi}UserId" minOccurs="0"/>
- *         &lt;element name="distinctiveRing" type="{http://schema.broadsoft.com/xsi}DistinctiveRing" minOccurs="0"/>
- *         &lt;element name="diversionInhibited" type="{http://schema.broadsoft.com/xsi}EmptyContent" minOccurs="0"/>
- *         &lt;element name="recallType" type="{http://schema.broadsoft.com/xsi}RecallType" minOccurs="0"/>
- *         &lt;element name="startTime" type="{http://schema.broadsoft.com/xsi}Timestamp"/>
- *         &lt;element name="answerTime" type="{http://schema.broadsoft.com/xsi}Timestamp" minOccurs="0"/>
- *         &lt;element name="heldTime" type="{http://schema.broadsoft.com/xsi}Timestamp" minOccurs="0"/>
- *         &lt;element name="totalHeldTime" type="{http://schema.broadsoft.com/xsi}PositiveInt" minOccurs="0"/>
- *         &lt;element name="detachedTime" type="{http://schema.broadsoft.com/xsi}Timestamp" minOccurs="0"/>
- *         &lt;element name="releaseTime" type="{http://schema.broadsoft.com/xsi}Timestamp" minOccurs="0"/>
- *         &lt;element name="acdCallInfo" type="{http://schema.broadsoft.com/xsi}ACDCallInfo" minOccurs="0"/>
- *         &lt;element name="agentEscalation" type="{http://schema.broadsoft.com/xsi}AgentEscalation" minOccurs="0"/>
- *         &lt;element name="acdOutgoingCallInfo" type="{http://schema.broadsoft.com/xsi}ACDOutgoingCallInfo" minOccurs="0"/>
- *         &lt;element name="groupCallParkLocationSelected" type="{http://schema.broadsoft.com/xsi}EmptyContent" minOccurs="0"/>
- *         &lt;element name="recorded" type="{http://schema.broadsoft.com/xsi}EmptyContent" minOccurs="0"/>
- *         &lt;element name="findMeFollowMeUserId" type="{http://schema.broadsoft.com/xsi}UserId" minOccurs="0"/>
- *         &lt;element name="allowedRecordingControls" type="{http://schema.broadsoft.com/xsi}RecordingControls" minOccurs="0"/>
- *         &lt;element name="recordingState" type="{http://schema.broadsoft.com/xsi}RecordingState" minOccurs="0"/>
- *         &lt;element name="executiveUserId" type="{http://schema.broadsoft.com/xsi}UserId" minOccurs="0"/>
- *         &lt;element name="recallFromParty" type="{http://schema.broadsoft.com/xsi}PartyInformation" minOccurs="0"/>
- *         &lt;element name="securityClassification" type="{http://schema.broadsoft.com/xsi}NonEmptyToken" minOccurs="0"/>
- *         &lt;element name="clientSessionInfo" type="{http://schema.broadsoft.com/xsi}ClientSessionInfo" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="Call"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="callId" type="{http://schema.broadsoft.com/xsi}CallId"/&gt;
+ *         &lt;element name="extTrackingId" type="{http://schema.broadsoft.com/xsi}ExternalTrackingId"/&gt;
+ *         &lt;element name="networkCallId" type="{http://schema.broadsoft.com/xsi}NonEmptyToken" minOccurs="0"/&gt;
+ *         &lt;element name="personality" type="{http://schema.broadsoft.com/xsi}Personality"/&gt;
+ *         &lt;element name="state" type="{http://schema.broadsoft.com/xsi}CallState"/&gt;
+ *         &lt;element name="releaseCause" type="{http://schema.broadsoft.com/xsi}ReleaseCause" minOccurs="0"/&gt;
+ *         &lt;element name="releasingParty" type="{http://schema.broadsoft.com/xsi}ReleasingParty" minOccurs="0"/&gt;
+ *         &lt;element name="remoteParty" type="{http://schema.broadsoft.com/xsi}PartyInformation"/&gt;
+ *         &lt;element name="redirections" type="{http://schema.broadsoft.com/xsi}RedirectionList" minOccurs="0"/&gt;
+ *         &lt;element name="redirect" type="{http://schema.broadsoft.com/xsi}Redirect" minOccurs="0"/&gt;
+ *         &lt;element name="endpoint" type="{http://schema.broadsoft.com/xsi}Endpoint" minOccurs="0"/&gt;
+ *         &lt;element name="appearance" type="{http://schema.broadsoft.com/xsi}Appearance" minOccurs="0"/&gt;
+ *         &lt;element name="allowAnswer" type="{http://schema.broadsoft.com/xsi}EmptyContent" minOccurs="0"/&gt;
+ *         &lt;element name="allowRetrieve" type="{http://schema.broadsoft.com/xsi}EmptyContent" minOccurs="0"/&gt;
+ *         &lt;element name="alternateAddressType" type="{http://schema.broadsoft.com/xsi}AlternateAddressType" minOccurs="0"/&gt;
+ *         &lt;element name="huntGroupUserId" type="{http://schema.broadsoft.com/xsi}UserId" minOccurs="0"/&gt;
+ *         &lt;element name="distinctiveRing" type="{http://schema.broadsoft.com/xsi}DistinctiveRing" minOccurs="0"/&gt;
+ *         &lt;element name="diversionInhibited" type="{http://schema.broadsoft.com/xsi}EmptyContent" minOccurs="0"/&gt;
+ *         &lt;element name="recallType" type="{http://schema.broadsoft.com/xsi}RecallType" minOccurs="0"/&gt;
+ *         &lt;element name="startTime" type="{http://schema.broadsoft.com/xsi}Timestamp"/&gt;
+ *         &lt;element name="answerTime" type="{http://schema.broadsoft.com/xsi}Timestamp" minOccurs="0"/&gt;
+ *         &lt;element name="heldTime" type="{http://schema.broadsoft.com/xsi}Timestamp" minOccurs="0"/&gt;
+ *         &lt;element name="totalHeldTime" type="{http://schema.broadsoft.com/xsi}PositiveInt" minOccurs="0"/&gt;
+ *         &lt;element name="detachedTime" type="{http://schema.broadsoft.com/xsi}Timestamp" minOccurs="0"/&gt;
+ *         &lt;element name="releaseTime" type="{http://schema.broadsoft.com/xsi}Timestamp" minOccurs="0"/&gt;
+ *         &lt;element name="acdCallInfo" type="{http://schema.broadsoft.com/xsi}ACDCallInfo" minOccurs="0"/&gt;
+ *         &lt;element name="agentEscalation" type="{http://schema.broadsoft.com/xsi}AgentEscalation" minOccurs="0"/&gt;
+ *         &lt;element name="acdOutgoingCallInfo" type="{http://schema.broadsoft.com/xsi}ACDOutgoingCallInfo" minOccurs="0"/&gt;
+ *         &lt;element name="groupCallParkLocationSelected" type="{http://schema.broadsoft.com/xsi}EmptyContent" minOccurs="0"/&gt;
+ *         &lt;element name="recorded" type="{http://schema.broadsoft.com/xsi}EmptyContent" minOccurs="0"/&gt;
+ *         &lt;element name="findMeFollowMeUserId" type="{http://schema.broadsoft.com/xsi}UserId" minOccurs="0"/&gt;
+ *         &lt;element name="allowedRecordingControls" type="{http://schema.broadsoft.com/xsi}RecordingControls" minOccurs="0"/&gt;
+ *         &lt;element name="recordingState" type="{http://schema.broadsoft.com/xsi}RecordingState" minOccurs="0"/&gt;
+ *         &lt;element name="executiveUserId" type="{http://schema.broadsoft.com/xsi}UserId" minOccurs="0"/&gt;
+ *         &lt;element name="recallFromParty" type="{http://schema.broadsoft.com/xsi}PartyInformation" minOccurs="0"/&gt;
+ *         &lt;element name="securityClassification" type="{http://schema.broadsoft.com/xsi}NonEmptyToken" minOccurs="0"/&gt;
+ *         &lt;element name="clientSessionInfo" type="{http://schema.broadsoft.com/xsi}ClientSessionInfo" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

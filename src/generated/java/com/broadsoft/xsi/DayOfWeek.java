@@ -1,35 +1,34 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java-Klasse für DayOfWeek.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
- * <p>
  * <pre>
- * &lt;simpleType name="DayOfWeek">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="Sunday"/>
- *     &lt;enumeration value="Monday"/>
- *     &lt;enumeration value="Tuesday"/>
- *     &lt;enumeration value="Wednesday"/>
- *     &lt;enumeration value="Thursday"/>
- *     &lt;enumeration value="Friday"/>
- *     &lt;enumeration value="Saturday"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="DayOfWeek"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="Sunday"/&gt;
+ *     &lt;enumeration value="Monday"/&gt;
+ *     &lt;enumeration value="Tuesday"/&gt;
+ *     &lt;enumeration value="Wednesday"/&gt;
+ *     &lt;enumeration value="Thursday"/&gt;
+ *     &lt;enumeration value="Friday"/&gt;
+ *     &lt;enumeration value="Saturday"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

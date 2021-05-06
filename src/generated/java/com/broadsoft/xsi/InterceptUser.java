@@ -1,21 +1,21 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -24,32 +24,32 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;extension base="{http://schema.broadsoft.com/xsi}ActivatableServiceInfo">
- *       &lt;sequence>
- *         &lt;element name="announcementSelection" type="{http://schema.broadsoft.com/xsi}AnnouncementSelection" minOccurs="0"/>
- *         &lt;element name="audioFileDescription" type="{http://schema.broadsoft.com/xsi}FileDescription" minOccurs="0"/>
- *         &lt;element name="audioMediaType" type="{http://schema.broadsoft.com/xsi}MediaFileType" minOccurs="0"/>
- *         &lt;element name="videoFileDescription" type="{http://schema.broadsoft.com/xsi}FileDescription" minOccurs="0"/>
- *         &lt;element name="videoMediaType" type="{http://schema.broadsoft.com/xsi}MediaFileType" minOccurs="0"/>
- *         &lt;element name="playNewPhoneNumber" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         &lt;element name="newPhoneNumber" type="{http://schema.broadsoft.com/xsi}DN" minOccurs="0"/>
- *         &lt;element name="transferOnZeroToPhoneNumber" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         &lt;element name="transferPhoneNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDN" minOccurs="0"/>
- *         &lt;element name="rerouteOutboundCalls" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         &lt;element name="outboundReroutePhoneNumber" type="{http://schema.broadsoft.com/xsi}Address" minOccurs="0"/>
- *         &lt;element name="exemptInboundMobilityCalls" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         &lt;element name="exemptOutboundMobilityCalls" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         &lt;element name="disableParallelRingingToNetworkLocations" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         &lt;element name="outboundCallMode" type="{http://schema.broadsoft.com/xsi}InterceptOutboundCall"/>
- *         &lt;element name="inboundCallMode" type="{http://schema.broadsoft.com/xsi}InterceptInboundCall"/>
- *         &lt;element name="alternateBlockingAnnouncement" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         &lt;element name="routeToVoiceMail" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *       &lt;/sequence>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://schema.broadsoft.com/xsi}ActivatableServiceInfo"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="announcementSelection" type="{http://schema.broadsoft.com/xsi}AnnouncementSelection" minOccurs="0"/&gt;
+ *         &lt;element name="audioFileDescription" type="{http://schema.broadsoft.com/xsi}FileDescription" minOccurs="0"/&gt;
+ *         &lt;element name="audioMediaType" type="{http://schema.broadsoft.com/xsi}MediaFileType" minOccurs="0"/&gt;
+ *         &lt;element name="videoFileDescription" type="{http://schema.broadsoft.com/xsi}FileDescription" minOccurs="0"/&gt;
+ *         &lt;element name="videoMediaType" type="{http://schema.broadsoft.com/xsi}MediaFileType" minOccurs="0"/&gt;
+ *         &lt;element name="playNewPhoneNumber" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="newPhoneNumber" type="{http://schema.broadsoft.com/xsi}DN" minOccurs="0"/&gt;
+ *         &lt;element name="transferOnZeroToPhoneNumber" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="transferPhoneNumber" type="{http://schema.broadsoft.com/xsi}OutgoingDN" minOccurs="0"/&gt;
+ *         &lt;element name="rerouteOutboundCalls" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="outboundReroutePhoneNumber" type="{http://schema.broadsoft.com/xsi}Address" minOccurs="0"/&gt;
+ *         &lt;element name="exemptInboundMobilityCalls" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="exemptOutboundMobilityCalls" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="disableParallelRingingToNetworkLocations" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="outboundCallMode" type="{http://schema.broadsoft.com/xsi}InterceptOutboundCall"/&gt;
+ *         &lt;element name="inboundCallMode" type="{http://schema.broadsoft.com/xsi}InterceptInboundCall"/&gt;
+ *         &lt;element name="alternateBlockingAnnouncement" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="routeToVoiceMail" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

@@ -1,18 +1,18 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSeeAlso;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -25,15 +25,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
- * &lt;complexType name="CallEvent">
- *   &lt;complexContent>
- *     &lt;extension base="{http://schema.broadsoft.com/xsi}EventData">
- *       &lt;sequence>
- *         &lt;element name="call" type="{http://schema.broadsoft.com/xsi}Call"/>
- *       &lt;/sequence>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CallEvent"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://schema.broadsoft.com/xsi}EventData"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="call" type="{http://schema.broadsoft.com/xsi}Call"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -43,31 +43,31 @@ import javax.xml.bind.annotation.XmlType;
     "call"
 })
 @XmlSeeAlso({
-    CallRecordingResumedEvent.class,
-    CallOriginatedEvent.class,
-    PlayMusicOnHoldFailureEvent.class,
-    CallOriginatingEvent.class,
-    CallCollectingEvent.class,
-    CallReleasingEvent.class,
-    CallParkRetrievedEvent.class,
-    CallRecordingStartedEvent.class,
-    CallReleasedEvent.class,
-    CallForwardedEvent.class,
     CallAnsweredEvent.class,
-    CallDetachedEvent.class,
-    CallReceivedEvent.class,
-    CallTransferredEvent.class,
     CallBargedInEvent.class,
-    CallUpdatedEvent.class,
-    CallRecordingStartingEvent.class,
-    CallMonitoredEvent.class,
     CallClientSessionInfoUpdatedEvent.class,
-    CallPickedUpEvent.class,
-    CallRecordingPausedEvent.class,
     CallSecurityClassificationUpdatedEvent.class,
+    CallCollectingEvent.class,
+    CallDetachedEvent.class,
+    CallForwardedEvent.class,
     CallHeldEvent.class,
+    CallMonitoredEvent.class,
+    CallOriginatedEvent.class,
+    CallOriginatingEvent.class,
+    CallPickedUpEvent.class,
+    CallParkRetrievedEvent.class,
+    CallReceivedEvent.class,
+    CallRecordingStartingEvent.class,
+    CallRecordingStartedEvent.class,
+    CallRecordingPausedEvent.class,
+    CallRecordingResumedEvent.class,
     CallRecordingStoppedEvent.class,
-    CallRetrievedEvent.class
+    CallReleasedEvent.class,
+    CallReleasingEvent.class,
+    CallRetrievedEvent.class,
+    CallTransferredEvent.class,
+    CallUpdatedEvent.class,
+    PlayMusicOnHoldFailureEvent.class
 })
 public abstract class CallEvent
     extends EventData

@@ -1,19 +1,19 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -31,34 +31,34 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
- * &lt;complexType name="Subscription">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="subscriptionId" type="{http://schema.broadsoft.com/xsi}SubscriptionId" minOccurs="0"/>
- *         &lt;element name="sharedSubscriptionId" type="{http://schema.broadsoft.com/xsi}SubscriptionId" minOccurs="0"/>
- *         &lt;choice>
- *           &lt;element name="subscriberId" type="{http://schema.broadsoft.com/xsi}UserId" minOccurs="0"/>
- *           &lt;element name="clientId" type="{http://schema.broadsoft.com/xsi}ClientAppId" minOccurs="0"/>
- *         &lt;/choice>
- *         &lt;element name="targetIdType" type="{http://schema.broadsoft.com/xsi}EntityType" minOccurs="0"/>
- *         &lt;element name="targetGrpParentId" type="{http://schema.broadsoft.com/xsi}NonEmptyString" minOccurs="0"/>
- *         &lt;element name="targetId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="targetSubId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;choice>
- *           &lt;element name="event" type="{http://schema.broadsoft.com/xsi}EventPackage" minOccurs="0"/>
- *           &lt;element name="eventPackageList" type="{http://schema.broadsoft.com/xsi}EventPackageList" minOccurs="0"/>
- *         &lt;/choice>
- *         &lt;element name="expires" type="{http://schema.broadsoft.com/xsi}SubscriptionExpiration" minOccurs="0"/>
- *         &lt;choice>
- *           &lt;element name="httpContact" type="{http://schema.broadsoft.com/xsi}ContactURL" minOccurs="0"/>
- *           &lt;element name="channelSetId" type="{http://schema.broadsoft.com/xsi}ChannelSetId" minOccurs="0"/>
- *         &lt;/choice>
- *         &lt;element name="applicationId" type="{http://schema.broadsoft.com/xsi}ExternalApplicationId" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="Subscription"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="subscriptionId" type="{http://schema.broadsoft.com/xsi}SubscriptionId" minOccurs="0"/&gt;
+ *         &lt;element name="sharedSubscriptionId" type="{http://schema.broadsoft.com/xsi}SubscriptionId" minOccurs="0"/&gt;
+ *         &lt;choice&gt;
+ *           &lt;element name="subscriberId" type="{http://schema.broadsoft.com/xsi}UserId" minOccurs="0"/&gt;
+ *           &lt;element name="clientId" type="{http://schema.broadsoft.com/xsi}ClientAppId" minOccurs="0"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element name="targetIdType" type="{http://schema.broadsoft.com/xsi}EntityType" minOccurs="0"/&gt;
+ *         &lt;element name="targetGrpParentId" type="{http://schema.broadsoft.com/xsi}NonEmptyString" minOccurs="0"/&gt;
+ *         &lt;element name="targetId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="targetSubId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;choice&gt;
+ *           &lt;element name="event" type="{http://schema.broadsoft.com/xsi}EventPackage" minOccurs="0"/&gt;
+ *           &lt;element name="eventPackageList" type="{http://schema.broadsoft.com/xsi}EventPackageList" minOccurs="0"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element name="expires" type="{http://schema.broadsoft.com/xsi}SubscriptionExpiration" minOccurs="0"/&gt;
+ *         &lt;choice&gt;
+ *           &lt;element name="httpContact" type="{http://schema.broadsoft.com/xsi}ContactURL" minOccurs="0"/&gt;
+ *           &lt;element name="channelSetId" type="{http://schema.broadsoft.com/xsi}ChannelSetId" minOccurs="0"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element name="applicationId" type="{http://schema.broadsoft.com/xsi}ExternalApplicationId" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

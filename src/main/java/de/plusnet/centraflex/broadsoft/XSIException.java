@@ -1,7 +1,7 @@
 /**
  * 
  */
-package de.qsc.centraflex.broadsoft;
+package de.plusnet.centraflex.broadsoft;
 
 import java.io.IOException;
 

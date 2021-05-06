@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 
 import com.broadsoft.xsi.api.XSIConnection;
 
-import de.qsc.centraflex.broadsoft.XSIException;
+import de.plusnet.centraflex.broadsoft.XSIException;
 
 /**
  * @author spr

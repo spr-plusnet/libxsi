@@ -1,35 +1,34 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java-Klasse für CallUpdateReason.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
- * <p>
  * <pre>
- * &lt;simpleType name="CallUpdateReason">
- *   &lt;restriction base="{http://schema.broadsoft.com/xsi}NonEmptyToken">
- *     &lt;enumeration value="Call Transferred"/>
- *     &lt;enumeration value="Call Picked-Up"/>
- *     &lt;enumeration value="Call Barged-In"/>
- *     &lt;enumeration value="Call Monitored"/>
- *     &lt;enumeration value="Call Forwarded"/>
- *     &lt;enumeration value="Call Park Retrieved"/>
- *     &lt;enumeration value="Unknown"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="CallUpdateReason"&gt;
+ *   &lt;restriction base="{http://schema.broadsoft.com/xsi}NonEmptyToken"&gt;
+ *     &lt;enumeration value="Call Transferred"/&gt;
+ *     &lt;enumeration value="Call Picked-Up"/&gt;
+ *     &lt;enumeration value="Call Barged-In"/&gt;
+ *     &lt;enumeration value="Call Monitored"/&gt;
+ *     &lt;enumeration value="Call Forwarded"/&gt;
+ *     &lt;enumeration value="Call Park Retrieved"/&gt;
+ *     &lt;enumeration value="Unknown"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

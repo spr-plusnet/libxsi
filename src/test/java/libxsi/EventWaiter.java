@@ -10,7 +10,7 @@ import com.broadsoft.xsi.api.EventChannel;
 import com.broadsoft.xsi.api.EventChannelListener;
 import com.broadsoft.xsi.api.XSIConnection;
 
-import de.qsc.centraflex.broadsoft.XSIDriver;
+import de.plusnet.centraflex.broadsoft.XSIDriver;
 
 public class EventWaiter {
 

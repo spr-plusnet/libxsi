@@ -13,7 +13,7 @@ import com.broadsoft.xsi.Enterprise;
 import com.broadsoft.xsi.UserAdditionalEnterpriseGroupDetails;
 import com.broadsoft.xsi.api.XSIConnection;
 
-import de.qsc.centraflex.broadsoft.XSIException;
+import de.plusnet.centraflex.broadsoft.XSIException;
 
 /**
  * @author prelle

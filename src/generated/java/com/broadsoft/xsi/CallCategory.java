@@ -1,36 +1,35 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java-Klasse für CallCategory.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
- * <p>
  * <pre>
- * &lt;simpleType name="CallCategory">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *     &lt;enumeration value="Local"/>
- *     &lt;enumeration value="National"/>
- *     &lt;enumeration value="Interlata"/>
- *     &lt;enumeration value="Intralata"/>
- *     &lt;enumeration value="International"/>
- *     &lt;enumeration value="Private"/>
- *     &lt;enumeration value="Emergency"/>
- *     &lt;enumeration value="Other"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="CallCategory"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token"&gt;
+ *     &lt;enumeration value="Local"/&gt;
+ *     &lt;enumeration value="National"/&gt;
+ *     &lt;enumeration value="Interlata"/&gt;
+ *     &lt;enumeration value="Intralata"/&gt;
+ *     &lt;enumeration value="International"/&gt;
+ *     &lt;enumeration value="Private"/&gt;
+ *     &lt;enumeration value="Emergency"/&gt;
+ *     &lt;enumeration value="Other"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

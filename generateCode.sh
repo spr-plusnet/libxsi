@@ -1,0 +1,2 @@
+#!/bin/bash
+java -cp foo/rngom-3.0.0.jar:foo/jakarta.activation-2.0.0.jar:foo/jakarta.xml.bind-api-3.0.0.jar:foo/relaxng-datatype-3.0.0.jar:foo/jaxb-xjc-3.0.0.jar:foo/jaxb-core-3.0.0.jar:foo/jaxb-runtime-3.0.0.jar:foo/codemodel-3.0.0.jar:foo/istack-commons-runtime-4.0.0.jar:foo/xsom-3.0.0.jar com.sun.tools.xjc.XJCFacade -d src/main/java -d src/generated/java/ -p com.broadsoft.xsi xsd/XSISchema.xsd

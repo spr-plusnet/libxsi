@@ -1,38 +1,37 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Diese Datei wurde mit der Eclipse Implementation of JAXB, v3.0.0 generiert 
+// Siehe https://eclipse-ee4j.github.io/jaxb-ri 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2021.02.12 um 09:46:20 AM CET 
+// Generiert: 2021.02.15 um 02:45:42 PM CET 
 //
 
 
 package com.broadsoft.xsi;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java-Klasse für FaxStatusCode.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
- * <p>
  * <pre>
- * &lt;simpleType name="FaxStatusCode">
- *   &lt;restriction base="{http://schema.broadsoft.com/xsi}NonEmptyToken">
- *     &lt;enumeration value="Preparing to Transmit"/>
- *     &lt;enumeration value="Transmitting"/>
- *     &lt;enumeration value="Successful"/>
- *     &lt;enumeration value="Error - File Not Found"/>
- *     &lt;enumeration value="Error - File Transfer Failed"/>
- *     &lt;enumeration value="Temporarily Unavailable"/>
- *     &lt;enumeration value="User Not Found"/>
- *     &lt;enumeration value="File Conversion In Progress"/>
- *     &lt;enumeration value="File Conversion Failed"/>
- *     &lt;enumeration value="Xtended Conversion Service Not Available"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="FaxStatusCode"&gt;
+ *   &lt;restriction base="{http://schema.broadsoft.com/xsi}NonEmptyToken"&gt;
+ *     &lt;enumeration value="Preparing to Transmit"/&gt;
+ *     &lt;enumeration value="Transmitting"/&gt;
+ *     &lt;enumeration value="Successful"/&gt;
+ *     &lt;enumeration value="Error - File Not Found"/&gt;
+ *     &lt;enumeration value="Error - File Transfer Failed"/&gt;
+ *     &lt;enumeration value="Temporarily Unavailable"/&gt;
+ *     &lt;enumeration value="User Not Found"/&gt;
+ *     &lt;enumeration value="File Conversion In Progress"/&gt;
+ *     &lt;enumeration value="File Conversion Failed"/&gt;
+ *     &lt;enumeration value="Xtended Conversion Service Not Available"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */
