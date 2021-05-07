@@ -1,4 +1,4 @@
-package libxsi;
+package com.broadsoft.xsi;
 
 import java.io.IOException;
 import java.util.Properties;

@@ -1,4 +1,4 @@
-package libxsi;
+package com.broadsoft.xsi;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -8,15 +8,14 @@ import com.broadsoft.xsi.api.XSIConnection;
 
 import de.plusnet.centraflex.broadsoft.XSIDriver;
 
-public class GetUserInfo {
+public class GetUserInfo2 {
 
 	//-----------------------------------------------------------------
 	public static void main(String[] args) throws IOException {
-		System.out.println("Running");
 		Properties config = new Properties();
-		config.put(XSIDriver.PROP_XSI_USER, "04212025933@qsc.de");
-		config.put(XSIDriver.PROP_XSI_PASS, "tamina88ke");
-		config.put(XSIDriver.PROP_XSI_SERVER, "web4.bmcag.com");
+		config.put(XSIDriver.PROP_XSI_USER, "<yourid>");
+		config.put(XSIDriver.PROP_XSI_PASS, "<yourpass>");
+		config.put(XSIDriver.PROP_XSI_SERVER, "web1-lab.bmcag.com");
 //		config.put(XSIDriver.PROP_XSI_USESSL, "true");
 		config.put(XSIDriver.PROP_XSI_APPNAME, "GetUserInfo Example");
 		

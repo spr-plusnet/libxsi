@@ -11,8 +11,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.release>11</maven.compiler.release>
-		<client.plugin.version>0.1.37-SNAPSHOT</client.plugin.version>
-		<mainClassName>libxsi.GetUserInfo</mainClassName>
+		<client.plugin.version>0.1.39</client.plugin.version>
 		<jaxb.version>3.0.0</jaxb.version>
 		<log4j.version>2.14.0</log4j.version>
 	</properties>
@@ -105,7 +104,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>1.9.1</version>
+				<version>3.2.0</version>
 				<executions>
 					<execution>
 						<phase>generate-sources</phase>
@@ -151,7 +150,7 @@
 					</nativeImageArgs>
 				</configuration>
 			</plugin>
-			<plugin>
+			<!--plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<version>3.1.1</version>
@@ -177,7 +176,7 @@
 					</execution>
 				</executions>
 
-			</plugin>
+			</plugin-->
 		</plugins>
 
 	</build>
