@@ -9,7 +9,6 @@ import java.util.Properties;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.eclipse.persistence.Version;
 
 import com.broadsoft.xsi.api.XSIConnection;
 
@@ -42,15 +41,14 @@ public class XSIDriver {
 	//-----------------------------------------------------------------
 	static {
 		Package pack = XSIDriver.class.getPackage();
-		Version.getVersionString();
 		if (pack.getImplementationTitle()==null)
 			logger.info("XSI Driver running directly from class files");
 		else
 			logger.info(XSIDriver.class.getPackage().getImplementationTitle()+" version "+XSIDriver.class.getPackage().getImplementationVersion());
 		try {
 //			jaxb = ContextFactory.createContext("com.broadsoft.xsi", XSIDriver.class.getClassLoader(), new HashMap<String, Object>());
-			jaxb = org.eclipse.persistence.jaxb.JAXBContextFactory.createContext("com.broadsoft.xsi", XSIDriver.class.getClassLoader(), new HashMap<String, Object>());
-//			jaxb = JAXBContext.newInstance("com.broadsoft.xsi");
+//			jaxb = org.eclipse.persistence.jaxb.JAXBContextFactory.createContext("com.broadsoft.xsi", XSIDriver.class.getClassLoader(), new HashMap<String, Object>());
+			jaxb = JAXBContext.newInstance("com.broadsoft.xsi");
 			unmarshaller = jaxb.createUnmarshaller();
 			marshaller   = jaxb.createMarshaller();
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);

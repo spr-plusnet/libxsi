@@ -13,7 +13,7 @@
 		<maven.compiler.release>11</maven.compiler.release>
 		<client.plugin.version>0.1.39</client.plugin.version>
 		<jaxb.version>3.0.0</jaxb.version>
-		<log4j.version>2.14.0</log4j.version>
+		<log4j.version>2.14.1</log4j.version>
 	</properties>
 
 	<developers>
@@ -37,50 +37,6 @@
 			<groupId>jakarta.xml.bind</groupId>
 			<artifactId>jakarta.xml.bind-api</artifactId>
 			<version>3.0.0</version>
-			<exclusions>
-				<exclusion>
-				  <groupId>com.sun.activation</groupId>
-    	    <artifactId>jakarta.activation</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.glassfish.jaxb</groupId> -->
-<!-- 			<artifactId>jaxb-xjc</artifactId> -->
-<!-- 			<version>${jaxb.version}</version> -->
-<!-- 		</dependency> -->
-
-		<dependency>
-			<groupId>org.glassfish.jaxb</groupId>
-			<artifactId>jaxb-core</artifactId>
-			<version>${jaxb.version}</version>
-			<exclusions>
-				<exclusion>
-				  <groupId>com.sun.activation</groupId>
-    	    <artifactId>jakarta.activation</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.glassfish.jaxb</groupId> -->
-<!-- 			<artifactId>jaxb-runtime</artifactId> -->
-<!-- 			<version>${jaxb.version}</version> -->
-<!-- 		</dependency> -->
-		<dependency>
-			<groupId>org.eclipse.persistence</groupId>
-			<artifactId>org.eclipse.persistence.moxy</artifactId>
-			<version>3.0.0</version>
-			<exclusions>
-				<exclusion>
-				  <groupId>com.sun.activation</groupId>
-    	    <artifactId>jakarta.activation</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>de.plusnet</groupId>
-			<artifactId>activation-api</artifactId>
-			<version>0.0.1</version>
 		</dependency>
 	</dependencies>
 
@@ -124,59 +80,6 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
 			</plugin>
-
-			<plugin>
-				<groupId>com.gluonhq</groupId>
-				<artifactId>client-maven-plugin</artifactId>
-				<version>${client.plugin.version}</version>
-				<configuration>
-
-					<bundlesList>
-						<list>org.eclipse.persistence.exceptions.i18n.JAXBExceptionResource</list>
-						<list>org.eclipse.persistence.internal.localization.i18n.LoggingLocalizationResource</list>
-						<list>org.eclipse.persistence.internal.localization.i18n.EclipseLinkLocalizationResource</list>
-						<list>org.eclipse.persistence.exceptions.i18n.ValidationExceptionResource</list>
-						<list>org.eclipse.persistence.version</list>
-					</bundlesList>
-					<!--enableSWRendering>true</enableSWRendering -->
-					<!--javafxStaticSdkVersion>16-ea+gvm31</javafxStaticSdkVersion -->
-					<mainClass>${mainClassName}</mainClass>
-					<nativeImageArgs>
-						<arg>-Duser.language=de</arg>
-						<arg>-Duser.country=DE</arg>
-						<arg>--allow-incomplete-classpath</arg>
-						<arg>--report-unsupported-elements-at-runtime</arg>
-						<arg>-H:IncludeResourceBundles=org.eclipse.persistence.version</arg>
-					</nativeImageArgs>
-				</configuration>
-			</plugin>
-			<!--plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<version>3.1.1</version>
-
-				<configuration>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
-					<archive>
-						<manifest>
-							<mainClass>${mainClassName}</mainClass>
-						</manifest>
-					</archive>
-				</configuration>
-
-				<executions>
-					<execution>
-						<id>make-assembly</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-					</execution>
-				</executions>
-
-			</plugin-->
 		</plugins>
 
 	</build>

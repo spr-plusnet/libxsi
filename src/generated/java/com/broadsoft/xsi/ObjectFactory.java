@@ -188,7 +188,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link com.broadsoft.xsi.CallCenters }
+     * Create an instance of {@link com.broadsoft.xsi.api.CallCenters }
      * 
      */
     public com.broadsoft.xsi.CallCenters createCallCenters() {
@@ -852,7 +852,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link com.broadsoft.xsi.CallCenter }
+     * Create an instance of {@link com.broadsoft.xsi.api.CallCenter }
      * 
      */
     public com.broadsoft.xsi.CallCenter createCallCenter() {

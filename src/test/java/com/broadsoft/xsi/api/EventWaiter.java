@@ -1,4 +1,4 @@
-package com.broadsoft.xsi;
+package com.broadsoft.xsi.api;
 
 import java.io.IOException;
 import java.util.Properties;
