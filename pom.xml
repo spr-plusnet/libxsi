@@ -19,6 +19,8 @@
 		<developer>
 			<name>Stefan Prelle</name>
 			<email>spr@plusnet.de</email>
+			<organization>Plusnet GmbH</organization>
+			<organizationUrl>https://www.plusnet.de/</organizationUrl>
 			<timezone>GMT+1</timezone>
 			<roles>
 				<role>Lead developer</role>
@@ -44,21 +46,6 @@
 			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
-
-	<repositories>
-		<repository>
-			<id>Gluon</id>
-			<url>https://nexus.gluonhq.com/nexus/content/repositories/releases</url>
-		</repository>
-		<repository>
-			<id>jfrog</id>
-			<url>https://rpgframework.jfrog.io/artifactory/RPGFramework</url>
-		</repository>
-		<repository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/groups/public</url>
-		</repository>
-	</repositories>
 
 	<build>
 		<plugins>
