@@ -28,6 +28,8 @@ public class CallLogService {
 	/**
 	 */
 	public CallLogService(XSIConnection con) {
+		if (con==null)
+			throw new NullPointerException();
 		this.con = con;
 		actions = new ArrayList<>();
 	}
