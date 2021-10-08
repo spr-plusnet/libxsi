@@ -4,6 +4,7 @@
     {"pattern":"\\Qorg/eclipse/persistence/version.properties\\E"}
   ]},
   "bundles":[
+    {"name":"org.glassfish.jaxb.runtime.v2.model.impl.Messages"}, 
     {"name":"org.eclipse.persistence.internal.localization.i18n.JAXBLocalizationResource"}, 
     {"name":"org.eclipse.persistence.internal.localization.i18n.EclipseLinkLocalizationResource"},
     {"name":"org.eclipse.persistence.internal.localization.i18n.ToStringLocalizationResource"}
