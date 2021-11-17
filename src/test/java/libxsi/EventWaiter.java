@@ -1,6 +1,8 @@
 package libxsi;
 
 import java.io.IOException;
+import java.net.Authenticator;
+import java.net.PasswordAuthentication;
 import java.util.Properties;
 
 import com.broadsoft.xsi.CallReceivedEvent;
@@ -17,13 +19,18 @@ public class EventWaiter {
 	//-----------------------------------------------------------------
 	public static void main(String[] args) throws IOException {
 		Properties config = new Properties();
-		config.put(XSIDriver.PROP_XSI_SERVER, "web-b.bmcag.com");
+		config.put(XSIDriver.PROP_XSI_SERVER, "web5.bmcag.com");
 //		config.put(XSIDriver.PROP_XSI_SERVER, "web3.bmcag.com");
 //		config.put(XSIDriver.PROP_XSI_USER, "022149937093@qsc.de");
-		config.put(XSIDriver.PROP_XSI_USER, "040668610764@qsc.de");
-		config.put(XSIDriver.PROP_XSI_PASS, "<yourpass>");
-		config.put(XSIDriver.PROP_XSI_USESSL, "true");
+		config.put(XSIDriver.PROP_XSI_USER, "04212025933@qsc.de");
+		config.put(XSIDriver.PROP_XSI_PASS, "tamina99ke");
+		config.put(XSIDriver.PROP_XSI_USESSL, "false");
 		
+		Authenticator.setDefault(new Authenticator(){
+		protected PasswordAuthentication getPasswordAuthentication() {
+			return new PasswordAuthentication ("04212025933@qsc.de", "tamina99ke".toCharArray());
+		}
+	});
 		XSIConnection xsi = XSIDriver.open(config);
 		EventChannel channel = xsi.createEventChannel("myChannel",new EventChannelListener() {
 			

@@ -447,7 +447,7 @@ public class XSIConnectionImpl implements XSIConnection {
 		} catch (MalformedURLException e) {
 			logger.error("Malformed URL - url was "+subURL);
 		} catch (IOException e) {
-			logger.error("Exception making GET request: "+e);
+			logger.error("Exception making POST request: "+e);
 			throw e;
 		} 
 

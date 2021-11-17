@@ -10,6 +10,7 @@ package com.broadsoft.xsi.api.service;
 public enum ServiceType {
 
 	BLF,
+	CALL_CENTER,
 	CALL_FORWARDING_ALWAYS,
 	CALL_LOGS,
 	CALL_RECORDING,
