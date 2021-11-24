@@ -1,5 +1,9 @@
 [
 {
+  "name":"com.sun.xml.bind.v2.ContextFactory",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
   "name":"com.broadsoft.xsi.ACDAgentJoinData",
   "allDeclaredFields":true,
   "allDeclaredMethods":true,

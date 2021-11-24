@@ -142,13 +142,30 @@ public class DirectoryService {
 //	@Override
 	public List<CallCenterAgents.CallCenter> getCallCenterAgents() throws XSIException {
 		String subURL = String.format("user/%s/directories/Agents?", con.getUser());
-//		List<String> params = new ArrayList<String>();
-//		try {
-//			params.add("user="+URLEncoder.encode("Supervisor", "UTF-8"));
-//		} catch (UnsupportedEncodingException e) {
-//			logger.error(e.toString());
-//		}
-//		subURL += String.join("&", params);
+			
+		try {
+			CallCenterAgents list = (CallCenterAgents) con.actionGETQuery(subURL);
+			return list.getCallCenter();
+		} catch (IOException e) {
+			logger.error("Failed executing "+subURL,e);
+			throw new XSIException("Failed obtaining CallCenter list: "+e, 0);
+		}
+	}
+
+	//-------------------------------------------------------------------
+	/**
+	 * @see com.broadsoft.xsi.api.service.Service#get()
+	 */
+//	@Override
+	public List<CallCenterAgents.CallCenter> getCallCenterAgents(String callCenter) throws XSIException {
+		String subURL = String.format("user/%s/directories/Agents?", con.getUser());
+		List<String> params = new ArrayList<String>();
+		try {
+			params.add("callcenter="+URLEncoder.encode(callCenter, "UTF-8"));
+		} catch (UnsupportedEncodingException e) {
+			logger.error(e.toString());
+		}
+		subURL += String.join("&", params);
 			
 		try {
 			CallCenterAgents list = (CallCenterAgents) con.actionGETQuery(subURL);
