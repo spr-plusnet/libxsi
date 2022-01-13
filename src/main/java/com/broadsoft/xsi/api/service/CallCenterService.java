@@ -1,11 +1,10 @@
 package com.broadsoft.xsi.api.service;
 
 import java.io.IOException;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import com.broadsoft.xsi.CallCenter;
 import com.broadsoft.xsi.api.XSIConnection;
@@ -19,7 +18,7 @@ import de.plusnet.centraflex.broadsoft.XSIException;
  */
 public class CallCenterService implements Service<CallCenter> {
 
-	private final static Logger logger = LogManager.getLogger("xsi.service.callcenter");
+	private final static Logger logger = System.getLogger("xsi.service.callcenter");
 
 	private XSIConnection con;
 	
@@ -46,7 +45,7 @@ public class CallCenterService implements Service<CallCenter> {
 		try {
 			return (CallCenter)con.actionGETQuery(String.format("services/CallCenter"));
 		} catch (IOException e) {
-			logger.error("Failed obtaining CallCenter options",e);
+			logger.log(Level.ERROR, "Failed obtaining CallCenter options",e);
 			throw new XSIException("Failed obtaining CallCenter options: "+e, 0);
 		}
 		

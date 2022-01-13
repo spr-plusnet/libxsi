@@ -1,12 +1,8 @@
-/**
- * 
- */
 package com.broadsoft.xsi.api.action;
 
 import java.io.IOException;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 
 import com.broadsoft.xsi.api.XSIConnection;
 
@@ -18,7 +14,7 @@ import de.plusnet.centraflex.broadsoft.XSIException;
  */
 public class StopRecordingAction implements CallControlAction {
 
-	private final static Logger logger = LogManager.getLogger("xsi.service.callrecording");
+	private final static Logger logger = System.getLogger("xsi.service.callrecording");
 
 	private XSIConnection con;
 
@@ -49,7 +45,7 @@ public class StopRecordingAction implements CallControlAction {
 		try {
 			con.actionPUTQuery(subURL, null);
 		} catch (IOException e) {
-			logger.error("Failed executing action",e);
+			logger.log(Level.ERROR, "Failed executing action",e);
 			throw new XSIException("Failed executing service "+e, 0);
 		}
 	}

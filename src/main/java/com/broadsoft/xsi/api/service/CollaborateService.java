@@ -1,11 +1,10 @@
 package com.broadsoft.xsi.api.service;
 
 import java.io.IOException;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import com.broadsoft.xsi.CollaborateBridgeInfo;
 import com.broadsoft.xsi.api.XSIConnection;
@@ -19,7 +18,7 @@ import de.plusnet.centraflex.broadsoft.XSIException;
  */
 public class CollaborateService implements Service<CollaborateBridgeInfo> {
 
-	private final static Logger logger = LogManager.getLogger("xsi.service.collaborate");
+	private final static Logger logger = System.getLogger("xsi.service.collaborate");
 
 	private XSIConnection con;
 	
@@ -46,7 +45,7 @@ public class CollaborateService implements Service<CollaborateBridgeInfo> {
 		try {
 			return (CollaborateBridgeInfo)con.actionGETQuery(String.format("services/collaborate"));
 		} catch (IOException e) {
-			logger.error("Failed obtaining collaboration options",e);
+			logger.log(Level.ERROR, "Failed obtaining collaboration options",e);
 			throw new XSIException("Failed obtaining collaboration options: "+e, 0);
 		}
 		

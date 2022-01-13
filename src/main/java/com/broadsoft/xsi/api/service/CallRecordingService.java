@@ -4,11 +4,10 @@
 package com.broadsoft.xsi.api.service;
 
 import java.io.IOException;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import com.broadsoft.xsi.CallRecording;
 import com.broadsoft.xsi.api.XSIConnection;
@@ -24,7 +23,7 @@ import de.plusnet.centraflex.broadsoft.XSIException;
  */
 public class CallRecordingService implements WritableService<CallRecording> {
 
-	private final static Logger logger = LogManager.getLogger("xsi.service.callrecording");
+	private final static Logger logger = System.getLogger("xsi.service.callrecording");
 
 	private XSIConnection con;
 	private List<Action> actions;
@@ -59,7 +58,7 @@ public class CallRecordingService implements WritableService<CallRecording> {
 		try {
 			return (CallRecording) con.actionGETQuery(subURL);
 		} catch (IOException e) {
-			logger.error("Failed executing service "+getType(),e);
+			logger.log(Level.ERROR, "Failed executing service "+getType(),e);
 			throw new XSIException("Failed executing service "+getType()+": "+e, 0);
 		}
 	}
@@ -73,7 +72,7 @@ public class CallRecordingService implements WritableService<CallRecording> {
 		try {
 			con.actionPUTQuery("user/"+con.getUser()+"/services/CallRecording", value);
 		} catch (IOException e) {
-			logger.error("Failed executing service "+getType(),e);
+			logger.log(Level.ERROR, "Failed executing service "+getType(),e);
 			throw new XSIException("Failed executing service "+getType()+": "+e, 0);
 		}
 	}

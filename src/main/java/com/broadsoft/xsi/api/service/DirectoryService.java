@@ -2,12 +2,11 @@ package com.broadsoft.xsi.api.service;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import com.broadsoft.xsi.CallCenterAgents;
 import com.broadsoft.xsi.CallCenters;
@@ -24,7 +23,7 @@ import de.plusnet.centraflex.broadsoft.XSIException;
  */
 public class DirectoryService {
 
-	private final static Logger logger = LogManager.getLogger("xsi.service.enterprise");
+	private final static Logger logger = System.getLogger("xsi.service.enterprise");
 
 	private XSIConnection con;
 
@@ -48,7 +47,7 @@ public class DirectoryService {
 			params.add("lastName="+URLEncoder.encode(key, "UTF-8"));
 			params.add("searchCriteriaModeOr=True");
 		} catch (UnsupportedEncodingException e) {
-			logger.error(e.toString());
+			logger.log(Level.ERROR, e.toString());
 		}
 		subURL += String.join("&", params);
 			
@@ -56,7 +55,7 @@ public class DirectoryService {
 			Enterprise logs = (Enterprise) con.actionGETQuery(subURL);
 			return logs.getEnterpriseDirectory().getDirectoryDetails();
 		} catch (IOException e) {
-			logger.error("Failed executing service EnterpriseCommon",e);
+			logger.log(Level.ERROR, "Failed executing service EnterpriseCommon",e);
 			throw new XSIException("Failed executing service EnterpriseCommon: "+e, 0);
 		}
 	}
@@ -72,7 +71,7 @@ public class DirectoryService {
 		try {
 			params.add("impId="+URLEncoder.encode(key, "UTF-8"));
 		} catch (UnsupportedEncodingException e) {
-			logger.error(e.toString());
+			logger.log(Level.ERROR, e.toString());
 		}
 		subURL += String.join("&", params);
 			
@@ -80,7 +79,7 @@ public class DirectoryService {
 			Enterprise logs = (Enterprise) con.actionGETQuery(subURL);
 			return logs.getEnterpriseDirectory().getDirectoryDetails();
 		} catch (IOException e) {
-			logger.error("Failed executing service EnterpriseCommon",e);
+			logger.log(Level.ERROR, "Failed executing service EnterpriseCommon",e);
 			throw new XSIException("Failed executing service EnterpriseCommon: "+e, 0);
 		}
 	}
@@ -98,7 +97,7 @@ public class DirectoryService {
 //			params.add("lastName="+URLEncoder.encode(key, "UTF-8"));
 //			params.add("searchCriteriaModeOr=True");
 //		} catch (UnsupportedEncodingException e) {
-//			logger.error(e.toString());
+//			logger.log(Level.ERROR, e.toString());
 //		}
 //		subURL += String.join("&", params);
 //			
@@ -106,7 +105,7 @@ public class DirectoryService {
 //			Enterprise logs = (Enterprise) con.actionGETQuery(subURL);
 //			return logs.getEnterpriseDirectory().getDirectoryDetails();
 //		} catch (IOException e) {
-//			logger.error("Failed executing service EnterpriseCommon",e);
+//			logger.log(Level.ERROR, "Failed executing service EnterpriseCommon",e);
 //			throw new XSIException("Failed executing service EnterpriseCommon: "+e, 0);
 //		}
 //	}
@@ -122,7 +121,7 @@ public class DirectoryService {
 		try {
 			params.add("user="+URLEncoder.encode("Supervisor", "UTF-8"));
 		} catch (UnsupportedEncodingException e) {
-			logger.error(e.toString());
+			logger.log(Level.ERROR, e.toString());
 		}
 		subURL += String.join("&", params);
 			
@@ -130,7 +129,7 @@ public class DirectoryService {
 			CallCenters list = (CallCenters) con.actionGETQuery(subURL);
 			return list.getCallCenter();
 		} catch (IOException e) {
-			logger.error("Failed executing "+subURL,e);
+			logger.log(Level.ERROR, "Failed executing "+subURL,e);
 			throw new XSIException("Failed obtaining CallCenter list: "+e, 0);
 		}
 	}
@@ -147,7 +146,7 @@ public class DirectoryService {
 			CallCenterAgents list = (CallCenterAgents) con.actionGETQuery(subURL);
 			return list.getCallCenter();
 		} catch (IOException e) {
-			logger.error("Failed executing "+subURL,e);
+			logger.log(Level.ERROR, "Failed executing "+subURL,e);
 			throw new XSIException("Failed obtaining CallCenter list: "+e, 0);
 		}
 	}
@@ -163,7 +162,7 @@ public class DirectoryService {
 		try {
 			params.add("callcenter="+URLEncoder.encode(callCenter, "UTF-8"));
 		} catch (UnsupportedEncodingException e) {
-			logger.error(e.toString());
+			logger.log(Level.ERROR, e.toString());
 		}
 		subURL += String.join("&", params);
 			
@@ -171,7 +170,7 @@ public class DirectoryService {
 			CallCenterAgents list = (CallCenterAgents) con.actionGETQuery(subURL);
 			return list.getCallCenter();
 		} catch (IOException e) {
-			logger.error("Failed executing "+subURL,e);
+			logger.log(Level.ERROR, "Failed executing "+subURL,e);
 			throw new XSIException("Failed obtaining CallCenter list: "+e, 0);
 		}
 	}

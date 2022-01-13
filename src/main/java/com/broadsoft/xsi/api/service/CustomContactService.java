@@ -2,12 +2,11 @@ package com.broadsoft.xsi.api.service;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import com.broadsoft.xsi.CustomContact;
 import com.broadsoft.xsi.Directory;
@@ -27,7 +26,7 @@ import de.plusnet.centraflex.broadsoft.XSIException;
  */
 public class CustomContactService {
 
-	private final static Logger logger = LogManager.getLogger("xsi.service.contact");
+	private final static Logger logger = System.getLogger("xsi.service.contact");
 
 	private XSIConnection con;
 	private List<Action> actions;
@@ -59,7 +58,7 @@ public class CustomContactService {
 				ret.add(detail.getName());
 			}
 		} catch (IOException e) {
-			logger.error("Failed executing service "+getType(),e);
+			logger.log(Level.ERROR, "Failed executing service "+getType(),e);
 			throw new XSIException("Failed executing service "+getType()+": "+e, 0);
 		}
 		return ret;
@@ -73,7 +72,7 @@ public class CustomContactService {
 			Directory logs = (Directory) con.actionGETQuery(subURL);
 			
 		} catch (IOException e) {
-			logger.error("Failed executing service "+getType(),e);
+			logger.log(Level.ERROR, "Failed executing service "+getType(),e);
 			throw new XSIException("Failed executing service "+getType()+": "+e, 0);
 		}
 		return ret;
@@ -87,7 +86,7 @@ public class CustomContactService {
 			Personal data = (Personal) con.actionGETQuery(subURL);
 			ret.addAll(data.getEntry());
 		} catch (IOException e) {
-			logger.error("Failed executing service "+getType(),e);
+			logger.log(Level.ERROR, "Failed executing service "+getType(),e);
 			throw new XSIException("Failed executing service "+getType()+": "+e, 0);
 		}
 		return ret;
@@ -105,7 +104,7 @@ public class CustomContactService {
 			if (name!=null && !name.isBlank()) params.add("name="+URLEncoder.encode(name, "UTF-8"));
 			if (number!=null && !number.isBlank()) params.add("number="+URLEncoder.encode(number, "UTF-8"));
 		} catch (UnsupportedEncodingException e) {
-			logger.error(e.toString());
+			logger.log(Level.ERROR, e.toString());
 		}
 		if (results>0) params.add("results="+results);
 		subURL += String.join("&", params);
@@ -114,7 +113,7 @@ public class CustomContactService {
 			EnterpriseCommon logs = (EnterpriseCommon) con.actionGETQuery(subURL);
 			return logs.getCommonPhoneEntry();
 		} catch (IOException e) {
-			logger.error("Failed executing service EnterpriseCommon",e);
+			logger.log(Level.ERROR, "Failed executing service EnterpriseCommon",e);
 			throw new XSIException("Failed executing service EnterpriseCommon: "+e, 0);
 		}
 	}
@@ -131,7 +130,7 @@ public class CustomContactService {
 			if (name!=null && !name.isBlank()) params.add("name="+URLEncoder.encode(name, "UTF-8"));
 			if (number!=null && !number.isBlank()) params.add("number="+URLEncoder.encode(number, "UTF-8"));
 		} catch (UnsupportedEncodingException e) {
-			logger.error(e.toString());
+			logger.log(Level.ERROR, e.toString());
 		}
 		if (results>0) params.add("results="+results);
 		if (params.size()>0) {
@@ -143,7 +142,7 @@ public class CustomContactService {
 			GroupCommon logs = (GroupCommon) con.actionGETQuery(subURL);
 			return logs.getCommonPhoneEntry();
 		} catch (IOException e) {
-			logger.error("Failed executing service GroupCommon",e);
+			logger.log(Level.ERROR, "Failed executing service GroupCommon",e);
 			throw new XSIException("Failed executing service GroupCommon: "+e, 0);
 		}
 	}

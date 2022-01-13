@@ -1,11 +1,10 @@
 package com.broadsoft.xsi.api.service;
 
 import java.io.IOException;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import com.broadsoft.xsi.Call;
 import com.broadsoft.xsi.CallInfo;
@@ -21,7 +20,7 @@ import de.plusnet.centraflex.broadsoft.XSIException;
  */
 public class CallControlService {
 
-	private final static Logger logger = LogManager.getLogger("xsi.service.callctrl");
+	private final static Logger logger = System.getLogger("xsi.service.callctrl");
 
 	private XSIConnection con;
 
@@ -47,7 +46,7 @@ public class CallControlService {
 			}
 			
 		} catch (IOException e) {
-			logger.error("Failed to get list of calls",e);
+			logger.log(Level.ERROR, "Failed to get list of calls",e);
 		}
 		
 		
@@ -65,10 +64,10 @@ public class CallControlService {
 			subURL+="&locationAddress="+locAddress;
 		try {
 			CallStartInfo info = (CallStartInfo) con.actionPOSTQuery(subURL, new byte[0]);
-			logger.warn("CallStartInfo  = "+info);
+			logger.log(Level.WARNING, "CallStartInfo  = "+info);
 			return info;
 		} catch (IOException e) {
-			logger.error("Failed executing service ",e);
+			logger.log(Level.ERROR, "Failed executing service ",e);
 			throw new XSIException("Failed executing service : "+e, 0);
 		}
 	}
@@ -80,7 +79,7 @@ public class CallControlService {
 			Call info = (Call) con.actionGETQuery(subURL);
 			return info;
 		} catch (IOException e) {
-			logger.error("Failed executing service ",e);
+			logger.log(Level.ERROR, "Failed executing service ",e);
 			throw new XSIException("Failed executing service : "+e, 0);
 		}
 	}
@@ -91,7 +90,7 @@ public class CallControlService {
 		try {
 			con.actionPUTQuery(subURL, new byte[0]);
 		} catch (IOException e) {
-			logger.error("Failed executing service ",e);
+			logger.log(Level.ERROR, "Failed executing service ",e);
 			throw new XSIException("Failed executing service : "+e, 0);
 		}
 	}
@@ -102,31 +101,31 @@ public class CallControlService {
 		try {
 			con.actionDELETEQuery(subURL, new byte[0]);
 		} catch (IOException e) {
-			logger.error("Failed executing service ",e);
+			logger.log(Level.ERROR, "Failed executing service ",e);
 			throw new XSIException("Failed executing service : "+e, 0);
 		}
 	}
 
 	//-------------------------------------------------------------------
 	public void holdCall(String callID) throws XSIException {
-		logger.debug("holdCall");
+		logger.log(Level.DEBUG, "holdCall");
 		String subURL = String.format("user/%s/calls/%s/Hold", con.getUser(), callID);
 		try {
 			con.actionPUTQuery(subURL, new byte[0]);
 		} catch (IOException e) {
-			logger.error("Failed executing service ",e);
+			logger.log(Level.ERROR, "Failed executing service ",e);
 			throw new XSIException("Failed executing service : "+e, 0);
 		}
 	}
 
 	//-------------------------------------------------------------------
 	public void resumeCall(String callID) throws XSIException {
-		logger.debug("resumeCall");
+		logger.log(Level.DEBUG, "resumeCall");
 		String subURL = String.format("user/%s/calls/%s/Reconnect", con.getUser(), callID);
 		try {
 			con.actionPUTQuery(subURL, new byte[0]);
 		} catch (IOException e) {
-			logger.error("Failed executing service ",e);
+			logger.log(Level.ERROR, "Failed executing service ",e);
 			throw new XSIException("Failed executing service : "+e, 0);
 		}
 	}

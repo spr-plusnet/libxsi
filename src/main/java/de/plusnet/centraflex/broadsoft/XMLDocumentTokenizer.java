@@ -1,18 +1,15 @@
-/**
- * 
- */
 package de.plusnet.centraflex.broadsoft;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.stream.XMLStreamException;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.xml.sax.SAXException;
 
 /**
@@ -21,7 +18,7 @@ import org.xml.sax.SAXException;
  */
 public class XMLDocumentTokenizer {
 	
-	private final static Logger logger = LogManager.getLogger("connector.xsi.xml");
+	private final static Logger logger = System.getLogger("connector.xsi.xml");
 	
 	enum ParseMode {
 		IDLE,
@@ -131,7 +128,7 @@ public class XMLDocumentTokenizer {
 					}
 					break;
 				default:
-					logger.warn("TODO: "+mode+" reading '"+ch+"' while having "+tmp+"  current="+current);
+					logger.log(Level.WARNING, "TODO: "+mode+" reading '"+ch+"' while having "+tmp+"  current="+current);
 					System.exit(0);
 				}
 				break;
@@ -142,7 +139,7 @@ public class XMLDocumentTokenizer {
 				case PROCESSING_INSTRUCTION:
 					if (ch=='>') {
 						// End of processing instruction
-						logger.trace("Found PI "+tmp);
+						logger.log(Level.TRACE, "Found PI "+tmp);
 						buf.append(tmp.toString());
 						tmp = new StringBuffer();
 						mode = ParseMode.IDLE;
@@ -152,7 +149,7 @@ public class XMLDocumentTokenizer {
 				case START_ELEMENT:
 					if (ch=='>') {
 						// End of start element
-						logger.trace("Found START "+tmp);
+						logger.log(Level.TRACE, "Found START "+tmp);
 						buf.append(tmp.toString());
 						tmp = new StringBuffer();
 						mode = ParseMode.IDLE;
@@ -163,7 +160,7 @@ public class XMLDocumentTokenizer {
 				case END_ELEMENT:
 					if (ch=='>') {
 						// End of end element
-						logger.trace("Found END "+tmp);
+						logger.log(Level.TRACE, "Found END "+tmp);
 						buf.append(tmp.toString());
 						tmp = new StringBuffer();
 						mode = ParseMode.IDLE;
@@ -177,7 +174,7 @@ public class XMLDocumentTokenizer {
 				case CDATA:
 					if (ch=='>') {
 						// End of CDATA
-						logger.trace("Found CDATA "+tmp);
+						logger.log(Level.TRACE, "Found CDATA "+tmp);
 						buf.append(tmp.toString());
 						tmp = new StringBuffer();
 						mode = ParseMode.IDLE;
@@ -187,7 +184,7 @@ public class XMLDocumentTokenizer {
 				case COMMENT:
 					if (ch=='>') {
 						// End of CDATA
-						logger.trace("Found COMMENT "+tmp);
+						logger.log(Level.TRACE, "Found COMMENT "+tmp);
 						buf.append(tmp.toString());
 						tmp = new StringBuffer();
 						mode = ParseMode.IDLE;
@@ -196,7 +193,7 @@ public class XMLDocumentTokenizer {
 					break;
 					
 				default:
-					logger.warn("TODO: "+mode+" reading '"+ch+"' while having "+tmp+"  current="+current);
+					logger.log(Level.WARNING, "TODO: "+mode+" reading '"+ch+"' while having "+tmp+"  current="+current);
 					System.exit(0);
 				}
 				break;
@@ -216,7 +213,7 @@ public class XMLDocumentTokenizer {
 				break;
 
 			default:
-				logger.warn("TODO: "+mode+" reading '"+ch+"' while having "+tmp+"  current="+current);
+				logger.log(Level.WARNING, "TODO: "+mode+" reading '"+ch+"' while having "+tmp+"  current="+current);
 				System.exit(0);
 			}
 

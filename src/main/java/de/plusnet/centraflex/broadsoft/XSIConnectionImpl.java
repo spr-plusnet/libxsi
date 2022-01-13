@@ -1,6 +1,3 @@
-/**
- * 
- */
 package de.plusnet.centraflex.broadsoft;
 
 import java.io.BufferedReader;
@@ -10,6 +7,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 import java.net.Authenticator;
 import java.net.CookieHandler;
 import java.net.CookieManager;
@@ -28,9 +27,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Properties;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import com.broadsoft.xsi.api.EventChannel;
 import com.broadsoft.xsi.api.EventChannelListener;
@@ -54,7 +50,7 @@ import jakarta.xml.bind.JAXBException;
  */
 public class XSIConnectionImpl implements XSIConnection {
 
-	private final static Logger logger = LogManager.getLogger("connector.xsi");
+	private final static Logger logger = System.getLogger("connector.xsi");
 	
 	private String hostport;
 	private String user;
@@ -108,7 +104,7 @@ public class XSIConnectionImpl implements XSIConnection {
 		services.put(ServiceType.REMOTE_OFFICE, new RemoteOfficeService(this));
 		services.put(ServiceType.SERVICES, new ServicesService(this));
 		
-		logger.debug("XSIConnection("+config+") called");
+		logger.log(Level.DEBUG, "XSIConnection("+config+") called");
 	}
 
 	//-----------------------------------------------------------------
@@ -153,7 +149,7 @@ public class XSIConnectionImpl implements XSIConnection {
 
 		try {
 			URL url = new URL(String.format("http"+(useSSL?"s":"")+"://%s/com.broadsoft.xsi-actions/v2.0/%s", hostport, subURL));
-			logger.info("GET "+url);
+			logger.log(Level.INFO, "GET "+url);
 
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
 			con.setRequestProperty("Charset", encoding);
@@ -168,11 +164,11 @@ public class XSIConnectionImpl implements XSIConnection {
 			});
 			con.setRequestMethod("GET"); 
 
-			logger.debug("Connected: "+con.getResponseCode()+" "+con.getResponseMessage());
+			logger.log(Level.DEBUG, "Connected: "+con.getResponseCode()+" "+con.getResponseMessage());
 			switch (con.getResponseCode()) {
 			case 200:
 				InputStream in = con.getInputStream();
-				logger.debug("Currently "+in.available()+" bytes available");
+				logger.log(Level.DEBUG, "Currently "+in.available()+" bytes available");
 				
 				/*
 				 * Sometimes data returns with a content length header,
@@ -194,12 +190,12 @@ public class XSIConnectionImpl implements XSIConnection {
 					//Read bytes from the channel
 					numRead = channel.read(byteBuffer);
 					byteBuffer.rewind();
-					logger.trace(" Read "+numRead);
+					logger.log(Level.TRACE, " Read "+numRead);
 					if (numRead > 0) {
 						readTotal += numRead;
 						byte[] dataBytes = byteBuffer.array();
 						baos.write(dataBytes, 0, numRead);
-						logger.debug("** "+new String(dataBytes,0, numRead));
+						logger.log(Level.DEBUG, "** "+new String(dataBytes,0, numRead));
 					}
 //					try { Thread.sleep(20); } catch (Exception e) {}
 					byteBuffer.clear();
@@ -212,17 +208,17 @@ public class XSIConnectionImpl implements XSIConnection {
 				
 				// Copy to string
 
-				logger.debug("Read "+readTotal+" bytes as "+rcvEncoding+" (probably "+baos.size()+")");
+				logger.log(Level.DEBUG, "Read "+readTotal+" bytes as "+rcvEncoding+" (probably "+baos.size()+")");
 				byte[] mess = new byte[readTotal];
 				System.arraycopy(baos.toByteArray(), 0, mess, 0, readTotal);
 				String message = new String(mess, rcvEncoding);
-				logger.debug(message);
+				logger.log(Level.DEBUG, message);
 
 				try {
 					return XSIDriver.unmarshall(message);
 				} catch (JAXBException e) {
-					logger.error("Error unmarshalling server response: ",e);
-					logger.error("Message was:\n"+message);
+					logger.log(Level.ERROR, "Error unmarshalling server response: ",e);
+					logger.log(Level.ERROR, "Message was:\n"+message);
 					con.disconnect();
 					System.exit(1);
 					throw new IOException("Error unmarshalling server response: "+e);
@@ -232,14 +228,14 @@ public class XSIConnectionImpl implements XSIConnection {
 			case 403: // Forbidden
 				throw new OperationNotAllowedException("Operation not allowed. Server replied: "+con.getResponseMessage());
 			default:
-				logger.warn("Unexpected response contacting Broadsoft server: "+con.getResponseCode()+" "+con.getResponseMessage()+"\nRequest was: GET "+url);
+				logger.log(Level.WARNING, "Unexpected response contacting Broadsoft server: "+con.getResponseCode()+" "+con.getResponseMessage()+"\nRequest was: GET "+url);
 			}
 
 			con.disconnect();
 		} catch (MalformedURLException e) {
-			logger.error("Malformed URL - url was "+subURL);
+			logger.log(Level.ERROR, "Malformed URL - url was "+subURL);
 		} catch (IOException e) {
-			logger.error("Exception making GET request: "+e,e);
+			logger.log(Level.ERROR, "Exception making GET request: "+e,e);
 			throw e;
 		} 
 
@@ -255,7 +251,7 @@ public class XSIConnectionImpl implements XSIConnection {
 
 		try {
 			URL url = new URL(String.format("http"+(useSSL?"s":"")+"://%s/com.broadsoft.xsi-actions/v2.0/%s", hostport, subURL));
-			logger.debug("PUT "+url+"\n"+(new String(data)));
+			logger.log(Level.DEBUG, "PUT "+url+"\n"+(new String(data)));
 
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
 			con.setRequestProperty("Charset", encoding);
@@ -283,7 +279,7 @@ public class XSIConnectionImpl implements XSIConnection {
 			
 			con.connect();
 
-			logger.debug("Connected: "+con.getResponseCode()+" "+con.getResponseMessage());
+			logger.log(Level.DEBUG, "Connected: "+con.getResponseCode()+" "+con.getResponseMessage());
 			switch (con.getResponseCode()) {
 			case 200:
 			case 201:
@@ -292,12 +288,12 @@ public class XSIConnectionImpl implements XSIConnection {
 				byte[] mess = new byte[con.getInputStream().available()];
 				con.getInputStream().read(mess);
 				String message = new String(mess);
-				logger.debug(message);
+				logger.log(Level.DEBUG, message);
 
 				try {
 					return XSIDriver.unmarshall(message);
 				} catch (JAXBException e) {
-					logger.error("Error unmarshalling server response: "+e);
+					logger.log(Level.ERROR, "Error unmarshalling server response: "+e);
 				}
 				break;
 			case 401:
@@ -305,16 +301,16 @@ public class XSIConnectionImpl implements XSIConnection {
 			case 403: // Forbidden
 				throw new OperationNotAllowedException("Operation not allowed. Server replied: "+con.getResponseMessage());
 			default:
-				logger.warn("Unexpected response contacting Broadsoft server: "+con.getResponseCode()+" "+con.getResponseMessage());
-				logger.warn("Command was PUT "+url);
+				logger.log(Level.WARNING, "Unexpected response contacting Broadsoft server: "+con.getResponseCode()+" "+con.getResponseMessage());
+				logger.log(Level.WARNING, "Command was PUT "+url);
 				throw new IOException("Unexpected response contacting Broadsoft server: "+con.getResponseCode()+" "+con.getResponseMessage());
 			}
 
 			con.disconnect();
 		} catch (MalformedURLException e) {
-			logger.error("Malformed URL - url was "+subURL);
+			logger.log(Level.ERROR, "Malformed URL - url was "+subURL);
 		} catch (IOException e) {
-			logger.error("Exception making GET request: "+e);
+			logger.log(Level.ERROR, "Exception making GET request: "+e);
 			throw e;
 		} 
 
@@ -357,7 +353,7 @@ public class XSIConnectionImpl implements XSIConnection {
 
 		try {
 			URL url = new URL(String.format("http"+(useSSL?"s":"")+"://%s/com.broadsoft.xsi-events/v2.0/%s", hostport, subURL));
-			logger.debug("POST "+url+"\n"+(new String(data)));
+			logger.log(Level.DEBUG, "POST "+url+"\n"+(new String(data)));
 
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
 			con.setRequestProperty("Charset", encoding);
@@ -384,13 +380,13 @@ public class XSIConnectionImpl implements XSIConnection {
 			
 			con.connect();
 
-			logger.debug("Connected: "+con.getResponseCode()+" "+con.getResponseMessage());
+			logger.log(Level.DEBUG, "Connected: "+con.getResponseCode()+" "+con.getResponseMessage());
 			if (con.getResponseCode()==HttpURLConnection.HTTP_MOVED_TEMP) {
-				logger.debug("Redirected to "+ con.getHeaderField("Location"));
+				logger.log(Level.DEBUG, "Redirected to "+ con.getHeaderField("Location"));
 				
 				out.close();
 				url = new URL(con.getHeaderField("Location"));
-				logger.debug("POST "+url+"\n"+(new String(data)));
+				logger.log(Level.DEBUG, "POST "+url+"\n"+(new String(data)));
 				
 				con = (HttpURLConnection) url.openConnection();
 				con.setRequestProperty("Charset", encoding);
@@ -422,16 +418,16 @@ public class XSIConnectionImpl implements XSIConnection {
 				byte[] mess = new byte[con.getInputStream().available()];
 //				con.getInputStream().read(mess);
 				String message = streamToString(con.getInputStream());
-				logger.debug("RCV: "+message);
+				logger.log(Level.DEBUG, "RCV: "+message);
 				if (message.isEmpty()) {
-					logger.warn("Empty response received");
+					logger.log(Level.WARNING, "Empty response received");
 					return null;
 				}
 
 				try {
 					return XSIDriver.unmarshall(message);
 				} catch (JAXBException e) {
-					logger.error("Error unmarshalling server response: "+e);
+					logger.log(Level.ERROR, "Error unmarshalling server response: "+e);
 				}
 				break;
 			case 401:
@@ -439,15 +435,15 @@ public class XSIConnectionImpl implements XSIConnection {
 			case 403: // Forbidden
 				throw new OperationNotAllowedException("Operation not allowed. Server replied: "+con.getResponseMessage());
 			default:
-				logger.warn("Unexpected response contacting Broadsoft server: "+con.getResponseCode()+" "+con.getResponseMessage());
+				logger.log(Level.WARNING, "Unexpected response contacting Broadsoft server: "+con.getResponseCode()+" "+con.getResponseMessage());
 				throw new IOException("Unexpected response contacting Broadsoft server: "+con.getResponseCode()+" "+con.getResponseMessage());
 			}
 
 			con.disconnect();
 		} catch (MalformedURLException e) {
-			logger.error("Malformed URL - url was "+subURL);
+			logger.log(Level.ERROR, "Malformed URL - url was "+subURL);
 		} catch (IOException e) {
-			logger.error("Exception making POST request: "+e);
+			logger.log(Level.ERROR, "Exception making POST request: "+e);
 			throw e;
 		} 
 
@@ -481,8 +477,8 @@ public class XSIConnectionImpl implements XSIConnection {
 
 		try {
 			URL url = new URL(String.format("http://%s/com.broadsoft.xsi-actions/v2.0/%s", hostport, subURL));
-			logger.info("Query "+url+"\n"+(new String(data)));
-			logger.debug("POST "+url);
+			logger.log(Level.INFO, "Query "+url+"\n"+(new String(data)));
+			logger.log(Level.DEBUG, "POST "+url);
 
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
 			con.setRequestProperty("Charset", encoding);
@@ -509,19 +505,19 @@ public class XSIConnectionImpl implements XSIConnection {
 			
 			con.connect();
 
-			logger.debug("Connected: "+con.getResponseCode()+" "+con.getResponseMessage());
+			logger.log(Level.DEBUG, "Connected: "+con.getResponseCode()+" "+con.getResponseMessage());
 			switch (con.getResponseCode()) {
 			case 200:
 			case 201:
 				byte[] mess = new byte[con.getInputStream().available()];
 				con.getInputStream().read(mess);
 				String message = new String(mess);
-				logger.debug(message);
+				logger.log(Level.DEBUG, message);
 
 				try {
 					return XSIDriver.unmarshall(message);
 				} catch (JAXBException e) {
-					logger.error("Error unmarshalling server response: "+e);
+					logger.log(Level.ERROR, "Error unmarshalling server response: "+e);
 				}
 				break;
 			case 401:
@@ -529,15 +525,15 @@ public class XSIConnectionImpl implements XSIConnection {
 			case 403: // Forbidden
 				throw new OperationNotAllowedException("Operation not allowed. Server replied: "+con.getResponseMessage());
 			default:
-				logger.warn("Unexpected response contacting Broadsoft server: "+con.getResponseCode()+" "+con.getResponseMessage());
+				logger.log(Level.WARNING, "Unexpected response contacting Broadsoft server: "+con.getResponseCode()+" "+con.getResponseMessage());
 				throw new IOException("Unexpected response contacting Broadsoft server: "+con.getResponseCode()+" "+con.getResponseMessage());
 			}
 
 			con.disconnect();
 		} catch (MalformedURLException e) {
-			logger.error("Malformed URL - url was "+subURL);
+			logger.log(Level.ERROR, "Malformed URL - url was "+subURL);
 		} catch (IOException e) {
-			logger.error("Exception making GET request: "+e);
+			logger.log(Level.ERROR, "Exception making GET request: "+e);
 			throw e;
 		} 
 
@@ -571,8 +567,8 @@ public class XSIConnectionImpl implements XSIConnection {
 
 		try {
 			URL url = new URL(String.format("http://%s/com.broadsoft.xsi-actions/v2.0/%s", hostport, subURL));
-			logger.debug("Query "+url+"\n"+(new String(data)));
-			logger.debug("DELETE "+url);
+			logger.log(Level.DEBUG, "Query "+url+"\n"+(new String(data)));
+			logger.log(Level.DEBUG, "DELETE "+url);
 
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
 			con.setRequestProperty("Charset", encoding);
@@ -598,7 +594,7 @@ public class XSIConnectionImpl implements XSIConnection {
 			
 			con.connect();
 
-			logger.debug("Connected: "+con.getResponseCode()+" "+con.getResponseMessage());
+			logger.log(Level.DEBUG, "Connected: "+con.getResponseCode()+" "+con.getResponseMessage());
 			switch (con.getResponseCode()) {
 			case 200:
 			case 201:
@@ -607,12 +603,12 @@ public class XSIConnectionImpl implements XSIConnection {
 				if (mess==null || mess.length==0)
 					return null;
 				String message = new String(mess);
-				logger.debug(message);
+				logger.log(Level.DEBUG, message);
 
 				try {
 					return XSIDriver.unmarshall(message);
 				} catch (JAXBException e) {
-					logger.error("Error unmarshalling server response: "+e);
+					logger.log(Level.ERROR, "Error unmarshalling server response: "+e);
 				}
 				break;
 			case 401:
@@ -620,15 +616,15 @@ public class XSIConnectionImpl implements XSIConnection {
 			case 403: // Forbidden
 				throw new OperationNotAllowedException("Operation not allowed. Server replied: "+con.getResponseMessage());
 			default:
-				logger.warn("Unexpected response contacting Broadsoft server: "+con.getResponseCode()+" "+con.getResponseMessage());
+				logger.log(Level.WARNING, "Unexpected response contacting Broadsoft server: "+con.getResponseCode()+" "+con.getResponseMessage());
 				throw new IOException("Unexpected response contacting Broadsoft server: "+con.getResponseCode()+" "+con.getResponseMessage());
 			}
 
 			con.disconnect();
 		} catch (MalformedURLException e) {
-			logger.error("Malformed URL - url was "+subURL);
+			logger.log(Level.ERROR, "Malformed URL - url was "+subURL);
 		} catch (IOException e) {
-			logger.error("Exception making GET request: "+e);
+			logger.log(Level.ERROR, "Exception making GET request: "+e);
 			throw e;
 		} 
 
@@ -642,14 +638,14 @@ public class XSIConnectionImpl implements XSIConnection {
 	 */
 	@Override
 	public EventChannel createEventChannel(String name, EventChannelListener listener) throws IOException {
-		logger.debug("createEventChannel("+name+")");
+		logger.log(Level.DEBUG, "createEventChannel("+name+")");
 		// First set the default cookie manager.
 		CookieHandler.setDefault(new CookieManager(null, CookiePolicy.ACCEPT_ALL));		
 
 		EventChannelImpl channel = new EventChannelImpl(this, name, useSSL, encoding, useCType, listener);
-		logger.debug("Channel created");
+		logger.log(Level.DEBUG, "Channel created");
 		
-		logger.debug("Thread for channel started");
+		logger.log(Level.DEBUG, "Thread for channel started");
 		return channel;
 	}
 

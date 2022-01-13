@@ -4,11 +4,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringReader;
 import java.io.Writer;
-import java.util.HashMap;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 import java.util.Properties;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import com.broadsoft.xsi.api.XSIConnection;
 
@@ -23,7 +21,7 @@ import jakarta.xml.bind.Unmarshaller;
  *
  */
 public class XSIDriver {
-	private final static Logger logger = LogManager.getLogger("connector.xsi");
+	private final static Logger logger = System.getLogger("connector.xsi");
 
 
 	public final static String PROP_XSI_SERVER = "xsi.server";
@@ -42,9 +40,9 @@ public class XSIDriver {
 	static {
 		Package pack = XSIDriver.class.getPackage();
 		if (pack.getImplementationTitle()==null)
-			logger.info("XSI Driver running directly from class files");
+			logger.log(Level.INFO, "XSI Driver running directly from class files");
 		else
-			logger.info(XSIDriver.class.getPackage().getImplementationTitle()+" version "+XSIDriver.class.getPackage().getImplementationVersion());
+			logger.log(Level.INFO, XSIDriver.class.getPackage().getImplementationTitle()+" version "+XSIDriver.class.getPackage().getImplementationVersion());
 		try {
 //			jaxb = ContextFactory.createContext("com.broadsoft.xsi", XSIDriver.class.getClassLoader(), new HashMap<String, Object>());
 //			jaxb = org.eclipse.persistence.jaxb.JAXBContextFactory.createContext("com.broadsoft.xsi", XSIDriver.class.getClassLoader(), new HashMap<String, Object>());
@@ -53,7 +51,7 @@ public class XSIDriver {
 			marshaller   = jaxb.createMarshaller();
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 		} catch (JAXBException e) {
-			logger.error("Could not initialize JAXB context: "+e);
+			logger.log(Level.ERROR, "Could not initialize JAXB context: "+e);
 			System.exit(0);
 		}
 	}

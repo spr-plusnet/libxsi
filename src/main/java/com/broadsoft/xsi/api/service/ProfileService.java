@@ -1,11 +1,10 @@
 package com.broadsoft.xsi.api.service;
 
 import java.io.IOException;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import com.broadsoft.xsi.AccessDevice;
 import com.broadsoft.xsi.AccessDevices;
@@ -21,7 +20,7 @@ import de.plusnet.centraflex.broadsoft.XSIException;
  */
 public class ProfileService implements Service<Profile> {
 
-	private final static Logger logger = LogManager.getLogger("xsi.service.profile");
+	private final static Logger logger = System.getLogger("xsi.service.profile");
 
 	private XSIConnection con;
 	
@@ -48,7 +47,7 @@ public class ProfileService implements Service<Profile> {
 		try {
 			return (Profile)con.actionGETQuery(String.format("user/%s/profile", con.getUser()));
 		} catch (IOException e) {
-			logger.error("Failed obtaining own profile",e);
+			logger.log(Level.ERROR, "Failed obtaining own profile",e);
 			throw new XSIException("Failed obtaining own profile: "+e, 0);
 		}
 		
@@ -59,7 +58,7 @@ public class ProfileService implements Service<Profile> {
 		try {
 			return (Profile)con.actionGETQuery(String.format("user/%s/profile", user));
 		} catch (IOException e) {
-			logger.error("Failed obtaining profile",e);
+			logger.log(Level.ERROR, "Failed obtaining profile",e);
 			throw new XSIException("Failed obtaining profile: "+e, 0);
 		}
 		
@@ -80,7 +79,7 @@ public class ProfileService implements Service<Profile> {
 			AccessDevices devs = ((AccessDevices)con.actionGETQuery(String.format("user/%s/profile/device", con.getUser())));
 			return devs.getAccessDevice();
 		} catch (IOException e) {
-			logger.error("Failed obtaining list of devices",e);
+			logger.log(Level.ERROR, "Failed obtaining list of devices",e);
 			throw new XSIException("Failed obtaining own profile: "+e, 0);
 		}
 		

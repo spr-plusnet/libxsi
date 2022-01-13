@@ -5,7 +5,7 @@
 
 	<groupId>de.plusnet.centraflex</groupId>
 	<artifactId>libxsi</artifactId>
-	<version>2020.07.04</version>
+	<version>2020.07.05</version>
 	<name>libxsi</name>
 
 	<properties>
@@ -30,11 +30,6 @@
 	</developers>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-api</artifactId>
-			<version>${log4j.version}</version>
-		</dependency>
 		<dependency>
 			<groupId>jakarta.xml.bind</groupId>
 			<artifactId>jakarta.xml.bind-api</artifactId>

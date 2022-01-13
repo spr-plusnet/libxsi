@@ -4,6 +4,8 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 import java.net.Authenticator;
 import java.net.HttpURLConnection;
 import java.net.PasswordAuthentication;
@@ -27,8 +29,6 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
@@ -49,7 +49,7 @@ import com.broadsoft.xsi.api.Subscription;
  */
 public class EventChannelImpl implements Runnable, EventChannel {
 
-	private final static Logger logger = LogManager.getLogger("xsi.events");
+	private final static Logger logger = System.getLogger("xsi.events");
 
 	private static int count = 0;
 	
@@ -87,10 +87,10 @@ public class EventChannelImpl implements Runnable, EventChannel {
 			allListener.add(listener);
 		subscriptionsByID = new HashMap<String, SubscriptionImpl>();
 
-		logger.debug("Setup XSI event channel to "+sess+" using SSL="+USE_SSL);
+		logger.log(Level.DEBUG, "Setup XSI event channel to "+sess+" using SSL="+USE_SSL);
 		sendSetupRequest();
 
-		logger.info("Channel "+channelID+" from set "+channelSetId+" created");
+		logger.log(Level.INFO, "Channel "+channelID+" from set "+channelSetId+" created");
 
 		int id = ++count;
 		notClosed = true;
@@ -121,13 +121,13 @@ public class EventChannelImpl implements Runnable, EventChannel {
 
 	//-----------------------------------------------------------------
 	private void fireEvent(SubscriptionEvent event) {
-		logger.trace("---fire event to "+allListener.size()+" listener");
+		logger.log(Level.TRACE, "---fire event to "+allListener.size()+" listener");
 		for (EventChannelListener tmp : allListener) {
-			logger.debug("Fire to "+tmp.getClass());
+			logger.log(Level.DEBUG, "Fire to "+tmp.getClass());
 			try {
 				tmp.onXSIEvent(this, event);
 			} catch (Exception e) {
-				logger.error("Error delivering XSI event on listener "+tmp.getClass(),e);
+				logger.log(Level.ERROR, "Error delivering XSI event on listener "+tmp.getClass(),e);
 			}
 		}
 	}
@@ -145,25 +145,25 @@ public class EventChannelImpl implements Runnable, EventChannel {
 	void setState(ConnectionState newState) {
 		if (newState==state)
 			return;
-		logger.info("States changed from "+state+" to "+newState);
+		logger.log(Level.INFO, "States changed from "+state+" to "+newState);
 //		try {
 //			throw new RuntimeException("Trace");
 //		} catch (Exception e) {
-//			logger.error("Why?",e);
+//			logger.log(Level.ERROR, "Why?",e);
 //		}
 		state = newState;
 		for (EventChannelListener callback : allListener) {
 			try {
 				callback.channelStateChanged(this, newState);
 			} catch (Exception e) {
-				logger.error("Error calling callback: "+e,e);
+				logger.log(Level.ERROR, "Error calling callback: "+e,e);
 			}
 		}
 	}
 
 	//-----------------------------------------------------------------
 	private PostResult sendPost(URL url, String xml) throws IOException {
-		logger.debug("POST "+url+"\n"+xml);
+		logger.log(Level.DEBUG, "POST "+url+"\n"+xml);
 		byte[] data = xml.getBytes(encoding);
 		HttpURLConnection con = (HttpURLConnection) url.openConnection();
 		con.setDoOutput(true);
@@ -173,14 +173,14 @@ public class EventChannelImpl implements Runnable, EventChannel {
 		con.setRequestProperty("Content-Length", "" + data);
 //		Authenticator.setDefault(new Authenticator(){
 //			protected PasswordAuthentication getPasswordAuthentication() {
-//				logger.trace("Auth(sendPost): "+session.getUser()+"  / "+session.getPass());
+//				logger.log(Level.TRACE, "Auth(sendPost): "+session.getUser()+"  / "+session.getPass());
 //				return new PasswordAuthentication (session.getUser(), session.getPass().toCharArray());
 //			}
 //		});
 		con.setRequestMethod("POST");
 		con.setInstanceFollowRedirects(false);
 		//Send request
-		logger.warn("Query: "+url);
+		logger.log(Level.WARNING, "Query: "+url);
 		DataOutputStream out = new DataOutputStream(con.getOutputStream ());
 		out.write(data);
 		out.flush ();
@@ -190,9 +190,9 @@ public class EventChannelImpl implements Runnable, EventChannel {
 		PostResult ret = new PostResult();
 		ret.code = con.getResponseCode();
 		ret.mess = con.getResponseMessage();
-		logger.warn("Response was "+ret.code+" "+ret.mess);
+		logger.log(Level.WARNING, "Response was "+ret.code+" "+ret.mess);
 		if (ret.code==HttpURLConnection.HTTP_MOVED_TEMP) {
-			logger.debug("Redirected to "+ con.getHeaderField("Location"));
+			logger.log(Level.DEBUG, "Redirected to "+ con.getHeaderField("Location"));
 			return sendPost(new URL(con.getHeaderField("Location")), xml);
 		}
 		
@@ -201,33 +201,33 @@ public class EventChannelImpl implements Runnable, EventChannel {
 		else {
 			ret.in = con.getErrorStream();
 			if (ret.in==null) {
-				logger.warn("HTTP Error: "+con.getResponseCode()+" "+con.getResponseMessage());
+				logger.log(Level.WARNING, "HTTP Error: "+con.getResponseCode()+" "+con.getResponseMessage());
 				return ret;
 			}
 		}
 
-//		logger.debug("Response received: "+con.getContentType());
+//		logger.log(Level.DEBUG, "Response received: "+con.getContentType());
 		String toParse = waitForNextResponse(ret.in);
 
 		if (con.getContentType().startsWith("application/xml") || con.getContentType().startsWith("text/xml")) {
 			try {
-				logger.debug("RCV "+toParse);
+				logger.log(Level.DEBUG, "RCV "+toParse);
 				//				logger.fatal("Stop here");
 				//				System.exit(0);
 				ret.jaxb = XSIDriver.unmarshall(toParse);
 			} catch (JAXBException e) {
-				logger.error("Failed unmarshalling: \""+toParse+"\"",e);
+				logger.log(Level.ERROR, "Failed unmarshalling: \""+toParse+"\"",e);
 				throw new IOException(e);
 			}
 		}
 
-		logger.trace("sendPost done");
+		logger.log(Level.TRACE, "sendPost done");
 		return ret;
 	}
 
 	//-----------------------------------------------------------------
 	private PostResult sendDelete(URL url, String xml) throws IOException {
-		logger.debug("DELETE "+url+"\n"+xml);
+		logger.log(Level.DEBUG, "DELETE "+url+"\n"+xml);
 		byte[] data = xml.getBytes(encoding);
 		HttpURLConnection con = (HttpURLConnection) url.openConnection();
 		con.setDoOutput(true);
@@ -238,25 +238,25 @@ public class EventChannelImpl implements Runnable, EventChannel {
 		con.setRequestProperty("Content-Length", "" + data);
 		Authenticator.setDefault(new Authenticator(){
 			protected PasswordAuthentication getPasswordAuthentication() {
-				logger.trace("Auth(sendDELETE): "+session.getUser()+"  / "+session.getPass());
+				logger.log(Level.TRACE, "Auth(sendDELETE): "+session.getUser()+"  / "+session.getPass());
 				return new PasswordAuthentication (session.getUser(), session.getPass().toCharArray());
 			}
 		});
 		con.setRequestMethod("DELETE"); 
 		//Send request
 		con.connect();
-		logger.debug("Request sent");
+		logger.log(Level.DEBUG, "Request sent");
 
 		PostResult ret = new PostResult();
 		ret.code = con.getResponseCode();
 		ret.mess = con.getResponseMessage();
-		logger.debug("Response was "+ret.code+" "+ret.mess);
+		logger.log(Level.DEBUG, "Response was "+ret.code+" "+ret.mess);
 		if (ret.code==200)
 			ret.in = con.getInputStream();
 		else {
 			ret.in = con.getErrorStream();
 			if (ret.in==null) {
-				logger.warn("HTTP Error: "+con.getResponseCode()+" "+con.getResponseMessage());
+				logger.log(Level.WARNING, "HTTP Error: "+con.getResponseCode()+" "+con.getResponseMessage());
 				return ret;
 			}
 		}
@@ -266,7 +266,7 @@ public class EventChannelImpl implements Runnable, EventChannel {
 
 	//-----------------------------------------------------------------
 	private PostResult sendPostDontWait(URL url, String xml) throws IOException {
-		logger.debug("POST "+url+"\n"+xml);
+		logger.log(Level.DEBUG, "POST "+url+"\n"+xml);
 		byte[] data = xml.getBytes(encoding);
 		HttpURLConnection con = (HttpURLConnection) url.openConnection();
 		con.setDoOutput(true);
@@ -285,12 +285,12 @@ public class EventChannelImpl implements Runnable, EventChannel {
 		out.write(data);
 		out.flush ();
 		con.connect();
-		logger.trace("Request sent");
+		logger.log(Level.TRACE, "Request sent");
 
 		PostResult ret = new PostResult();
 		ret.code = con.getResponseCode();
 		ret.mess = con.getResponseMessage();
-		logger.trace("Response was "+ret.code+" "+ret.mess);
+		logger.log(Level.TRACE, "Response was "+ret.code+" "+ret.mess);
 		if (ret.code==200)
 			ret.in = con.getInputStream();
 		else if (ret.code==302) {
@@ -304,9 +304,9 @@ public class EventChannelImpl implements Runnable, EventChannel {
 
 	//-----------------------------------------------------------------
 	private String waitForNextResponse(InputStream in) throws IOException {
-		logger.trace("waitForNextResponse");
+		logger.log(Level.TRACE, "waitForNextResponse");
 		if (state==ConnectionState.DISCONNECTED) {
-			logger.warn("Cannot wait for events when channel is "+state);
+			logger.log(Level.WARNING, "Cannot wait for events when channel is "+state);
 			throw new IllegalStateException("Cannot wait for events when channel is "+state);
 		}
 		if (in==null)
@@ -314,7 +314,7 @@ public class EventChannelImpl implements Runnable, EventChannel {
 
 		if (!cached.isEmpty()) {
 			String content = cached.remove(0);
-			logger.info("Read from cache: "+content);
+			logger.log(Level.INFO, "Read from cache: "+content);
 			return content;
 		}
 
@@ -325,17 +325,17 @@ public class EventChannelImpl implements Runnable, EventChannel {
 			read = in.read(buf, pos2, buf.length-pos2);
 			if (read==-1) {
 				if (state==ConnectionState.DISCONNECTED) {
-					logger.debug("EventChannel closed");
+					logger.log(Level.DEBUG, "EventChannel closed");
 					return null;
 				}
-				logger.error("Connection closed by foreign host");
+				logger.log(Level.ERROR, "Connection closed by foreign host");
 				heartbeat.cancel();
 				heartbeat.purge();
 				setState(ConnectionState.CONNECTION_LOST);
 				throw new IOException("Connection closed by foreign host");
 			}
 			pos2+=read;
-			logger.trace("read="+read+"  pos2="+pos2);
+			logger.log(Level.TRACE, "read="+read+"  pos2="+pos2);
 		} while (read>0 && pos2<=32);
 
 		String content = new String(buf,0,pos2);
@@ -345,12 +345,12 @@ public class EventChannelImpl implements Runnable, EventChannel {
 			int newPos = content.indexOf("<?xml", pos+1);
 			if (newPos==-1) {
 				String line = content.substring(pos);
-				//				logger.info("Last Substring "+line);
+				//				logger.log(Level.INFO, "Last Substring "+line);
 				cached.add(line);
 				break;
 			} else {
 				String line = content.substring(pos, newPos);
-				//				logger.info("Mid  Substring "+line);
+				//				logger.log(Level.INFO, "Mid  Substring "+line);
 				cached.add(line);
 				pos = newPos;
 			}
@@ -376,7 +376,7 @@ public class EventChannelImpl implements Runnable, EventChannel {
 
 			XSIDriver.marshall(toEncode, foo);
 		} catch (Exception e) {
-			logger.error("Marshalling failed for "+channel,e);
+			logger.log(Level.ERROR, "Marshalling failed for "+channel,e);
 			throw new IOException("Marshalling failed");
 		}
 
@@ -390,17 +390,17 @@ public class EventChannelImpl implements Runnable, EventChannel {
 		if (result.code==200) {
 			Channel confChannel = (Channel)result.jaxb;
 			channelID = confChannel.getChannelId();
-			//			logger.debug("json = "+json);
-			//			logger.debug("mess = "+result.mess);
+			//			logger.log(Level.DEBUG, "json = "+json);
+			//			logger.log(Level.DEBUG, "mess = "+result.mess);
 			//			channelID = (String) ((JSONObject)((JSONObject)json.get("Channel")).get("channelId")).get("$");
-			logger.debug("channelID = "+channelID);
+			logger.log(Level.DEBUG, "channelID = "+channelID);
 			setState(ConnectionState.CONNECTED);
 		} else if (result.code==401) {
-			logger.warn("HTTP Error: "+result.code+" "+result.mess);
+			logger.log(Level.WARNING, "HTTP Error: "+result.code+" "+result.mess);
 			setState(ConnectionState.ERROR_INVALID_CREDENTIALS);
 			throw new IOException("HTTP Error: "+result.code+" "+result.mess);			
 		} else if (result.code==503) {
-			logger.warn("HTTP Error: "+result.code+" "+result.mess);
+			logger.log(Level.WARNING, "HTTP Error: "+result.code+" "+result.mess);
 			setState(ConnectionState.ERROR_CONNECTION_PROBLEMS);
 			throw new IOException("HTTP Error: "+result.code+" "+result.mess);			
 		} else if (result.jaxb==null) {
@@ -419,11 +419,11 @@ public class EventChannelImpl implements Runnable, EventChannel {
 	 */
 	@Override
 	public void close() throws IOException {
-		logger.info("Close event channel '"+channelSetId+"'");
+		logger.log(Level.INFO, "Close event channel '"+channelSetId+"'");
 		notClosed = true;
 
 		// Stop threads and timer
-		logger.debug("Cancelling heartbeat");
+		logger.log(Level.DEBUG, "Cancelling heartbeat");
 		heartbeat.cancel();
 		heartbeat.purge();
 		thread.interrupt();
@@ -439,7 +439,7 @@ public class EventChannelImpl implements Runnable, EventChannel {
 		//		JSONObject json = result.json;
 
 		if (result.code==200) {
-			logger.debug("EventChannel closed");
+			logger.log(Level.DEBUG, "EventChannel closed");
 		} else if (result.jaxb==null) {
 			throw new IOException("HTTP Error: "+result.code+" "+result.mess);
 		} else {
@@ -452,7 +452,7 @@ public class EventChannelImpl implements Runnable, EventChannel {
 
 	//-----------------------------------------------------------------
 	private void sendEventResponse(String eventID) throws IOException {
-		logger.debug("sendEventResponse("+eventID+")");
+		logger.log(Level.DEBUG, "sendEventResponse("+eventID+")");
 		URL url = new URL(String.format("http"+(USE_SSL?"s":"")+"://%s/com.broadsoft.xsi-events/v2.0/channel/eventresponse", session.getHostport()));
 		String xml = "<?xml version=\"1.0\" encoding=\""+encoding+"\"?>\n"+
 				"<EventResponse xmlns=\"http://schema.broadsoft.com/xsi\">\n"+
@@ -460,9 +460,9 @@ public class EventChannelImpl implements Runnable, EventChannel {
 
 		PostResult result = sendPostDontWait(url, xml);
 		if (result.code==200) {
-			logger.debug("Event "+eventID+" confirmed");
+			logger.log(Level.DEBUG, "Event "+eventID+" confirmed");
 		} else {
-			logger.error("Event "+eventID+" could not be confirmed: "+result.code+" "+result.mess);
+			logger.log(Level.ERROR, "Event "+eventID+" could not be confirmed: "+result.code+" "+result.mess);
 			System.exit(0);
 		}
 	}
@@ -477,7 +477,7 @@ public class EventChannelImpl implements Runnable, EventChannel {
 				return null;
 			return nodes.getNodeValue();
 		} catch (XPathExpressionException e) {
-			logger.error("XPath "+xpath+" error: "+e.getCause());
+			logger.log(Level.ERROR, "XPath "+xpath+" error: "+e.getCause());
 			System.exit(0);
 		}
 		return null;
@@ -485,8 +485,8 @@ public class EventChannelImpl implements Runnable, EventChannel {
 
 //	//-----------------------------------------------------------------
 //	private void processSubscriptionEvent(SubscriptionEvent event) {
-//		logger.debug("processSubscriptionEvent "+event);
-//		//		logger.info("I subscribed to events from "+event.getTargetId());
+//		logger.log(Level.DEBUG, "processSubscriptionEvent "+event);
+//		//		logger.log(Level.INFO, "I subscribed to events from "+event.getTargetId());
 //		//		String subscribedUser = event.getTargetId();
 //		//		EventData data = event.getEventData();
 //
@@ -500,11 +500,11 @@ public class EventChannelImpl implements Runnable, EventChannel {
 	private boolean parseEvent(String content) throws SAXException, IOException {
 		try {
 			BaseEvent event = (BaseEvent) XSIDriver.unmarshall(content);
-			logger.debug("rcv2 "+event);
+			logger.log(Level.DEBUG, "rcv2 "+event);
 			return processEvent(event);
 		} catch (JAXBException e) {
-			logger.error("Error unmarshalling XML event from server: "+e,e);
-			logger.error("Content ( ugly ) was: "+content);
+			logger.log(Level.ERROR, "Error unmarshalling XML event from server: "+e,e);
+			logger.log(Level.ERROR, "Content ( ugly ) was: "+content);
 			processEvent(null);
 			return true;
 		}
@@ -519,14 +519,14 @@ public class EventChannelImpl implements Runnable, EventChannel {
 			SubscriptionEvent subEv = (SubscriptionEvent)event;
 			sendEventResponse(subEv.getEventID());
 			// 
-			logger.info("Received subscribed event: "+subEv.getEventData().getClass());
+			logger.log(Level.INFO, "Received subscribed event: "+subEv.getEventData().getClass());
 			fireEvent((SubscriptionEvent)event);
 		} else if (event instanceof ChannelTerminatedEvent) {
 			ChannelTerminatedEvent termEv = (ChannelTerminatedEvent)event;
-			logger.error("XSI event channel closed by foreign host. Reason = "+termEv.getReason());
+			logger.log(Level.ERROR, "XSI event channel closed by foreign host. Reason = "+termEv.getReason());
 			return false;
 		} else {
-			logger.error("Unknown event "+event);
+			logger.log(Level.ERROR, "Unknown event "+event);
 		}
 
 		return true;
@@ -540,35 +540,35 @@ public class EventChannelImpl implements Runnable, EventChannel {
 	public void run() {
 		try {
 			while (notClosed) {
-				logger.trace("Waiting for events  "+DateFormat.getTimeInstance().format(new Date(System.currentTimeMillis())));
+				logger.log(Level.TRACE, "Waiting for events  "+DateFormat.getTimeInstance().format(new Date(System.currentTimeMillis())));
 
 				String read = waitForNextResponse(in);
 				if (read==null) {
 					if (state==ConnectionState.DISCONNECTED) {
-						logger.debug("Stopped waiting for channel data");
+						logger.log(Level.DEBUG, "Stopped waiting for channel data");
 						return;
 					}
-					logger.warn("Lost event channel connection. Closed by remote host.");
+					logger.log(Level.WARNING, "Lost event channel connection. Closed by remote host.");
 					setState(ConnectionState.CONNECTION_LOST);
 					return;
 				}
 				if (read.contains("ChannelHeartBeat")) {
-					logger.trace("RCV: Heartbeat");
+					logger.log(Level.TRACE, "RCV: Heartbeat");
 					continue;
 				}
-				logger.debug("RCV: "+read);
+				logger.log(Level.DEBUG, "RCV: "+read);
 				boolean stayAlive = parseEvent(read);
 
 				if (!stayAlive) {
-					logger.error("Channel terminated");
+					logger.log(Level.ERROR, "Channel terminated");
 					setState(ConnectionState.CONNECTION_LOST);
 					heartbeat.cancel();
 					return;
 				}
 			}
 		} catch (Exception e) {
-			logger.error("Exception reading from channel: "+e,e);
-			logger.error("Channel terminated");
+			logger.log(Level.ERROR, "Exception reading from channel: "+e,e);
+			logger.log(Level.ERROR, "Channel terminated");
 			setState(ConnectionState.DISCONNECTED);
 			return;
 		}
@@ -610,7 +610,7 @@ public class EventChannelImpl implements Runnable, EventChannel {
 		if (subscriptionsByID.containsKey(eventPackage))
 			throw new IllegalStateException();
 		
-		logger.info("Subscribe "+eventPackage);
+		logger.log(Level.INFO, "Subscribe "+eventPackage);
 		String subURL = String.format("user/%s/subscription", session.getUser());
 		String xml = "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n"+
 				"<Subscription xmlns=\"http://schema.broadsoft.com/xsi\">\n"+
@@ -622,9 +622,9 @@ public class EventChannelImpl implements Runnable, EventChannel {
 		byte[] data = xml.getBytes("iso-8859-1");
 
 		com.broadsoft.xsi.Subscription result = (com.broadsoft.xsi.Subscription) session.eventsPOSTQuery(subURL, data);
-		logger.debug("Result = "+result);
+		logger.log(Level.DEBUG, "Result = "+result);
 		if (result==null) {
-			logger.error("Missing expected Subscription data after subscribing - cannot determine subscription ID");
+			logger.log(Level.ERROR, "Missing expected Subscription data after subscribing - cannot determine subscription ID");
 //			return new SubscriptionImpl(null, session.getUser(), eventPackage);
 			throw new IOException("Missing expected Subscription data after subscribing - cannot determine subscription ID");
 		}
@@ -644,7 +644,7 @@ public class EventChannelImpl implements Runnable, EventChannel {
 		if (subscriptionsByID.containsKey(eventPackage))
 			throw new IllegalStateException();
 		
-		logger.info("Subscribe "+eventPackage+" for "+user);
+		logger.log(Level.INFO, "Subscribe "+eventPackage+" for "+user);
 		String subURL = String.format("user/%s/subscription", user);
 		String xml = "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n"+
 				"<Subscription xmlns=\"http://schema.broadsoft.com/xsi\">\n"+
@@ -656,7 +656,7 @@ public class EventChannelImpl implements Runnable, EventChannel {
 		byte[] data = xml.getBytes("iso-8859-1");
 
 		com.broadsoft.xsi.Subscription result = (com.broadsoft.xsi.Subscription) session.eventsPOSTQuery(subURL, data);
-		logger.debug("Result = "+result);
+		logger.log(Level.DEBUG, "Result = "+result);
 
 		SubscriptionImpl ret = new SubscriptionImpl(result.getSubscriptionId(), user, eventPackage);
 		subscriptionsByID.put(result.getSubscriptionId(), ret);
@@ -665,15 +665,15 @@ public class EventChannelImpl implements Runnable, EventChannel {
 	
 	//-----------------------------------------------------------------
 	private void sendChannelHeartbeat() {
-		logger.debug("sendChannelHeartbeat  "+DateFormat.getTimeInstance().format(new Date(System.currentTimeMillis())));
+		logger.log(Level.DEBUG, "sendChannelHeartbeat  "+DateFormat.getTimeInstance().format(new Date(System.currentTimeMillis())));
 		if (state!=ConnectionState.CONNECTED) {
-			logger.warn("Still keep trying to send channel heartbeats, although channel not connected ("+state+")");
+			logger.log(Level.WARNING, "Still keep trying to send channel heartbeats, although channel not connected ("+state+")");
 			throw new IllegalStateException("Channel is in state "+state);
 		}
 		
 		try {
 			URL url = new URL(String.format("http"+(USE_SSL?"s":"")+"://%s/com.broadsoft.xsi-events/v2.0/channel/%s/heartbeat", session.getHostport(), channelID));
-			logger.trace("Query "+url);
+			logger.log(Level.TRACE, "Query "+url);
 			String xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"+
 					"<ChannelHeartbeat xmlns=\"http://schema.broadsoft.com/xsi\" />";
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -684,38 +684,38 @@ public class EventChannelImpl implements Runnable, EventChannel {
 			con.setRequestProperty("Content-Length", "" + Integer.toString(xml.getBytes().length));
 			con.setRequestMethod("PUT"); 
 			//Send request
-			logger.trace("Heartbeat: "+con.getResponseCode()+" "+con.getResponseMessage());
+			logger.log(Level.TRACE, "Heartbeat: "+con.getResponseCode()+" "+con.getResponseMessage());
 			
 			try {
 				int code = con.getResponseCode();
 				if (code==200) {
-					logger.debug("Heartbeat ok: ");
+					logger.log(Level.DEBUG, "Heartbeat ok: ");
 				} else if (code==404) {
 					waitForNextResponse(con.getErrorStream());
-					logger.warn("Heartbeat failed - unknown channel or channel closed");
+					logger.log(Level.WARNING, "Heartbeat failed - unknown channel or channel closed");
 					close();
 //					heartbeat.cancel();
 //					setState(ConnectionState.DISCONNECTED);
 				} else {
 					String resp = waitForNextResponse(con.getErrorStream());
-					logger.info("Heartbeat failed with code "+code+": "+resp);
+					logger.log(Level.INFO, "Heartbeat failed with code "+code+": "+resp);
 					close();
 //					heartbeat.cancel();
 //					setState(ConnectionState.DISCONNECTED);
 				}
 				con.disconnect();
 			} catch (SSLException e) {
-				logger.error("Channel heartbeat failed due SSLException: "+e.getMessage()+"  ... one retry");
+				logger.log(Level.ERROR, "Channel heartbeat failed due SSLException: "+e.getMessage()+"  ... one retry");
 				int code = con.getResponseCode();
 				if (code==200) {
-					logger.trace("Heartbeat ok: ");
+					logger.log(Level.TRACE, "Heartbeat ok: ");
 				} else if (code==404) {
 					waitForNextResponse(con.getErrorStream());
-					logger.warn("Heartbeat failed - unknown channel or channel closed");
+					logger.log(Level.WARNING, "Heartbeat failed - unknown channel or channel closed");
 					heartbeat.cancel();
 				} else {
 					String resp = waitForNextResponse(con.getErrorStream());
-					logger.info("Heartbeat failed: "+resp);
+					logger.log(Level.INFO, "Heartbeat failed: "+resp);
 					close();
 //					heartbeat.cancel();
 				}
@@ -724,7 +724,7 @@ public class EventChannelImpl implements Runnable, EventChannel {
 				close();
 			}
 		} catch (Exception e) {
-			logger.error("Channel heartbeat failed: "+e,e);
+			logger.log(Level.ERROR, "Channel heartbeat failed: "+e,e);
 			heartbeat.cancel();
 			setState(ConnectionState.DISCONNECTED);
 		}
